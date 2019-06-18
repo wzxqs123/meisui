@@ -1,0 +1,37 @@
+/** 移动端页面备注 **/
+首页——index.html
+集团业务
+  直播平台——live-terrace.html
+  艺人培养——artist-cultivate.html
+  MCN——mcn.html
+  影视产业——movie-industry.html
+新闻中心——news-center.html
+  新闻详情——news-details.html
+运营中心——region-agent.html
+  城市运营中心——operation-center.html
+合伙人计划
+  合伙人计划——partner-plan.html
+  成功经验分享——success-share.html
+  商务合作——business-cooperation.html
+关于我们
+  企业简介——company-profile.html
+  公司历程——company-history.html
+  联系我们——contact-us.html
+
+
+/** PC端页面备注 **/
+首页——index.html
+集团业务——group-business.html
+  直播平台——live-terrace.html
+  艺人培养——artist-cultivate.html
+  MCN——mcn.html
+  影视产业——movies-estate.html
+新闻中心——new.html
+  新闻详情——new-details.html
+运营中心——operate-centre.html
+  城市运营中心——city-operate.html
+合伙人计划——cooperate-plan.html
+关于我们
+  企业简介,企业文化——company-profile.html
+  公司历程——company-history.html
+联系我们——contact-outs.html

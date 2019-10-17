@@ -1,0 +1,75 @@
+
+skeleton.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+d
+  rotate: false
+  xy: 2, 2
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+h1
+  rotate: true
+  xy: 1084, 36
+  size: 332, 472
+  orig: 343, 486
+  offset: 5, 0
+  index: -1
+h2
+  rotate: false
+  xy: 1806, 1773
+  size: 127, 149
+  orig: 127, 180
+  offset: 0, 0
+  index: -1
+q4
+  rotate: true
+  xy: 1084, 898
+  size: 1024, 720
+  orig: 1024, 720
+  offset: 0, 0
+  index: -1
+星河
+  rotate: false
+  xy: 1084, 370
+  size: 658, 526
+  orig: 658, 526
+  offset: 0, 0
+  index: -1
+
+skeleton2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+q1
+  rotate: false
+  xy: 2, 1326
+  size: 1024, 720
+  orig: 1024, 720
+  offset: 0, 0
+  index: -1
+q2
+  rotate: false
+  xy: 2, 604
+  size: 1024, 720
+  orig: 1024, 720
+  offset: 0, 0
+  index: -1
+q3
+  rotate: true
+  xy: 1028, 1022
+  size: 1024, 720
+  orig: 1024, 720
+  offset: 0, 0
+  index: -1
+星空
+  rotate: true
+  xy: 2, 2
+  size: 600, 1065
+  orig: 600, 1065
+  offset: 0, 0
+  index: -1

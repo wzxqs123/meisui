@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>钻石余额</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #f9f4f5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="diam-b-wrap">
+            <!-- 标题部分 -->
+            <div class="pubtit bg-white clearfix">
+                <h2 class="text-center thirty-two">钻石余额</h2>
+                <a href="" class="pubreturn left"></a>
+            </div>
+            <div class="diam-b-head position-rel">
+                <i class="diam-b-headpic block"></i>
+                <span class="diam-b-headnum diam-b-yellow text-center block weight-bold">220</span>
+                <em class="twenty-six text-center block">钻石</em>
+                <!-- 明细 -->
+                <a href="" class="diam-b-detail bg-white nine text-center position-abs">明细</a>
+            </div>
+            <ul class="diam-b-list bg-white clearfix">
+                <li class="thirty">
+                    <span class="three left">200钻石</span>
+                    <div class="diam-b-price diam-b-yellow text-center right">¥<span>3</span></div>
+                    <em class="nine right">¥6</em>
+                </li>
+                <li class="thirty">
+                    <span class="three left">2500钻石</span>
+                    <div class="diam-b-price diam-b-yellow text-center right">¥<span>25</span></div>
+                </li>
+                <li class="thirty">
+                    <span class="three left">9900钻石</span>
+                    <div class="diam-b-price diam-b-yellow text-center right">¥<span>99</span></div>
+                </li>
+                <li class="thirty">
+                    <span class="three left">29800钻石</span>
+                    <div class="diam-b-price diam-b-yellow text-center right">¥<span>298</span></div>
+                </li>
+                <li class="thirty">
+                    <span class="three left">49800钻石</span>
+                    <div class="diam-b-price diam-b-yellow text-center right">¥<span>498</span></div>
+                </li>
+                <li class="thirty">
+                    <span class="three left">99800钻石</span>
+                    <div class="diam-b-price diam-b-yellow text-center right">¥<span>988</span></div>
+                    <em class="nine right">¥998</em>
+                </li>
+                <li class="thirty">
+                    <span class="three left">199800钻石</span>
+                    <div class="diam-b-price diam-b-yellow text-center right">¥<span>1978</span></div>
+                    <em class="nine right">¥1998</em>
+                </li>
+            </ul>
+            <!-- 温馨提示 -->
+            <div class="det-prompt twenty-four nine text-center">温馨提示：如果您在支付种遇到问题，请及时联系<br />官方客服 QQ：00990000 微信：1234445</div>
+            <!-- 导航 -->
+            <div class="nav bg-white clearfix position-fix">
+                <a href="" class="index-sel left"></a>
+                <a href="" class="pic-nosel left"></a>
+                <a href="" class="video-nosel left"></a>
+                <a href="" class="my-nosel left"></a>
+            </div>
+            <!-- 付款弹窗 -->
+            <div class="diam-b-alertbg position-fix none">
+                <div class="diam-b-alert bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="diam-b-close position-abs"></span>
+                    <em class="diam-b-money block text-center">¥<span>298</span></em>
+                    <!-- <a href="" class="diam-b-zfb block white thirty-two text-center">支付宝支付</a> -->
+                    <a href="javascript:;" class="block" style="margin-bottom: 1.07rem;"></a>
+                    <a href="" class="diam-b-wechat block white thirty-two text-center">微信支付</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            function lastLi (liEve) {
+                var liNum = $(liEve).size();
+                $(liEve).eq(liNum - 1).css({
+                    "box-shadow" : "0 0 0 0 #e6e6e6"
+                })
+            }
+            lastLi(".diam-b-list li");
+
+            // 点击价格
+            $(".diam-b-price").click(function (e) {
+                var _this = $(this);
+                var moneyNum = _this.children("span").html();
+                $(".diam-b-alertbg").removeClass("none");
+                $(".diam-b-money span").html(moneyNum);
+            });
+
+            // 关闭弹窗
+            $(".diam-b-close").click(function(event) {
+                $(".diam-b-alertbg").addClass("none");
+            });
+            freeBlank(".diam-b-alertbg", ".diam-b-alert", "none")
+        </script>
+    </body>
+</html>

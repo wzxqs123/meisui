@@ -1,0 +1,12 @@
+{
+    "front": [
+        {
+            "file": "../video/advert.mp4",
+            "type": "mp4",
+            "link": "http://www.ckplayer.com",
+            "time": 15,
+            "exhibitionMonitor": "exhibitionMonitor.php",
+            "clickMonitor": "clickMonitor.php"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>动画特效</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <script src="aaa/spine-player.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="aaa/spine-player.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="player-container" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0);"></div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            new spine.SpinePlayer("player-container", {
+                jsonUrl: "aaa/assets/skeleton.json",
+                atlasUrl: "aaa/assets/skeleton.atlas",
+                animation: "animation", // 将要执行的动画，如果为一个则就播放该动画，如果为多个则播放数组的默认播放数组的第一个动画，多个动画书写如下：animations: ["walk", "run", "jump"]
+                defaultMix: 0.1, // 默认混合时间，当用户在两个动画之间切换时，默认情况下，播放器将混合动画0.25秒，显示平滑过渡。
+                // skin: "funky", // 默认皮肤，可以通过此属性设置皮肤，此属性可以规定选择规定的几个皮肤中的一种，例如：skins: ["default", "funky"]
+                // premultipliedAlpha: true, // 播放器是否加载启用了预乘alpha的图像,默认为true
+                showControls: false, // 隐藏控件
+                // debug: { // 调试可视化
+                //     bones: true, 
+                //     regions: true,
+                //     meshes: true,
+                //     bounds: true,
+                //     paths: true,
+                //     clipping: true,
+                //     points: true,
+                //     hulls: true
+                // },
+                alpha: true, // 启用播放器半透明
+                backgroundColor: "#00000000", // 可以通过background color配置属性设置播放器背景色。颜色必须指定为十六进制rgba颜色（rrggbbaa）。
+                // fullScreenBackgroundColor: "#00ff00ff", // 用户可以将播放器扩展到全屏。可通过FullScreenBackgroundColor配置属性设置全屏模式的单独背景色。如果未指定，全屏背景色将与背景色相同。
+                /*backgroundImage: { // 在骨架后面显示背景图像, X和Y属性指定图像左下角在骨架的世界坐标空间中的位置。宽度和高度属性指定图像的尺寸。
+                    url: "assets/background.png",
+                    x: 0,
+                    y: 0,
+                    width: 330,
+                    height: 330
+                },*/
+                viewport: {
+                    animations: {
+                        "animation": {
+                            // x: -575,
+                            // y: -575,
+                            // width: 1150,
+                            // height: 1150,
+                            padLeft: "-42%",
+                            padRight: "-37%",
+                            padTop: "-38%",
+                            padBottom: "-38%"
+                        },
+                    },
+                    // debugRender: true,
+                    // transitionTime: 1, // 当播放器在动画之间切换时，它会插入新旧动画的视区0.2秒。此视区转换时间可以通过TransitionTime属性设置：
+                }
+            })
+        </script>
+    </body>
+</html>

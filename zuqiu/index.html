@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="index-wrap position-rel">
+            <!-- banner -->
+            <div class="swiper-container index-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide index-slide">
+                        <img class="block img" src="images/demoimages/pic1.png" alt="" />
+                    </div>
+                    <div class="swiper-slide index-slide">
+                        <img class="block img" src="images/demoimages/pic1.png" alt="" />
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="index-games clearfix bg-white">
+                <a href="" class="index-gameitem left">
+                    <img class="block" src="images/demoimages/pic2.png" alt="" />
+                    <div class="twenty-four three text-center">游戏游戏游戏</div>
+                </a>
+                <a href="" class="index-gameitem left">
+                    <img class="block" src="images/demoimages/pic3.png" alt="" />
+                    <div class="twenty-four three text-center">游戏</div>
+                </a>
+                <a href="" class="index-gameitem left">
+                    <img class="block" src="images/demoimages/pic4.png" alt="" />
+                    <div class="twenty-four three text-center">游戏</div>
+                </a>
+            </div>
+            <!-- 最新赛事 -->
+            <div class="index-new bg-white">
+                <div class="index-newtit clearfix">
+                    <span class="twenty-four left position-rel weight-bold"><em class="position-abs"></em>最新赛事</span>
+                    <a href="new-match.html" class="nine index-redcolor right">查看更多</a>
+                </div>
+                <div class="index-newcon">
+                    <!-- 第一条为绿色背景index-greenbg -->
+                    <a href="gues-details.html" class="index-newitem clearfix block">
+                        <div class="index-newleft left">
+                            <div>
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="thirty three text-center">皇马</p>
+                        </div>
+                        <div class="index-newcoms left text-center">
+                            <strong class="index-newgo thirty three block weight-bold">去竞猜&nbsp>></strong>
+                            <span class="block nine twenty-four">已有20人竞猜</span>
+                            <em class="index-newvs block weight-bold"></em>
+                            <p class="nine twenty-four">2018-10-12 18:00 开赛</p>
+                        </div>
+                        <div class="index-newright right">
+                            <div>
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="thirty three text-center">英国</p>
+                        </div>
+                    </a>
+                    <a href="gues-details.html" class="index-newitem clearfix block">
+                        <div class="index-newleft left">
+                            <div>
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="thirty three text-center">皇马</p>
+                        </div>
+                        <div class="index-newcoms left text-center">
+                            <strong class="index-newgo thirty three block weight-bold">去竞猜&nbsp>></strong>
+                            <span class="block nine twenty-four">已有20人竞猜</span>
+                            <em class="index-newvs block weight-bold"></em>
+                            <p class="nine twenty-four">2018-10-12 18:00 开赛</p>
+                        </div>
+                        <div class="index-newright right">
+                            <div>
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="thirty three text-center">英国</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 热门兑换 -->
+            <div class="index-hot bg-white">
+                <div class="index-newtit twenty-four clearfix">
+                    <span class="left position-rel weight-bold"><em class="position-abs"></em>热门兑换</span>
+                    <a href="integral.html" class="nine right">查看更多</a>
+                </div>
+                <div class="index-hotcon clearfix">
+                    <a href="integral.html" class="index-hotitem left">
+                        <div class="index-hotpic">
+                            <img class="block" src="images/demoimages/pic6.png" alt="" />
+                        </div>
+                        <p class="index-hotcom three weight-bold">Iphone x 256G</p>
+                        <div class="index-hotjf twenty-four clearfix weight-bold">
+                            <span class="left index-redcolor">9000</span>
+                            <em class="left nine">积分兑换</em>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 导航 -->
+            <nav class="nav clearfix bg-white twenty-four text-center weight-bold position-fix">
+                <!-- 选中的类名加sel，例如nav-index选中为nav-indexsel -->
+                <a href="javascript:;" class="nav-indexsel left three">首页</a>
+                <a href="ranking-list.html" class="nav-list left three">神算榜</a>
+                <a href="gues-compet.html" class="nav-guess left three">竞猜</a>
+                <a href="my.html" class="nav-my left three">我的</a>
+            </nav>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction : false,
+                autoHeight: true, //高度随内容变化
+                freeMode : false,
+                slidesPerView : "auto",
+                
+                // 如果需要分页器
+                pagination: '.swiper-pagination'
+            })
+
+            // 最新赛事列表样式变化
+            $(".index-newitem").eq(0).addClass("index-greenbg");
+
+            // 兑换热门列表右边距
+            $(".index-hotitem").each(function (i) {
+                var eqNum = i + 1;
+                if (eqNum % 3 == 0) {
+                    $(this).css({
+                        "margin-right" : "0"
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

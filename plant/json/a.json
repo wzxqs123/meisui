@@ -1,0 +1,27 @@
+{
+    "user": [{
+        "img": "images/demoimages/fruit-orange.gif",
+        "type": 1,
+        "value": 100
+    }, {
+        "img": "images/demoimages/fruit-pink.gif",
+        "type": 1,
+        "value": 100
+
+    }, {
+        "img": "images/demoimages/fruit-red.gif",
+        "type": 1,
+        "value": 100
+
+    }, {
+        "img": "images/demoimages/fruit-violet.gif",
+        "type": 1,
+        "value": 100
+
+    }, {
+        "img": "images/demoimages/fruit-yellow.gif",
+        "type": 1,
+        "value": 100
+
+    }]
+}

@@ -246,8 +246,9 @@ input::-webkit-inner-spin-button {
   margin-top: 20px;
 }
 .index-p-newitem {
-  width: 60px;
+  min-width: 40px;
   height: 30px;
+  padding: 0 10px;
   background-color: #ececec;
   color: #bfbfbf;
   line-height: 30px;
@@ -643,6 +644,7 @@ input::-webkit-inner-spin-button {
   width: 160px;
   height: 50px;
   padding: 0 20px;
+  color: #777;
 }
 .index-p-rightnav {
   z-index: 5;
@@ -935,6 +937,7 @@ input::-webkit-inner-spin-button {
   min-width: 40px;
   height: 30px;
   padding: 0 10px;
+  margin: 5px 0;
   line-height: 30px;
   color: #bfbfbf;
   background-color: #ececec;
@@ -1466,6 +1469,7 @@ input::-webkit-inner-spin-button {
 .contact-o-form {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 .contact-o-form input, 
 .contact-o-cons {
@@ -1474,18 +1478,19 @@ input::-webkit-inner-spin-button {
   border-left: 0;
   border-right: 0;
   border-bottom: 1px solid #cccccc;
+  font-size: 16px;
   line-height: 24px;
   outline: none;
 }
 .contact-o-form input {
-  width: 320px;
+  width: 350px;
   height: 24px;
-  margin: 0 50px 20px 0;
+  margin: 0 25px 20px 25px;
 }
 .contact-o-cons {
-  width: 1060px;
+  width: 1150px;
   height: 100px;
-  margin-bottom: 40px;
+  margin: 0 25px 40px 25px;
   resize: none;
 }
 .contact-o-button {

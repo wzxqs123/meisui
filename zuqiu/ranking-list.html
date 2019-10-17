@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>神算榜</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: rgb(35,194,112); /* Old browsers */
+                background: -moz-linear-gradient(left,  rgba(35,194,112,1) 0%, rgba(45,211,125,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left,  rgba(35,194,112,1) 0%,rgba(45,211,125,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right,  rgba(35,194,112,1) 0%,rgba(45,211,125,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23c270', endColorstr='#2dd37d',GradientType=1 ); /* IE6-9 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="rank-l-wrap position-rel">
+            <div class="rank-l-head clearfix">
+                <a href="my.html" class="rank-l-two left bg-white position-rel">
+                    <div class="rank-l-twopic position-rel">
+                        <img class="block" src="images/demoimages/pic10.png" alt="" />
+                        <span class="position-abs"></span>
+                    </div>
+                    <!-- 线 -->
+                    <span class="rank-l-twoline position-abs"></span>
+                    <em class="rank-l-name weight-bold text-center block three thirty">黄老邪</em>
+                    <p class="rank-l-autog text-center nine twenty-four">收积分+QQ</p>
+                    <div class="rank-l-drawnum weight-bold twenty-four text-center rank-l-yellow">中奖18单</div>
+                </a>
+                <a href="my.html" class="rank-l-one left bg-white">
+                    <div class="rank-l-onepic position-rel">
+                        <img class="block" src="images/demoimages/pic11.png" alt="" />
+                        <span class="position-abs"></span>
+                    </div>
+                    <em class="rank-l-name weight-bold text-center block three thirty">黄老邪</em>
+                    <p class="rank-l-autog text-center nine twenty-four">收积分+QQ</p>
+                    <div class="rank-l-drawnum weight-bold twenty-four text-center rank-l-yellow">中奖18单</div>
+                </a>
+                <a href="my.html" class="rank-l-three left bg-white position-rel">
+                    <div class="rank-l-threepic position-rel">
+                        <img class="block" src="images/demoimages/pic10.png" alt="" />
+                        <span class="position-abs"></span>
+                    </div>
+                    <!-- 线 -->
+                    <span class="rank-l-threeline position-abs"></span>
+                    <em class="rank-l-name weight-bold text-center block three thirty">黄老邪</em>
+                    <p class="rank-l-autog text-center nine twenty-four">收积分+QQ</p>
+                    <div class="rank-l-drawnum weight-bold twenty-four text-center rank-l-yellow">中奖18单</div>
+                </a>
+            </div>
+            <div class="rank-l-lists bg-white">
+                <a href="my.html" class="rank-l-item block clearfix">
+                    <span class="rank-l-itemnum weight-bold thirty left three">4</span>
+                    <div class="rank-l-itempic left">
+                        <img class="block img" src="images/demoimages/pic10.png" alt="" />
+                    </div>
+                    <div class="rank-l-itemcom left">
+                        <span class="weight-bold thirty three block">张学友</span>
+                        <em class="block twenty-four nine">收积分+QQ</em>
+                    </div>
+                    <div class="rank-l-itemwin right rank-l-yellow twenty-four weight-bold">中奖300单</div>
+                </a>
+                <a href="my.html" class="rank-l-item block clearfix">
+                    <span class="rank-l-itemnum weight-bold thirty left three">4</span>
+                    <div class="rank-l-itempic left">
+                        <img class="block img" src="images/demoimages/pic10.png" alt="" />
+                    </div>
+                    <div class="rank-l-itemcom left">
+                        <span class="weight-bold thirty three block">张学友</span>
+                        <em class="block twenty-four nine">收积分+QQ</em>
+                    </div>
+                    <div class="rank-l-itemwin right rank-l-yellow twenty-four weight-bold">中奖300单</div>
+                </a>
+            </div>
+            <!-- 导航 -->
+            <nav class="nav clearfix bg-white twenty-four text-center weight-bold position-fix">
+                <!-- 选中的类名加sel，例如nav-index选中为nav-indexsel -->
+                <a href="index.html" class="nav-index left three">首页</a>
+                <a href="javascript:;" class="nav-listsel left three">神算榜</a>
+                <a href="gues-compet.html" class="nav-guess left three">竞猜</a>
+                <a href="my.html" class="nav-my left three">我的</a>
+            </nav>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 列表最后一项虚线删除处理
+            var lastitem = $(".rank-l-item").size() - 1;
+            $(".rank-l-item").eq(lastitem).css({
+                "border-bottom" : "none"
+            });
+        </script>
+    </body>
+</html>

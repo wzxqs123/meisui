@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>种植基地</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #84eafb;
+            }
+            /*.snow-canvas {
+                z-index: 5;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: fixed;
+                pointer-events: none;
+            }*/
+        </style>
+    </head>
+    <body>
+        <div class="plant-wrap plant-wrapone position-rel">
+            <!-- <div class="headtit clearfix">
+                <h2 class="thirty-two white text-center">我的</h2>
+            </div> -->
+            <!-- 下雪 -->
+            <!-- <canvas class="snow-canvas" speed="1" interaction="false" size="2" count="80" opacity="0.00001" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" wind-power="0" image="false" width="1366" height="667"></canvas>
+            <canvas class="snow-canvas" speed="3" interaction="true" size="6" count="30" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false" width="1366" height="667"></canvas>
+            <canvas class="snow-canvas" speed="3" interaction="true" size="12" count="20" wind-power="-5" image="images/snow.png" width="1366" height="667"></canvas> -->
+            <div class="plant-head plant-blue text-center clearfix">
+                <div class="plant-headlongbg left">
+                    <div class="plant-headname">
+                        <span class="block weight-bold">落水吴晴</span>
+                        <em class="twenty-four block">ID:2200064</em>
+                    </div>
+                </div>
+                <div class="plant-headshortbg left">
+                    <div class="plant-headpm">
+                        <span class="block weight-bold">20</span>
+                        <em class="twenty-four block">排名</em>
+                    </div>
+                </div>
+                <div class="plant-headshortbg left">
+                    <div class="plant-headzz">
+                        <span class="block weight-bold">3</span>
+                        <em class="twenty-four block">种子</em>
+                    </div>
+                </div>
+                <div class="plant-headshortbg left">
+                    <div class="plant-headfx">
+                        <span class="block weight-bold">323</span>
+                        <em class="twenty-four block">分享</em>
+                    </div>
+                </div>
+            </div>
+            <!-- 商店图标 -->
+            <a href="shop-mall.html" class="plant-shop position-abs"></a>
+            <!-- 任务图标 -->
+            <a href="task.html" class="plant-task position-abs"><span class="position-abs text-center">2</span></a>
+            <!-- 左侧除草等图标 -->
+            <div class="plant-operate position-abs">
+                <!-- 需要红点时i标签删除none类 -->
+                <div class="plant-water position-rel"><i class="position-abs none"></i></div>
+                <div class="plant-fertilize position-rel"><i class="position-abs none"></i></div>
+                <div class="plant-insect position-rel"><i class="position-abs none"></i></div>
+                <div class="plant-weed position-rel"><i class="position-abs none"></i></div>
+            </div>
+            <!-- 植物进度条 -->
+            <div class='plant-bar text-center index-brown position-abs'>
+                <div class='plant-barin position-rel'>
+                    <div class='plant-barincon position-abs'></div>
+                    <div class='plant-barcs position-abs'>成熟</div>
+                    <div class='plant-barjg position-abs'>结果</div>
+                    <div class='plant-barkh position-abs'>开花</div>
+                    <div class='plant-barfy position-abs'>发芽</div>
+                    <div class='plant-barbz position-abs'>播种</div>
+                </div>
+            </div>
+            <!-- 种植区 -->
+            <div class="plant-main position-abs">
+                <div class="swiper-container plant-flo">
+                    <div class="swiper-wrapper plant-wrapper clearfix">
+
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination plant-fyq"></div>
+                </div>
+                <!-- 除草等特效操作 -->
+                <div class="plant-effect position-abs">
+                    <!-- 浇水 -->
+                    <div class="plant-wateract position-abs"></div>
+                    <!-- 施肥 -->
+                    <div class="plant-feract position-abs"></div>
+                    <!-- 除虫 -->
+                    <div class="plant-insectact position-abs"></div>
+                    <!-- 除草 -->
+                    <div class="plant-weedact position-abs"></div>
+                </div>
+            </div>
+            <!-- 无种植 -->
+            <div class="plant-noplant position-abs none">
+                <div class="plant-shovel">
+                    <img class="block" src="images/plant-shovel.png" alt="" />
+                </div>
+                <a class="plant-goplant thirty-two text-center weight-bold block" href="">马上去种植</a>
+                <p class="plant-plantpro text-center twenty-six">您还没有种植任何种子哦</p>
+            </div>
+            <!-- 完成任务弹窗 -->
+            <!-- <div class="plant-taskalebg position-fix none">
+                <div class="plant-taskale bg-white text-center position-abs">
+                    <div class="plant-tapic position-abs"></div>
+                    <div class="plant-tatit twenty-four index-brown">恭喜你！</div>
+                    <p class="plant-tacon weight-bold">+300</p>
+                    <span class="plant-tabut block twenty-four">朕知道了</span>
+                </div>
+            </div> -->
+            <!-- 收成弹窗 -->
+            <div class="plant-cropalebg position-fix none">
+                <div class="plant-cropale bg-white text-center position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="plant-cropclose position-abs"></span>
+                    <div class="plant-croppic position-abs"></div>
+                    <div class="plant-cropcon text-center index-brown thirty">
+                        <div class="">
+                            <img src="images/demoimages/pic10.png" alt="" class="block" />
+                            <em class="block twenty-six index-brown">火币x10</em>
+                        </div>
+                    </div>
+                    <a class="plant-scbut block twenty-four position-abs" href="">去仓库</a>
+                </div>
+            </div>
+            <!-- 收到土地弹窗 -->
+            <div class="plant-landalebg position-fix none">
+                <div class="plant-landale bg-white text-center position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="plant-landclose position-abs"></span>
+                    <div class="plant-landpic position-abs"></div>
+                    <div class="plant-landcon text-center thirty">
+                        <p class="index-brown">收到系统赠送的一块土地</p>
+                        <span class="plant-landid font-orange block weight-bold">区块链密钥：276352746</span>
+                    </div>
+                    <a class="plant-landbut block twenty-four position-abs" href="javascript:;">朕知道了</a>
+                </div>
+            </div>
+
+            <!-- 底部导航 -->
+            <div class="index-footnav plant-footnav clearfix position-abs">
+                <a href="index.html" class="index-home left"><i class="block"></i></a>
+                <a href="javascript:;" class="index-plant index-navsel left"><i class="block"></i></a>
+                <a href="my.html" class="index-my left"><i class="block"></i></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <!-- 下雪 -->
+        <!-- <script src="js/snow-plugin.js" type="text/javascript"></script> -->
+        <script type="text/javascript">
+            // 下雪
+            /*$(function(){
+                $(".snow-canvas").snow();
+            });*/
+            
+            $.ajax({
+                url: 'json/a.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data){
+                    var flowernum = data.user.length;
+                    // 0~25：seed.png，25~50：sprouting.png，50~75：bloom.png，75~99：result.png，100：mature.png
+                    if (flowernum == 0) {
+                        $(".plant-noplant").removeClass("none");
+                        $(".plant-main").addClass("none");
+                        $(".plant-bar").addClass("none");
+                    } else {
+                        $(".plant-noplant").addClass("none");
+                        $(".plant-main").removeClass("none");
+                        $(".plant-bar").removeClass("none");
+
+                        for (var i = 0; i < flowernum; i++) {
+                            $(".plant-wrapper").append("<div class='swiper-slide plant-slide left position-rel'><img src='" + data.user[i].img + "' alt='' class='plant-pic position-abs' /></div>")
+                        };
+
+                        // 判断当前植物是否死亡 
+                        function plantDie (plantType, sideNum) {
+                            if (plantType == 1) {
+                                // 隐藏正常大背景
+                                $(".plant-wrap").addClass("plant-wrapone");
+                                // 隐藏正常植物小背景
+                                $(".plant-main").addClass("plant-plantbg");
+                                // 展示植物死亡背景
+                                $(".plant-wrap").removeClass("plant-plantdie");
+                                // 展示分页器
+                                $(".plant-fyq").removeClass("none");
+                            } else if (plantType == 2) {
+                                $(".plant-wrap").removeClass("plant-wrapone");
+                                $(".plant-main").removeClass("plant-plantbg");
+                                $(".plant-wrap").addClass("plant-plantdie");
+                                $(".plant-fyq").addClass("none");
+                                // 添加去商店按钮
+                                $(".plant-slide").eq(sideNum).append("<a href='' class='plant-goshopbut position-abs thirty-two weight-bold text-center'>去商店</a>");
+                            }
+                        }
+                        plantDie(data.user[0].type, 0);
+
+                        var mySwiper = new Swiper ('.swiper-container', {
+                            direction: 'horizontal',
+                            loop: false,
+                            
+                            // 如果需要分页器
+                            pagination: '.swiper-pagination',
+                            onSlideChangeEnd: function(swiper){
+                                // 获取当前展示种子的序号
+                                var currentIndex = swiper.activeIndex;
+                                // 滑到下一个slide时切换背景图
+                                // if (currentIndex % 2 == 1) {
+                                //     $(".plant-wrap").removeClass("plant-wrapone").addClass("plant-wraptwo");
+                                // } else {
+                                //     $(".plant-wrap").removeClass("plant-wraptwo").addClass("plant-wrapone");
+                                // }
+                                barData(currentIndex);
+
+                                // 切换种子页面时立即删除当前正在执行浇水等一些特效
+                                function deleteAnmi (actClass, animClass) {
+                                    $(actClass).removeClass(animClass);
+                                }
+                                deleteAnmi(".plant-wateract", "plant-wateranim");
+                                deleteAnmi(".plant-feract", "plant-feranim");
+                                deleteAnmi(".plant-insectact", "plant-insectanim");
+                                deleteAnmi(".plant-weedact", "plant-weedanim");
+
+                                // 判断当前植物是否死亡
+                                plantDie(data.user[currentIndex].type, currentIndex);
+                            }
+                        })
+                        function barData (indexNum) {
+                            // 重置进度条
+                            $(".plant-barincon").css({
+                                "height" : 0
+                            })
+                            // 动画展示当前进度条高度
+                            $(".plant-barincon").stop(true).animate({
+                                "height" : data.user[indexNum].value + "%"
+                            }, 1500);
+                            // 判断是否有百分百成熟的树
+                            if (data.user[indexNum].value == 100 && !$(".plant-slide").eq(indexNum).children().hasClass("plant-fruit")) {
+                                $(".plant-slide").eq(indexNum).append("<div class='plant-fruit position-abs'></div>");
+                                // 给彩蛋绑定可点击事件
+                                fruitClick();
+                            }
+                        }
+                        barData(0); // 默认初始进度高度获取的是0即第一种子的进度条高度
+                    }
+                }
+            })
+
+            // 点击成熟的彩蛋弹窗
+            function fruitClick () {
+                $(".plant-fruit").click(function (e) {
+                    $(".plant-cropalebg").removeClass("none");
+                    lockscroll(); // 锁定滚动条
+                });
+            }
+            
+            function closeAlert (butEve, alertEve) {
+                $(butEve).click(function() {
+                    relievescroll();
+                    $(alertEve).addClass("none");
+                });
+            }
+            // 关闭任务弹窗
+            // closeAlert(".plant-tabut", ".plant-taskalebg");
+            // 关闭果实收货弹窗
+            closeAlert(".plant-cropclose", ".plant-cropalebg");
+            // 收到土地弹窗
+            closeAlert(".plant-landclose", ".plant-landalebg");
+            closeAlert(".plant-landbut", ".plant-landalebg");
+
+            // freeBlank(".plant-taskalebg", ".plant-taskale", "none");
+            freeBlank(".plant-cropalebg", ".plant-cropale", "none");
+            freeBlank(".plant-landalebg", ".plant-landale", "none");
+
+            // 当任务图标为0时隐藏
+            var taskNum = parseInt($(".plant-task span").html());
+            if (taskNum == 0) {
+                $(".plant-task span").addClass("none");
+            }
+
+            function anmiEffect (butEve, actClass, animClass) {
+                $(butEve).click(function (e) {
+                    // 重置
+                    $(actClass).removeClass(animClass);
+                    $(actClass).addClass(animClass);
+                    setTimeout(function () {
+                        $(actClass).removeClass(animClass);
+                    }, 2000)
+                });
+            }
+            // 浇水特效
+            anmiEffect(".plant-water", ".plant-wateract", "plant-wateranim");
+            // 施肥特效
+            anmiEffect(".plant-fertilize", ".plant-feract", "plant-feranim");
+            // 除虫特效
+            anmiEffect(".plant-insect", ".plant-insectact", "plant-insectanim");
+            // 除草特效
+            anmiEffect(".plant-weed", ".plant-weedact", "plant-weedanim");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "user": [{
+        "img": "images/demoimages/index-sunsprout.gif",
+        "type": 1,
+        "value": 35
+    }, {
+        "img": "images/demoimages/index-potseed.png",
+        "type": 2,
+        "value": 13
+
+    }, {
+        "img": "images/demoimages/index-sunresult.gif",
+        "type": 1,
+        "value": 80
+
+    }]
+}

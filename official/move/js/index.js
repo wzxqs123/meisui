@@ -83,12 +83,12 @@ var navListCon = [{
     "listItemSrc": ["region-agent.html", "2", "3", "4", "5", "6", "7"]
 }, {
     "name": "合伙人计划",
-    "listComs": ["合伙人计划", "成功经验分享", "商务合作"],
-    "listItemSrc": ["partner-plan.html", "success-share.html", "business-cooperation.html"]
+    "listComs": ["合伙人计划", "商务合作"],
+    "listItemSrc": ["partner-plan.html", "business-cooperation.html"]
 }, {
     "name": "关于我们",
-    "listComs": ["企业简介", "公司历程", "联系我们"],
-    "listItemSrc": ["company-profile.html", "company-history.html", "contact-us.html"]
+    "listComs": ["企业简介", "联系我们"],
+    "listItemSrc": ["company-profile.html", "contact-us.html"]
 }]
 // 点击微信图标
 function clickWechat (wxPic, codePic) {

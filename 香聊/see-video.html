@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>小视频</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #f9f4f5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="see-v-wrap">
+            <div class="pubtit bg-white clearfix">
+                <h2 class="text-center thirty-two">蔷薇</h2>
+                <a href="" class="pubreturn left"></a>
+                <a href="" class="pubinfo right">
+                    <img src="images/demoimages/pic1.png" alt="" />
+                </a>
+            </div>
+            <!-- 视频 -->
+            <div class="see-v-list position-rel">
+                
+            </div>
+            <div class="see-v-operate bg-white">
+                <div class="see-p-lick left">
+                    <div class="clearfix">
+                        <i class="left"></i>
+                        <span class="index-pink left">6</span>
+                    </div>
+                </div>
+                <div class="see-p-nolick left">
+                    <div class="clearfix">
+                        <i class="left"></i>
+                        <span class="index-pink left">6620</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 弹窗提示 -->
+            <div class="prompt-alertbg position-fix none">
+                <div class="prompt-alert text-center bg-white position-abs">
+                    <h2 class="weight-bold thirty-two">提示</h2>
+                    <p class="three">十个字十个字十个生活似火</p>
+                    <a href="javascript:;" class="block white thirty-two">确定</a>
+                </div>
+            </div>
+
+            <!-- 导航 -->
+            <div class="nav bg-white clearfix position-fix">
+                <a href="" class="index-sel left"></a>
+                <a href="" class="pic-nosel left"></a>
+                <a href="" class="video-nosel left"></a>
+                <a href="" class="my-nosel left"></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/ckplayer.js" type="text/javascript"></script>
+        <script>
+
+            // 点赞
+            function zanNum (divEve) {
+                $(divEve).click(function() {
+                    var num = parseInt($(this).children("").children("span").html());
+                    num++;
+                    $(this).children("").children("span").html(num)
+                });
+            }
+            zanNum(".see-p-lick");
+            zanNum(".see-p-nolick");
+
+            var pmHeight = $(window).height();
+            var pmWidth = window.screen.width;
+            var operateH = 188 * pmWidth / 750;
+            $(".see-v-list").height(pmHeight - operateH);
+
+            
+
+            var videoObject = {
+                container : '.see-v-list',//“#”代表容器的ID，“.”或“”代表容器的class
+                variable : 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+                poster : 'images/demoimages/pic14.png',//封面图片
+                autoplay: false,//自动播放
+                mobileCkControls: true,//是否在移动端（包括ios）环境中显示控制栏
+                video : 'http://img.ksbbs.com/asset/Mon_1703/d0897b4e9ddd9a5.mp4'//视频地址
+            };
+            var player = new ckplayer(videoObject);
+            
+        </script>
+    </body>
+</html>

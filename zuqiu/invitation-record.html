@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>邀请记录</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/zepto.mdater.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="invit-r-wrap position-rel">
+            <div class="invit-r-layer">
+                <form action="" class="invit-r-head bg-white">
+                    <div class="invit-r-times clearfix text-center">
+                        <input type="text" class="invit-r-start left twenty-six text-center" placeholder="开始时间" readonly="readonly" />
+                        <input type="text" class="invit-r-end left twenty-six text-center" placeholder="结束时间" readonly="readonly" />
+                        <button type="submit" class="invit-r-query thirty white left"> 查询</button>
+                    </div>
+                    <div class="invit-r-total clearfix">
+                        <div class="invit-r-zjf text-center left">
+                            <span class="block weight-bold">2068</span>
+                            <em class="block nine twenty-four">邀请用户总积分</em>
+                        </div>
+                        <div class="invit-r-zyjf text-center left">
+                            <span class="block weight-bold">2068</span>
+                            <em class="block nine twenty-four">总赢积分</em>
+                        </div>
+                        <div class="invit-r-zsjf text-center right">
+                            <span class="block weight-bold">2068</span>
+                            <em class="block nine twenty-four">总输积分</em>
+                        </div>
+                    </div>
+                    <div class="invit-r-take clearfix">
+                        <div class="invit-r-jfls text-center left">
+                            <span class="block weight-bold">2068</span>
+                            <em class="block nine twenty-four">竞猜积分流水</em>
+                        </div>
+                        <div class="invit-r-ccb text-center left">
+                            <span class="block weight-bold">2068</span>
+                            <em class="block nine twenty-four">抽成比</em>
+                        </div>
+                        <div class="invit-r-yqrs text-center right">
+                            <span class="block weight-bold">2068</span>
+                            <em class="block nine twenty-four">邀请人数</em>
+                        </div>
+                    </div>
+                </form>
+                <ul class="invit-r-list bg-white">
+                    <li class="invit-r-item clearfix">
+                        <div class="invit-r-itemcom left thirty weight-bold">成功邀请张学友</div>
+                        <div class="invit-r-succ thirty weight-bold right index-greencolor">成功邀请</div>
+                        <span class="invit-r-stream weight-bold right index-greencolor thirty-two">2083273</span>
+                    </li>
+                    <li class="invit-r-item clearfix">
+                        <div class="invit-r-itemcom left thirty weight-bold">成功邀请张学友</div>
+                        <div class="invit-r-succ thirty weight-bold right index-greencolor">成功邀请</div>
+                        <span class="invit-r-stream weight-bold right index-greencolor thirty-two">2083273</span>
+                    </li>
+                </ul>
+            </div>
+            <footer class="invit-r-foot text-center six twenty-six">
+                <div class="invit-r-tip clearfix"><em class="weight-bold">温馨提示：</em>提现请联系官方客服</div>
+                <div class="invit-r-contact">微信:0000000&nbsp&nbspQQ:0000000</div>
+            </footer>
+        </div>
+        <script src="js/zepto.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/zepto.mdater.js" type="text/javascript"></script>
+        <script src="js/ajax.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 列表最后一项虚线删除处理
+            var lastitem = $(".invit-r-item").size() - 1;
+            $(".invit-r-item").eq(lastitem).css({
+                "border-bottom" : "none"
+            });
+
+            // 时间选择
+            $('.invit-r-start').mdater({
+                minDate : new Date(1970, 0, 1)
+            });
+            $('.invit-r-end').mdater({
+                minDate : new Date(1970, 0, 1)
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>登录</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sign-i-wrap position-rel">
+            <!-- <div class="headtit clearfix">
+                <h2 class="thirty-two white text-center">登录</h2>
+                <a href="" class="left"></a>
+            </div> -->
+            <!-- 登录弹窗 -->
+            <form class="sign-alertbg" action="">
+                <div class="sign-alertcon bg-white">
+                    <!-- 关闭按钮 -->
+                    <!-- <span class="sign-close position-abs"></span> -->
+                    <!-- <div class="sign-dotted"></div>
+                    <div class="sign-tit text-center index-brown bg-white weight-bold">请先登录</div> -->
+                    <div class="sign-pholayer">
+                        <input type="number" placeholder="请输入手机号" class="thirty-two index-brown block" />
+                    </div>
+                    <div class="sign-passlayer">
+                        <input type="password" placeholder="请输入登录密码" class="thirty-two index-brown block" />
+                    </div>
+
+                    <button type="button" class="sign-but text-center thirty-two block">登录</button>
+                    
+                    <div class="sign-i-option clearfix">
+                        <a href="" class="sign-i-forgetpw text-center left twenty-six font-orange">注册账号</a>
+                        <a href="" class="sign-i-forgetpw text-center right twenty-six font-orange">忘记密码</a>
+                    </div>
+                    <!-- <div class="sign-third twenty-four text-center clearfix">
+                        <a href="" class="sign-qq left three">
+                            <div></div>
+                            <span class="block">QQ登录</span>
+                        </a>
+                        <a href="" class="sign-wechat left three">
+                            <div></div>
+                            <span class="block">微信登录</span>
+                        </a>
+                    </div> -->
+                    
+                </div>
+            </form>
+            <div class="sign-i-foot my-nocontact twenty-six index-brown text-center position-abs">
+                <span class="block">如有问题请联系客服</span>
+                <em class="block">QQ:98373774&nbsp&nbsp&nbsp微信:273447775</em>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            // 点击登录
+            var conAir = /^[\s]*$/;
+            var nonEmpty = /^[\S]*$/;
+            $(".sign-but").click(function (e) {
+                $(".sign-pholayer input").blur();
+                $(".sign-passlayer input").blur();
+                var formFocus = [0, 0];
+                var phoneCon = $(".sign-pholayer input").val(),
+                    passCon = $(".sign-passlayer input").val();
+                // 判断手机格式是否正确且不为空
+                if (phoneReg.test(phoneCon) && !conAir.test(phoneCon)) {
+                    // 手机格式正确且不为空
+                    formFocus[0] = 1;
+                    $(".sign-pholayer input").removeClass("sign-infoerror");
+                } else {
+                    // 手机格式错误
+                    formFocus[0] = 0;
+                    $(".sign-pholayer input").addClass("sign-infoerror");
+                    $(".sign-pholayer input").val("");
+                    $(".sign-pholayer input").attr({
+                        "placeholder" : "请输入正确的手机号"
+                    });
+                }
+                
+                if (!conAir.test(passCon) && nonEmpty.test(passCon)) {
+                    // 密码不为为空
+                    if (passCon.length > 6 && passCon.length < 20) {
+                        // 正确密码格式
+                        formFocus[1] = 1;
+                        $(".sign-passlayer input").removeClass("sign-infoerror");
+                    } else {
+                        formFocus[1] = 0;
+                        $(".sign-passlayer input").addClass("sign-infoerror");
+                        $(".sign-passlayer input").val("");
+                        $(".sign-passlayer input").attr({
+                            "placeholder" : "密码长度为6~20位"
+                        });
+                    }
+                } else {
+                    // 验证码为空
+                    formFocus[1] = 0;
+                    $(".sign-passlayer input").addClass("sign-infoerror");
+                    $(".sign-passlayer input").val("");
+                    $(".sign-passlayer input").attr({
+                        "placeholder" : "密码不能为空"
+                    });
+                }
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    // 这里提交数据，验证手机号码与验证码是否正确
+                    console.log(phoneCon, passCon);
+                }
+            })
+        </script>
+    </body>
+</html>

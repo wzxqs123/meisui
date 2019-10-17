@@ -176,7 +176,7 @@ input::-webkit-inner-spin-button {
 }
 .index-itemleftword, 
 .index-itemrightword em {
-  height: 3.57rem;
+  min-height: 3.57rem;
 }
 .index-itemleftword, 
 .index-itemrightword em {
@@ -556,7 +556,8 @@ input::-webkit-inner-spin-button {
   font-size: 0.72rem;
 }
 /*公司历程*/
-.company-h-content {
+.company-h-content, 
+.contact-u-content {
   padding: 2.68rem 4.7% 4.64rem 4.7%;
 }
 .company-h-proword {
@@ -813,6 +814,14 @@ input::-webkit-inner-spin-button {
 }
 .live-t-advantage {
   padding-bottom: 5.71rem;
+}
+.live-t-terrace p {
+  padding-bottom: 0.36rem;
+  line-height: 1.5rem;
+}
+.live-t-terrace p img {
+  display: block;
+  width: 100%;
 }
 /*区级代理*/
 .region-a-content {

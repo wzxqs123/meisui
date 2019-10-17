@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>明细</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background: #f9f4f5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="det-wrap position-rel">
+            <!-- 标题部分 -->
+            <div class="pubtit bg-white clearfix">
+                <h2 class="text-center thirty-two">明细</h2>
+                <a href="" class="pubreturn left"></a>
+            </div>
+            <div class="det-hascon three">
+                <div class="det-nav twenty-six text-center clearfix">
+                    <span class="det-pink left position-rel"><em class="position-abs"></em>消费记录</span>
+                    <span class="left position-rel"><em class="position-abs none"></em>充值记录</span>
+                </div>
+                <div class="det-listcon thirty">
+                    <ul class="det-consume bg-white">
+                        <li class="clearfix">
+                            <span class="left">车模的照片</span>
+                            <em class="right">-600钻</em>
+                        </li>
+                        <li class="clearfix">
+                            <span class="left">车模的照片</span>
+                            <em class="right">-600钻</em>
+                        </li>
+                    </ul>
+                    <ul class="det-recharge bg-white none">
+                        <li class="clearfix">
+                            <span class="left">微信充值</span>
+                            <em class="det-pink right">+600钻</em>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="det-nonecon position-fix text-center nine twenty-six none">您还没明细记录哦</div> -->
+            <!-- 温馨提示 -->
+            <div class="det-prompt twenty-four nine text-center">温馨提示：如果您在支付种遇到问题，请及时联系<br />官方客服 QQ：00990000 微信：1234445</div>
+            <!-- 导航 -->
+            <div class="nav bg-white clearfix position-fix">
+                <a href="" class="index-sel left"></a>
+                <a href="" class="pic-nosel left"></a>
+                <a href="" class="video-nosel left"></a>
+                <a href="" class="my-nosel left"></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            function lastLi (liEve) {
+                var liNum = $(liEve).size();
+                $(liEve).eq(liNum - 1).css({
+                    "box-shadow" : "0 0 0 0 #e6e6e6"
+                })
+            }
+            lastLi(".det-consume li");
+            lastLi(".det-recharge li");
+
+            $(".det-nav").on('click', 'span', function (e) {
+                var _this = $(this),
+                    liIndex = $(this).index();
+                _this.addClass("det-pink");
+                _this.siblings("span").removeClass("det-pink");
+                _this.children("em").removeClass("none");
+                _this.siblings("span").children("em").addClass("none");
+                $(".det-listcon ul").eq(liIndex).removeClass("none");
+                $(".det-listcon ul").eq(liIndex).siblings().addClass("none");
+            });
+
+            var pmHeight = $(window).height();
+            var pmWidth = window.screen.width;
+            var operateH = 296 * pmWidth / 750;
+            var conHeight = pmHeight - operateH;
+            $(".det-hascon").css({
+                "min-height" : conHeight + "px"
+            });
+
+            /*$.ajax({
+                url: '',
+                type: 'get',
+                dataType: "json",
+                success: function (data) {
+                    // consumeInfo消费信息记录长度，rechargeInfo充值信息长度
+                    var consumeInfo = data.user.length,
+                        rechargeInfo = data.user.length;
+                    if (consumeInfo == 0 && rechargeInfo == 0) {
+                        $(".det-nonecon").removeClass("none");
+                        $(".det-hascon").addClass("none");
+                        $(".det-prompt").css({
+                            "position" : "fixed",
+                            "bottom" : "4.29rem",
+                            "left" : "0"
+                        })
+                    } else {
+                        $(".det-prompt").css({
+                            "position" : "relative",
+                            "bottom" : "0",
+                            "left" : "0"
+                        })
+                        // 循环列表信息
+                        console.log(1)
+                    }
+                }
+            })*/
+            
+        </script>
+    </body>
+</html>

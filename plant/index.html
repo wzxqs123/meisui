@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #55e0f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="index-wrap position-rel">
+            <!-- <div class="headtit clearfix">
+                <h2 class="thirty-two white text-center">我的</h2>
+                <a href="" class="left"></a>
+            </div>
+            <a href="" class="index-returnxl block twenty-six white">返回香聊</a> -->
+            <!-- 头部导航 -->
+            <div class="index-head clearfix">
+                <!-- 需要“新”图标时删除i标签的none类 -->
+                <a href="my.html" class="index-depot left position-rel"><i class="position-abs none"></i></a>
+                <a href="shop-mall.html" class="index-shop left position-rel"><i class="position-abs none"></i></a>
+                <a href="explain.html" class="index-explain left position-rel"><i class="position-abs none"></i></a>
+            </div>
+            <!-- 实时动态 -->
+            <div class="index-realtime">
+                <div id="index-realcon" class="index-realcon">
+                    <ul id="index-trelist" class="index-trelist">
+                        <li>
+                            <span class="index-brown block">恭喜手机 1570592**** 用户收获了---</span>
+                            <em class="block weight-bold font-orange">向日葵太阳电热器</em>
+                        </li>
+                        <li>
+                            <span class="index-brown block">恭喜手机 1570592**** 用户收获了---</span>
+                            <em class="block weight-bold font-orange">向日葵太阳电热器</em>
+                        </li>
+                        <li>
+                            <span class="index-brown block">恭喜手机 1570592**** 用户收获了---</span>
+                            <em class="block weight-bold font-orange">向日葵太阳电热器</em>
+                        </li>
+                        <li>
+                            <span class="index-brown block">恭喜手机 1570592**** 用户收获了---</span>
+                            <em class="block weight-bold font-orange">向日葵太阳电热器</em>
+                        </li>
+                        <li>
+                            <span class="index-brown block">恭喜手机 1570592**** 用户收获了---</span>
+                            <em class="block weight-bold font-orange">向日葵太阳电热器</em>
+                        </li>
+                        <li>
+                            <span class="index-brown block">恭喜手机 1570592**** 用户收获了---</span>
+                            <em class="block weight-bold font-orange">向日葵太阳电热器</em>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 今日报价 -->
+            <!-- <div class="index-offer index-brown">
+                <div class="index-offtit twenty-four weight-bold clearfix">
+                    <span class="left">市场</span>
+                    <span class="left">最新成交价</span>
+                </div>
+                <div class="index-offcon">
+                    <div id="index-offlist" class="index-offlist">
+                        <Ul id="index-offul" class="index-offul">
+                            <li class="index-offli weight-bold clearfix">
+                                <span class="left">火币Pro</span>
+                                <span class="left">¥5544.00\¥6500.00</span>
+                            </li>
+                            <li class="index-offli weight-bold clearfix">
+                                <span class="left">火币Pro</span>
+                                <span class="left">¥5544.00\¥6500.00</span>
+                            </li>
+                            <li class="index-offli weight-bold clearfix">
+                                <span class="left">火币Pro</span>
+                                <span class="left">¥5544.00\¥6500.00</span>
+                            </li>
+                            <li class="index-offli weight-bold clearfix">
+                                <span class="left">火币Pro</span>
+                                <span class="left">¥5544.00\¥6500.00</span>
+                            </li>
+                        </Ul>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 底部导航 -->
+            <div class="index-footnav plant-footnav clearfix position-abs">
+                <a href="javascript:;" class="index-home index-navsel left"><i class="block"></i></a>
+                <a href="plant.html" class="index-plant left"><i class="block"></i></a>
+                <a href="my.html" class="index-my left"><i class="block"></i></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 实时动态滚动
+            realtimeScroll("index-realcon", "#index-realcon", "#index-trelist", 1, 50);
+            function realtimeScroll (idEve, outerlayer, inlayer, speed, intervaltime) {
+                // 全服获奖榜模块滚动
+                var luckMain = document.getElementById(idEve);
+                var luckSpeed = speed;
+                var luckScroll = setInterval(function (){
+                    if (luckMain.scrollTop + $(outerlayer).height() >= $(inlayer).height() - 2) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollTop += luckSpeed;
+                            // 滚动到底部时重新滚动
+                            luckMain.scrollTop = 0;
+                            realtimeScroll("index-realcon", "#index-realcon", "#index-trelist", 1, 50);
+                        }, 1500)
+                    } else if(luckMain.scrollTop + $(outerlayer).height() < $(inlayer).height() - 2 && luckMain.scrollTop == 0) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollTop += luckSpeed;
+                            realtimeScroll("index-realcon", "#index-realcon", "#index-trelist", 1, 50);
+                        }, 1500)
+                    } else {
+                        luckMain.scrollTop += luckSpeed;
+                    }
+                }, intervaltime);
+            }
+
+            // 今日报价背景色
+            $(".index-offli").each(function (i) {
+                if (i % 2 == 1) {
+                    $(this).css({
+                        "background-color" : "rgba(255, 255, 255, 0)"
+                    })
+                }
+            })
+
+            // 滚动条自动下滑一些距离
+            var scrollHeight = 120 * window.screen.width / 750;
+            $('body,html').stop(true).animate({
+                "scrollTop" : scrollHeight + "px"
+            },500);
+            // 今日报价滚动
+            /*offerScroll("index-offlist", "#index-offlist", "#index-offul", 1, 50);
+            function offerScroll (idEve, outerlayer, inlayer, speed, intervaltime) {
+                // 全服获奖榜模块滚动
+                var luckMain = document.getElementById(idEve);
+                var luckSpeed = speed;
+                var luckScroll = setInterval(function (){
+                    if (luckMain.scrollTop + $(outerlayer).height() >= $(inlayer).height() - 2) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollTop += luckSpeed;
+                            // 滚动到底部时重新滚动
+                            luckMain.scrollTop = 0;
+                            offerScroll("index-offlist", "#index-offlist", "#index-offul", 1, 50);
+                        }, 1500)
+                    } else if(luckMain.scrollTop + $(outerlayer).height() < $(inlayer).height() - 2 && luckMain.scrollTop == 0) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollTop += luckSpeed;
+                            offerScroll("index-offlist", "#index-offlist", "#index-offul", 1, 50);
+                        }, 1500)
+                    } else {
+                        luckMain.scrollTop += luckSpeed;
+                    }
+                }, intervaltime);
+            }*/
+        </script>
+    </body>
+</html>

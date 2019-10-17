@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>注册</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pubtit bg-white clearfix">
+            <h2 class="text-center thirty-two">注册</h2>
+            <a href="" class="pubreturn left"></a>
+        </div>
+        <form class="register-t-wrap sign-i-wrap three" action="">
+            <!-- 标题部分 -->
+            <div>
+                <div class="register-t-word register-t-wordtwo">
+                    <input type="number" class="register-o-phone block thirty" placeholder="请输入手机号码" />
+                </div>
+                <button type="button" class="register-o-but register-t-but thirty white text-center block">下一步</button>
+            </div>
+        </form>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            $(".register-o-phone").on('input', function (e) {
+                var _this = $(this);
+                var phoneNum = _this.val();
+                if (phoneReg.test(phoneNum)) {
+                    $(".register-t-but").removeClass("register-o-but");
+                } else {
+                    $(".register-t-but").addClass("register-o-but");
+                }
+            });
+            $(".register-t-but").click(function (e) {
+                var _this = $(this);
+                if (!_this.hasClass("register-o-but")) {
+                    // 这里传手机号致服务端
+                    console.log($(".register-o-phone").val())
+                }
+            });
+        </script>
+    </body>
+</html>

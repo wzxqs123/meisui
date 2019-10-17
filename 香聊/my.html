@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/mobileSelect.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #f9f4f5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="my-wrap">
+            <header class="my-head position-rel">
+                <!-- 封面未上传 -->
+                <div class="my-nocover">
+                    <input type="file" class="block" />
+                </div>
+                <!-- 已上传封面 -->
+                <div class="my-cover none">
+                    <img src="images/demoimages/pic15.png" alt="" class="block img" />
+                </div>
+                <!-- 头像 -->
+                <div class="my-headpic position-abs clearfix">
+                    <div class="my-headimg left position-rel">
+                        <img src="images/demoimages/pic16.png" alt="" class="block" />
+                        <input type="file" class="position-abs" />
+                    </div>
+                    <div class="my-edit left">
+                        <a href="" class="twenty-six white block">香聊爸爸爸</a>
+                        <span class="white block">ID:1234567</span>
+                    </div>
+                </div>
+            </header>
+            <div class="my-peonum text-center bg-white clearfix">
+                <div class="my-fans left">
+                    <span class="index-pink block weight-bold">2200</span>
+                    <em class="twenty-six block">粉丝</em>
+                </div>
+                <div class="my-follow left">
+                    <span class="index-pink block weight-bold">2200</span>
+                    <em class="twenty-six block">关注</em>
+                </div>
+            </div>
+            <!-- 标签 -->
+            <!-- <a href="" class="my-label bg-white three block clearfix">
+                <span class="thirty left">标签</span>
+                <i class="right"></i> -->
+                <!-- 蓝色添加.my-labelblue,红色添加.my-labelred,黄色添加.my-labelyellow -->
+                <!-- <em class="my-labelblue twenty-six right">大长腿</em>
+                <em class="my-labelred twenty-six right">露大奶</em>
+                <em class="my-labelyellow twenty-six right">白皙</em>
+            </a> -->
+            <div class="my-infolist bg-white">
+                <a href="" class="my-money block clearfix three position-rel">
+                    <span class="thirty left">钱包</span>
+                    <i class="right"></i>
+                    <em class="right index-pink thirty position-abs">2000钻</em>
+                </a>
+                <a href="javascript:;" class="my-age block clearfix three position-rel">
+                    <span class="thirty left">年龄</span>
+                    <i class="right"></i>
+                    <em id="my-agenum" class="right nine thirty position-abs">22</em>
+                </a>
+                <a href="javascript:;" class="my-city block clearfix three position-rel">
+                    <span class="thirty left">城市</span>
+                    <i class="right"></i>
+                    <em id="my-cschoice" class="right nine thirty position-abs">福建.厦门</em>
+                </a>
+                <a href="javascript:;" class="my-const block clearfix three position-rel">
+                    <span class="thirty left">星座</span>
+                    <i class="right"></i>
+                    <em id="my-xzchoice" class="right nine thirty position-abs">无</em>
+                </a>
+            </div>
+            <!-- 导航 -->
+            <div class="nav bg-white clearfix position-fix">
+                <a href="" class="index-nosel left"></a>
+                <a href="" class="pic-nosel left"></a>
+                <a href="" class="video-nosel left"></a>
+                <a href="" class="my-sel left"></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/mobileSelect.js" type="text/javascript"></script>
+        <script src="js/my.js" type="text/javascript"></script>
+        <script>
+            // 去除列表最后一项的分割线
+            function lastLi (liEve) {
+                var liNum = $(liEve).size();
+                $(liEve).eq(liNum - 1).css({
+                    "box-shadow" : "0 0 0 0 #e6e6e6"
+                })
+            }
+            lastLi(".my-infolist a");
+            
+            //只有trigger 和 wheels 是必要参数  其他都是选填参数
+            var mobileSelect1 = new MobileSelect({
+                trigger: '#my-xzchoice',
+                title: '星座选择',
+                wheels: [
+                            {data: constArr}
+                        ],
+                position:[0] //初始化定位 打开时默认选中的哪个  如果不填默认为0
+            });
+            var mobileSelect2 = new MobileSelect({
+                trigger: '#my-agenum',
+                title: '年龄选择',
+                wheels: [
+                            {data: ageArr}
+                        ],
+                position:[17]
+            });
+            var mobileSelect3 = new MobileSelect({
+                trigger: '#my-cschoice',
+                title: '城市选择',
+                wheels: [
+                            {data: cityArr}
+                        ]
+            });
+        </script>
+    </body>
+</html>

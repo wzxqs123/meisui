@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>充值</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="recha-wrap position-rel">
+            <header class="recha-head text-center position-rel">
+                <i class="recha-intpic block"></i>
+                <span class="recha-intnum block white weight-bold">2200</span>
+                <em class="recha-int block twenty-four">积分</em>
+                <a href="detailed.html" class="recha-details white position-abs">明细</a>
+            </header>
+            <ul class="recha-list bg-white">
+                <li class="recha-item thirty clearfix">
+                    <span class="left weight-bold">6积分</span>
+                    <div class="right text-center deta-red weight-bold">￥<em>6</em></div>
+                </li>
+                <li class="recha-item thirty clearfix">
+                    <span class="left weight-bold">25积分</span>
+                    <div class="right text-center deta-red weight-bold">￥<em>25</em></div>
+                </li>
+            </ul>
+            <footer class="sign-i-foot text-center nine twenty-four position-abs">
+                <div class="sign-i-tip clearfix">提现请联系官方客服</div>
+                <div class="sign-i-contact">微信:0000000&nbsp&nbspQQ:0000000</div>
+            </footer>
+            <!-- 弹窗 -->
+            <div class="recha-alertbg position-fix none">
+                <div class="recha-alert bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="recha-close position-abs"></span>
+                    <!-- 金额 -->
+                    <div class="recha-money text-center weight-bold">￥<em>6</em></div>
+                    <a href="" class="recha-zfbpay block thirty white text-center">支付宝支付</a>
+                    <a href="" class="recha-wxpay block thirty white text-center">微信支付</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 列表最后一项虚线删除处理
+            function itemNum (items) {
+                var xflistsitem = $(items).size() - 1;
+                $(items).eq(xflistsitem).css({
+                    "border-bottom" : "none"
+                });
+            }
+            itemNum(".recha-item");
+
+            // 点击金钱按钮
+            $(".recha-item div").click(function() {
+                var moneyNum = parseInt($(this).children("em").html());
+                $(".recha-alertbg").removeClass("none");
+                $(".recha-money em").html(moneyNum);
+                lockscroll(); // 锁定滚动条，不让底部标签可以移动
+            });
+            $(".recha-close").click(function() {
+                $(".recha-alertbg").addClass("none");
+                relievescroll(); // 解除锁定
+            });
+            freeBlank(".recha-alertbg", ".recha-alert", "none");
+        </script>
+    </body>
+</html>

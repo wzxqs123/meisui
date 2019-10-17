@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
         <meta charset="utf-8">
         <title>东城互娱-首页</title>
@@ -14,9 +14,11 @@
         <!-- 头部导航 -->
         <div class="index-p-nav position-fix">
             <div class="index-p-navcon clearfix">
-                <a class="index-p-navlogo left" href="index.html">
-                    <img src="images/demoimages/index-p-navlogo.png" alt="" />
-                </a>
+                <h1 class="index-p-navlogo left">
+                    <a class="block" href="index.html">
+                        <img class="block" src="images/demoimages/index-p-navlogo.png" alt="" />
+                    </a>
+                </h1>
                 <div class="index-p-navcom right text-center fourteen clearfix">
                     <!-- 当前页添加index-p-navitemsel -->
                     <div class="index-p-navitem index-p-navitemsel left position-rel">
@@ -28,20 +30,23 @@
                     <div class="index-p-navitem left position-rel">
                         <a href="new.html" class="index-p-navword block">新闻中心</a>
                     </div>
-                    <div class="index-p-navitem left position-rel">
+                    <!-- <div class="index-p-navitem left position-rel">
                         <a href="operate-centre.html" class="index-p-navword block">城市运营中心</a>
-                    </div>
+                    </div> -->
                     <div class="index-p-navitem left position-rel">
                         <a href="cooperate-plan.html" class="index-p-navword block">合伙人计划</a>
                     </div>
                     <div class="index-p-navitem left position-rel">
+                        <a href="company-profile.html" class="index-p-navword block">关于我们</a>
+                    </div>
+                    <!-- <div class="index-p-navitem left position-rel">
                         <a href="javascript:;" class="index-p-navword block">关于我们<i></i></a>
                         <ul class="index-p-navul bg-white position-abs none">
                             <li class="index-p-navli text-center"><a class="block" href="company-profile.html">企业简介</a></li>
                             <li class="index-p-navli text-center"><a class="block" href="company-profile.html">企业文化</a></li>
                             <li class="index-p-navli text-center"><a class="block" href="company-history.html">公司历程</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="index-p-navitem left position-rel">
                         <a href="contact-outs.html" class="index-p-navword block">联系我们</a>
                     </div>
@@ -88,53 +93,53 @@
                                 <a class="block" href="live-terrace.html">
                                     <img class="block img" src="images/demoimages/pic2.png" alt="" />
                                 </a>
-                                <div class="index-p-mask position-abs index-p-masknone">
+                                <a href="live-terrace.html" class="index-p-mask position-abs index-p-masknone">
                                     <div class="index-p-maskcon">
                                         <em class="block"></em>
                                         <h3 class="white">直播平台</h3>
                                         <span class="block white twelve">Live broadcast platform</span>
                                         <em class="block"></em>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li class="index-p-intrritem position-rel">
                                 <a class="block" href="artist-cultivate.html">
                                     <img class="block img" src="images/demoimages/pic3.png" alt="" />
                                 </a>
-                                <div class="index-p-mask position-abs index-p-masknone">
+                                <a href="artist-cultivate.html" class="index-p-mask position-abs index-p-masknone">
                                     <div class="index-p-maskcon">
                                         <em class="block"></em>
                                         <h3 class="white">艺人养成</h3>
                                         <span class="block white twelve">Artists develop</span>
                                         <em class="block"></em>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li class="index-p-intrritem position-rel">
                                 <a class="block" href="movies-estate.html">
                                     <img class="block img" src="images/demoimages/pic4.png" alt="" />
                                 </a>
-                                <div class="index-p-mask position-abs index-p-masknone">
+                                <a href="movies-estate.html" class="index-p-mask position-abs index-p-masknone">
                                     <div class="index-p-maskcon">
                                         <em class="block"></em>
                                         <h3 class="white">影视产业</h3>
                                         <span class="block white twelve">showbiz industry</span>
                                         <em class="block"></em>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li class="index-p-intrritem position-rel">
                                 <a class="block" href="mcn.html">
                                     <img class="block img" src="images/demoimages/pic5.png" alt="" />
                                 </a>
-                                <div class="index-p-mask position-abs index-p-masknone">
+                                <a href="mcn.html" class="index-p-mask position-abs index-p-masknone">
                                     <div class="index-p-maskcon">
                                         <em class="block"></em>
                                         <h3 class="white">MCN</h3>
                                         <span class="block white twelve">Multi-Channel Network</span>
                                         <em class="block"></em>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -447,30 +452,39 @@
                 mySwiper.destroy();
             }
 
+            var indexPicitem = parseInt($(".index-p-picitem").size() / 2); // 获取艺人展示图片的个数
             var mySwipers = new Swiper ('.swiper-containers', {
                 direction: 'horizontal', // 横向切换选项
+                initialSlide: indexPicitem,
                 watchSlidesProgress: true, // 开启这个参数来计算每个slide的progress(进度、进程)
                 slidesPerView: 'auto', // 设置slider容器能够同时显示的slides数量
                 loopedSlides: 5, // 在loop模式下使用slidesPerview:'auto'，还需使用该参数设置所要用到的loop个数
                 centeredSlides: true, // 设定为true时，active slide会居中，而不是默认状态下的居左。
-                loop: true, // 循环模式选项
+                loop: false, // 循环模式选项
+                effect : 'coverflow',
+
                 slideToClickedSlide: true, // 点击slide是否要过渡到这个slide
                 autoplay: { // 自动切换
                     delay: 5000, // 自动切换的时间间隔，单位ms
                     stopOnLastSlide: false, // 换到最后一个slide时是否停止自动切换
                     disableOnInteraction: false, // 用户操作swiper之后，是否禁止autoplay
                 },
-                on: {
+                /*on: {
                     progress: function(progress) { // 回调函数，当Swiper的progress被改变时执行。
+                        // console.log(progress)
                         for (i = 0; i < this.slides.length; i++) {
                             var slide = this.slides.eq(i);
+                            // console.log(this.slides.length)
+                            // console.log(slide)
                             var slideProgress = this.slides[i].progress;
+                            // console.log(Math.abs(slideProgress))
 
                             if (Math.abs(slideProgress) > 1) {
                                 var modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
                             }
                             translate = slideProgress * modify * 33.6 + 'px';
                             scale = 1 - Math.abs(slideProgress) / 10;
+                            console.log(scale)
                             zIndex = 99 - Math.abs(Math.round(10 * slideProgress));
                             slide.transform('translateX(' + translate + ') scale(' + scale + ')');
                             slide.css('zIndex', zIndex);
@@ -486,7 +500,7 @@
                             slide.transition(transition);
                         }
                     }
-                }
+                }*/
             })
 
             // 底部表单提交
@@ -556,13 +570,22 @@
                     var textareaCon = $("#index-p-textarea").val();
                     // 此处将信息上传服务端
                     console.log(nameDel, emailDel, phoneNum, textareaCon);
+                    resetInput("#index-p-name", "index-p-inputerror");
+                    resetInput("#index-p-email", "index-p-inputerror");
+                    resetInput("#index-p-number", "index-p-inputerror");
+                    resetInput("#index-p-textarea", "index-p-inputerror");
                     $(".index-p-alerttip").html("提交成功");
                     $(".index-p-alerttip").fadeIn(300, function() {
                         $(this).fadeOut(3000);
                     });
                 }
             });
-
+            function resetInput (inputEve, reClass) {
+                $(inputEve).removeClass(reClass);
+                $(inputEve).attr({
+                    "placeholder" : ""
+                });
+            }
         </script>
     </body>
 </html>

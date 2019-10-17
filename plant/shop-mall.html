@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>商城</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #54e0f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="shop-m-wrap">
+            <!-- <div class="headtit clearfix">
+                <h2 class="thirty-two white text-center">商城</h2>
+                <a href="" class="left"></a>
+            </div> -->
+            <div class="shop-m-shop position-rel">
+                <!-- 返回按钮 -->
+                <a href="javascript:history.go(-1)" class="shop-m-return position-abs"></a>
+                <ul class="shop-m-list">
+                    <li class="shop-m-item clearfix">
+                        <div class="shop-m-iteml text-center left position-rel">
+                            <div class="shop-m-picbg position-rel">
+                                <img src="images/demoimages/pic2.png" alt="" class="position-abs" />
+                                <span class="shop-m-price twenty-four weight-bold position-abs">￥<em>100</em></span>
+                            </div>
+                            <a href="javascript:;" class="shop-m-buy weight-bold position-abs">购买</a>
+                        </div>
+                        <ul class="shop-m-itemr twenty-four left">
+                            <li>名称：千年老爱豆子</li>
+                            <li>收获时间：1天</li>
+                            <li class="shop-m-lipad">任务：浇水、施肥、除草除虫、分享</li>
+                            <li class="shop-m-lipad">奖励：种子、实物奖励、虚拟币其中一种</li>
+                        </ul>
+                    </li>
+                    <li class="shop-m-item clearfix">
+                        <div class="shop-m-iteml text-center left position-rel">
+                            <div class="shop-m-picbg position-rel">
+                                <img src="images/demoimages/pic2.png" alt="" class="position-abs" />
+                                <span class="shop-m-price twenty-four weight-bold position-abs">￥<em>100</em></span>
+                            </div>
+                            <a href="javascript:;" class="shop-m-buy weight-bold position-abs">购买</a>
+                        </div>
+                        <ul class="shop-m-itemr twenty-four left">
+                            <li>名称：千年老爱豆子</li>
+                            <li>收获时间：1天</li>
+                            <li class="shop-m-lipad">任务：浇水、施肥、除草除虫、分享</li>
+                            <li class="shop-m-lipad">奖励：种子、实物奖励、虚拟币其中一种</li>
+                        </ul>
+                    </li>
+                    <li class="shop-m-item clearfix">
+                        <div class="shop-m-iteml text-center left position-rel">
+                            <div class="shop-m-picbg position-rel">
+                                <img src="images/demoimages/pic2.png" alt="" class="position-abs" />
+                                <span class="shop-m-price twenty-four weight-bold position-abs">￥<em>100</em></span>
+                            </div>
+                            <a href="javascript:;" class="shop-m-buy weight-bold position-abs">购买</a>
+                        </div>
+                        <ul class="shop-m-itemr twenty-four left">
+                            <li>名称：千年老爱豆子</li>
+                            <li>收获时间：1天</li>
+                            <li class="shop-m-lipad">任务：浇水、施肥、除草除虫、分享</li>
+                            <li class="shop-m-lipad">奖励：种子、实物奖励、虚拟币其中一种</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 购买成功弹窗 -->
+            <div class="shop-m-alertbg position-fix none">
+                <div class="shop-m-alert bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="shop-m-cgclose plant-landclose position-abs"></span>
+                    <h2 class="task-brown thirty weight-bold text-center">购买成功啦</h2>
+                    <p class="task-brown thirty text-center">可以去仓库领取你的<br />种子去种植啦～</p>
+                    <a href="" class="twenty-six block text-center">去仓库</a>
+                </div>
+            </div>
+            <!-- 支付方式 -->
+            <div class="shop-m-paybg position-fix none">
+                <div class="shop-m-pay bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="shop-m-close position-abs"></span>
+                    <div class="shop-m-paymoney text-center font-orange weight-bold">¥<span>50</span></div>
+                    <p class="shop-m-paytips thirty text-center">请选择以下支付方式进行支付</p>
+                    <div class="shop-m-paybut thirty clearfix">
+                        <a href="" class="shop-m-wechat white left">微信支付</a>
+                        <a href="" class="shop-m-zfb white left">支付宝支付</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(".shop-m-buy").click(function(event) {
+                var moneyNum = $(this).siblings(".shop-m-picbg").children("span").children("em").html();
+                $(".shop-m-paymoney").children("span").html(moneyNum);
+                $(".shop-m-paybg").removeClass("none");
+            });
+            
+            // 关闭支付弹窗
+            $(".shop-m-close").click(function (e) {
+                $(".shop-m-paybg").addClass("none");
+                relievescroll();
+            });
+            freeBlank(".shop-m-paybg", ".shop-m-pay", "none");
+
+            
+
+            // 点击空白部分隐藏弹窗
+            freeBlank(".shop-m-alertbg", ".shop-m-alert", "none");
+            // 点击返回或关闭按钮关闭弹窗
+            function alertClose (closeEvt, alertbg) {
+                $(closeEvt).click(function (e) {
+                    $(alertbg).addClass("none");
+                    relievescroll() // 解除锁定
+                });
+            }
+            alertClose(".shop-m-cgclose", ".shop-m-alertbg");
+
+        </script>
+    </body>
+</html>

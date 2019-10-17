@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>任务</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #53cf7b;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="task-wrap">
+            <!-- <div class="headtit clearfix">
+                <h2 class="thirty-two white text-center">任务</h2>
+                <a href="" class="left"></a>
+            </div> -->
+            <div class="task-layer">
+                <div class="task-con">
+                    <ul class="task-list task-brown">
+                        <li class="task-li clearfix">
+                            <div class="task-licon clearfix">
+                                <div class="thirty left">浇水<em class="weight-bold">&nbsp1&nbsp</em>次</div>
+                                <!-- 已完成则添加类task-adder -->
+                                <a href="plant.html" class="task-adder text-center white weight-bold right">已完成</a>
+                            </div>
+                        </li>
+                        <li class="task-li clearfix">
+                            <div class="task-licon clearfix">
+                                <div class="thirty left">施肥<em class="weight-bold">&nbsp1&nbsp</em>次</div>
+                                <a href="plant.html" class="text-center white weight-bold right">前往</a>
+                            </div>
+                        </li>
+                        <li class="task-li clearfix">
+                            <div class="task-licon clearfix">
+                                <div class="thirty left">除虫<em class="weight-bold">&nbsp1&nbsp</em>次</div>
+                                <a href="plant.html" class="text-center white weight-bold right">前往</a>
+                            </div>
+                        </li>
+                        <li class="task-li clearfix">
+                            <div class="task-licon clearfix">
+                                <div class="thirty left">除草<em class="weight-bold">&nbsp1&nbsp</em>次</div>
+                                <a href="plant.html" class="text-center white weight-bold right">前往</a>
+                            </div>
+                        </li>
+                        <li class="task-li clearfix">
+                            <div class="task-licon clearfix">
+                                <div class="thirty left">分享<em class="weight-bold">&nbsp1&nbsp</em>次</div>
+                                <a href="share.html" class="text-center white weight-bold right">前往</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ol class="task-rule task-brown twenty-six">
+                        <li class="weight-bold">任务规则：</li>
+                        <li class="task-rulecon">完成所有任务后，植物成熟，可以收成“彩蛋”。当收成“礼蛋”后，可以开始新的一轮种植。任务每天24:00刷新，若不想等待刷新时间可以通过邀请好友来注册立即刷新。</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- 任务全部完成弹窗 -->
+            <div class="task-alertbg position-fix none">
+                <div class="task-alert bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="task-aleclose shop-m-cgclose plant-landclose position-abs"></span>
+                    <!-- 背景光 -->
+                    <span class="task-light position-abs"></span>
+                    <h2 class="task-alerttit text-center thirty font-orange weight-bold position-abs">恭喜你</h2>
+                    <p class="task-alertcon text-center task-brown weight-bold">果实已成熟</p>
+                    <a href="" class="task-alertbut twenty-four text-center block weight-bold">马上去收获</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 点击空白部分隐藏弹窗
+            freeBlank(".task-alertbg", ".task-alert", "none");
+            // 点击返回或关闭按钮关闭弹窗
+            function alertClose (closeEvt, alertbg) {
+                $(closeEvt).click(function (e) {
+                    $(alertbg).addClass("none");
+                    relievescroll() // 解除锁定
+                });
+            }
+            alertClose(".task-aleclose", ".task-alertbg");
+        </script>
+    </body>
+</html>

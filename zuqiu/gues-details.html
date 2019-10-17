@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>竞猜详情</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gues-c-wrap">
+            <header class="gues-c-head">
+                <div class="give-headcon bg-white clearfix">
+                    <i class="give-gift left"></i>
+                    <span class="thirty left">积分余额:</span>
+                    <em class="give-jfnum left weight-bold">2200.58</em>
+                    <a href="recharge.html" class="gues-c-givebut text-center thirty white right weight-bold">充值</a>
+                </div>
+            </header>
+            <nav class="gues-d-nav twenty-four text-center clearfix">
+                <span class="gues-d-navsel bg-white left">猜胜负</span>
+                <span class="bg-white left">大小球</span>
+                <span class="bg-white left">猜比分</span>
+                <!-- <span class="bg-white left">猜黄牌</span> -->
+                <span class="bg-white left">开球方</span>
+            </nav>
+            <div class="gues-d-layer">
+                <!-- 猜胜负 -->
+                <div class="gues-d-sfblock bg-white position-rel">
+                    <h2 class="gues-d-sftit gues-d-contit thirty weight-bold text-center">请预测胜利方</h2>
+                    <p class="gues-d-contip nine text-center twenty-four">2018-10-12 18:00 开赛</p>
+                    <div class="gues-d-sfcoun gues-d-coun clearfix">
+                        <div class="gues-d-sfcounl gues-d-counl left">
+                            <div class="gues-d-sfpicl gues-d-picl">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-sfgjmzl gues-d-gjmzl thirty text-center">沙特阿拉伯</p>
+                        </div>
+                        <div class="gues-d-sfdraw gues-d-draw left">
+                            <em class="gues-d-vs block"></em>
+                            <p class="gues-d-pj thirty text-center">平局</p>
+                        </div>
+                        <div class="gues-d-sfcounr gues-d-counr left">
+                            <div class="gues-d-sfpicr gues-d-picr">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-sfgjmzr gues-d-gjmzr thirty text-center">澳大利亚</p>
+                        </div>
+                    </div>
+                    <div class="gues-d-choice gues-d-bortop clearfix">
+                        <div class="gues-d-sell text-center left">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>3.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-sfsel gues-d-sfsingle block"></span>
+                        </div>
+                        <div class="gues-d-selz text-center left">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>1.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-sfsingle block"></span>
+                        </div>
+                        <div class="gues-d-selr text-center right">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>2.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-sfsingle block"></span>
+                        </div>
+                    </div>
+                    <!-- 按钮 -->
+                    <div class="gues-d-foot thirty position-abs">
+                        <input class="block text-center" type="number" placeholder="请输入竞猜积分" />
+                        <div class="gues-d-sfsub white text-center">提交竞猜</div>
+                    </div>
+                </div>
+                <!-- 大小球 -->
+                <div class="gues-d-dxqblock bg-white position-rel none">
+                    <h2 class="gues-d-contit thirty weight-bold text-center">请预测总球数大小</h2>
+                    <p class="gues-d-contip nine text-center twenty-four">2018-10-12 18:00 开赛</p>
+                    <div class="gues-d-dxqcoun gues-d-coun clearfix">
+                        <div class="gues-d-counl left">
+                            <div class="gues-d-picl">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzl thirty text-center">沙特阿拉伯</p>
+                        </div>
+                        <div class="gues-d-draw left">
+                            <em class="gues-d-vs block"></em>
+                        </div>
+                        <div class="gues-d-counr left">
+                            <div class="gues-d-picr">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzr thirty text-center">澳大利亚</p>
+                        </div>
+                    </div>
+                    <div class="gues-d-ball clearfix">
+                        <div class="gues-d-ballbig left">
+                            <em class="left thirty weight-bold">大球</em>
+                            <span class="right twenty-four">双方进球总数3个或3个以上</span>
+                        </div>
+                        <div class="gues-d-ballsmall right">
+                            <em class="left thirty weight-bold">小球</em>
+                            <span class="right twenty-four">双方进球总数2个或2个以下</span>
+                        </div>
+                    </div>
+                    <div class="gues-d-choice clearfix">
+                        <div class="gues-d-sell text-center left">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>5.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-dxqsel gues-d-dxqsingle block"></span>
+                        </div>
+                        <div class="gues-d-selr text-center right">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>2.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-dxqsingle block"></span>
+                        </div>
+                    </div>
+                    <!-- 按钮 -->
+                    <div class="gues-d-foot thirty position-abs">
+                        <input class="block text-center" type="number" placeholder="请输入竞猜积分" />
+                        <div class="gues-d-dxqsub white text-center">提交竞猜</div>
+                    </div>
+                </div>
+                <!-- 猜比分 -->
+                <div class="gues-d-cbfblock bg-white position-rel none">
+                    <h2 class="gues-d-contit thirty weight-bold text-center">请预测比分</h2>
+                    <p class="gues-d-contip nine text-center twenty-four">2018-10-12 18:00 开赛</p>
+                    <div class="gues-d-cbfcoun gues-d-coun clearfix">
+                        <div class="gues-d-counl left">
+                            <div class="gues-d-picl">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzl thirty text-center">沙特阿拉伯</p>
+                        </div>
+                        <div class="gues-d-draw left">
+                            <em class="gues-d-vs block"></em>
+                            <p class="gues-d-pj thirty text-center">平局</p>
+                        </div>
+                        <div class="gues-d-counr left">
+                            <div class="gues-d-picr">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzr thirty text-center">澳大利亚</p>
+                        </div>
+                    </div>
+                    <div class="position-rel">
+                        <div class="gues-d-datalist position-rel">
+                            <table class="gues-d-table text-center">
+                                <!-- 表格主体，用于呈现数据 -->
+                                <tbody class="gues-d-tbody twenty-six">
+                                    <tr>
+                                        <td class="weight-bold twenty-four">主胜</td>
+                                        <td class="gues-d-tdsel">
+                                            <span class="twenty-four six block">2:1</span>
+                                            <em class="weight-bold block">2.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">3:1</span>
+                                            <em class="weight-bold block">3.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">3:2</span>
+                                            <em class="weight-bold block">4.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">2:0</span>
+                                            <em class="weight-bold block">5.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">4:1</span>
+                                            <em class="weight-bold block">6.12</em>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weight-bold twenty-four">和局</td>
+                                        <td>
+                                            <span class="twenty-four six block">2:2</span>
+                                            <em class="weight-bold block">2.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">1:1</span>
+                                            <em class="weight-bold block">3.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">0:0</span>
+                                            <em class="weight-bold block">4.12</em>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weight-bold twenty-four">主负</td>
+                                        <td>
+                                            <span class="twenty-four six block">0:2</span>
+                                            <em class="weight-bold block">2.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">0:1</span>
+                                            <em class="weight-bold block">3.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">0:3</span>
+                                            <em class="weight-bold block">5.12</em>
+                                        </td>
+                                        <td>
+                                            <span class="twenty-four six block">0:4</span>
+                                            <em class="weight-bold block">6.12</em>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 左右两边提示箭头 -->
+                        <i class="gues-d-jtleft position-abs"></i>
+                        <i class="gues-d-jtright position-abs"></i>
+                    </div>
+                    <div class="gues-d-jctip twenty-four text-center index-redcolor">点击赔率竞猜</div>
+                    <!-- 按钮 -->
+                    <div class="gues-d-foot thirty position-abs">
+                        <input class="block text-center" type="number" placeholder="请输入竞猜积分" />
+                        <div class="gues-d-cbfsub white text-center">提交竞猜</div>
+                    </div>
+                </div>
+                <!-- 猜黄牌 -->
+                <!-- <div class="gues-d-chpblock bg-white position-rel none">
+                    <h2 class="gues-d-contit thirty weight-bold text-center">请预测黄牌总数量</h2>
+                    <p class="gues-d-contip nine text-center twenty-four">2018-10-12 18:00 开赛</p>
+                    <div class="gues-d-chpcoun gues-d-coun clearfix">
+                        <div class="gues-d-counl left">
+                            <div class="gues-d-picl">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzl thirty text-center">沙特阿拉伯</p>
+                        </div>
+                        <div class="gues-d-draw left">
+                            <em class="gues-d-vs block"></em>
+                        </div>
+                        <div class="gues-d-counr left">
+                            <div class="gues-d-picr">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzr thirty text-center">澳大利亚</p>
+                        </div>
+                    </div>
+                    <div class="gues-d-ycardnum text-center thirty weight-bold clearfix">
+                        <div class="gues-d-ybignum left"><span>大于4</span></div>
+                        <div class="gues-d-ysmallnum right"><span>小于4</span></div>
+                    </div>
+                    <div class="gues-d-choice clearfix">
+                        <div class="gues-d-sell text-center left">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>3.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-chpsel gues-d-chpsingle block"></span>
+                        </div>
+                        <div class="gues-d-selr text-center right">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>7.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-chpsingle block"></span>
+                        </div>
+                    </div>
+                    <div class="gues-d-foot thirty position-abs">
+                        <input class="block text-center" type="number" placeholder="请输入竞猜积分" />
+                        <div class="gues-d-chpsub white text-center">提交竞猜</div>
+                    </div>
+                </div> -->
+                <!-- 开球方 -->
+                <div class="gues-d-kqfblock bg-white position-rel none">
+                    <h2 class="gues-d-contit thirty weight-bold text-center">请预测开球方</h2>
+                    <p class="gues-d-contip nine text-center twenty-four">2018-10-12 18:00 开赛</p>
+                    <div class="gues-d-kqfcoun gues-d-coun clearfix">
+                        <div class="gues-d-counl left">
+                            <div class="gues-d-picl">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzl thirty text-center">沙特阿拉伯</p>
+                        </div>
+                        <div class="gues-d-draw left">
+                            <em class="gues-d-vs block"></em>
+                        </div>
+                        <div class="gues-d-counr left">
+                            <div class="gues-d-picr">
+                                <img class="block img" src="images/demoimages/pic5.png" alt="" />
+                            </div>
+                            <p class="gues-d-gjmzr thirty text-center">澳大利亚</p>
+                        </div>
+                    </div>
+                    <div class="gues-d-choice gues-d-bortop clearfix">
+                        <div class="gues-d-sell text-center left">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>0.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-kqfsel gues-d-kqfsingle block"></span>
+                        </div>
+                        <div class="gues-d-selz text-center left"></div>
+                        <div class="gues-d-selr text-center right">
+                            <em class="block thirty index-redcolor weight-bold">赔率:<strong>8.4</strong></em>
+                            <p class="nine twenty-four">20000人竞猜</p>
+                            <span class="gues-d-kqfsingle block"></span>
+                        </div>
+                    </div>
+                    <!-- 按钮 -->
+                    <div class="gues-d-foot thirty position-abs">
+                        <input class="block text-center" type="number" placeholder="请输入竞猜积分" />
+                        <div class="gues-d-kqfsub white text-center">提交竞猜</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 弹窗 -->
+            <div class="gues-d-pubalebg position-fix none">
+                <div class="gues-d-pubale bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="gues-d-pubclose position-abs"></span>
+                    <h2 class="weight-bold thirty text-center">确认竞猜订单</h2>
+                    <div class="gues-d-pubres thirty">
+                        <div class="gues-d-pubitem clearfix">
+                            <em class="gues-d-jcresult left"></em>
+                            <span class="gues-d-pubcoun left"></span>
+                            <strong class="gues-d-explain deta-red left"></strong>
+                        </div>
+                        <div class="gues-d-pubitem clearfix">
+                            <em class="left">竞猜比分：</em>
+                            <span class="gues-d-pubnum left"></span>
+                        </div>
+                        <div class="gues-d-pubitem clearfix">
+                            <em class="left">当前赔率：</em>
+                            <span class="gues-d-pubodds weight-bold left"></span>
+                        </div>
+                        <div class="gues-d-pubitem clearfix">
+                            <em class="left">竞猜积分：</em>
+                            <span class="gues-d-pubgral weight-bold deta-red left"></span>
+                        </div>
+                    </div>
+                    <p class="gues-d-tips nine twenty-four">最高可返积分：根据用户下注当时的赔率计算好用户赢多少积分；友情提醒：竞猜的赔率可能会有波动，请以下注成功后的赔率为准。</p>
+                    <div class="gues-d-pubbut white thirty text-center">确定</div>
+                </div>
+            </div>
+            <!-- 渐隐弹窗 -->
+            <div class="gues-d-alesuc position-fix text-center thirty weight-bold none"></div>
+            <!-- 提交成功弹窗 -->
+            <div class="gues-d-subsucbg position-fix none">
+                <div class="gues-d-subsuc bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="gues-d-subsucclose position-abs"></span>
+                    <h2 class="gues-d-subsuctit index-greencolor weight-bold">订单提交成功！</h2>
+                    <div class="gues-d-subsuccon position-rel">
+                        <div class="gues-d-qrteams weight-bold clearfix">
+                            <span class="gues-d-qrteaml left">巴塞罗高VS利郎皇马队</span>
+                            <span class="gues-d-qrteamr right">
+                                <strong>巴塞罗那尔</strong>
+                                <em class="deta-red">胜</em>
+                            </span>
+                        </div>
+                        <div class="gues-d-subsuctime twenty-four six">2018-06-14  23:00:00</div>
+                        <div class="gues-d-subsucodds twenty-four six">赔率：<em>3.23</em></div>
+                        <div class="gues-d-subsucinte twenty-four six clearfix">
+                            <span class="gues-d-jcjf left">本次竞猜积分：<em class="weight-bold three">20000</em></span>
+                            <span class="gues-d-zghd right">最高可返积分：<em class="weight-bold three">2123.20</em></span>
+                        </div>
+                    </div>
+                    <p class="gues-d-subsuctip twenty-four six">您的订单需要系统确认，请在“竞猜记录”留意订单状态。</p>
+                    <div class="gues-d-subsucbut position-abs text-center thirty-two clearfix">
+                        <a href="my.html" class="gues-d-cancel three left">查看竞猜记录</a>
+                        <span class="gues-d-continue left index-greencolor">继续竞猜</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 切换
+            $(".gues-d-nav").on('click', 'span', function () {
+                var indexNum = $(this).index();
+                $(this).addClass("gues-d-navsel");
+                $(this).siblings("span").removeClass("gues-d-navsel");
+                $(".gues-d-layer").children("div").eq(indexNum).removeClass("none");
+                $(".gues-d-layer").children("div").eq(indexNum).siblings("div").addClass("none");
+            });
+
+            // 确定table的总长度
+            var tablethSize = null;
+            var tablethone = $(".gues-d-tbody tr").eq(0).children("td").size(),
+                tablethtwo = $(".gues-d-tbody tr").eq(1).children("td").size(),
+                tableththree = $(".gues-d-tbody tr").eq(2).children("td").size();
+            if (tablethone >= tablethtwo) {
+                if (tablethone >= tableththree) {
+                    tablethSize = tablethone;
+                } else {
+                    tablethSize = tableththree;
+                }
+            } else {
+                if (tablethtwo >= tableththree) {
+                    tablethSize = tablethtwo;
+                } else {
+                    tablethSize = tableththree;
+                }
+            }
+            var tableWidth = tablethSize * 4.29;
+            $(".gues-d-table").css({
+                "width" : tableWidth + "rem"
+            });
+            // 猜比分选择
+            $(".gues-d-tbody td").click(function (e) {
+                if ($(this).index() != 0) {
+                    $(".gues-d-tbody td").removeClass("gues-d-tdsel");
+                    $(this).addClass("gues-d-tdsel");
+                    console.log($(this).index());
+                }
+            });
+
+            // 点击向左向右箭头滑动表格
+            var pmWidth = null;
+            if (screen.width > 750) {
+                pmWidth = 750;
+            } else {
+                pmWidth = screen.width;
+            }
+            var screenBase = 28 * pmWidth / 750;
+            var maxSlid = (tableWidth - 21.07) * screenBase + 5; //21.07为gues-d-datalist标签的宽度21.07rem
+            var slidDist = 0,
+                slidSpeed = 40;
+            function slidTable (buts, nums) {
+                $(buts).click(function (e) {
+                    var speedNum = slidSpeed * nums;
+                    slidDist += speedNum;
+                    if (slidDist > maxSlid) {
+                        slidDist = maxSlid;
+                    }
+                    if (slidDist < 0) {
+                        slidDist = 0;
+                    }
+                    $(".gues-d-datalist").scrollLeft(slidDist);
+                });
+            }
+            slidTable(".gues-d-jtleft", -1);
+            slidTable(".gues-d-jtright", 1);
+
+            // 选择，打钩
+            function choice (butEve, selBut) {
+                $(butEve).click(function () {
+                    var _this = $(this);
+                    _this.addClass(selBut);
+                    _this.parent("div").siblings().children(butEve).removeClass(selBut);
+                });
+            }
+            choice(".gues-d-sfsingle", "gues-d-sfsel");
+            choice(".gues-d-dxqsingle", "gues-d-dxqsel");
+            // choice(".gues-d-chpsingle", "gues-d-chpsel");
+            choice(".gues-d-kqfsingle", "gues-d-kqfsel");
+
+            var leftTeam = $(".gues-d-gjmzl").html(),
+                rightTeam = $(".gues-d-gjmzr").html();
+            var playStype = null; // 押注哪种类型或猜比分中的具体比分情况
+            function infoSub (subEve, sel, counEve, cons, explains) {
+                $(subEve).click(function (e) {
+                    var _thiss = $(this);
+                    var inputTab = _thiss.siblings("input");
+                    inputTab.blur();
+                    var phoneCon = inputTab.val(), // 输入框的值
+                        jfNum = $(".give-jfnum").html() - 0; // 个人积分总值
+                    if (phoneCon == "" || phoneCon == 0) {
+                        inputTab.addClass("infoerror");
+                        inputTab.val("");
+                        inputTab.attr({
+                            "placeholder" : "竞猜积分不能为空"
+                        });
+                    } else if (phoneCon > jfNum) {
+                        inputTab.addClass("infoerror");
+                        inputTab.val("");
+                        inputTab.attr({
+                            "placeholder" : "您的积分不足"
+                        });
+                    } else {
+                        $(".gues-d-explain").html(""); // 重置该标签内容
+
+                        // 是否为猜比分模块
+                        if (_thiss.hasClass("gues-d-cbfsub")) {
+                            $(".gues-d-pubale").css({
+                                "height" : "21.25rem"
+                            });
+                            $(".gues-d-pubitem").eq(1).removeClass("none");
+                            $(".gues-d-jcresult").html("");
+                            $(".gues-d-pubcoun").addClass("block weight-bold deta-red").removeClass("left");
+
+                            var cbfodds = $(".gues-d-tdsel").children("em").html() - 0; // 获取赔率，并number类型
+                            var selScore = $(".gues-d-tdsel").children("span").html(); // 选择赔率所对应的竞猜比分
+                            
+                            $(".gues-d-pubcoun").html(leftTeam + "&nbspVS&nbsp" + rightTeam);
+                            $(".gues-d-pubnum").html(selScore);
+                            $(".gues-d-pubodds").html(cbfodds);
+                            $(".gues-d-pubgral").html(parseInt(phoneCon));
+
+                            playStype = selScore; // 将具体比分情况赋值给$(".gues-d-qrteamr stong")
+                        } else {
+                            $(".gues-d-pubale").css({
+                                "height" : "19.39rem"
+                            });
+                            $(".gues-d-pubitem").eq(1).addClass("none");
+                            $(".gues-d-jcresult").html("竞猜结果：");
+                            $(".gues-d-pubcoun").removeClass("block weight-bold deta-red").addClass("left");
+
+                            var selIndexNum = $(sel).parent().index(); // 选中哪一个
+                            console.log(selIndexNum)
+                            var selRanks = $(counEve).children("div").eq(selIndexNum).children(cons).html(); // 获取到选中的那个国家的名字
+                            var oddsNum = $(sel).siblings("em").children("strong").html(); // 获取赔率
+                            console.log(selRanks, oddsNum, parseInt(phoneCon));
+
+                            $(".gues-d-pubcoun").html(selRanks);
+                            $(".gues-d-explain").html(explains);
+                            $(".gues-d-pubodds").html(oddsNum);
+                            $(".gues-d-pubgral").html(parseInt(phoneCon));
+
+                            playStype = selRanks; // 将具体押注类型情况赋值给$(".gues-d-qrteamr stong")
+                        }
+                        // 显示弹窗
+                        $(".gues-d-pubalebg").removeClass("none");
+                    }
+                });
+            }
+            infoSub(".gues-d-sfsub", ".gues-d-sfsel", ".gues-d-sfcoun", "p", "胜");
+            infoSub(".gues-d-dxqsub", ".gues-d-dxqsel", ".gues-d-ball", "em");
+            // infoSub(".gues-d-chpsub", ".gues-d-chpsel", ".gues-d-ycardnum", "span");
+            infoSub(".gues-d-kqfsub", ".gues-d-kqfsel", ".gues-d-kqfcoun", "p", "开球");
+            infoSub(".gues-d-cbfsub"); // 猜比分
+
+            // 点击确定按钮
+            $(".gues-d-pubbut").click(function (e) {
+                // 这里发送数据给服务端
+
+                relievescroll(); // 解除锁定
+                $(".gues-d-pubalebg").addClass("none");
+                
+                var jcbool = 0; // 从服务端返回一个值判断其是否竞猜成功，这里暂且规定0为成功，1为失败
+                if (jcbool == 0) {
+                    var vanishNum = parseInt($(".gues-d-pubgral").html()); // 消耗的积分
+                    var startNum = $(".give-jfnum").html() - 0; // 竞猜成功之前的积分总额
+                    $(".give-jfnum").html(startNum - vanishNum); // 竞猜成功之后的积分总额
+
+                    var stakeInt = $(".gues-d-pubgral").html() - 0, // 押注的积分并转化成number类型
+                        stakeodds = $(".gues-d-pubodds").html() - 0, // 押注的赔率并转化成number类型
+                        compensated = (stakeInt * stakeodds).toFixed(2); // 最高获赔
+                    console.log(stakeInt, stakeodds, compensated);
+                    $(".gues-d-qrteaml").html(leftTeam + "&nbspVS&nbsp" + rightTeam);
+                    $(".gues-d-jcjf em").html(stakeInt);
+                    $(".gues-d-subsucodds em").html(stakeodds);
+                    $(".gues-d-zghd em").html(compensated);
+                    $(".gues-d-qrteamr strong").html(playStype);
+                    $(".gues-d-qrteamr em").html($(".gues-d-explain").html());
+                    $(".gues-d-subsucbg").removeClass("none");
+                } else {
+                    // 报错渐隐弹窗
+                    $(".gues-d-alesuc").html("竞猜失败");
+                    $(".gues-d-alesuc").fadeIn(300, function () {
+                        // 报错渐隐弹窗淡出
+                        $(this).fadeOut(3300);
+                    })
+                }
+                
+            });
+            // 关闭弹窗
+            function closeAlert (butEve, bgEve) {
+                $(butEve).click(function () {
+                    $(bgEve).addClass("none");
+                    relievescroll(); // 解除锁定
+                });
+            }
+            closeAlert(".gues-d-pubclose", ".gues-d-pubalebg");
+            closeAlert(".gues-d-subsucclose", ".gues-d-subsucbg");
+            closeAlert(".gues-d-continue", ".gues-d-subsucbg");
+            freeBlank(".gues-d-pubalebg", ".gues-d-pubale", "none");
+            freeBlank(".gues-d-subsucbg", ".gues-d-subsuc", "none");
+        </script>
+    </body>
+</html>

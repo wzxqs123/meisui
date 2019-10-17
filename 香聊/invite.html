@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>邀请</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #f9f4f5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="invite-wrap">
+            <!-- 标题部分 -->
+            <div class="pubtit bg-white clearfix">
+                <h2 class="text-center thirty-two">邀请</h2>
+                <a href="" class="pubreturn left"></a>
+            </div>
+            <p class="invite-tips three"><em class="weight-bold">分享奖励：</em><br />长按图片保存，并且发送给好友。<br />若成功邀请好友登录即可获得60钻奖励。</p>
+            <div class="swiper-containers invite-con">
+                <div class="swiper-wrapper clearfix">
+                    <div href="" class="swiper-slide invite-slide left position-rel">
+                        <img src="images/demoimages/pic18.png" alt="" class="invite-bigpic position-abs" />
+                        <!-- 二维码 -->
+                        <a href="javascript:;" class="invite-codeone position-abs">
+                            <img src="images/demoimages/pic19.png" alt="" class="block img" />
+                        </a>
+                    </div>
+                    <div href="" class="swiper-slide invite-slide left position-rel">
+                        <img src="images/demoimages/pic17.png" alt="" class="invite-bigpic position-abs" />
+                        <!-- 二维码 -->
+                        <a href="" class="invite-codetwo position-abs">
+                            <img src="images/demoimages/pic19.png" alt="" class="block img" />
+                        </a>
+                    </div>
+                    <div href="" class="swiper-slide invite-slide left position-rel">
+                        <img src="images/demoimages/pic21.png" alt="" class="invite-bigpic position-abs" />
+                        <!-- 二维码 -->
+                        <a href="" class="invite-codeone position-abs">
+                            <img src="images/demoimages/pic19.png" alt="" class="block img" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 导航 -->
+            <div class="nav bg-white clearfix position-fix">
+                <a href="" class="index-nosel left"></a>
+                <a href="" class="pic-nosel left"></a>
+                <a href="" class="video-nosel left"></a>
+                <a href="" class="my-sel left"></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <!-- 滑动 -->
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script>
+            var artDlist = parseInt($(".invite-slide").size() / 2);
+            var mySwi = new Swiper ('.swiper-containers', {
+                direction: 'horizontal',
+                loop: true,
+                // autoplay: 5000,
+                autoplayDisableOnInteraction : false,
+                initialSlide : artDlist,
+                centeredSlides : true,
+                freeMode : false,
+                slidesPerView : "auto"
+            })
+        </script>
+    </body>
+</html>

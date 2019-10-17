@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>赠送</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="give-wrap">
+            <header class="give-head">
+                <div class="give-headcon bg-white clearfix">
+                    <i class="give-gift left"></i>
+                    <span class="thirty left">积分:</span>
+                    <em class="give-jfnum left weight-bold">2200</em>
+                    <div class="give-givebut text-center thirty white right weight-bold">赠送</div>
+                </div>
+            </header>
+            <nav class="deta-nav clearfix text-center twenty-four bg-white">
+                <div class="deta-titsel left position-rel"><span class="position-abs"></span>赠送记录</div>
+                <div class="left position-rel"><span class="position-abs"></span>收礼记录</div>
+            </nav>
+            <div class="give-layer">
+                <ul class="give-zslists bg-white">
+                    <li class="give-zsitem clearfix">
+                        <div class="give-zsiteml left">
+                            <div class="give-zsitemcom clearfix">
+                                <span class="weight-bold thirty left">李达逵</span>
+                                <em class="twenty-four left">ID:000000</em>
+                            </div>
+                            <p class="six twenty-four">2018.02.13 18:23:12</p>
+                        </div>
+                        <div class="give-zsitemr thirty deta-red right weight-bold clearfix">
+                            <em class="left">积分</em>
+                            <span class="left">-200</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="give-sllists bg-white none">
+                    <li class="give-slitem clearfix">
+                        <div class="give-sliteml left">
+                            <div class="give-slitemcom clearfix">
+                                <span class="weight-bold thirty left">李达逵</span>
+                                <em class="twenty-four left">ID:000000</em>
+                            </div>
+                            <p class="six twenty-four">2018.02.13 18:23:12</p>
+                        </div>
+                        <div class="give-slitemr thirty index-greencolor right weight-bold clearfix">
+                            <em class="left">积分</em>
+                            <span class="left">+200</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="give-alertbg position-fix none">
+                <!-- 赠送信息 -->
+                <form action="" class="give-zsinfo thirty text-center bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="give-close position-abs"></span>
+                    <h2 class="weight-bold">赠送信息</h2>
+                    <input class="give-intnum block text-center" type="number" placeholder="请输入积分" />
+                    <input class="give-intid block text-center" type="number" placeholder="请输入赠送人ID" />
+                    <button type="button" class="give-zsbut white block">赠送</button>
+                </form>
+            </div>
+            <!-- 确认提示弹窗 -->
+            <div class="give-tipalebg position-fix none">
+                <div class="give-tipale bg-white position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="give-tipclose position-abs"></span>
+                    <h2 class="give-tiptit index-greencolor weight-bold">积分赠送详细信息</h2>
+                    <div class="give-tipalecon">本次将赠送<em class="give-tipjf weight-bold">1000积分</em>给<span class="give-tipid weight-bold">ID20988700</span>的用户。</div>
+                    <p class="give-notice deta-red">积分一旦赠送，将无法退还！</p>
+                    <div class="give-tipbut position-abs text-center thirty-two clearfix">
+                        <span class="give-tipcancel left">取消</span>
+                        <span class="give-tiptrue left index-greencolor">确认</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 赠送成功弹窗 -->
+            <div class="give-sucalebg position-fix none">
+                <div class="give-sucale bg-white text-center position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="give-succlose position-abs"></span>
+                    <!-- 赠送成功为give-succon，失败或报错为give-failcon -->
+                    <p class="give-succon weight-bold">赠送成功</p>
+                    <div class="give-sucbut thirty white">知道了</div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 列表最后一项虚线删除处理
+            function itemNum (items) {
+                var xflistsitem = $(items).size() - 1;
+                $(items).eq(xflistsitem).css({
+                    "border-bottom" : "none"
+                });
+            }
+            itemNum(".give-zsitem");
+            itemNum(".give-slitem");
+
+            // 点击切换
+            $(".deta-nav").on('click', 'div', function () {
+                var indexNum = $(this).index();
+                $(this).addClass("deta-titsel").siblings("div").removeClass("deta-titsel");
+                $(".give-layer ul").eq(indexNum).removeClass("none");
+                $(".give-layer ul").eq(indexNum).siblings("ul").addClass("none");
+            });
+
+            // 关闭弹窗
+            function closeAlert (butEve, bgEve) {
+                $(butEve).click(function () {
+                    $(bgEve).addClass("none");
+                    relievescroll(); // 解除锁定
+                });
+            }
+            closeAlert(".give-close", ".give-alertbg");
+            closeAlert(".give-tipclose", ".give-tipalebg");
+            closeAlert(".give-tipcancel", ".give-tipalebg");
+            closeAlert(".give-succlose", ".give-sucalebg");
+            closeAlert(".give-sucbut", ".give-sucalebg");
+
+            // 点击空白部分隐藏弹窗
+            freeBlank(".give-alertbg", ".give-zsinfo", "none");
+            freeBlank(".give-sucalebg", ".give-sucale", "none");
+            
+            $(".give-givebut").click(function(event) {
+                $(".give-alertbg").removeClass("none");
+                $(".give-tipalebg").addClass("none");
+                lockscroll(); // 锁定滚动条
+            });
+            // 点击弹窗中的赠送
+            var conAir = /^[\s]*$/;
+            var intJudge = /^[1-9]\d*$/;
+            var intNum = null,
+                intId = null;
+            $(".give-zsbut").click(function (e) {
+                $(".give-intnum").blur();
+                $(".give-intid").blur();
+                var formFocus = [0, 0];
+                intNum = $(".give-intnum").val();
+                intId = $(".give-intid").val();
+                function conEmpty (con, arrtindex, inputEve, errorCon, noIntError) {
+                    if (!conAir.test(con)) {
+                        // formFocus[arrtindex] = 1;
+                        if (intJudge.test(con)) {
+                            formFocus[arrtindex] = 1;
+                        } else {
+                            formFocus[arrtindex] = 0;
+                            $(inputEve).val("");
+                            $(inputEve).addClass("infoerror");
+                            $(inputEve).attr({
+                                "placeholder" : noIntError
+                            })
+                        }
+                    } else {
+                        formFocus[arrtindex] = 0;
+                        $(inputEve).val("");
+                        $(inputEve).addClass("infoerror");
+                        $(inputEve).attr({
+                            "placeholder" : errorCon
+                        })
+                    }
+                }
+                conEmpty(intNum, 0, ".give-intnum", "积分不能为空", "积分不能为小数或0");
+                conEmpty(intId, 1, ".give-intid", "ID不能为空", "ID不能为小数");
+                
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    $(".give-tipjf").html(intNum + "积分");
+                    $(".give-tipid").html("ID" + intId);
+                    $(".give-alertbg").addClass("none");
+                    $(".give-tipalebg").removeClass("none");
+                }
+            });
+
+            // 点击积分赠送详细信息中的确认按钮
+            $(".give-tiptrue").click(function (e) {
+                // 这里提交数据，验证手机号码与验证码是否正确
+                console.log(intNum, intId);
+                $(".give-tipalebg").addClass("none");
+                $(".give-sucalebg").removeClass("none"); // 显示赠送成功弹窗
+
+                $(".give-intnum").val("");
+                $(".give-intid").val("");
+                relievescroll(); // 解除锁定
+            });
+
+        </script>
+    </body>
+</html>

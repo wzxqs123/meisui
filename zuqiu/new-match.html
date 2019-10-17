@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>最新赛事</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="new-m-wrap">
+            <nav class="new-m-nav clearfix text-center twenty-four">
+                <div class="new-m-titsel left position-rel"><span class="position-abs"></span>按时间</div>
+                <div class="left position-rel"><span class="position-abs"></span>按分组</div>
+            </nav>
+            <div class="new-m-layer">
+                <div class="new-m-list">
+                    <ul class="new-m-timelist bg-white">
+                        <li class="new-m-itemone new-m-timeitem position-rel">
+                            <a href="gues-details.html" class="block">
+                                <div class="new-m-timel clearfix">
+                                    <div class="new-m-timecom thirty left weight-bold clearfix">
+                                        <span class="left">马竞</span>
+                                        <i class="left"></i>
+                                        <span class="left">啊森纳</span>
+                                    </div>
+                                </div>
+                                <div class="new-m-timer clearfix">
+                                    <p class="new-m-timetip nine twenty-four left">2018-01-12 18:00 开赛</p>
+                                    <em class="new-m-timejc block right nine twenty-four">已有20人竞猜&nbsp>></em>
+                                </div>
+                            </a>
+                            <!-- 已关注添加类名new-m-followed -->
+                            <span class="new-m-timegz right white weight-bold text-center twenty-six position-abs">关注</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="new-m-list clearfix none">
+                    <div class="new-m-group left">
+                        <div class="new-m-zu new-m-zusel six thirty weight-bold text-center">
+                            <span class="block">A</span>
+                            <em class="block">组</em>
+                        </div>
+                        <div class="new-m-zu six thirty weight-bold text-center">
+                            <span class="block">B</span>
+                            <em class="block">组</em>
+                        </div>
+                        <div class="new-m-zu six thirty weight-bold text-center">
+                            <span class="block">C</span>
+                            <em class="block">组</em>
+                        </div>
+                    </div>
+                    <ul class="new-m-grouplist right bg-white">
+                        <li class="new-m-itemtwo new-m-timeitem position-rel">
+                            <a href="gues-details.html" class="block">
+                                <div class="new-m-timel clearfix">
+                                    <div class="new-m-timecom thirty left weight-bold clearfix">
+                                        <span class="left">马竞</span>
+                                        <i class="left"></i>
+                                        <span class="left">啊森纳</span>
+                                    </div>
+                                </div>
+                                <div class="new-m-timer clearfix">
+                                    <p class="new-m-timetip nine twenty-four left">2018-01-12 18:00 开赛</p>
+                                    <em class="new-m-timejc block right nine twenty-four">已有20人竞猜&nbsp>></em>
+                                </div>
+                            </a>
+                            <!-- 已关注添加类名new-m-followed -->
+                            <span class="new-m-timegz right white weight-bold text-center twenty-six position-abs">关注</span>
+                        </li>
+                        <li class="new-m-itemtwo new-m-timeitem position-rel">
+                            <a href="gues-details.html" class="block">
+                                <div class="new-m-timel clearfix">
+                                    <div class="new-m-timecom thirty left weight-bold clearfix">
+                                        <span class="left">马竞</span>
+                                        <i class="left"></i>
+                                        <span class="left">啊森纳</span>
+                                    </div>
+                                </div>
+                                <div class="new-m-timer clearfix">
+                                    <p class="new-m-timetip nine twenty-four left">2018-01-12 18:00 开赛</p>
+                                    <em class="new-m-timejc block right nine twenty-four">已有20人竞猜&nbsp>></em>
+                                </div>
+                            </a>
+                            <!-- 已关注添加类名new-m-followed -->
+                            <span class="new-m-timegz right white weight-bold text-center twenty-six position-abs">关注</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 列表最后一项虚线删除处理
+            function itemNum (items) {
+                var xflistsitem = $(items).size() - 1;
+                $(items).eq(xflistsitem).css({
+                    "border-bottom" : "none"
+                });
+            }
+            itemNum(".new-m-itemone");
+            itemNum(".new-m-itemtwo");
+            var zuitemNum = $(".new-m-zu").size() - 1;
+            $(".new-m-zu").eq(zuitemNum).css({
+                "box-shadow" : "none"
+            });
+
+            // 点击切换
+            $(".new-m-nav").on('click', 'div', function () {
+                var indexNum = $(this).index();
+                $(this).addClass("new-m-titsel").siblings("div").removeClass("new-m-titsel");
+                $(".new-m-list").eq(indexNum).removeClass("none");
+                $(".new-m-list").eq(indexNum).siblings("div").addClass("none");
+            });
+            // 点击关注按钮
+            function timegz (gzEve, gsClass) {
+                $(gzEve).click(function(event) {
+                    if ($(this).hasClass(gsClass)) {
+                        $(this).removeClass(gsClass);
+                        $(this).html("关注");
+                    } else {
+                        $(this).addClass(gsClass);
+                        $(this).html("已关注");
+                    }
+                    
+                });
+            }
+            timegz(".new-m-timegz", "new-m-followed");
+
+            // 点击分组
+            $(".new-m-group").on('click', '.new-m-zu', function (e) {
+                $(this).addClass("new-m-zusel");
+                $(this).siblings(".new-m-zu").removeClass("new-m-zusel");
+                // 删除当前列表的内容，通过ajax请求新的列表内容，重新绑定关注等事件函数
+                // $(".new-m-grouplist").empty();
+            });
+        </script>
+    </body>
+</html>

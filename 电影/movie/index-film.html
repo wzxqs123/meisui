@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/film.css">
+        <style type="text/css">
+            html, body {
+                background: #f5f1ef;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="index-f-wrap">
+            <header class="index-f-head position-rel">
+                <div class="index-f-headstyle clearfix">
+                    <span class="bg-white left b-four twenty-four position-rel"><i class="index-f-search position-abs"></i>搜索全网</span>
+                    <a class="index-f-bang thirty white left clearfix" href=""><i class="left"></i>榜单</a>
+                </div>
+                <div class="index-f-headinput none">
+                    <input class="left twenty-four" type="text" placeholder="请输入片名或主演名" />
+                    <span class="left thirty white">搜索</span>
+                    <em class="left thirty white">取消</em>
+                </div>
+                <!-- 搜索推荐列表 -->
+                <div class="index-f-searchlists bg-white position-abs none">
+                    <a class="block thirty clearfix" href="">
+                        <span class="three left">仙女归来</span>
+                        <em class="nine right">电影</em>
+                    </a>
+                </div>
+            </header>
+            <nav class="index-f-nav twenty-four text-center clearfix">
+                <a class="index-f-navsel left white" href="">首页</a>
+                <a class="left white" href="">VIP</a>
+                <a class="left white" href="">电影</a>
+                <a class="left white" href="">电视剧</a>
+                <a class="left white" href="">综艺</a>
+                <a class="left white" href="">动漫</a>
+                <a class="left white" href="">鬼片</a>
+            </nav>
+            <!-- 广告位 -->
+            <div class="index-f-advert text-center twenty-six">
+                <a class="block" href=""><marquee class="block" direction="left">魔口99电影网www.mokou99.com魔口99电影网www.mokou99.com</marquee></a>
+            </div>
+            <!-- end -->
+            <div class="index-f-lists bg-white clearfix">
+                <a class="index-f-movie white twenty-four left position-rel" href="">
+                    <span class="position-abs">高清国语</span>
+                    <img class="block img" src="images/demoimages/pic1.png" alt="" />
+                    <em class="position-abs text-center">加勒比海盗2</em>
+                </a>
+            </div>
+            <div class="index-f-lists bg-white clearfix">
+                <div class="index-f-listhead clearfix">
+                    <span class="thirty left">最新动漫</span>
+                    <a class="b-one thirty right clearfix" href="">更多<em class="right">></em></a>
+                </div>
+                <a class="index-f-movie white twenty-four left position-rel" href="">
+                    <span class="position-abs">高清国语</span>
+                    <img class="block img" src="images/demoimages/pic1.png" alt="" />
+                    <em class="position-abs text-center">加勒比海盗2</em>
+                </a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            $(".index-f-headstyle span").click(function() {
+                $(".index-f-headstyle").addClass("none");
+                $(".index-f-headinput").removeClass("none");
+                $(".index-f-searchlists").removeClass("none");
+                $(".index-f-headinput input").focus();
+            });
+            $(".index-f-headinput em").click(function() {
+                $(".index-f-headstyle").removeClass("none");
+                $(".index-f-headinput").addClass("none");
+                $(".index-f-searchlists").addClass("none");
+            });
+
+        </script>
+    </body>
+</html>

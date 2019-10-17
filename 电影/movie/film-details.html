@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>电影二级页面-简介</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/film.css">
+        <style type="text/css">
+            html, body {
+                background: #f5f1ef;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="film-d-wrap">
+            <header class="film-d-head index-f-head position-rel">
+                <div class="film-d-headstyle index-f-headstyle clearfix">
+                    <em class="b-four twenty-four left clearfix">电影<i class="right"></i></em>
+                    <span class="bg-white left b-four twenty-four position-rel"><i class="index-f-search position-abs"></i>搜索全网</span>
+                    <a class="film-d-bang index-f-bang thirty white left clearfix" href=""><i class="left"></i>首页</a>
+                </div>
+                <div class="index-f-headinput none">
+                    <input class="left twenty-four" type="text" placeholder="请输入片名或主演名" />
+                    <span class="left thirty white">搜索</span>
+                    <em class="left thirty white">取消</em>
+                </div>
+                <!-- 搜索推荐列表 -->
+                <div class="index-f-searchlists bg-white position-abs none">
+                    <a class="block thirty clearfix" href="">
+                        <span class="three left">仙女归来</span>
+                        <em class="nine right">电影</em>
+                    </a>
+                </div>
+                <!-- 点击电影出现导航 -->
+                <div class="film-d-headnav position-abs thirty text-center clearfix none">
+                    <a class="left" href="">首页</a>
+                    <a class="left" href="">动漫</a>
+                    <a class="left" href="">电影</a>
+                    <a class="left" href="">VIP</a>
+                    <a class="left" href="">综艺</a>
+                </div>
+            </header>
+            <div class="film-d-crumbs three twenty-four bg-white clearfix">
+                <em class="left">您当前所在的位置：</em>
+                <a class="left" href="">首页</a>
+                <em class="left">&nbsp>&nbsp</em>
+                <a class="left" href="">电影</a>
+                <em class="left">&nbsp>&nbsp</em>
+                <a class="film-d-names left" href="">加勒比海盗2</a>
+            </div>
+            <section class="film-d-sec">
+                <div class="film-d-moviedec bg-white clearfix position-rel">
+                    <div class="film-d-movieimg left position-rel">
+                        <img class="block img" src="images/demoimages/pic1.png" alt="" />
+                        <a class="text-center white twenty-four position-abs" href="">播放</a>
+                    </div>
+                    <div class="film-d-moviecon twenty-four left">
+                        <h2 class="thirty-two">加勒比海报2</h2>
+                        <em class="block">状态：最近更新</em>
+                        <span class="block">主演：于加勒  托马斯 杰克逊</span>
+                        <span class="block">类型：冒险 探索</span>
+                        <span class="block">导演：沃尔玛森</span>
+                        <span class="block">地区：美国</span>
+                    </div>
+                    <strong class="film-d-movielable position-abs"></strong>
+                </div>
+                <div class="film-d-com bg-white">
+                    <div class="film-d-comnav text-center thirty clearfix">
+                        <span class="film-d-comnavsel left">电影集</span>
+                        <span class="left">简介</span>
+                    </div>
+                    <!-- 线路 -->
+                    <div class="film-d-module">
+                        <div class="film-d-palyline">
+                            <p class="nine twenty-four">播放线路>艺播</p>
+                            <div class="film-d-palynum text-center twenty-four clearfix">
+                                <a class="left three" href="">第一部</a>
+                                <a class="left three" href="">第一部</a>
+                                <a class="left three" href="">第一部</a>
+                                <a class="left three" href="">第一部</a>
+                                <a class="left three" href="">第一部</a>
+                                <a class="left three" href="">第一部</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-d-brief none">
+                        <p class="six thirty">各种简介模板素材 免费下载电商素材, 平啊啊UI素材,H5素材.海报背景Banner素材专注png免抠素材帮助2000万设计师提升10倍工作效率,快速设计出精品作品升职加薪奥!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            // 头部导航
+            $(".film-d-headstyle span").click(function() {
+                $(".film-d-headstyle").addClass("none");
+                $(".index-f-headinput").removeClass("none");
+                $(".index-f-searchlists").removeClass("none");
+                $(".film-d-headnav").addClass("none");
+                $(".index-f-headinput input").focus();
+            });
+            $(".index-f-headinput em").click(function() {
+                $(".film-d-headstyle").removeClass("none");
+                $(".index-f-headinput").addClass("none");
+                $(".index-f-searchlists").addClass("none");
+            });
+            $(".film-d-headstyle em").click(function() {
+                if ($(".film-d-headnav").hasClass("none")) {
+                    $(".film-d-headnav").removeClass("none");
+                } else {
+                    $(".film-d-headnav").addClass("none");
+                }
+            });
+
+            // 集数最右标签去除右边距
+            $(".film-d-palynum a").each(function(i) {
+                var filmdBoolean = (i + 1) % 3 == 0;
+                if (filmdBoolean) {
+                    $(this).css({
+                        "marginRight" : "0"
+                    });
+                }
+            });
+
+            // 集数与简介切换
+            $(".film-d-comnav span").click(function (e) {
+                $(this).addClass("film-d-comnavsel");
+                $(this).siblings().removeClass("film-d-comnavsel");
+                var tableNum = $(this).index();
+                if (tableNum == 0) {
+                    $(".film-d-module").removeClass("none");
+                    $(".film-d-brief").addClass("none");
+                } else if(tableNum == 1) {
+                    $(".film-d-module").addClass("none");
+                    $(".film-d-brief").removeClass("none");
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>分享</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #9bf2fa;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="share-wrap position-rel">
+            <a href="javascript:history.go(-1)" class="share-return text-center bg-white twenty-six font-orange position-abs">返回</a>
+            <div class="share-head">
+                <img class="block img" src="images/demoimages/result.png" alt="" />
+            </div>
+            <div class="share-helpbut thirty text-center weight-bold">邀请好友帮忙</div>
+            <div class="share-friend clearfix">
+                <!-- 如果有好友为其助力时div处应该添加share-hasfri类 -->
+                <div class="share-hasfri left">
+                    <!-- 三个头像为固定的，第一个为pic21.png，第二个为pic22.png，第三个为pic23.png，无为pic24.png -->
+                    <img class="block" src="images/demoimages/pic21.png" alt="" />
+                </div>
+                <div class="share-hasfri left">
+                    <img class="block" src="images/demoimages/pic22.png" alt="" />
+                </div>
+                <div class="left">
+                    <img class="block" src="images/demoimages/pic24.png" alt="" />
+                </div>
+            </div>
+            <div class="share-foot clearfix">
+                <div class="share-footl left">
+                    <div class="share-code bg-white">
+                        <img class="block img" src="images/demoimages/pic1.png" alt="" />
+                    </div>
+                    <span class="block twenty-six text-center">扫码加入农场</span>
+                </div>
+                <div class="share-footr left">
+                    <div class="share-names thirty font-orange weight-bold">昵称：大玩家艺术</div>
+                    <div class="share-id thirty font-orange weight-bold">ID：1234567</div>
+                    <p class="twenty-six">养蛙不如养植物，还有机会中大奖！一起发家致富！</p>
+                </div>
+            </div>
+           <!-- 提示 -->
+           <div class="my-fadealert text-center white position-fix none"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var startBool = 0; // 判断该用户是否已经助力过了，这里需要请求一次服务端，这里假设为0是未助力过，1为助力过了
+            $(".share-helpbut").click(function (e) {
+                if (startBool == 0) {
+                    var hasFriNum = $(".share-hasfri").size();
+                    if (hasFriNum == 0) {
+                        $(".share-friend div").eq(0).addClass("share-hasfri");
+                        $(".share-friend div").eq(0).children("img").attr({
+                            "src" : "images/demoimages/pic21.png"
+                        });
+                        startBool = 1;
+                        $(".my-fadealert").fadeIn(300, function () {
+                            $(".my-fadealert").html("助力成功");
+                            $(this).fadeOut(3300);
+                        })
+                    } else if(hasFriNum == 1) {
+                        $(".share-friend div").eq(1).addClass("share-hasfri");
+                        $(".share-friend div").eq(1).children("img").attr({
+                            "src" : "images/demoimages/pic22.png"
+                        });
+                        startBool = 1;
+                        $(".my-fadealert").fadeIn(300, function () {
+                            $(".my-fadealert").html("助力成功");
+                            $(this).fadeOut(3300);
+                        })
+                    } else if(hasFriNum == 2) {
+                        $(".share-friend div").eq(2).addClass("share-hasfri");
+                        $(".share-friend div").eq(2).children("img").attr({
+                            "src" : "images/demoimages/pic23.png"
+                        });
+                        startBool = 1;
+                        $(".my-fadealert").fadeIn(300, function () {
+                            $(".my-fadealert").html("助力成功");
+                            $(this).fadeOut(3300);
+                        })
+                    } else {
+                        $(".my-fadealert").fadeIn(300, function () {
+                            $(".my-fadealert").html("此任务已完成！");
+                            $(this).fadeOut(3300);
+                        })
+                    }
+                } else {
+                    $(".my-fadealert").fadeIn(300, function () {
+                        $(".my-fadealert").html("你已助力过该好友");
+                        $(this).fadeOut(3300);
+                    })
+                }
+            });
+        </script>
+    </body>
+</html>

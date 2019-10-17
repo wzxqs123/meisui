@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "腾祥细潮黑简";
+    src: url("腾祥细潮黑简.eot"); /* IE9 */
+    src: url("腾祥细潮黑简.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("腾祥细潮黑简.woff") format("woff"), /* chrome、firefox */
+    url("腾祥细潮黑简.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("腾祥细潮黑简.svg#腾祥细潮黑简") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

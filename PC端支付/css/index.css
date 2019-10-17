@@ -1,0 +1,1974 @@
+@charset 'utf-8';
+/* CSS reset */
+html{color:#000;background:#fff;font-family:"Microsoft Yahei", tahoma, arial, 宋体;font-size: 14px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong{padding:0;margin:0;font-family:Arial,'Microsoft YaHei';}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+a{text-decoration:none; color:#000; outline:none;}/*此处待添加默认链接颜色*/
+var,em,strong{font-style:normal;}
+address,caption,cite,code,dfn,em,strong,th,var, optgroup{font-style:inherit;font-weight:inherit;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit; font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+body {
+    min-width: 1200px;
+}
+@font-face {
+    font-family: "TXXCHJ";
+    src: url("../font/TXXCHJ.eot"); /* IE9 */
+    src: url("../font/TXXCHJ.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("../font/TXXCHJ.woff") format("woff"), /* chrome、firefox */
+    url("../font/TXXCHJ.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("../font/TXXCHJ.svg#TXXCHJ") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+/*去除type="number"自带的默认样式*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+/*显示*/
+.block {
+    display: block;
+}
+/*隐藏*/
+.none {
+    display: none;
+}
+/*文字居中*/
+.text-center {
+    text-align: center;
+}
+/*相对定位*/
+.position-rel {
+    position: relative;
+}
+/*绝对定位*/
+.position-abs {
+    position: absolute;
+}
+.position-fix {
+    position: fixed;
+}
+/*加粗*/
+.weight-bold {
+    font-weight: bold;
+}
+/*文字缩进2字符*/
+.text-indent {
+    text-indent: 2em;
+}
+.img {
+    width: 100%;
+}
+.bg-white {
+    background-color: #fff;
+}
+.b-one {
+    color: #000;
+}
+.white {
+    color: #fff;
+}
+.red {
+    color: #f00;
+}
+.ccc {
+    color: #ccc;
+}
+.three {
+    color: #333;
+}
+.six {
+    color: #666;
+}
+.nice {
+    color: #999;
+}
+.twelve {
+    font-size: 12px;
+}
+.fourteen {
+    font-size: 14px;
+}
+/*首页*/
+.index-banner .index-falsehints::-webkit-input-placeholder, 
+.applica-i-redprompt::-webkit-input-placeholder, 
+.modify-p-newpw .modify-p-errorpw::-webkit-input-placeholder { /* WebKit browsers */
+    color: #f00;
+}
+.index-banner .index-falsehints:-moz-placeholder, 
+.applica-i-redprompt:-moz-placeholder, 
+.modify-p-newpw .modify-p-errorpw:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #f00;
+}
+.index-banner .index-falsehints::-moz-placeholder, 
+.applica-i-redprompt::-moz-placeholder, 
+.modify-p-newpw .modify-p-errorpw::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #f00;
+}
+.index-banner .index-falsehints:-ms-input-placeholder, 
+.applica-i-redprompt:-ms-input-placeholder, 
+.modify-p-newpw .modify-p-errorpw:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #f00;
+}
+.index-info {
+    height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fafafa;
+}
+.index-infominh, .index-titcon, 
+.index-payment, .index-case, 
+.index-footcom, .index-friendshipcom, 
+.prod-i-sec, .access-d-sec, 
+.about-o-sec, .merchant-i-title, 
+.merchant-i-sec, .modify-p-seccon {
+    width: 1200px;
+    margin: 0 auto;
+}
+.index-infoser {
+    height: 40px;
+    padding-left: 100px;
+    line-height: 40px;
+    font-size: 12px;
+}
+.index-infoser span {
+    margin-right: 25px;
+}
+.index-infodel {
+    padding: 11px 100px 0 0;
+}
+.index-toprsign, .index-toprster {
+    width: 64px;
+    border-right: 1px solid #e6e6e6;
+}
+.index-mybusiness {
+    height: 29px;
+    padding: 0 20px 0 14px;
+    background: url("../images/index-mybusiness.png") 67px center no-repeat;
+    border-right: 1px solid #e6e6e6;
+    cursor: pointer;
+}
+.index-client {
+    padding: 0 10px 0 32px;
+    background: url("../images/index-client.png") 14px center no-repeat;
+}
+.index-mywhite {
+    z-index: 2;
+    top: 0;
+    left: 129px;
+    width: 82px;
+    height: 41px;
+    border-right: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    line-height: 40px;
+    background: #fff url("../images/index-mybusiness.png") 70px center no-repeat;
+}
+.index-mycondel {
+    top: 41px;
+    left: 129px;
+    z-index: 2;
+    width: 149px;
+    height: 220px;
+    padding: 16px 12px 0 12px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+}
+.index-mydl {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.index-mydl dt {
+    margin-right: 14px;
+}
+.index-mydl dt, .index-mydl dt img {
+    width: 42px;
+    height: 42px;
+}
+.index-mydl dt img {
+    border-radius: 50%;
+}
+.index-mydl dd {
+    width: 93px;
+    font-size: 14px;
+}
+.index-mydl dd div {
+    padding-top: 3px;
+    margin-bottom: 3px;
+}
+.index-mydl dd a {
+    color: #e8373d;
+}
+.index-mylists {
+    padding-top: 14px;
+}
+.index-mylists a {
+    font-size: 14px;
+    line-height: 36px;
+}
+.index-banner {
+    width: 100%;
+}
+.index-banimg {
+    width: 100%;
+    height: 500px;
+    background: url("../images/index-banner.png") center top no-repeat;
+}
+.index-register {
+    height: 280px;
+}
+.index-register, .index-login {
+    top: 120px;
+    right: 460px;
+    width: 280px;
+    padding: 20px 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0, 130, 213, 0.2);
+}
+.index-register input, .index-login input {
+    width: 240px;
+    height: 50px;
+    padding: 0 20px 0 20px;
+    margin-bottom: 10px;
+    line-height: 50px;
+    border: 0;
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgba(204, 204, 204, 0.8);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.index-register .index-regcode input {
+    margin-bottom: 0;
+}
+.index-regcode {
+    margin-bottom: 20px;
+}
+.index-banner input::-webkit-input-placeholder, 
+.selfhelp-b-moneyin::-webkit-input-placeholder, 
+.selfhelp-b-pwin::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ccc;
+}
+.index-banner input:-moz-placeholder, 
+.selfhelp-b-moneyin:-moz-placeholder, 
+.selfhelp-b-pwin:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+.index-banner input::-moz-placeholder, 
+.selfhelp-b-moneyin::-moz-placeholder, 
+.selfhelp-b-moneyin::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+.index-banner input:-ms-input-placeholder, 
+.selfhelp-b-moneyin:-ms-input-placeholder, 
+.selfhelp-b-pwin:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ccc;
+}
+.index-regcode div {
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    background-color: #00aaef;
+    line-height: 50px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.index-sign, .index-logaway {
+    width: 280px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 0;
+    background: url("../images/index-sign.png") center center no-repeat;
+    line-height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0, 130, 213, 0.2);
+    outline: none;
+}
+.index-reghas, .index-logsign {
+    font-size: 12px;
+}
+.index-reghas span, .index-logsign span {
+    color: #00aaef;
+    cursor: pointer;
+}
+.index-login {
+    height: 230px;
+}
+.index-login .index-logincode {
+    margin-bottom: 10px;
+}
+.special-s-error {
+    height: 20px;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+.index-title {
+    height: 90px;
+}
+.index-titcon h2, 
+.merchant-i-titlelogo {
+    height: 90px;
+    padding-left: 100px;
+    margin-right: 467px;
+    line-height: 90px;
+    font-size: 20px;
+    color: #00aaef;
+    font-family: "TXXCHJ";
+}
+.index-nav .index-navsel, .index-nav a:hover {
+    color: #00aaef;
+}
+.index-nav {
+    padding-right: 1px;
+}
+.index-nav a {
+    height: 90px;
+    margin-right: 85px;
+    line-height: 90px;
+    font-size: 16px;
+    color: #333;
+}
+.index-paymentbg {
+    height: 200px;
+    box-shadow: 0 20px 50px 0 rgba(222, 222, 222, 0.2);
+}
+.index-payment div {
+    width: 100px;
+    padding: 150px 100px 0;
+    font-size: 16px;
+}
+.index-paymentpc {
+    background: url("../images/index-paymentpc.png") center 30px no-repeat;
+}
+.index-paymentgz {
+    background: url("../images/index-paymentgz.png") center 30px no-repeat;
+}
+.index-paymentyd {
+    background: url("../images/index-paymentyd.png") center 30px no-repeat;
+}
+.index-paymentapp {
+    background: url("../images/index-paymentapp.png") center 30px no-repeat;
+}
+.index-case {
+    min-height: 985px;
+    padding: 105px 0 0 0;
+}
+.index-case h2 {
+    margin-bottom: 34px;
+    font-size: 32px;
+    color: #00aaef;
+}
+.index-casecon {
+    margin-bottom: 102px;
+    font-size: 18px;
+}
+.index-caseexa {
+    padding: 0 80px;
+}
+.index-casedel {
+    width: 220px;
+    padding: 0 20px;
+}
+.index-casepic, .index-casepic img {
+    width: 218px;
+    height: 278px;
+}
+.index-casepic {
+    margin-bottom: 24px;
+    border: 1px solid #ebebeb;
+}
+.index-casename {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+.index-casename, .index-casebrief {
+    padding-left: 10px;
+}
+.index-footcon {
+    background-color: #4f515c;
+}
+.index-footcom {
+    padding: 30px 0 20px 0;
+}
+.index-footcomtop {
+    padding-left: 90px;
+    margin-bottom: 40px;
+}
+.index-about {
+    width: 130px;
+}
+.index-about em {
+    margin-bottom: 17px;
+}
+.index-about a {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.index-footcode {
+    padding: 0 35px;
+}
+.index-footcodeone {
+    margin-left: 45px;
+}
+.index-footcode span {
+    margin-bottom: 20px;
+}
+.index-footcode img {
+    width: 90px;
+    height: 90px;
+}
+.index-footcus {
+    margin-left: 50px;
+}
+.index-footcus span {
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+.index-footcus div {
+    font-size: 28px;
+}
+.index-footcus em {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.index-footcus a {
+    height: 19px;
+    background: url("../images/index-qq.png") 0 center no-repeat;
+}
+.index-footdiploma {
+    padding: 0 256px 0 286px;
+}
+.index-footdiploma img {
+    width: 82px;
+    padding-bottom: 12px;
+    margin-right: 27px;
+}
+.index-footcombot p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.index-friendship {
+    background-color: #434450;
+}
+.index-friendshipcom {
+    line-height: 30px;
+    font-size: 12px;
+}
+.index-friendshipcom a, .index-friendshipcom em {
+    color: rgba(255, 255, 255, 0.5);
+}
+.index-friendshipcom a {
+    padding: 0 9px;
+}
+.index-callser {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 70px;
+    height: 283px;
+}
+.index-callser a, 
+.index-returntop, 
+.index-busicoo {
+    width: 70px;
+    height: 23px;
+    padding-top: 47px;
+    cursor: pointer;
+}
+.index-callser a, .index-busicoo {
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+.index-callser a {
+    background: #4f515c url("../images/index-callser.png") center 15px no-repeat;
+}
+.index-callhover {
+    top: -28px;
+    right: 80px;
+    width: 200px;
+    height: 100px;
+    padding-top: 20px;
+    background: url("../images/index-callhover.png") center center no-repeat;
+    box-shadow: 0 20px 30px rgba(79, 81, 92, 0.1);
+}
+.index-busicoo {
+    background: #4f515c url("../images/index-cooperation.png") center 15px no-repeat;
+}
+.index-returntop {
+    background: #4f515c url("../images/index-top.png") center center no-repeat;
+}
+.index-callhover p, 
+.index-callhover span {
+    margin-bottom: 13px;
+}
+.index-callhover p, 
+.index-callhover span, 
+.index-busicoopic strong {
+    color: #4f515c;
+}
+.index-callhover span {
+    font-size: 20px;
+}
+.index-callhover strong {
+    color: rgba(79, 81, 92, 0.6);
+}
+.index-busicoopic {
+    top: -75px;
+    right: 80px;
+    width: 180px;
+    height: 193px;
+    padding: 17px 10px 0 0;
+    background: url("../images/index-busicoopic.png") center center no-repeat;
+    box-shadow: 0 20px 30px rgba(79, 81, 92, 0.1);
+}
+.index-busicoopic img {
+    width: 150px;
+    margin: 0 auto 10px;
+}
+.index-callser a:hover, 
+.index-busicoo:hover, 
+.index-returntop:hover {
+    background-color: #2f3039;
+}
+.index-regisuc {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+/*小融-登录*/
+.special-s-banimg {
+    width: 100%;
+    height: 570px;
+    background: url(../images/index-banner.jpg) center top no-repeat;
+}
+.special-s-footcon .index-about a, 
+.special-s-footcon .index-footcus em, 
+.special-s-footcon .index-footcombot p {
+    color: rgba(102, 102, 102, 0.5);
+}
+/*产品介绍*/
+.prod-i-sec {
+    padding: 112px 0 145px 0;
+}
+.prod-i-suggest {
+    padding-left: 115px;
+    margin-bottom: 175px;
+}
+.prod-i-suggest img {
+    width: 610px;
+}
+.prod-i-suggest div {
+    width: 325px;
+    padding: 17px 0 0 35px;
+    text-align: right;
+}
+.prod-i-suggest div h2, 
+.prod-i-mode h2, 
+.access-d-flowsheet div h2, 
+.about-o-title, 
+.access-d-technical div h2 {
+    font-size: 32px;
+    color: #00aaef;
+}
+.prod-i-suggest div span, 
+.prod-i-mode p, 
+.access-d-flowsheet div span, 
+.access-d-technical div span {
+    font-size: 18px;
+}
+.prod-i-mode h2 {
+    margin-bottom: 36px;
+}
+.prod-i-mode p {
+    margin-bottom: 85px;
+}
+.prod-i-mode img {
+    width: 988px;
+    margin: 0 auto 58px;
+}
+.prod-i-mode div {
+    padding-left: 225px;
+}
+.prod-i-mode div span {
+    width: 220px;
+    height: 90px;
+    margin: 0 15px;
+}
+.prod-i-zfb {
+    background: url("../images/prod-i-zfb.png") center center no-repeat;
+}
+.prod-i-wx {
+    background: url("../images/prod-i-wx.png") center center no-repeat;
+}
+.prod-i-yl {
+    background: url("../images/prod-i-yl.png") center center no-repeat;
+}
+/*接入文档*/
+.access-d-sec {
+    padding: 92px 0 240px 0;
+}
+.access-d-model {
+    padding-left: 14px;
+    margin-bottom: 225px;
+}
+.access-d-android, 
+.access-d-ios, 
+.access-d-service {
+    width: 167px;
+    padding: 220px 30px 0;
+    margin: 0 82px;
+}
+.access-d-android {
+    background: url("../images/access-d-android.jpg") center 0 no-repeat;
+}
+.access-d-ios {
+    background: url("../images/access-d-ios.jpg") center 0 no-repeat;
+}
+.access-d-service {
+    background: url("../images/access-d-service.jpg") center 0 no-repeat;
+}
+.access-d-android div, 
+.access-d-ios div, 
+.access-d-service div {
+    padding: 50px 0 0 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+.access-d-android span, 
+.access-d-ios span, 
+.access-d-service span {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+.access-d-android .access-d-conlast, 
+.access-d-ios .access-d-conlast, 
+.access-d-service .access-d-conlast {
+    margin-bottom: 50px;
+}
+.access-d-android a, 
+.access-d-ios a, 
+.access-d-service a {
+    width: 158px;
+    height: 48px;
+    border: 1px solid #00aaef;
+    font-size: 18px;
+    color: #00aaef;
+    line-height: 48px;
+    border-radius: 5px;
+}
+.access-d-android a:hover, 
+.access-d-ios a:hover, 
+.access-d-service a:hover {
+    width: 160px;
+    height: 50px;
+    border: 0;
+    color: #fff;
+    line-height: 50px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00d7ff+0,00abef+100 */
+    background: #00d7ff; /* Old browsers */
+    background: -moz-linear-gradient(left, #00d7ff 0%, #00abef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #00d7ff 0%,#00abef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #00d7ff 0%,#00abef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d7ff', endColorstr='#00abef',GradientType=1 ); /* IE6-9 */
+}
+.access-d-flowsheet {
+    padding-left: 110px;
+    margin-bottom: 195px;
+}
+.access-d-flowsheet img {
+    width: 834px;
+}
+.access-d-flowsheet div {
+    width: 138px;
+    padding: 6px 0 0 8px;
+    text-align: right;
+}
+.access-d-technical {
+    padding-left: 110px;
+}
+.access-d-technical img {
+    width: 811px;
+}
+.access-d-technical div {
+    width: 150px;
+    padding-right: 6px;
+    text-align: right;
+}
+/*关于我们*/
+.about-o-banimg {
+    height: 500px;
+    background: url(../images/index-bannertwo.png) center top no-repeat;
+}
+.about-o-sec {
+    padding: 105px 0 130px 0;
+}
+.about-o-title {
+    margin-bottom: 82px;
+}
+.about-o-seccon {
+    padding-left: 32px;
+    margin-bottom: 95px;
+}
+.about-o-subset {
+    width: 150px;
+    margin: 0 67px;
+}
+.about-o-subset em {
+    margin-bottom: 14px;
+    font-size: 18px;
+    color: #333;
+}
+.about-o-subset span {
+    line-height: 30px;
+    font-size: 16px;
+    color: #666;
+}
+/*商户信息*/
+.merchant-i-titlebg {
+    height: 90px;
+    margin-bottom: 20px;
+}
+.merchant-i-personal {
+    padding: 29px 100px 29px 0;
+}
+.merchant-i-personal img {
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+    border-radius: 50%;
+}
+.merchant-i-persname {
+    height: 32px;
+    padding-right: 20px;
+    background: url("../images/order-s-orderall.png") right center no-repeat;
+    line-height: 32px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.merchant-i-persname em {
+    margin-right: 7px;
+}
+.merchant-i-modify {
+    z-index: 2;
+    top: 72px;
+    left: -60px;
+    box-shadow: 0 10px 30px 0 rgba(51, 51, 51, 0.1);
+}
+.merchant-i-modify a {
+    width: 180px;
+    height: 50px;
+    padding-left: 30px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.merchant-i-modify a:hover {
+    background-color: #f2f2f2;
+}
+.merchant-i-sec {
+    padding: 0 100px 0;
+}
+.merchant-i-secleft {
+    margin: 0 20px 60px 0;
+}
+.merchant-i-secleft a, 
+.merchant-i-secleft span {
+    width: 145px;
+    height: 60px;
+    padding-left: 75px;
+    line-height: 60px;
+    font-size: 16px;
+}
+.merchant-i-navsel {
+    background-color: #00aaef;
+    box-shadow: 0 0 15px 4px rgba(0, 170, 239, 0.2);
+}
+.merchant-i-businessgl {
+    background: url("../images/merchant-i-businessgl.png") 47px center no-repeat;
+}
+.merchant-i-bankcard {
+    background: url("../images/merchant-i-bankcard.png") 47px center no-repeat;
+}
+.merchant-i-balance {
+    background: url("../images/merchant-i-balance.png") 47px center no-repeat;
+}
+.merchant-i-appmanage {
+    background: url("../images/merchant-i-appmanage.png") 47px center no-repeat;
+}
+.merchant-i-secright {
+    width: 760px;
+    padding-bottom: 45px;
+}
+.merchant-i-merchant {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.merchant-i-merctitle {
+    width: 730px;
+    height: 60px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 60px;
+}
+.merchant-i-merctitle span {
+    margin-right: 12px;
+    font-size: 16px;
+}
+.merchant-i-merctitle em {
+    font-size: 14px;
+}
+.merchant-i-mercinfo {
+    padding: 36px 30px 0;
+}
+.merchant-i-infocon {
+    margin-bottom: 23px;
+}
+.merchant-i-mernum {
+    margin-bottom: 40px;
+}
+.merchant-i-mernum span {
+    margin-bottom: 10px;
+}
+.merchant-i-blue {
+    color: #00aaef;
+}
+.merchant-i-rsa {
+    margin-bottom: 36px;
+}
+.merchant-i-userrsa {
+    margin-bottom: 17px;
+}
+.merchant-i-userrsa em {
+    cursor: pointer;
+}
+.merchant-i-rsacom {
+    padding: 14px 25px;
+    background-color: #f2f2f2;
+    line-height: 24px;
+    word-break: break-all;
+    word-wrap:break-word;
+}
+.merchant-i-payment {
+    padding: 42px 30px 5px;
+}
+.merchant-i-paymentcon {
+    padding-bottom: 50px;
+}
+.merchant-i-paymenthead {
+    height: 17px;
+    margin-bottom: 30px;
+    line-height: 17px;
+}
+.merchant-i-payprompt {
+    padding-left: 28px;
+    background: url("../images/merchant-i-payment.png") 0 center no-repeat;
+}
+.merchant-i-paymentnum, 
+.merchant-i-paymentcom:hover, 
+.bankcard-m-com:hover, 
+.order-s-listterm:hover {
+    background-color: #f2f2f2;
+}
+.merchant-i-paymentnum span, 
+.merchant-i-paymentcom span {
+    width: 233px;
+    height: 50px;
+    line-height: 50px;
+}
+.merchant-i-paymentcom span, 
+.bankcard-m-com, 
+.order-s-listterm {
+    border-bottom: 1px dashed #e6e6e6;
+}
+.merchant-i-paymentnum .merchant-i-headname, 
+.merchant-i-paymentcom .merchant-i-paymode {
+    width: 171px;
+    padding-left: 62px;
+    text-align: left;
+}
+.merchant-i-wx {
+    width: 18px;
+    height: 51px;
+    margin-right: 21px;
+    background: url("../images/merchant-i-wx.png") center center no-repeat;
+}
+.merchant-i-zfb {
+    width: 22px;
+    height: 51px;
+    margin-right: 21px;
+    background: url("../images/merchant-i-zfb.png") center center no-repeat;
+}
+.merchant-i-yl {
+    width: 22px;
+    height: 51px;
+    margin-right: 21px;
+    background: url("../images/merchant-i-yl.png") center center no-repeat;
+}
+.bankcard-m-head {
+    height: 60px;
+    padding-left: 30px;
+    line-height: 60px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.bankcard-m-head span {
+    margin-right: 12px;
+    font-size: 16px;
+}
+.bankcard-m-con {
+    min-height: 480px;
+    padding: 30px;
+}
+.bankcard-m-nav, 
+.order-s-listtit {
+    background-color: #f2f2f2;
+}
+.bankcard-m-nav, .bankcard-m-com, 
+.order-s-listtit, .order-s-listterm {
+    height: 50px;
+    line-height: 50px;
+}
+.bankcard-m-navhnum, .bankcard-m-consnum {
+    width: 65px;
+    padding: 0 30px 0 30px;
+}
+.bankcard-m-navhopen, .bankcard-m-consopen {
+    width: 135px;
+    padding-right: 30px;
+}
+.bankcard-m-navhname, .bankcard-m-consname {
+    width: 100px;
+    padding-right: 25px;
+}
+.bankcard-m-navhtype, .bankcard-m-constype {
+    width: 90px;
+    padding-right: 15px;
+}
+.bankcard-m-navhcn, .bankcard-m-conscn {
+    width: 160px;
+    padding-right: 20px;
+}
+.order-s-yellow {
+    color: #ffb400;
+}
+.order-s-center {
+    margin-bottom: 20px;
+}
+.order-s-center h3 {
+    width: 730px;
+    height: 60px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 60px;
+}
+.order-s-center h3 span {
+    margin-right: 12px;
+    font-size: 16px;
+}
+.order-s-totalorder div {
+    width: 170px;
+    padding: 30px 10px;
+}
+.order-s-totalorder div span {
+    margin-bottom: 11px;
+    font-size: 26px;
+}
+.order-s-con {
+    padding: 30px;
+}
+.order-s-funnav {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.order-s-funnav .order-s-timechoice, 
+.manage-c-funnav .order-s-timechoice {
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 40px;
+    opacity: 0;
+}
+.order-s-funnav .order-s-timechoice span, 
+.manage-c-funnav .order-s-timechoice span {
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.order-s-ordertime {
+    width: 130px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: #ffb400;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.order-s-ordertime:active {
+    font-size: 16px;
+    background-color: #eaa500;
+}
+.order-s-funnav .order-s-choiceend, 
+.manage-c-funnav .order-s-choiceend {
+    width: 178px;
+    height: 38px;
+    margin-right: 10px;
+    background-color: #fff;
+    line-height: 38px;
+    color: #00aaef;
+    border: 1px solid #00aaef;
+}
+.order-s-ordernum {
+    width: 125px;
+    height: 38px;
+    padding-left: 13px;
+    margin-right: 10px;
+    border: 1px solid #e6e6e6;
+    line-height: 38px;
+    outline: none;
+    border-radius: 5px;
+}
+.order-s-ordernum::-webkit-input-placeholder, 
+.modify-p-alert input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #cccccc;
+}
+.order-s-ordernum:-moz-placeholder, 
+.modify-p-alert input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #cccccc;
+}
+.order-s-ordernum::-moz-placeholder, 
+.modify-p-alert input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #cccccc;
+}
+.order-s-ordernum:-ms-input-placeholder, 
+.modify-p-alert input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #cccccc;
+}
+.order-s-order {
+    margin-right: 10px;
+}
+.order-s-orderall {
+    width: 113px;
+    height: 38px;
+    padding-left: 15px;
+    border: 1px solid #e6e6e6;
+    background: url("../images/order-s-orderall.png") 110px center no-repeat;
+    line-height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.order-s-orderchoice, 
+.rder-s-asynchchoice {
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    box-shadow: 0 10px 20px 0 rgba(51, 51, 51, 0.1);
+}
+.order-s-orderchoice span, 
+.rder-s-asynchchoice span {
+    width: 120px;
+    height: 40px;
+    padding-left: 30px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.order-s-orderchoice span:hover, 
+.rder-s-asynchchoice span:hover {
+    background-color: #f2f2f2;
+}
+.order-s-asynch, .order-s-query {
+    margin-right: 10px;
+}
+.order-s-asynchstate {
+    width: 88px;
+    height: 38px;
+    padding-left: 10px;
+    border: 1px solid #e6e6e6;
+    background: url("../images/order-s-orderall.png") 83px center no-repeat;
+    line-height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.rder-s-asynchsel, 
+.order-s-ordersel {
+    background: #f2f2f2 url("../images/rder-s-asynchsel.png") 11px center no-repeat;
+}
+.order-s-query, .order-s-export {
+    width: 50px;
+    height: 40px;
+    background-color: #00aaef;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.order-s-query:active, 
+.order-s-export:active {
+    font-size: 16px;
+    background-color: #0090ca;
+}
+.order-s-titname, .order-s-secname {
+    overflow: hidden;
+    width: 85px;
+    padding: 0 8px 0 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.order-s-titorder, .order-s-secorder {
+    width: 168px;
+    padding-right: 10px;
+}
+.order-s-titmoney, .order-s-secmoney {
+    width: 82px;
+    padding-right: 10px;
+}
+.order-s-titordertime, .order-s-secordertime {
+    width: 105px;
+    padding-right: 10px;
+}
+.order-s-titzf, .order-s-seczf {
+    width: 80px;
+    padding-right: 10px;
+}
+.order-s-titstate, .order-s-secstate {
+    width: 60px;
+    padding-right: 10px;
+}
+.order-s-secstate {
+    color: #0090ca;
+}
+.order-s-titoperate, .order-s-secoperate {
+    width: 35px;
+    padding-right: 10px;
+}
+.order-s-lists {
+    padding-bottom: 60px;
+}
+/*退款管理*/
+.refund-m-head {
+    margin-bottom: 0;
+}
+.refund-m-query {
+    width: 110px;
+}
+.refund-m-order, .balance-r-query {
+    margin-right: 20px;
+}
+.refund-m-titname, .refund-m-secname {
+    width: 120px;
+}
+.refund-m-titorder, .refund-m-secorder {
+    width: 150px;
+}
+.refund-m-titmoney, .refund-m-secmoney {
+    width: 115px;
+}
+/*结算记录*/
+.balance-r-query, .balance-r-export {
+    width: 70px;
+}
+.balance-r-titqzri, .balance-r-secqzri {
+    width: 100px;
+    padding-right: 15px;
+}
+.balance-r-titname, .balance-r-secname {
+    width: 95px;
+    padding: 0 10px 0 18px;
+}
+.balance-r-itorder, .balance-r-secorder {
+    width: 80px;
+    padding-right: 10px;
+}
+.balance-r-titmoney, .balance-r-secmoney {
+    width: 105px;
+    padding-right: 10px;
+}
+.balance-r-titordertime, .balance-r-secordertime {
+    width: 70px;
+    padding-right: 10px;
+}
+.balance-r-titzf, .balance-r-seczf {
+    width: 120px;
+    padding-right: 10px;
+}
+.balance-r-titoperate, .balance-r-secoperate {
+    width: 45px;
+}
+.order-s-listterm .balance-r-secqzri {
+    padding-top: 5px;
+    line-height: 20px;
+}
+/*自助结算*/
+.selfhelp-b-totalorder div {
+    width: 233px;
+}
+.selfhelp-b-con {
+    padding: 40px 60px;
+}
+.selfhelp-b-form {
+    margin-bottom: 50px;
+}
+.selfhelp-b-money, 
+.selfhelp-b-account {
+    margin-bottom: 20px;
+}
+.selfhelp-b-pw {
+    margin-bottom: 30px;
+}
+.selfhelp-b-form div label, 
+.selfhelp-b-moneyerr,  
+.selfhelp-b-pwerr, 
+.selfhelp-b-acctit, 
+.selfhelp-b-choicecon, 
+.selfhelp-b-accerr {
+    line-height: 40px;
+}
+.selfhelp-b-form div label, 
+.selfhelp-b-moneyin,  
+.selfhelp-b-pwin, 
+.selfhelp-b-acctit, 
+.selfhelp-b-select {
+    margin-right: 20px;
+}
+.selfhelp-b-moneyin, 
+.selfhelp-b-pwin, 
+.selfhelp-b-choicecon {
+    width: 200px;
+    height: 38px;
+    padding: 0 16px;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    border-radius: 5px;
+}
+.selfhelp-b-choicecon {
+    background: url("../images/order-s-orderall.png") 210px center no-repeat;
+    cursor: pointer;
+}
+.selfhelp-b-selectcon {
+    top: 12px;
+    right: 5px;
+    box-shadow: 0 0 20px 2px rgba(51, 51, 51, 0.1);
+}
+.selfhelp-b-selectcon span {
+    width: 200px;
+    height: 40px;
+    padding-left: 30px;
+    line-height: 40px;
+}
+.selfhelp-b-selectcon .selfhelp-b-optionsel {
+    background: #f2f2f2 url("../images/rder-s-asynchsel.png") 10px center no-repeat;
+}
+.selfhelp-b-selectcon span:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+.selfhelp-b-truebut {
+    width: 110px;
+    height: 40px;
+    margin-left: 92px;
+    background-color: #00aaef;
+    line-height: 40px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 3px rgba(0, 177, 242, 0.2);
+    cursor: pointer;
+}
+.selfhelp-b-explain {
+    margin-bottom: 32px;
+}
+.selfhelp-b-expcon li {
+    line-height: 24px;
+}
+/*对账统计*/
+.account-s-titdate, .account-s-secdate {
+    width: 150px;
+    padding: 0 10px 0 30px;
+}
+.account-s-titnum, .account-s-secnum, 
+.account-s-titmoney, .account-s-secmoney {
+    width: 170px;
+    padding-right: 10px;
+}
+.account-s-titser, .account-s-secser {
+    width: 135px;
+    padding-right: 10px;
+}
+.account-s-exmonthbill, .account-s-gemonthbill {
+    width: 118px;
+    height: 38px;
+    margin-right: 20px;
+    border: 1px solid #e6e6e6;
+    line-height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.account-s-exmonthbill:active, 
+.account-s-gemonthbill:active {
+    background-color: #f2f2f2;
+}
+.account-s-month {
+    width: 120px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: #00aaef;
+    line-height: 40px;
+    border-radius: 5px;
+}
+.account-s-month:active, 
+.account-s-month:hover {
+    background-color: #1099d1;
+    cursor: pointer;
+}
+.account-s-month .account-s-monthsec {
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+}
+.account-s-month .account-s-monthsec span {
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.account-s-month .account-s-monthsec a {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+/*应用信息*/
+.applica-i-title {
+    margin-bottom: 0;
+}
+.applica-i-appname, 
+.applica-i-appnum  {
+    width: 123px;
+    padding: 0 0 0 25px;
+    margin-right: 20px;
+}
+.applica-i-funnav .applica-i-inputsel {
+    color: #00aaef;
+    border: 1px solid #00aaef;
+}
+.applica-i-newadd {
+    width: 70px;
+    height: 40px;
+    background-color: #ffb400;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.applica-i-titname, .applica-i-secname {
+    overflow: hidden;
+    width: 93px;
+    padding: 0 10px 0 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.applica-i-titnum, .applica-i-secnum {
+    width: 135px;
+    padding-right: 10px;
+}
+.applica-i-titscene, .applica-i-secscene {
+    width: 103px;
+    padding-right: 10px;
+}
+.applica-i-tittype, .applica-i-sectype {
+    width: 62px;
+    padding-right: 10px;
+}
+.applica-i-tittime, .applica-i-sectime {
+    width: 112px;
+    padding-right: 10px;
+}
+.applica-i-sectime {
+    margin-top: 6px;
+    line-height: 22px;
+}
+.applica-i-titopera, .applica-i-secopera {
+    width: 68px;
+    padding-right: 10px;
+}
+.applica-i-secedit {
+    width: 50px;
+}
+.applica-i-alertbg, .applica-i-alertcon {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.applica-i-alertbg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.applica-i-alertcon {
+    width: 827px;
+    height: 515px;
+    padding: 45px 0 0 33px;
+}
+.applica-i-closebut {
+    top: 14px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+    background: url("../images/applica-i-closebut.png") center center no-repeat;
+    cursor: pointer;
+}
+.applica-i-alerttit {
+    margin-bottom: 20px;
+}
+.applica-i-alerttit em {
+    width: 6px;
+    height: 6px;
+    margin: 8px 10px 0 0;
+    background-color: #ffb400;
+    border-radius: 50%;
+}
+.applica-i-alerttit span {
+    margin-right: 10px;
+}
+.applica-i-appoption {
+    padding-bottom: 13px;
+}
+.applica-i-atinput, .applica-i-atsec {
+    margin: 0 72px 30px 0;
+    cursor: pointer;
+}
+.applica-i-appoption .applica-i-last {
+    margin: 0 0px 30px 0;
+}
+.applica-i-star {
+    margin-right: 10px;
+    line-height: 42px;
+    font-size: 20px;
+}
+.applica-i-atinput input, .applica-i-secresult {
+    width: 160px;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #e6e6e6;
+    line-height: 40px;
+    border-radius: 8px;
+    outline: none;
+}
+.applica-i-secresult {
+    background: url("../images/order-s-orderall.png") 165px center no-repeat;
+}
+.applica-i-secoption {
+    top: 10px;
+    right: 10px;
+    box-shadow: 2px 2px 15px 0 rgba(51, 51, 51, 0.1),
+                -2px 2px 15px 0 rgba(51, 51, 51, 0.1);
+}
+.applica-i-secoption span {
+    width: 150px;
+    height: 30px;
+    padding-left: 30px;
+    line-height: 30px;
+}
+.applica-i-secoption span:hover {
+    background-color: #f2f2f2;
+}
+.applica-i-secoption .applica-i-optionsel {
+    background: #f2f2f2 url("../images/rder-s-asynchsel.png") 12px center no-repeat;
+}
+.applica-i-pubkey {
+    width: 160px;
+    height: 40px;
+    padding: 0 15px;
+    margin-left: 18px;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 40px;
+}
+.applica-i-manytext {
+    padding-left: 16px;
+    margin-bottom: 50px;
+}
+.applica-i-manytext textarea {
+    width: 718px;
+    height: 108px;
+    padding: 15px 20px;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    resize: none;
+}
+.applica-i-sub {
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    border: 0;
+    background-color: #ccc;
+    line-height: 40px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.applica-i-alertcon .applica-i-adopt {
+    background-color: #00aaef;
+}
+.applica-inew-titname, 
+.applica-inew-secname {
+    width: 235px;
+    padding: 0 10px 0 36px;
+}
+.applica-inew-secname img {
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px 0 0;
+}
+.applica-inew-titnum, 
+.applica-inew-secnum {
+    width: 280px;
+    padding-right: 10px;
+}
+.applica-inew-titscene, .applica-inew-secscene {
+    width: 125px;
+}
+.app-inew-addbg, .app-inew-add {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.app-inew-addbg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.app-inew-add {
+    width: 350px;
+    height: 450px;
+    padding: 50px 35px 0 35px;
+}
+.app-inew-name, .app-inew-brief {
+    margin-bottom: 40px;
+}
+.app-inew-namecon {
+    width: 350px;
+    height: 20px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+.app-inew-namecon span {
+    width: 6px;
+    height: 6px;
+    margin: 7px 10px 0 0;
+    background-color: #ffb400;
+    border-radius: 50%;
+}
+.app-inew-namecon em {
+    margin-right: 15px;
+}
+.app-inew-text {
+    width: 180px;
+    height: 40px;
+    padding: 14px;
+    margin: 0 35px 0 15px;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    resize: none;
+    border-radius: 5px;
+}
+.app-inew-upload {
+    width: 68px;
+    height: 68px;
+    border: 1px solid #e6e6e6;
+    background: url("../images/app-inew-upload.png") center center no-repeat;
+    border-radius: 5px;
+}
+.app-inew-upload input {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 68px;
+    height: 68px;
+    outline: none;
+    opacity: 0;
+}
+.app-inew-upload img {
+    width: 68px;
+    height: 68px;
+    border-radius: 5px;
+}
+.app-inew-brief textarea {
+    width: 278px;
+    height: 108px;
+    padding: 20px;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    resize: none;
+    border-radius: 5px;
+}
+.app-inew-but {
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    border: 0;
+    background-color: #00aaef;
+    line-height: 40px;
+    outline: none;
+    border-radius: 5px;
+}
+.app-i-paging span {
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.app-i-paging span:hover, .app-i-paging .app-i-pagingsel {
+    color: #fff;
+    background-color: #00aaef;
+    text-decoration: none;
+}
+/*应用信息-点击查看详情*/
+.see-i-head {
+    border-bottom: 1px solid #e6e6e6;
+}
+.see-i-return {
+    height: 60px;
+    padding-left: 50px;
+    background: url("../images/see-i-return.png") 30px center no-repeat;
+    line-height: 60px;
+}
+.see-i-sec {
+    padding: 40px 50px 0px 50px;
+}
+.see-i-seccon {
+    padding-bottom: 28px;
+}
+.see-i-seccon div {
+    margin-bottom: 40px;
+}
+.see-i-seccon div span {
+    margin-bottom: 2px;
+}
+.see-i-name, 
+.see-i-website, 
+.see-i-appkey {
+    width: 205px;
+    padding-right: 10px;
+}
+.see-i-num, 
+.see-i-encrypt {
+    width: 195px;
+    padding-right: 10px;
+}
+.see-i-scene {
+    width: 180px;
+    padding-right: 10px;
+}
+.see-i-type {
+    width: 50px;
+}
+.see-i-seccon .see-i-synopsis {
+    width: 230px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+.see-i-seccon .see-i-appkey {
+    margin-bottom: 0;
+}
+.see-i-keydel {
+    padding-bottom: 50px;
+    border-bottom: 1px dashed #e6e6e6;
+}
+.see-i-keydel span, .see-i-keydel em {
+    width: 108px;
+    height: 38px;
+    margin-right: 20px;
+    border: 1px solid #00aaef;
+    line-height: 38px;
+    color: #00aaef;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.see-i-keydel span:hover, 
+.see-i-keydel em:hover {
+    color: #fff;
+    background-color: #00aaef;
+}
+.see-i-zffs {
+    min-height: 207px;
+    padding: 35px 0 35px 0;
+}
+.see-i-zfterm {
+    width: 168px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+.see-i-switch {
+    width: 30px;
+    height: 12px;
+    margin: 4px 20px 0 0;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
+.see-i-switch span {
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 12px;
+    background-color: #fff;
+}
+.see-i-zfterm em {
+    height: 22px;
+    line-height: 22px;
+}
+.see-i-name input, 
+.see-i-appkey input, 
+.see-i-synopsis textarea {
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+.see-i-synopsis textarea {
+    width: 230px;
+    height: 66px;
+    resize: none;
+}
+.see-i-zfan {
+    padding-bottom: 80px;
+}
+.edit-i-operation em, 
+.edit-i-operation span {
+    width: 110px;
+    height: 50px;
+    border: 1px solid #00aaef;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-i-operation em {
+    margin: 0 50px 0 195px;
+}
+.edit-i-operation span {
+    background-color: #00aaef;
+}
+/*小融-管理中心*/
+.manage-c-funnav {
+    padding: 30px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.manage-c-screen, .manage-c-contrast {
+    width: 90px;
+    height: 40px;
+    margin-right: 20px;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #e6e6e6;
+}
+.manage-c-lists {
+    padding: 25px 30px 35px;
+    margin-bottom: 20px;
+}
+.manage-c-listhead {
+    margin-bottom: 25px;
+}
+.manage-c-listhead em {
+    width: 8px;
+    height: 8px;
+    margin: 7px 14px 0 0;
+    border-radius: 50%;
+}
+.manage-c-listhead span {
+    margin-right: 40px;
+}
+.manage-c-listnav, .manage-c-jtddnav {
+    background-color: #f6f6f6;
+}
+.manage-c-item, .manage-c-jtdditem {
+    border-bottom: 1px dashed #e6e6e6;
+}
+.manage-c-listcon, .manage-c-jtddlist {
+    margin-bottom: 25px;
+}
+.manage-c-listnav, 
+.manage-c-item, 
+.manage-c-jtddnav, 
+.manage-c-jtdditem {
+    height: 50px;
+    line-height: 50px;
+}
+.manage-c-listnav span, 
+.manage-c-item span {
+    width: 200px;
+    padding: 0 55px 0 95px;
+}
+.manage-c-titsjd, 
+.manage-c-secsjd {
+    width: 240px;
+    padding: 0 10px 0 55px;
+}
+.manage-c-titfqdd, 
+.manage-c-secfqdd {
+    width: 240px;
+    padding: 0 10px 0 0px;
+}
+.manage-c-titcjdd, .manage-c-seccjdd {
+    width: 135px;
+    padding-right: 10px;
+}
+.manage-c-dotblue {
+    background-color: #00aaef;
+}
+.manage-c-dotgreen {
+    background-color: #32e671;
+}
+.manage-c-dotyellow {
+    background-color: #ffb400;
+}
+/*小融-修改登录密码*/
+.modify-p-sec {
+    background-color: #f2f2f2;
+}
+.modify-p-sec {
+    height: 662px;
+    padding-top: 110px;
+}
+.modify-p-alert {
+    width: 500px;
+    height: 320px;
+    padding: 50px 0 0 100px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 20px 0px 30px 0 rgba(79, 81, 92, 0.1),
+                -20px 0px 30px 0 rgba(79, 81, 92, 0.1),
+                0px 20px 30px 0 rgba(79, 81, 92, 0.1);
+}
+.modify-p-tit {
+    padding-left: 75px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #00aaef;
+}
+.modify-p-number {
+    margin-bottom: 20px;
+}
+.modify-p-number label, .modify-p-code label {
+    height: 50px;
+    padding-right: 30px;
+    line-height: 50px;
+}
+.modify-p-number input {
+    width: 238px;
+    height: 48px;
+    padding: 0 20px;
+    border: 1px solid rgba(204, 204, 204, 0.8);
+    line-height: 48px;
+    border-radius: 5px;
+    outline: none;
+}
+.modify-p-code {
+    margin-bottom: 40px;
+}
+.modify-p-code input {
+    width: 138px;
+    height: 48px;
+    padding: 0 120px 0 20px;
+    border: 1px solid rgba(204, 204, 204, 0.8);
+    line-height: 48px;
+    border-radius: 5px;
+    outline: none;
+}
+.modify-p-code span {
+    top: 0;
+    left: 252px;
+    width: 100px;
+    height: 50px;
+    background-color: #00aaef;
+    line-height: 50px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.modify-p-code .modify-p-alrclick {
+    background-color: #ccc;
+}
+.modify-p-but {
+    width: 280px;
+    height: 50px;
+    margin-left: 75px;
+    border: 0;
+    background: url("../images/index-sign.png") center center no-repeat;
+    line-height: 50px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modify-p-close {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url("../images/applica-i-closebut.png") center center no-repeat;
+}
+.modify-p-password input {
+    width: 238px;
+    height: 48px;
+    padding: 0 20px;
+    border: 1px solid rgba(204, 204, 204, 0.8);
+    line-height: 48px;
+    border-radius: 5px;
+    outline: none;
+}
+.modify-p-opesuc div {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #00aaef;
+}
+.modify-p-opesuc {
+    width: 600px;
+    height: 235px;
+    padding-top: 135px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 20px 0px 30px 0 rgba(79, 81, 92, 0.1), -20px 0px 30px 0 rgba(79, 81, 92, 0.1), 0px 20px 30px 0 rgba(79, 81, 92, 0.1);
+}

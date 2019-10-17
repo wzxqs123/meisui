@@ -1,0 +1,1922 @@
+@charset "utf8";
+/* CSS reset */
+html{max-width: 750px;width: 100%;min-height:100%;background-color: #f0f0f0;color: #000;font-family:'jdytj',Arial,'Microsoft YaHei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong{padding:0;margin:0;font-family:'jdytj',Arial,'Microsoft YaHei';}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+a{text-decoration:none; color:#29738f; outline:none;}/*此处待添加默认链接颜色*/
+var,em,strong{font-style:normal;}
+address,caption,cite,code,dfn,em,strong,th,var, optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:center;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:'jdytj',inherit; font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+/*input{border:none; outline:none;}*/
+
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+/*去除高亮*/
+a, div, em, span, p, i, li, ul, ol, img, input, button, textarea {-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/*清除苹果默认按钮样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+textarea { -webkit-appearance: none;}
+
+/*去除type="number"自带的默认样式*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+@font-face {
+    font-family: 'jdytj';
+    src: url('../font/yt.ttf');
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+/*显示*/
+.block {
+    display: block;
+}
+/*隐藏*/
+.none {
+    display: none;
+}
+/*文字居中*/
+.text-center {
+    text-align: center;
+}
+/*相对定位*/
+.position-rel {
+    position: relative;
+}
+/*绝对定位*/
+.position-abs {
+    position: absolute;
+}
+.position-fix {
+    position: fixed;
+}
+/*加粗*/
+.weight-bold {
+    font-weight: bold;
+}
+.img {
+    width: 100%;
+}
+
+/*字体颜色*/
+.b-one {
+    color: #000;
+}
+.b-four {
+    color: #ccc;
+}
+.white {
+    color: #fff;
+}
+.three {
+    color: #333333;
+}
+.six {
+    color: #666666;
+}
+.nine {
+    color: #999999;
+}
+
+/*背景色*/
+/*白色背景*/
+.bg-white {
+    background-color: #fff;
+}
+.bg-b-one {
+    background-color: #000;
+}
+.bg-b-four {
+    background-color: #ccc;
+}
+
+/*24px字体*/
+.twenty-four {
+    font-size: 0.86rem;
+}
+/*26px字体*/
+.twenty-six {
+    font-size: 0.94rem;
+}
+/*30px字体*/
+.thirty {
+    font-size: 1.06rem;
+}
+/*32px字体*/
+.thirty-two {
+    font-size: 1.14rem;
+}
+
+.font-orange {
+    color: #ff5d25;
+}
+/*标题*/
+.headtit, .headtit h2 {
+    height: 3.14rem;
+    line-height: 3.14rem;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.headtit a {
+    width: 11.7%;
+    height: 3.14rem;
+    margin-top: -3.14rem;
+    background: url("../images/return-but.png") 41% center no-repeat;
+    background-size: 17.5%;
+}
+/*首页*/
+.index-wrap {
+    min-height: 100%;
+    background: url("../images/index-wrapbg.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.index-returnxl {
+    width: 20%;
+    height: 3.14rem;
+    padding-left: 8.7%;
+    margin-top: -3.14rem;
+    line-height: 3.14rem;
+}
+.index-head {
+    padding: 1.32rem 0 0 0;
+    margin-bottom: 0.89rem;
+}
+.index-depot {
+    width: 21.3%;
+    height: 4.86rem;
+    margin: 0.14rem 6.08% 0;
+    background: url("../images/index-depot.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.index-shop {
+    width: 21.7%;
+    height: 5rem;
+    margin: 0 6.08%;
+    background: url("../images/index-shop.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.index-explain {
+    width: 20.5%;
+    height: 4.75rem;
+    margin: 0.14rem 6.08% 0;
+    background: url("../images/index-explain.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.index-head a i {
+    width: 1.18rem;
+    height: 0.96rem;
+    background: url("../images/index-news.png") center center no-repeat;
+    background-size: contain;
+}
+.index-depot i {
+    top: -0.25rem;
+    right: 13%;
+}
+.index-shop i {
+    top: -0.36rem;
+    right: 15%;
+}
+.index-explain i {
+    top: 0.04rem;
+    right: 9%;
+}
+.index-realtime {
+    width: 88%;
+    height: 21.61rem;
+    padding: 3.96rem 0 7.5rem 0;
+    margin: 0 auto 0;
+    background: url("../images/index-realtime.png") center top no-repeat;
+    background-size: 100%;
+}
+.index-realcon {
+    overflow: auto;
+    height: 20.22rem;
+    padding-bottom: 0.1rem;
+}
+.index-trelist li {
+    width: 73.2%;
+    padding: 1rem 3% 1rem 6%;
+    margin: 0 auto 0.36rem;
+    background-color: #fef8ba;
+    border-radius: 0.6rem;
+    box-shadow: inset 0 0 0 0.21rem #cf6b00;
+}
+.index-trelist li span {
+    margin-bottom: 0.43rem;
+}
+.index-footnav {
+    padding-bottom: 0.82rem;
+}
+.index-footnav a {
+    width: 15.7%;
+    height: 4.21rem;
+    padding: 0.11rem 0.4%;
+    margin: 0 8.41%;
+    border-radius: 50%;
+}
+.index-footnav a i {
+    width: 100%;
+    height: 4.21rem;
+}
+.index-home i {
+    background: url("../images/index-home.png") center center no-repeat;
+    background-size: 100%;
+}
+.index-home i:active {
+    background: url("../images/index-homeact.png") center center no-repeat;
+    background-size: 100%;
+}
+.index-plant i {
+    background: url("../images/index-plant.png") center center no-repeat;
+    background-size: 100%;
+}
+.index-plant i:active {
+    background: url("../images/index-plantact.png") center center no-repeat;
+    background-size: 100%;
+}
+.index-my i {
+    background: url("../images/index-my.png") center center no-repeat;
+    background-size: 100%;
+}
+.index-my i:active {
+    background: url("../images/index-myact.png") center center no-repeat;
+    background-size: 100%;
+}
+.index-navsel {
+    box-shadow: 0 0 0 0.29rem rgba(255, 242, 41, 0.6);
+}
+/*分享*/
+.share-wrap {
+    min-height: 100%;
+    background: url("../images/share-wrapbg.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.share-return {
+    top: 1.07rem;
+    left: 4%;
+    width: 13.4%;
+    height: 2.14rem;
+    line-height: 2.14rem;
+    border-radius: 1.5rem;
+}
+.share-head {
+    width: 52.7%;
+    padding: 1.57rem 0 0 0;
+    margin: 0 auto 0.71rem;
+}
+.share-head img {
+    height: 14.43rem;
+}
+.share-helpbut {
+    width: 46.6%;
+    height: 2.86rem;
+    padding: 0.07rem 2.3% 1.21rem;
+    margin: 0 auto;
+    background: url("../images/share-helpbut.png") center center no-repeat;
+    background-size: 100%;
+    line-height: 2.86rem;
+    color: #fff838;
+}
+.share-friend {
+    width: 14.13rem;
+    margin: 0 auto 0.36rem;
+}
+.share-friend div, .share-friend div img {
+    width: 2.93rem;
+    height: 2.93rem;
+    border-radius: 50%;
+}
+.share-friend div {
+    margin: 0 0.89rem;
+    box-shadow: 0 0 0 0.14rem rgba(255, 255, 255, 0.5);
+}
+.share-foot {
+    padding: 3.21rem 4% 0;
+    height: 15.29rem;
+    background: url("../images/share-foot.png") center 0 no-repeat;
+    background-size: 100%;
+}
+.share-footl {
+    width: 32.5%;
+    margin: 0 7.3% 0 7.3%;
+}
+.share-code {
+    width: 91%;
+    height: 7.29rem;
+    padding: 0.36rem 4.5%;
+    margin-bottom: 0.86rem;
+}
+.share-code img, 
+.share-code div, 
+.share-code div canvas, 
+.share-code a, 
+.share-code a canvas {
+    width: 100%;
+    height: 100%;
+}
+.share-footl span, 
+.share-footr p {
+    color: #4b3f3f;
+}
+.share-footr {
+    width: 45.8%;
+    margin-top: -0.25rem;
+}
+.share-names {
+    margin-bottom: 0.53rem;
+}
+.share-id {
+    margin-bottom: 1.64rem;
+}
+.share-footr {
+    line-height: 1.61rem;
+}
+/*任务*/
+.task-brown, .index-brown {
+    color: #6f2f1b;
+}
+.task-wrap {
+    min-height: 100%;
+    background: url("../images/task-wrapbg.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.task-wrap .headtit {
+    margin-bottom: 1.43rem;
+}
+.task-layer {
+    padding: 1.43rem 0;
+}
+.task-con {
+    width: 88%;
+    padding: 3rem 0 1.25rem;
+    margin: 0 auto;
+    background: #ffe63c url("../images/task-list.png") center 0 no-repeat;
+    background-size: 100%;
+    border-radius: 2rem;
+    box-shadow: inset 0 -0.36rem 0 0 #ffdd3c,
+                0 0.18rem 0.36rem 0 rgba(247, 157, 0, 0.35);
+}
+.task-list {
+    padding: 0 0 0.1rem 0;
+    margin: 0 0 0.2rem 0;
+}
+.task-li {
+    width: 91%;
+    padding: 0.36rem 1.5%;
+    margin: 0 auto 0.71rem;
+    background-color: #f8c018;
+    border-radius: 0.4rem;
+    box-shadow: inset 0 0.18rem 0.18rem 0 rgba(190, 58, 0, 0.3);
+}
+.task-licon {
+    background-color: #fffce1;
+    border-radius: 0.4rem;
+}
+.task-licon div {
+    width: 65%;
+    padding: 1.18rem 4% 1.18rem 5%;
+}
+.task-licon div em {
+    color: #ff5d25;
+}
+.task-licon a {
+    width: 23%;
+    height: 2.5rem;
+    margin: 0.5rem 3% 0 0;
+    background-color: #ff5d25;
+    line-height: 2.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 93, 37, 0.3);
+}
+.task-licon .task-adder {
+    background-color: #ccc;
+    box-shadow: 0 0 0 0 rgba(255, 93, 37, 0);
+}
+.task-rule {
+    padding: 0 6.7%;
+}
+.task-rule li {
+    line-height: 1.64rem;
+}
+.task-rulecon {
+    text-indent: 2em;
+}
+.task-alertbg, .task-alert {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.task-alertbg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.task-alert {
+    width: 52%;
+    height: 11.07rem;
+    margin: auto;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.25rem 0.11rem rgba(255, 249, 208, 0.35);
+}
+.task-light {
+    top: -6.85rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 91.8%;
+    height: 7.71rem;
+    background: url("../images/task-light.png") center center no-repeat;
+    background-size: contain;
+}
+.task-alerttit {
+    top: -2.64rem;
+    left: -10.4%;
+    width: 120.8%;
+    height: 3.21rem;
+    padding-bottom: 1.43rem;
+    background: url("../images/task-alerttit.png") center center no-repeat;
+    background-size: contain;
+    line-height: 3.21rem;
+}
+.task-alertcon {
+    height: 3.64rem;
+    padding: 3.04rem 0 0 0;
+    font-size: 1.28rem;
+}
+.task-alertbut {
+    width: 79%;
+    height: 2.86rem;
+    margin: 0 auto;
+    background-color: #ff5d25;
+    line-height: 2.86rem;
+    color: #fff838;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 93, 37, 0.3);
+}
+/*商城*/
+.shop-m-yellow {
+    color: #f6d01f;
+}
+.shop-m-wrap {
+    min-height: 100%;
+    background: url("../images/shop-m-wrapbg.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.shop-m-shop {
+    height: 33.28rem;
+    padding: 6.93rem 7.2% 0;
+    background: url("../images/shop-m-shop.png") center 0.71rem no-repeat;
+    background-size: 100%;
+}
+.shop-m-return {
+    top: 0.25rem;
+    left: 5.4%;
+    width: 15.4%;
+    height: 3.21rem;
+    background: url("../images/shop-m-return.png") center center no-repeat;
+    background-size: contain;
+}
+.shop-m-list {
+    overflow: auto;
+    width: 100%;
+    height: 31.71rem;
+    padding: 0 0 0.1rem 0;
+    border-radius: 2rem;
+}
+.shop-m-item {
+    min-height: 11.39rem;
+    padding: 0.25rem 1%;
+    background: url("../images/shop-m-item.png") center 0 no-repeat;
+    background-size: contain;
+}
+.shop-m-iteml {
+    width: 31.8%;
+    padding: 1.43rem 0 0 0;
+    margin: 0 4.8% 0 5.6%;
+}
+.shop-m-picbg {
+    height: 5.54rem;
+    /*margin-bottom: 0.71rem;*/
+    background: url("../images/shop-m-picbg.png") center 0 no-repeat;
+    background-size: contain;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(83, 27, 0, 0.3);
+    border-radius: 0.35rem;
+}
+.shop-m-buy {
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: -3.57rem;
+    margin: auto;
+    width: 70%;
+    height: 2.14rem;
+    padding: 0.14rem 4.5% 0.5rem;
+    background: url("../images/shop-m-buy.png") center center no-repeat;
+    background-size: contain;
+    line-height: 2.14rem;
+    color: #ff4513;
+}
+.shop-m-picbg img {
+    top: -1.71rem;
+    left: -14%;
+    width: 130%;
+    height: 9.29rem;
+}
+.shop-m-price {
+    right: -6.5%;
+    top: -0.68rem;
+    width: 36.5%;
+    height: 1.68rem;
+    padding: 0 0 0.39rem 0%;
+    background: url("../images/shop-m-price.png") center center no-repeat;
+    background-size: contain;
+    color: #ff4513;
+    line-height: 1.68rem;
+}
+.shop-m-itemr {
+    width: 54%;
+    padding: 0.86rem 0 0.1rem 0;
+}
+.shop-m-itemr li {
+    padding: 0 6%;
+    margin-bottom: 0.18rem;
+    background-color: #ab6011;
+    color: #fff838;
+    line-height: 1.43rem;
+}
+.shop-m-itemr .shop-m-lipad {
+    padding: 0.18rem 6%;
+}
+.shop-m-paybg {
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.shop-m-pay {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 13.93rem;
+}
+.shop-m-close {
+    top: 1rem;
+    right: 5%;
+    width: 3.5%;
+    height: 0.94rem;
+    background: url("../images/shop-m-close.png") center center no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+.shop-m-paymoney {
+    padding: 1.79rem 0 0 0;
+    margin-bottom: 0.54rem;
+    font-size: 2.14rem;
+}
+.shop-m-paytips {
+    margin-bottom: 2rem;
+    color: #4b3f3f;
+}
+.shop-m-paybut {
+    padding: 0 2.7%; 
+}
+.shop-m-paybut a {
+    height: 4.29rem;
+    margin: 0 2.8%;
+    line-height: 4.29rem;
+    border-radius: 0.2rem;
+}
+.shop-m-wechat {
+    width: 25.4%;
+    padding-left: 19%;
+    background: #22ac38 url("../images/shop-m-wechat.png") 9% center no-repeat;
+    background-size: 25.5%;
+}
+.shop-m-zfb {
+    width: 27.4%;
+    padding-left: 17%;
+    background: #00aaef url("../images/shop-m-zfb.png") 9% center no-repeat;
+    background-size: 25.5%;
+}
+.shop-m-alertbg, .shop-m-alert {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.shop-m-alertbg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.shop-m-alert {
+    margin: auto;
+    width: 71%;
+    height: 11.07rem;
+    padding: 1.79rem 0 0 0;
+    border-radius: 0.5rem;
+}
+.shop-m-alert h2 {
+    margin-bottom: 1.07rem;
+}
+.shop-m-alert p {
+    padding: 0 15%;
+    margin-bottom: 1rem;
+    line-height: 1.86rem;
+}
+.shop-m-alert a {
+    width: 64%;
+    height: 2.86rem;
+    margin: 0 auto;
+    background-color: #ff5d25;
+    line-height: 2.86rem;
+    color: #fff838;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 93, 37, 0.3);
+}
+/*种植基地*/
+.plant-wrap, .explain-wrap {
+    min-height: 100%;
+}
+.plant-wrapone {
+    background:url("../images/plant-wrapone.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.plant-wraptwo, .explain-wrap {
+    background:url("../images/plant-wraptwo.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.plant-plantdie {
+    background:url("../images/plant-diebg.png") center bottom no-repeat;
+    background-size: 100%;
+}
+.plant-blue {
+    color: #09abff;
+}
+.plant-head {
+    padding: 1.79rem 0 35.04rem 0;
+}
+.plant-headlongbg, .plant-headshortbg {
+    height: 3.57rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transform: skew(-9deg);
+}
+.plant-headlongbg {
+    width: 23%;
+    margin: 0 0 0 5%;
+}
+.plant-headshortbg {
+    width: 12%;
+    margin: 0 0 0 1.5%;
+}
+.plant-headname, 
+.plant-headshortbg div {
+    height: 3.57rem;
+    padding: 0 7%;
+    -webkit-transform: skew(9deg);
+}
+.plant-headname span, 
+.plant-headshortbg div span {
+    overflow: hidden;
+    padding: 0.5rem 0 0 0;
+    margin-bottom: 0.18rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.plant-shop {
+    z-index: 10;
+    top: 1.78rem;
+    right: 8%;
+    width: 13.9%;
+    height: 4.61rem;
+    background: url("../images/plant-shop.png") center bottom no-repeat;
+    background-size: contain;
+}
+.plant-task {
+    z-index: 10;
+    top: 8.39rem;
+    right: 6%;
+    width: 15.2%;
+    height: 3.39rem;
+    background: url("../images/plant-task.png") center bottom no-repeat;
+    background-size: contain;
+}
+.plant-task span {
+    top: -0.64rem;
+    right: 6%;
+    width: 1.14rem;
+    height: 1.14rem;
+    background-color: #ff3950;
+    line-height: 1.14rem;
+    color: #fff838;
+    border-radius: 50%;
+}
+.plant-operate {
+    z-index: 2;
+    bottom: 15.28rem;
+    left: 4%;
+    width: 12%;
+    padding-bottom: 0.1rem;
+}
+.plant-operate div {
+    width: 89%;
+    height: 3.04rem;
+    margin-bottom: 1.43rem;
+}
+.plant-operate div i {
+    top: 0.18rem;
+    right: 0.18rem;
+    width: 0.5rem;
+    height: 0.5em;
+    background-color: #ff3950;
+    border-radius: 50%;
+}
+.plant-operate .plant-water i {
+    right: 0.46rem;
+}
+.plant-operate .plant-water {
+    width: 98%;
+    background: url("../images/plant-water.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.plant-fertilize {
+    background: url("../images/plant-fertilize.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.plant-insect {
+    background: url("../images/plant-insect.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.plant-weed {
+    background: url("../images/plant-weed.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.plant-footnav {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.plant-main, .plant-noplant {
+    overflow: hidden;
+    bottom: 0rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 78.7%;
+    height: 25.71rem;
+    padding: 0 6% 7.71rem;
+}
+.plant-plantbg {
+    background: url("../images/plant-main.png") center 0 no-repeat;
+    background-size: contain;
+}
+
+.plant-shovel {
+    width: 57.5%;
+    padding-top: 6.37rem;
+    margin: 0 auto 1rem;
+}
+.plant-shovel img {
+    width: 100%;
+    height: 11.32rem;
+}
+.plant-goplant {
+    width: 56%;
+    height: 3.21rem;
+    margin: 0 auto 1rem;
+    background-color: #ff5d25;
+    line-height: 3.21rem;
+    color: #fff838;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 93, 37, 0.3);
+}
+.plant-plantpro {
+    color: #4b3f3f;
+}
+.plant-flo {
+    width: 100%;
+    height: 25.71rem;
+}
+.plant-pic {
+    left: 0;
+    right: 0;
+    bottom: 3.39rem;
+    margin: auto;
+    width: 67%;
+    height: 14.43rem;
+}
+.plant-goshopbut {
+    bottom: 0rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 56%;
+}
+.plant-fyq .swiper-pagination-bullet {
+    width: 0.43rem;
+    height: 0.43rem;
+    display: inline-block;
+    border-radius: 100%;
+    background: #ea8f00;
+    opacity: 1;
+}
+.plant-fyq .swiper-pagination-bullet-active {
+    width: 1.21rem;
+    border-radius: 0.5rem;
+}
+.plant-slide, .plant-flo {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.plant-bar {
+    z-index: 2;
+    bottom: 12.68rem;
+    right: 13%;
+    width: 0.71rem;
+    height: 14.3rem;
+    padding: 0.21rem;
+    background: url("../images/plant-bar.png") center center no-repeat;
+    background-size: contain;
+}
+.plant-barin {
+    width: 0.71rem;
+    height: 14.3rem;
+}
+.plant-barincon {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: url(../images/plant-barin.png) center bottom no-repeat;
+    background-size: 100%;
+    border-radius: 0.3rem;
+}
+.plant-barin div {
+    font-size: 0.72rem;
+}
+.plant-barcs, .plant-barjg, 
+.plant-barkh, .plant-barfy, 
+.plant-barbz {
+    right: -2.39rem;
+    width: 2.36rem;
+    height: 1.36rem;
+    line-height: 1.36rem;
+}
+.plant-barcs {
+    top: -0.5rem;
+    background: url(../images/plant-tipscg.png) center center no-repeat;
+    background-size: 100%;
+}
+.plant-barjg, 
+.plant-barkh, .plant-barfy, 
+.plant-barbz {
+    background: url(../images/plant-tipsyb.png) center center no-repeat;
+    background-size: 100%;
+}
+.plant-barjg {
+    top: 2.93rem;
+}
+.plant-barkh {
+    top: 6.5rem;
+}
+.plant-barfy {
+    top: 10.07rem;
+}
+.plant-barbz {
+    top: 13.57rem;
+}
+.plant-fruit {
+    top: 0.71rem;
+    left: 27%;
+    width: 39.3%;
+    height: 6.46rem;
+    background: url("../images/plant-fruit.png") center center no-repeat;
+    background-size: contain;
+    -webkit-animation: general 1s linear infinite alternate;
+}
+@-webkit-keyframes general/*关键帧的名字*/ { 
+    0% {
+        top: 0.71rem;
+    }
+    100% {
+        top: 0.11rem;
+    }
+}
+.plant-taskalebg, 
+.plant-taskale, 
+.plant-cropalebg, 
+.plant-cropale, 
+.plant-landalebg, 
+.plant-landale {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.plant-taskalebg, 
+.plant-cropalebg, 
+.plant-landalebg {
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.plant-taskale, 
+.plant-cropale {
+    width: 52%;
+    height: 12.86rem;
+}
+.plant-landale {
+    width: 54.7%;
+    height: 12.5rem;
+}
+.plant-taskale, 
+.plant-cropale, 
+.plant-landale {
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0.25rem 0.07rem rgba(255, 249, 208, 0.35);
+}
+.plant-landclose {
+    bottom: -5.72rem;
+}
+.plant-tapic {
+    top: -6.79rem;
+    left: -10.5%;
+    width: 121%;
+    height: 8.36rem;
+    background: url("../images/plant-tapic.png") center center no-repeat;
+    background-size: contain;
+}
+.plant-tatit {
+    padding: 2.5rem 0 0.36rem 0;
+}
+.plant-tacon {
+    height: 4.25rem;
+    color: #ff5d25;
+    font-size: 2.14rem;
+}
+.plant-tabut {
+    margin: 0 auto;
+}
+.plant-tabut, 
+.plant-scbut, 
+.plant-landbut {
+    width: 79%;
+    height: 2.86rem;
+    background-color: #ff5d25;
+    line-height: 2.86rem;
+    color: #fff838;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 93, 37, 0.3);
+}
+.plant-scbut, .plant-landbut {
+    z-index: 2;
+    right: 0;
+    left: 0;
+    bottom: 1.14rem;
+    margin: auto;
+}
+.plant-cropcon {
+    width: 79%;
+    min-height: 5.29rem;
+    padding: 0.93rem 0 0 0;
+    margin: 0 auto;
+}
+.plant-cropcon img {
+    width: 68%;
+    margin: 0 auto 0rem;
+}
+.plant-cropcon em {
+    margin-top: -1.5rem;
+}
+.plant-landcon {
+    height: 4.93rem;
+    padding: 3.21rem 5% 0 5%;
+}
+.plant-landcon p {
+    margin-bottom: 0.71rem;
+}
+.plant-cropclose {
+    bottom: -6.14rem;
+}
+.plant-croppic, .plant-landpic {
+    left: -12%;
+    width: 128%;
+    height: 21.25rem;
+}
+.plant-croppic {
+    top: -7.86rem;
+    background: url("../images/plant-croppic.png") center 0 no-repeat;
+    background-size: 100%;
+}
+.plant-landpic {
+    top: -8.29rem;
+    background: url("../images/plant-landpic.png") center 0 no-repeat;
+    background-size: 100%;
+}
+.plant-effect {
+    bottom: 7.71rem;
+    left: 0;
+    width: 100%;
+    height: 25.71rem;
+}
+.plant-weedanim, 
+.plant-insectanim, 
+.plant-feranim, 
+.plant-wateranim {
+    z-index: 3;
+    width: 44.1%;
+    height: 10.71rem;
+    background-size: contain;
+}
+.plant-weedanim {
+    bottom: 2.5rem;
+    left: 47%;
+    -webkit-animation: weedanim 2s linear;
+}
+.plant-insectanim {
+    bottom: 6rem;
+    left: 43.5%;
+    -webkit-animation: insectanim 2s linear;
+}
+.plant-feranim {
+    bottom: 1.2rem;
+    left: 36%;
+    -webkit-animation: feranim 2s linear infinite;
+}
+.plant-wateranim {
+    bottom: 1.5rem;
+    left: 42%;
+    -webkit-animation: wateranim 2s linear infinite;
+}
+@-webkit-keyframes weedanim/*关键帧的名字*/ { 
+    0% {
+        background: url("../images/weedanim-one.png") center center no-repeat;
+        background-size: contain;
+    }
+    50% {
+        background: url("../images/weedanim-two.png") center center no-repeat;
+        background-size: contain;
+    }
+    100% {
+        background: url("../images/weedanim-three.png") center center no-repeat;
+        background-size: contain;
+    }
+}
+@-webkit-keyframes insectanim/*关键帧的名字*/ { 
+    0% {
+        background: url("../images/insectanim-one.png") center center no-repeat;
+        background-size: contain;
+    }
+    25% {
+        background: url("../images/insectanim-two.png") center center no-repeat;
+        background-size: contain;
+    }
+    50% {
+        background: url("../images/insectanim-three.png") center center no-repeat;
+        background-size: contain;
+    }
+    100% {
+        background: url("../images/insectanim-three.png") center center no-repeat;
+        background-size: contain;
+    }
+}
+@-webkit-keyframes feranim/*关键帧的名字*/ { 
+    0% {
+        background: url("../images/feranim-one.png") center center no-repeat;
+        background-size: contain;
+    }
+    25% {
+        background: url("../images/feranim-two.png") center center no-repeat;
+        background-size: contain;
+    }
+    50% {
+        background: url("../images/feranim-three.png") center center no-repeat;
+        background-size: contain;
+    }
+    100% {
+        background: url("../images/feranim-four.png") center center no-repeat;
+        background-size: contain;
+    }
+}
+@-webkit-keyframes wateranim/*关键帧的名字*/ { 
+    0% {
+        background: url("../images/wateranim-one.png") center center no-repeat;
+        background-size: contain;
+    }
+    25% {
+        background: url("../images/wateranim-two.png") center center no-repeat;
+        background-size: contain;
+    }
+    50% {
+        background: url("../images/wateranim-three.png") center center no-repeat;
+        background-size: contain;
+    }
+    100% {
+        background: url("../images/wateranim-three.png") center center no-repeat;
+        background-size: contain;
+    }
+}
+.sign-alertcon {
+    width: 82.8%;
+    padding: 2.14rem 0 6.61rem 0;
+    margin: 0 auto;
+}
+.sign-close {
+    bottom: -5rem;
+}
+.sign-close, .plant-cropclose, .plant-landclose {
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 4.36rem;
+    height: 4.36rem;
+    background: url("../images/sign-close.png") center center no-repeat;
+    background-size: contain;
+}
+.sign-dotted {
+    width: 96%;
+    height: 3rem;
+    margin: 0 auto;
+    border-bottom: 1px dashed #b7978d;
+}
+.sign-tit {
+    width: 28%;
+    height: 1.5rem;
+    margin: -0.75rem auto 2.32rem;
+    line-height: 1.5rem;
+    font-size: 1.22rem;
+}
+.sign-pholayer, 
+.sign-codelayer, 
+.sign-passlayer {
+    width: 75.5%;
+    height: 3.57rem;
+    padding: 0 3.3% 0 5%;
+    background-color: #f9f4f5;
+    border-radius: 0.2rem;
+}
+.sign-pholayer, .sign-codelayer {
+    margin: 0 auto 0.71rem;
+}
+.sign-passlayer {
+    margin: 0 auto 2.5rem;
+}
+.sign-but {
+    width: 83.8%;
+    height: 3.57rem;
+    margin: 0 auto 1.79rem;
+    background-color: #ff5d25;
+    line-height: 3.57rem;
+    border: none;
+    color: #fff838;
+    outline: none;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.25rem 0.36rem 0 rgba(255, 93, 37, 0.2);
+}
+.sign-i-option {
+    width: 83.8%;
+    margin: 0 auto;
+}
+.sign-qq, 
+.sign-wechat {
+    width: 22.5%;
+}
+.sign-qq {
+    margin: 0 23% 0 16%;
+}
+.sign-qq div, 
+.sign-wechat div {
+    width: 58.7%;
+    height: 2.93rem;
+    margin: 0 auto 0.71rem;
+}
+.sign-qq div {
+    background: url("../images/sign-qq.png") center center no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+.sign-wechat div {
+    background: url("../images/sign-wechat.png") center center no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+.sign-pholayer input, 
+.sign-passlayer input {
+    width: 100%;
+    height: 3.57rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    line-height: 3.57rem;
+    outline: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.sign-codelayer input {
+    width: 68%;
+    height: 3.57rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    line-height: 3.57rem;
+    outline: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.sign-codelayer span {
+    width: 32%;
+    height: 2.14rem;
+    margin-top: 0.71rem;
+    background-color: #ff5d25;
+    line-height: 2.14rem;
+    border-radius: 0.2rem;
+}
+input::-webkit-input-placeholder, 
+.my-givenum::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(111, 47, 27, 0.5);
+}
+input:-moz-placeholder, 
+.my-givenum:-moz-placeholder, 
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgba(111, 47, 27, 0.5);
+}
+input::-moz-placeholder, 
+.my-givenum::-moz-placeholder, 
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgba(111, 47, 27, 0.5);
+}
+input:-ms-input-placeholder, 
+.my-givenum:-ms-input-placeholder, 
+textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgba(111, 47, 27, 0.5);
+}
+.sign-alertcon .sign-infoerror::-webkit-input-placeholder, 
+.my-giveform .my-giveerror::-webkit-input-placeholder, 
+.my-infoerror::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ff5d25;
+}
+.sign-alertcon .sign-infoerror:-moz-placeholder, 
+.my-giveform .my-giveerror:-moz-placeholder, 
+.my-infoerror:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ff5d25;
+}
+.sign-alertcon .sign-infoerror::-moz-placeholder, 
+.my-giveform .my-giveerror::-moz-placeholder, 
+.my-infoerror::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ff5d25;
+}
+.sign-alertcon .sign-infoerror:-ms-input-placeholder, 
+.my-giveform .my-giveerror::-webkit-input-placeholder, 
+.my-infoerror::-webkit-input-placeholder { /* Internet Explorer 10+ */
+    color: #ff5d25;
+}
+.sign-codelayer .sign-downing {
+    background-color: #ccc;
+}
+.sign-i-wrap {
+    min-height: 100%;
+}
+.sign-i-foot {
+    bottom: 3.57rem;
+    left: 0;
+    width: 100%;
+}
+/*我的*/
+.my-wrap, .detail-wrap {
+    min-height: 100%;
+    background: url(../images/plant-wraptwo.png) center bottom no-repeat;
+    background-size: 100%;
+}
+.my-titdet {
+    height: 2.5rem;
+    padding-right: 2%;
+    line-height: 2.5rem;
+    color: #ff5d25;
+}
+.my-allcon {
+    width: 100%;
+}
+.my-layer {
+    padding: 1.07rem 0 6.29rem 0;
+}
+.my-bottombg {
+    width: 79.9%;
+    padding: 0rem 2.7% 0.71rem 9.4%;
+    margin: 0 auto;
+    background-color: #fff7b0;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 -0.11rem 0.36rem 0 rgba(245, 182, 25, 0.5);
+}
+.my-infocon, 
+.my-depotcon, 
+.my-givecon, 
+.my-aboutcon, 
+.my-myland, 
+.my-mybox {
+    height: 32.21rem;
+    padding: 0.71rem 1.6% 0.36rem;
+    background-color: #fffce1;
+    box-shadow: inset 0 0 0 0.36rem #ffc305,
+                inset 0 0.36rem 0.36rem 0 rgba(255, 54, 0, 0.2),
+                inset 0 0.54rem 0.36rem 0 rgba(255, 168, 4, 0.3);
+    border-radius: 1rem;
+}
+.my-leftnav {
+    top: 0;
+    left: 1.45%;
+    width: 8.7%;
+    padding: 3.05rem 0 0rem 0;
+}
+.my-leftnav div {
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0.36rem 0;
+    background-color: #fffce1;
+    border-radius: 0.6rem 0 0 0.6em;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(252, 136, 0, 0.25);
+}
+.my-navinfo, 
+.my-navgywm {
+    height: 4.21rem;
+    padding-top: 0.43rem;
+}
+.my-navware, 
+.my-navzs, 
+.my-navwdbx, 
+.my-navwdtd {
+    height: 3.21rem;
+    padding-top: 1.43rem;
+}
+.my-leftnav .my-navsel {
+    box-shadow: 0 0 0 0.36rem #ffbf05,
+                0 0.5rem 0.28rem rgba(255, 195, 5, 0.35);
+}
+@media only screen and (max-device-width: 320px) and (max-device-height :568px) {
+    .my-navinfo, 
+    .my-navgywm {
+        height: 4.64rem;
+        padding-top: 0;
+    }
+    .my-navware, 
+    .my-navzs, 
+    .my-navwdbx, 
+    .my-navwdtd {
+        height: 3.51rem;
+        padding-top: 1.13rem;
+    }
+}
+.my-navsel em {
+    right: -0.36rem;
+    top: 0;
+    width: 0.36rem;
+    height: 4.64rem;
+    background-color: #fffce1;
+}
+
+.my-nodepot {
+    height: 22.28rem;
+    padding-top: 9.64rem;
+}
+.my-nodepot p {
+    padding-top: 8.04rem;
+    margin-bottom: 8.93rem;
+    background: url("../images/my-nodepot.png") center 0 no-repeat;
+    background-size: 33.5%;
+}
+.my-nodepot a {
+    width: 79%;
+    height: 3.21rem;
+    margin: 0 auto;
+    background-color: #ff5d25;
+    color: #fff838;
+    line-height: 3.21rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 66, 0, 0.2);
+}
+.my-depotalebg, 
+.my-depotale, 
+.my-boxalebg, 
+.my-boxale, 
+.my-sucalebg, 
+.my-sucale, 
+.my-landalebg, 
+.my-landale, 
+.my-givealebg, 
+.my-giveale, 
+.my-givesucbg, 
+.my-givesuc, 
+.my-perfbg, 
+.my-perf {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.my-depotalebg, 
+.my-boxalebg, 
+.my-sucalebg, 
+.my-landalebg, 
+.my-givealebg, 
+.my-givesucbg, 
+.my-perfbg {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.my-depotale, 
+.my-boxale {
+    margin: auto;
+    width: 73.4%;
+    border-radius: 0.6rem;
+}
+.my-depotale {
+    height: 18.21rem;
+}
+.my-boxale {
+    height: 13.21rem;
+}
+.my-depotale h2, .my-boxale h2 {
+    padding: 1.43rem 0 0 0;
+    margin-bottom: 1.21rem;
+}
+.my-depotalecon, 
+.my-boxalecon {
+    padding: 0 11%;
+    margin-bottom: 1.07rem;
+    line-height: 1.79rem;
+}
+.my-depotalecon div em, 
+.my-boxalecon div em {
+    overflow: hidden;
+    max-width: 67%;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.my-depotret, .my-depottrue {
+    width: 35.5%;
+}
+.my-boxbut {
+    width: 76.3%;
+    margin: 0 auto;
+}
+.my-depotret, 
+.my-depottrue, 
+.my-boxbut, 
+.my-sucalebut, 
+.my-givealebut, 
+.my-givesucbut, 
+.my-perfbut, 
+.plant-goshopbut {
+    height: 2.86rem;
+    background-color: #ff5d25;
+    color: #fff838;
+    line-height: 2.86rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 93, 37, 0.3);
+}
+.my-depotret {
+    margin: 0 14% 0 7%;
+}
+.my-sucale {
+    margin: auto;
+    width: 61.4%;
+    height: 12.86rem;
+    border-radius: 0.8rem;
+}
+.my-sucale h2 {
+    padding-top: 1.61rem;
+    margin-bottom: 0.71rem;
+}
+.my-sucalecon span {
+    line-height: 1.43rem;
+}
+.my-sucalebut {
+    width: 61%;
+    margin: 0.86rem auto 0;
+}
+.my-depotlist, 
+.my-boxlist, 
+.my-landlist, 
+.my-givelist {
+    overflow: auto;
+    height: 31.84rem;
+    padding: 0.36rem 1.7% 0;
+}
+.my-depotitem, 
+.my-boxitem, 
+.my-giveitem {
+    width: 46.4%;
+    height: 9.29rem;
+    margin: 0 1.8% 0.71rem;
+    background-color: #f2eec7;
+    border-radius: 0.6rem;
+}
+.my-depotlab, 
+.my-boxlab, 
+.my-givelab {
+    top: 0;
+    left: 0;
+    width: 2.93rem;
+    height: 2.93rem;
+}
+.my-boxpic, 
+.my-depotpic, 
+.my-givepic {
+    width: 100%;
+    height: 9.29rem;
+}
+.my-depotname, 
+.my-boxname, 
+.my-givename {
+    left: 0;
+    bottom: 0.71rem;
+    width: 100%;
+}
+.my-aboutlist {
+    padding: 1.61rem 7% 0;
+    line-height: 2.14rem;
+}
+.my-noprize, 
+.my-nogive {
+    height: 22.99rem;
+    padding-top: 8.93rem;
+}
+.my-noprize p, 
+.my-nogive p {
+    padding: 8.23rem 0 0 0;
+    margin-bottom: 8.73rem;
+    background: url("../images/my-noprize.png") center 0 no-repeat;
+    background-size: 50.7%;
+    line-height: 1.79rem;
+    color: rgba(111, 47, 27, 0.5);
+}
+.my-nocontact {
+    line-height: 1.5rem;
+}
+.my-landitem {
+    width: 44.2%;
+    padding: 0.22rem 1.1%;
+    margin: 0 1.8% 0.71rem;
+    border-radius: 0.4rem;
+    box-shadow: inset 0 0 0 0.22rem rgba(255, 175, 4, 0.3);
+}
+.my-landpic {
+    padding: 0.89rem 0 1rem;
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+.my-landpic img {
+    width: 72.8%;
+    margin: 0 auto;
+}
+.my-landid {
+    padding: 0rem 3% 0rem;
+    background-color: #f2eec7;
+    border-radius: 0 0 0.2rem 0.2rem;
+}
+.my-landid span {
+    padding-top: 0.64rem;
+    margin-bottom: 0.14rem;
+}
+.my-landid em {
+    padding-bottom: 0.44rem;
+}
+.my-landale {
+    margin: auto;
+    width: 50.7%;
+    height: 15.71rem;
+    padding: 0 12% 0;
+    background: url("../images/my-landale.png") center center no-repeat;
+    background-size: contain;
+}
+.my-landale h2 {
+    padding-top: 3.14rem;
+    margin-bottom: 0.36rem;
+}
+.my-landale div em {
+    text-align: right;
+}
+.my-landale div span, 
+.my-landale div em {
+    width: 44.8%;
+    padding: 0.43rem 0 0.07rem 0;
+    border-bottom: 1px dashed rgba(111, 47, 27, 0.2);
+}
+.my-landale .my-landend em {
+    width: 34.8%;
+    padding-left: 10%;
+    text-align: left;
+}
+.my-landseal {
+    right: 1%;
+    bottom: 0.64rem;
+    width: 20.8%;
+    height: 3.61rem;
+    background: url("../images/my-landseal.png") center center no-repeat;
+    background-size: contain;
+}
+.my-giveale {
+    margin: auto;
+    width: 73.4%;
+    height: 13.57rem;
+    border-radius: 0.4rem;
+}
+.my-giveale h2 {
+    padding: 1.43rem 0 0 0;
+    margin-bottom: 2.14rem;
+}
+.my-giveid {
+    width: 76.5%;
+    height: 1.64rem;
+    padding-bottom: 0.71rem;
+    margin: 0 auto 1.86rem;
+    background-color: rgba(0, 0, 0, 0.0);
+    line-height: 1.64rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 0 0 #bfaca7;
+}
+.my-givealebut {
+    width: 74.5%;
+    margin: 0 auto;
+}
+.my-givesuc, 
+.my-perf {
+    margin: auto;
+    width: 55%;
+    height: 10rem;
+    border-radius: 0.4rem;
+}
+.my-givesuc p, .my-perf p {
+    padding-top: 2.5rem;
+    margin-bottom: 1.96rem;
+}
+.my-givesucbut, 
+.my-perfbut {
+    width: 61%;
+    margin: 0 auto;
+}
+
+.my-aboutcons {
+    text-indent: 2em;
+}
+.my-giveform {
+    padding-top: 0.5rem;
+}
+.my-fadealert {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 50%;
+    height: 3.57rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    line-height: 3.57rem;
+    border-radius: 0.6rem;
+}
+.my-infoform {
+    padding-top: 0.5rem;
+}
+.my-infoform div {
+  width: 83.4%;
+  height: 3.21rem;
+  padding: 0 5%;
+  margin: 0 auto 0.36rem;
+  line-height: 3.21rem;
+  border-radius: 0.7rem;
+  background-color: #f2eec7;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.my-infoform .my-info {
+    margin-bottom: 0.71rem;
+    background-color: #f2eec7;
+}
+.my-info .my-infocopy {
+    width: 30%;
+    height: 2.14rem;
+    margin: 0.54rem 0 0 0;
+    line-height: 2.14rem;
+    color: #e95b23;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.my-info .my-copyios {
+    width: 24%;
+    font-weight: bold;
+    background-color: #ffc038;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 120, 0, 0.3);
+}
+.my-infoform div input {
+    height: 3.21rem;
+    line-height: 3.21rem;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.my-nickname input, 
+.my-qminput input {
+    width: 74%;
+}
+.my-realname input, 
+.my-phonenum input {
+    width: 68%;
+}
+.my-infoform .my-address {
+    height: 5rem;
+    margin: 0 auto 2.5rem;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.my-address textarea {
+    width: 68%;
+    height: 4.29rem;
+    padding-top: 0.71rem;
+    line-height: 1.79rem;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    resize: none;
+}
+.my-footbut a {
+    width: 36.3%;
+}
+.my-footbut a, 
+.my-singlebut .my-signout {
+    height: 3.21rem;
+    line-height: 3.21rem;
+    border-radius: 0.4rem;
+}
+.my-footbut .my-signout {
+    margin: 0 14% 0 7%;
+}
+.my-footbut .my-signout, 
+.my-singlebut .my-signout {
+    color: #ffc138;
+    box-shadow: inset 0 0 0 0.14rem #ffc138;
+}
+.my-footbut .my-keepinfo {
+    color: #fff838;
+    background-color: #ff5d25;
+    box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 93, 37, 0.3);
+}
+.my-singlebut .my-signout {
+    width: 80%;
+    margin: 0 auto;
+}
+.my-focusbg {
+    background-color: #f2eec7;
+}
+/*登录*/
+.sign-i-wrap .headtit {
+    background-color: #30d3e6;
+}
+/*说明*/
+.explain-layer {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 88%;
+    height: 25.75rem;
+    padding-top: 0.71rem;
+    background-color: #fff7b0;
+    border-radius: 1.3rem;
+    box-shadow: inset 0 -0.25rem 0.5rem 0 rgba(245, 182, 25, 0.5);
+}
+.explain-frame {
+    width: 91%;
+    height: 24.32rem;
+    padding: 0.36rem 1.6%;
+    margin: 0 auto;
+    background-color: #ffc305;
+    border-radius: 1.3rem;
+    box-shadow: inset 0 0.36rem 0.72rem 0 rgba(255, 54, 0, 0.2);
+}
+.explain-cons {
+    height: 22rem;
+    padding: 2.32rem 7% 0;
+    background-color: #fffce1;
+    border-radius: 1.3rem;
+    box-shadow: inset 0 0.36rem 0.72rem 0 rgba(255, 168, 4, 0.3);
+}
+.explain-cons h2 {
+    margin-bottom: 1.61rem;
+}
+.explain-cons p {
+    line-height: 2.14rem;
+}
+/*明细*/
+.detail-layer {
+    padding: 1.43rem 0 1.43rem 0;
+}
+.detail-bottombg {
+    width: 82.6%;
+    height: 35.75rem;
+    padding: 0.71rem 2.7% 0;
+    margin: 0 auto;
+    background-color: #fff7b0;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 -0.11rem 0.36rem 0 rgba(245, 182, 25, 0.5);
+}
+.detail-titnav span {
+    width: 25.9%;
+    height: 3.57rem;
+    padding: 0.36rem 1.6% 0;
+    line-height: 3.57rem;
+}
+.detail-titnav span:nth-child(1) {
+    margin: 0 16% 0 13%;
+}
+.detail-titnav span em {
+    left: 0;
+    right: 0;
+    bottom: -0.36rem;
+    margin: auto;
+}
+.detail-titnav .detail-navsel {
+    color: #ff5d25;
+    background-color: #fffce1;
+    box-shadow: inset 0 0.36rem 0 0 #ffc305,
+                inset 0.36rem 0 0 0 #ffc305,
+                inset -0.36rem 0 0 0 #ffc305,
+                inset 0 0.71rem 0.36rem 0 rgba(255, 168, 4, 0.3);
+    border-radius: 1.4rem 1.4rem 0 0;
+}
+.detail-titnav .detail-navsel em {
+    width: 89%;
+    height: 0.36rem;
+    background-color: #fffce1;
+}
+.detail-allcon {
+    margin-top: -0.36rem;
+}
+.detail-recordcon, 
+.detail-detcon, 
+.detail-detempty {
+    height: 30.35rem;
+    padding: 0.71rem 1.7% 0.36rem;
+    background-color: #fffce1;
+    box-shadow: inset 0 0 0 0.36rem #ffc305,
+                inset 0 0.36rem 0.36rem 0 rgba(255, 54, 0, 0.2),
+                inset 0 0.54rem 0.36rem 0 rgba(255, 168, 4, 0.3);
+    border-radius: 1.5rem;
+}
+.detail-detempty i {
+    width: 36.8%;
+    height: 6.36rem;
+    margin: 8.07rem auto 1.64rem;
+    background: url("../images/detail-detempty.png") center 0 no-repeat;
+    background-size: contain;
+}
+.detail-detempty div {
+    color: rgba(111, 47, 27, 0.5);
+}
+.detail-reclist, .detail-detlist {
+    overflow: auto;
+    height: 27.57rem;
+    margin-top: 1.14rem;
+}
+.detail-recitem, .detail-detitem {
+    height: 3.57rem;
+    padding: 0 6.7% 0;
+}
+.detail-itemcol {
+    background-color: #f2eec7;
+}
+.detail-recleft, .detail-detleft {
+    width: 62%;
+    padding-top: 0.79rem;
+}
+.detail-recleft span, .detail-detleft span {
+    overflow: hidden;
+    max-width: 44%;
+    padding-right: 5%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.detail-recright, .detail-detright {
+    height: 3.57rem;
+    line-height: 3.57rem;
+}
+.detail-recname, .detail-detname {
+    margin-bottom: 0.18rem;
+}

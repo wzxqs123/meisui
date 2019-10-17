@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <p><img alt="" src="http://www.shoo99.cn/upload/image/896fe9ab1f7a4693a02187c0ba4b8b4b.png" style="height:266px; width:424px" />666</p><p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase = "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" ><param name="allowFullScreen" value = "true" /><param name="quality" value = "high" /><param name="movie" value = "http://www.shoo99.cn/qzmanage/res/img/flvplayer.swf?vcastr_file=http://www.shoo99.cn/upload/video/dceae8479d2549a5b4af953340de4912.mp4" /><embed allowfullscreen="true" pluginspage = "http://www.macromedia.com/go/getflashplayer" quality = "high" src = "http://www.shoo99.cn/qzmanage/res/img/flvplayer.swf?vcastr_file=http://www.shoo99.cn/upload/video/dceae8479d2549a5b4af953340de4912.mp4" type = "application/x-shockwave-flash" ></object > 赞！！！</p>
+        
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            setTimeout(function(){
+               console.log(1)
+            }, 0);
+             
+            new Promise(function (resolve) {
+               console.log(2);
+             
+               for (var i = 0; i < 10000; i++) {
+                   i == 9999 && resolve();
+               }
+               console.log(3);
+            }).then(function () {
+               console.log(4);
+            });
+             
+            console.log(5);
+        
+            // function CreatePerson (username, blogsrc, weibo) {
+            //     this.username = username;
+            //     this.blog = blogsrc;
+            //     this.weibo = weibo;
+                
+            // }
+            // CreatePerson.prototype.showInf = function () {
+            //     alert(this.username, this.blog, this.weibo);
+            // }
+            // var user1 = new CreatePerson("独行冰海", "www.abcd.com", "www.weibo1.com");
+            // user1.showInf();
+
+            /*function CreatePerson (idnum, nameEve, sexEve, phonenum) {
+                // var obj1 = new Object();
+                this.id = idnum;
+                this.username = nameEve;
+                this.sex = sexEve;
+                this.phonenum = phonenum;
+                // this.fun = function () {
+                //     console.log(this.id, this.username, this.sex, this.phonenum)
+                // }
+                // return obj1;
+            }
+            CreatePerson.prototype.fun = function () {
+                console.log(this.id, this.username, this.sex, this.phonenum)
+            }
+            
+            var user1 = new CreatePerson(0, "AAA", "男", 15759226362);
+            user1.fun();
+            var user2 = new CreatePerson(1, "BBB", "女", 15759226362);
+            user2.fun();
+            // console.log(user1.fun)
+            // console.log(user2.fun)
+            console.log(user1.fun == user2.fun)
+            // obj1.fun(obj1.id, obj1.username, obj1.sex, obj1.phonenum);*/
+            
+
+            /*[
+                {
+                    headTitle : "京东-秒杀",
+                    moreSrc : "../shop-list/shop-list",
+                    tapStyle : 0,
+                    listStyle : 0,
+                    timePart: [{
+                                "10:00" : listCon: [{
+                                            id: 0,
+                                            detailSrc: "logs",
+                                            picSrc: "../../resources/pic/pic-one.png",
+                                            titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                                            source: "PLUS专享价",
+                                            nowPrice: 299,
+                                            oldPrice: 548,
+                                            sale: "91%"
+                                          }, {
+                                            id: 1,
+                                            detailSrc: "shop-list",
+                                            picSrc: "../../resources/pic/pic-two.png",
+                                            titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                                            source: "买3免1",
+                                            nowPrice: 29.9,
+                                            oldPrice: 54.8,
+                                            sale: "91%"
+                                          }]
+                            }, {
+                                "12:00" : listCon: [{
+                                            id: 0,
+                                            detailSrc: "logs",
+                                            picSrc: "../../resources/pic/pic-three.png",
+                                            titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                                            source: "PLUS专享价",
+                                            nowPrice: 299,
+                                            oldPrice: 548,
+                                            sale: "91%"
+                                          }, {
+                                            id: 1,
+                                            detailSrc: "shop-list",
+                                            picSrc: "../../resources/pic/pic-four.png",
+                                            titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                                            source: "买3免1",
+                                            nowPrice: 29.9,
+                                            oldPrice: 54.8,
+                                            sale: "91%"
+                                          }]
+                            }, {
+                                "14:00" : listCon: [{
+                                            id: 0,
+                                            detailSrc: "logs",
+                                            picSrc: "../../resources/pic/pic-one.png",
+                                            titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                                            source: "PLUS专享价",
+                                            nowPrice: 299,
+                                            oldPrice: 548,
+                                            sale: "91%"
+                                          }, {
+                                            id: 1,
+                                            detailSrc: "shop-list",
+                                            picSrc: "../../resources/pic/pic-two.png",
+                                            titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                                            source: "买3免1",
+                                            nowPrice: 29.9,
+                                            oldPrice: 54.8,
+                                            sale: "91%"
+                                          }]
+                            }, {
+                                "16:00" : listCon: [{
+                                            id: 0,
+                                            detailSrc: "logs",
+                                            picSrc: "../../resources/pic/pic-three.png",
+                                            titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                                            source: "PLUS专享价",
+                                            nowPrice: 299,
+                                            oldPrice: 548,
+                                            sale: "91%"
+                                          }, {
+                                            id: 1,
+                                            detailSrc: "shop-list",
+                                            picSrc: "../../resources/pic/pic-four.png",
+                                            titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                                            source: "买3免1",
+                                            nowPrice: 29.9,
+                                            oldPrice: 54.8,
+                                            sale: "91%"
+                                          }]
+                            }, {
+                                "18:00" : listCon: [{
+                                            id: 0,
+                                            detailSrc: "logs",
+                                            picSrc: "../../resources/pic/pic-one.png",
+                                            titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                                            source: "PLUS专享价",
+                                            nowPrice: 299,
+                                            oldPrice: 548,
+                                            sale: "91%"
+                                          }, {
+                                            id: 1,
+                                            detailSrc: "shop-list",
+                                            picSrc: "../../resources/pic/pic-two.png",
+                                            titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                                            source: "买3免1",
+                                            nowPrice: 29.9,
+                                            oldPrice: 54.8,
+                                            sale: "91%"
+                                          }]
+                            }, {
+                                "20:00" : listCon: [{
+                                            id: 0,
+                                            detailSrc: "logs",
+                                            picSrc: "../../resources/pic/pic-three.png",
+                                            titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                                            source: "PLUS专享价",
+                                            nowPrice: 299,
+                                            oldPrice: 548,
+                                            sale: "91%"
+                                          }, {
+                                            id: 1,
+                                            detailSrc: "shop-list",
+                                            picSrc: "../../resources/pic/pic-four.png",
+                                            titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                                            source: "买3免1",
+                                            nowPrice: 29.9,
+                                            oldPrice: 54.8,
+                                            sale: "91%"
+                                          }]
+                            }, {
+                                "22:00" : listCon: [{
+                                            id: 0,
+                                            detailSrc: "logs",
+                                            picSrc: "../../resources/pic/pic-one.png",
+                                            titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                                            source: "PLUS专享价",
+                                            nowPrice: 299,
+                                            oldPrice: 548,
+                                            sale: "91%"
+                                          }, {
+                                            id: 1,
+                                            detailSrc: "shop-list",
+                                            picSrc: "../../resources/pic/pic-two.png",
+                                            titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                                            source: "买3免1",
+                                            nowPrice: 29.9,
+                                            oldPrice: 54.8,
+                                            sale: "91%"
+                                          }]
+                            }],
+                    listCon : [{
+                        id: 0,
+                        detailSrc: "logs",
+                        picSrc: "../../resources/pic/pic-one.png",
+                        titCon: "Prada/普拉达2017新款cahier手袋复古拼色牛皮单肩斜挎盒子女包经典款原装井口",
+                        source: "淘宝网",
+                        sourceImg: "../../resources/pic/tb-logo.png",
+                        nowPrice: 3420,
+                        oldPrice: 5420,
+                        endTime: "12:00:00"
+                    }, {
+                        id: 1,
+                        detailSrc: "shop-list",
+                        picSrc: "../../resources/pic/pic-two.png",
+                        titCon: "【限量特惠 买一赠三】 【直降29.9免邮 持久清新淡香】新系列套装持久淡香",
+                        source: "京东网",
+                        sourceImg: "../../resources/pic/jd-logo.png",
+                        nowPrice: 1,
+                        oldPrice: 10000,
+                        endTime: "12:00:00"
+                    }]
+                }, {
+                    headTitle : "淘宝-淘抢购",
+                    moreSrc : "../shop-list/shop-list",
+                    tapStyle : 0,
+                    listStyle : 0,
+                    listCon : [{
+                        id: 0,
+                        detailSrc: "logs",
+                        picSrc: "../../resources/pic/pic-one.png",
+                        titCon: "美的高端遥控塔扇 电风扇",
+                        source: "淘宝网",
+                        sourceImg: "../../resources/pic/tb-logo.png",
+                        nowPrice: 3420,
+                        oldPrice: 5420,
+                        endTime: "12:00:00"
+                    }, {
+                        id: 1,
+                        detailSrc: "shop-list",
+                        picSrc: "../../resources/pic/pic-two.png",
+                        titCon: "FOREO LUNA Mini2 硅胶洁面仪",
+                        source: "京东网",
+                        sourceImg: "../../resources/pic/jd-logo.png",
+                        nowPrice: 1,
+                        oldPrice: 10000,
+                        endTime: "12:00:00"
+                    }]
+                },  {
+                    headTitle : "网易考拉海购-限时购",
+                    moreSrc : "../shop-list/shop-list",
+                    tapStyle : 1,
+                    listStyle : 1,
+                    listCon : [{
+                        id: 0,
+                        detailSrc: "logs",
+                        picSrc: "../../resources/pic/pic-one.png",
+                        titCon: "LANCOME 兰蔻 新菁纯柔润唇膏#393  3.4g",
+                        source: "淘宝网",
+                        sourceImg: "../../resources/pic/tb-logo.png",
+                        nowPrice: 3420,
+                        oldPrice: 5420,
+                        endTime: "12:00:00"
+                    }, {
+                        id: 1,
+                        detailSrc: "shop-list",
+                        picSrc: "../../resources/pic/pic-two.png",
+                        titCon: "【报销税费】the SAEM 得鲜 济州岛99%芦荟胶啫喱300毫升/盒 3盒装",
+                        source: "京东网",
+                        sourceImg: "../../resources/pic/jd-logo.png",
+                        nowPrice: 1,
+                        oldPrice: 10000,
+                        endTime: "12:00:00"
+                    }]
+                }
+            ]*/
+        </script>
+    </body>
+</html>

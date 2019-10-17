@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>积分</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f4f5f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="integ-wrap">
+            <header class="give-head">
+                <div class="give-headcon bg-white clearfix">
+                    <i class="give-gift left"></i>
+                    <span class="thirty left">积分:</span>
+                    <em class="give-jfnum left weight-bold">2200</em>
+                    <a href="record-exchange.html" class="integ-givebut text-center thirty white right weight-bold">兑换记录</a>
+                </div>
+            </header>
+            <div class="integ-cons bg-white">
+                <div class="integ-contit thirty weight-bold text-center">
+                    <em class="position-rel"><i class="integ-titpicl position-abs"></i>足球周边<i class="integ-titpicr position-abs"></i></em>
+                </div>
+                <ul class="integ-lists clearfix">
+                    <li class="index-hotitem left">
+                        <div class="index-hotpic">
+                            <img class="block" src="images/demoimages/pic6.png" alt="" />
+                        </div>
+                        <p class="index-hotcom three weight-bold">Iphone x 256G</p>
+                        <div class="index-hotjf twenty-four clearfix weight-bold">
+                            <span class="left index-redcolor">9000</span>
+                            <em class="left nine">积分兑换</em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 兑换提示 -->
+            <div class="integ-dhtsalebg position-fix none">
+                <div class="integ-dhtsale bg-white thirty text-center position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="integ-dhtsclose position-abs"></span>
+                    <h2 class="integ-dhtstit weight-bold">兑换提示</h2>
+                    <p class="integ-dhtscon">确定使用100积分兑换C罗签名球衣照片吗？</p>
+                    <div class="integ-dhtsbut white">确认</div>
+                </div>
+            </div>
+            <!-- 完善地址 -->
+            <div class="integ-wsalebg position-fix none">
+                <div class="integ-wsale bg-white thirty text-center position-abs">
+                    <!-- 关闭按钮 -->
+                    <span class="integ-wsclose position-abs"></span>
+                    <p class="integ-wscon weight-bold">请完善收货地址</p>
+                    <a href="my.html" class="integ-wsbut block white">马上完善</a>
+                </div>
+            </div>
+            <!-- 兑换成功 -->
+            <div class="integ-sucalebg position-fix none">
+                <div class="integ-sucale bg-white thirty text-center position-abs">
+                    <div class="integ-tips white position-abs">
+                        <p>预知物流信息可添加客服</p>
+                        <span class="block">微信:000000&nbsp&nbspQQ:000000</span>
+                    </div>
+                    <!-- 兑换成功添加integ-succolor，兑换失败添加integ-failcolor -->
+                    <h2 class="integ-suctit weight-bold"></h2>
+                    <p class="integ-succon"></p>
+                    <div class="integ-sucbut white">确认</div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 兑换热门列表右边距
+            $(".integ-lists").each(function (i) {
+                $(this).children("li").each(function (j) {
+                    var _this = $(this);
+                    var eqNum = j + 1;
+                    if (eqNum % 3 == 0) {
+                        _this.css({
+                            "margin-right" : "0"
+                        });
+                    }
+                });
+            });
+
+            // 关闭弹窗
+            function closeAlert (butEve, bgEve, cons) {
+                $(butEve).click(function () {
+                    $(bgEve).addClass("none");
+                    relievescroll(); // 解除锁定
+                });
+            }
+            closeAlert(".integ-dhtsclose", ".integ-dhtsalebg");
+            closeAlert(".integ-wsclose", ".integ-wsalebg");
+            closeAlert(".integ-sucbut", ".integ-sucalebg");
+            // 点击空白部分隐藏内容
+            freeBlank(".integ-dhtsalebg", ".integ-dhtsale", "none");
+            freeBlank(".integ-wsalebg", ".integ-wsale", "none");
+            freeBlank(".integ-sucalebg", ".integ-sucale", "none");
+
+            // 点击商品
+            $(".integ-lists").on('click', '.index-hotitem', function(event) {
+                $(".integ-dhtsalebg").removeClass("none");
+                lockscroll(); // 锁定滚动条
+            });
+            // 点击提示兑换的确认
+            $(".integ-dhtsbut").click(function(event) {
+                // 此处做一次请求，例如兑换成功integBool=0，兑换失败integBool=1;
+                $(".integ-dhtsalebg").addClass("none");
+                $(".integ-sucalebg").removeClass("none");
+                var integBool = 0;
+                if (integBool == 0) {
+                    $(".integ-suctit").addClass("integ-succolor").removeClass("integ-failcolor").html("兑换成功");
+                    $(".integ-succon").html("奖品将于7-14个工作日内送达，请您留意。");
+                } else {
+                    $(".integ-suctit").addClass("integ-failcolor").removeClass("integ-succolor").html("兑换失败");
+                    $(".integ-succon").html("积分不足，去竞猜赢取更多积分吧！");
+                }
+            });
+        </script>
+    </body>
+</html>

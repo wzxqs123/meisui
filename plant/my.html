@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #7aa1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="my-wrap position-rel">
+            <!-- <div class="headtit clearfix">
+                <h2 class="thirty-two white text-center">我的</h2>
+            </div>
+            <a href="" class="my-titdet white twenty-six position-abs">明细</a> -->
+            <div class="my-layer">
+                <div class="my-bottombg position-rel clearfix">
+                    <!-- 查看明细 -->
+                    <a href="detailed.html" class="my-titdet weight-bold right twenty-six">查看明细</a>
+                    <div class="my-leftnav twenty-four text-center index-brown weight-bold position-abs">
+                        <div class="my-navinfo my-navsel left position-rel">个人信息<em class="position-abs"></em></div>
+                        <div class="my-navware left position-rel">仓库<em class="position-abs"></em></div>
+                        <div class="my-navzs left position-rel">赠送<em class="position-abs"></em></div>
+                        <div class="my-navwdbx left position-rel">宝箱<em class="position-abs"></em></div>
+                        <div class="my-navwdtd left position-rel">土地<em class="position-abs"></em></div>
+                        <div class="my-navgywm left position-rel">关于我们<em class="position-abs"></em></div>
+                    </div>
+                    <div class="my-allcon left">
+                        <!-- 个人信息 -->
+                        <div class="my-infocon">
+                            <form action="" class="my-infoform index-brown thirty">
+                                <div class="my-info weight-bold clearfix">
+                                    <strong class="left">ID:</strong>
+                                    <span id="my-infoidnum" class="my-infoidnum left">12346253</span>
+                                    <em id="my-infocopy" class="my-infocopy text-center right"></em>
+                                </div>
+                                <div class="my-nickname clearfix">
+                                    <label for="" class="left">昵称：</label>
+                                    <input type="text" class="left index-brown" placeholder="请输入昵称(必填)" />
+                                </div>
+                                <div class="my-qminput clearfix">
+                                    <label for="" class="left">签名：</label>
+                                    <input type="text" class="left index-brown" placeholder="输入个性签名(选填)" />
+                                </div>
+                                <div class="my-realname clearfix">
+                                    <label for="" class="left">真实姓名：</label>
+                                    <input type="text" class="left index-brown" placeholder="请输入真实姓名(必填)" />
+                                </div>
+                                <div class="my-phonenum clearfix">
+                                    <label for="" class="left">手机号码：</label>
+                                    <input type="text" class="left index-brown" placeholder="请输入手机号码(必填)" />
+                                </div>
+                                <div class="my-address clearfix">
+                                    <label for="" class="left">收货地址：</label>
+                                    <textarea name="" id="" rows="2" class="left index-brown" placeholder="请输入收货地址(必填)"></textarea>
+                                </div>
+                                <span class="my-footbut block clearfix weight-bold thirty-two text-center">
+                                    <a href="" class="my-signout left">退出登录</a>
+                                    <a href="javascript:;" class="my-keepinfo left">保存信息</a>
+                                </span>
+                                <!-- <span class="my-singlebut block weight-bold thirty-two text-center">
+                                    <a href="" class="my-signout block">退出登录</a>
+                                </span> -->
+                            </form>
+                        </div>
+                        <!-- 仓库 -->
+                        <div class="my-depotcon none">
+                            <!-- 有种子时显示该页面 -->
+                            <ul class="my-depotlist clearfix">
+                                <li class="my-depotitem left position-rel">
+                                    <!-- 标签,需要新收到标签时删除none类 -->
+                                    <em class="my-depotlab position-abs">
+                                        <img class="block img" src="images/demoimages/pic17.png" alt="" />
+                                    </em>
+                                    <img class="my-depotpic block" src="images/demoimages/pic2.png" alt="" />
+                                    <span class="my-depotname position-abs text-center index-brown twenty-six">灵豆种子 X2</span>
+                                </li>
+                            </ul>
+                            <!-- 没有种子时显示该页面 -->
+                            <div class="my-nodepot none">
+                                <p class="text-center twenty-six index-brown">您还没有种子哦～</p>
+                                <a href="" class="text-center weight-bold thirty-two block">马上去购买</a>
+                            </div>
+                            <!-- 点击种子弹窗 -->
+                            <div class="my-depotalebg position-fix none">
+                                <div class="my-depotale position-abs bg-white">
+                                    <!-- 关闭按钮 -->
+                                    <span class="my-depotclose plant-cropclose position-abs"></span>
+                                    <h2 class="weight-bold index-brown text-center thirty">种子详情</h2>
+                                    <div class="my-depotalecon twenty-six index-brown weight-bold">
+                                        <div class="clearfix">
+                                            <span class="left">名称：</span>
+                                            <em class="right">千年老豆</em>
+                                        </div>
+                                        <div class="clearfix">
+                                            <span class="left">单价：</span>
+                                            <em class="right">¥1</em>
+                                        </div>
+                                        <div class="clearfix">
+                                            <span class="left">收获时间：</span>
+                                            <em class="right">1天</em>
+                                        </div>
+                                        <div class="clearfix">
+                                            <span class="left">奖励：</span>
+                                            <em class="right">经验、iPad、 成长值</em>
+                                        </div>
+                                        <!-- 如果不是别人赠送的隐藏该项 -->
+                                        <div class="my-depotaleid font-orange clearfix">
+                                            <span class="left">赠送人ID</span>
+                                            <em class="right">1008000</em>
+                                        </div>
+                                    </div>
+                                    <div class="my-depotbut text-center clearfix">
+                                        <span class="my-depotret left twenty-six">返回</span>
+                                        <a href="" class="my-depottrue left twenty-six">确认种植</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 赠送 -->
+                        <div class="my-givecon none">
+                            <!-- 有物品时显示该页面 -->
+                            <ul class="my-givelist clearfix">
+                                <li class="my-giveitem left position-rel">
+                                    <!-- 标签,需要新收到标签时删除none类 -->
+                                    <em class="my-givelab position-abs">
+                                        <img class="block img" src="images/demoimages/pic17.png" alt="" />
+                                    </em>
+                                    <img class="my-givepic block" src="images/demoimages/pic7.png" alt="" />
+                                    <span class="my-givename position-abs text-center index-brown twenty-six">灵豆种子 X2</span>
+                                </li>
+                            </ul>
+                            <!-- 没有物品时显示该页面 -->
+                            <div class="my-nogive none">
+                                <p class="text-center twenty-six">还没有赠送记录哦</p>
+                            </div>
+                            <!-- 赠送弹窗 -->
+                            <div class="my-givealebg position-fix none">
+                                <div class="my-giveale position-abs bg-white">
+                                    <!-- 关闭按钮 -->
+                                    <span class="my-giveclose plant-cropclose position-abs"></span>
+                                    <h2 class="text-center thirty weight-bold index-brown">赠送</h2>
+                                    <input class="my-giveid index-brown block thirty text-center" type="number" placeholder="请输入好友ID" />
+                                    <div class="my-givealebut text-center twenty-six">确定赠送</div>
+                                </div>
+                            </div>
+                            <!-- 赠送成功 -->
+                            <div class="my-givesucbg position-fix none">
+                                <div class="my-givesuc position-abs bg-white">
+                                    <!-- 关闭按钮 -->
+                                    <span class="my-suclose plant-cropclose position-abs"></span>
+                                    <p class="thirty text-center index-brown">赠送成功</p>
+                                    <div class="my-givesucbut text-center twenty-six">朕知道了</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 宝箱 -->
+                        <div class="my-mybox none">
+                            <!-- 有礼物时显示该页面 -->
+                            <ul class="my-boxlist clearfix">
+                                <li class="my-boxitem left position-rel">
+                                    <!-- 标签,需要新收到标签时删除none类 -->
+                                    <em class="my-boxlab position-abs">
+                                        <img class="block img" src="images/demoimages/pic18.png" alt="" />
+                                    </em>
+                                    <img class="my-boxpic block" src="images/demoimages/pic8.png" alt="" />
+                                    <span class="my-boxname position-abs text-center index-brown twenty-six">灵豆种子 X2</span>
+                                </li>
+                                <li class="my-boxitem left position-rel">
+                                    <!-- 标签,需要新收到标签时删除none类 -->
+                                    <em class="my-boxlab position-abs">
+                                        <img class="block img" src="images/demoimages/pic19.png" alt="" />
+                                    </em>
+                                    <img class="my-boxpic block" src="images/demoimages/pic11.png" alt="" />
+                                    <span class="my-boxname position-abs text-center index-brown twenty-six">灵豆种子 X2</span>
+                                </li>
+                            </ul>
+                            <!-- 没有礼物时显示该页面 -->
+                            <div class="my-noprize none">
+                                <p class="text-center twenty-six"> 您的宝箱空空如也<br>快去种植赢取奖励</p>
+                                <div class="my-nocontact twenty-six index-brown text-center">
+                                    <span class="block">如有疑问，请添加客服查询</span>
+                                    <em class="block">QQ:88888880&nbsp&nbsp&nbsp微信:8888888</em>
+                                </div>
+                            </div>
+                            <!-- 点击奖品弹窗 -->
+                            <div class="my-boxalebg position-fix none">
+                                <div class="my-boxale position-abs bg-white">
+                                    <!-- 关闭按钮 -->
+                                    <span class="my-boxclose plant-cropclose position-abs"></span>
+                                    <h2 class="weight-bold index-brown text-center thirty">种子详情</h2>
+                                    <div class="my-boxalecon twenty-six index-brown weight-bold">
+                                        <div class="clearfix">
+                                            <span class="left">名称：</span>
+                                            <em class="right">千年老豆</em>
+                                        </div>
+                                        <!-- <div class="clearfix">
+                                            <span class="left">单价：</span>
+                                            <em class="right">¥1</em>
+                                        </div> -->
+                                        <div class="clearfix">
+                                            <span class="left">收获时间：</span>
+                                            <em class="right">1天</em>
+                                        </div>
+                                        <!-- <div class="clearfix">
+                                            <span class="left">奖励：</span>
+                                            <em class="right">经验、iPad、 成长值</em>
+                                        </div> -->
+                                        <!-- 如果不是别人赠送的隐藏该项 -->
+                                        <!-- <div class="my-boxaleid font-orange clearfix">
+                                            <span class="left">赠送人ID</span>
+                                            <em class="right">1008000</em>
+                                        </div> -->
+                                    </div>
+                                    <span class="my-boxbut block text-center twenty-six">领取奖品</span>
+                                </div>
+                            </div>
+                            <!-- 申请成功奖品弹窗 -->
+                            <div class="my-sucalebg position-fix none">
+                                <div class="my-sucale position-abs bg-white">
+                                    <!-- 关闭按钮 -->
+                                    <span class="my-succlose plant-cropclose position-abs"></span>
+                                    <h2 class="weight-bold index-brown text-center thirty">申请成功</h2>
+                                    <p class="my-sucalecon index-brown text-center twenty-six">
+                                        <span class="block">您的奖品将在7-14日内送达</span>
+                                        <span class="block">预知物流信息可添加客服</span>
+                                        <span class="block">QQ:88888880  微信:8888888</span>
+                                    </p>
+                                    <div class="my-sucalebut twenty-six text-center">朕知道了</div>
+                                </div>
+                            </div>
+                            <!-- 完善收货地址 -->
+                            <div class="my-perfbg position-fix none">
+                                <div class="my-perf position-abs bg-white">
+                                    <!-- 关闭按钮 -->
+                                    <span class="my-perflose plant-cropclose position-abs"></span>
+                                    <p class="thirty text-center index-brown">请完善收货地址</p>
+                                    <div class="my-perfbut text-center twenty-six block">马上去</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 土地 -->
+                        <div class="my-myland none">
+                            <ul class="my-landlist clearfix">
+                                <li class="my-landitem left">
+                                    <div class="my-landpic bg-white">
+                                        <img class="block" src="images/demoimages/my-landpic.png" alt="" />
+                                    </div>
+                                    <div class="my-landid text-center index-brown">
+                                        <span class="block twenty-four">&nbsp&nbsp&nbsp区块链密钥：</span>
+                                        <em class="block twenty-six weight-bold">274664264</em>
+                                    </div>
+                                </li>
+                                <li class="my-landitem left">
+                                    <div class="my-landpic bg-white">
+                                        <img class="block" src="images/demoimages/my-landpic.png" alt="" />
+                                    </div>
+                                    <div class="my-landid text-center index-brown">
+                                        <span class="block twenty-four">&nbsp&nbsp&nbsp区块链密钥：</span>
+                                        <em class="block twenty-six weight-bold">274664264</em>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 土地证弹窗 -->
+                            <div class="my-landalebg position-fix none">
+                                <div class="my-landale index-brown position-abs twenty-six">
+                                    <!-- 关闭按钮 -->
+                                    <span class="my-landclose plant-cropclose position-abs"></span>
+                                    <!-- 盖章 -->
+                                    <span class="my-landseal position-abs"></span>
+                                    <h2 class="thirty text-center weight-bold">土地证</h2>
+                                    <div class="my-landname clearfix">
+                                        <span class="left">土地使用权人</span>
+                                        <em class="right">老张</em>
+                                    </div>
+                                    <div class="my-landgronum clearfix">
+                                        <span class="left">区块链密钥</span>
+                                        <em class="right">276352746</em>
+                                    </div>
+                                    <div class="my-landtype clearfix">
+                                        <span class="left">类型</span>
+                                        <em class="right">普通土地</em>
+                                    </div>
+                                    <div class="my-landstar clearfix">
+                                        <span class="left">获得日期</span>
+                                        <em class="right">2018-04-16</em>
+                                    </div>
+                                    <div class="my-landend clearfix">
+                                        <span class="left">终止日期</span>
+                                        <em class="right">-</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 关于我们 -->
+                        <div class="my-aboutcon none">
+                            <ul class="my-aboutlist index-brown thirty">
+                                <li class="weight-bold">关于我们</li>
+                                <li class="my-aboutcons">我们是一个综合性游戏媒体平台致力于打造各种H5游戏服务广大玩家目前在运营的H5游戏已达数十款。未来，我们将着力引入更为多元的合作伙伴，积极服务于广大玩家及游戏平台。努力打造公平休闲的H5游戏。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 弹窗提示 -->
+            <div class="my-fadealert text-center white position-fix none"></div>
+            <!-- 底部导航 -->
+            <div class="index-footnav plant-footnav clearfix position-abs">
+                <a href="index.html" class="index-home left"><i class="block"></i></a>
+                <a href="plant.html" class="index-plant left"><i class="block"></i></a>
+                <a href="javascript:;" class="index-my index-navsel left"><i class="block"></i></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // tap切换
+            $(".my-leftnav").on("click", "div", function (e) {
+                var navNum = $(this).index();
+                $(this).addClass("my-navsel").siblings("div").removeClass("my-navsel");
+                $(".my-allcon").children("div").eq(navNum).removeClass("none").siblings().addClass("none");
+            });
+
+            // 个人信息
+            
+            // 复制功能
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("iphone") > -1) {
+                $(".my-infocopy").addClass("my-copyios").html("复制");
+                function copyArticle(event){
+                    const range = document.createRange();
+                    range.selectNode(document.getElementById('my-infoidnum'));
+
+                    const selection = window.getSelection();
+                    if(selection.rangeCount > 0) selection.removeAllRanges();
+                    selection.addRange(range);
+                    
+                    document.execCommand('copy');
+
+                    $(".my-fadealert").html("复制成功");
+                    $(".my-fadealert").fadeIn(300, function () {
+                        // 复制成功提示淡出
+                        $(this).fadeOut(2500);
+                    })
+                }
+                document.getElementById('my-infocopy').addEventListener('click', copyArticle, false);
+            }else {
+                $(".my-infocopy").removeClass("my-copyios").html("(长按复制)");
+            }
+
+            /*function inputChange (changeEve) {
+                $(changeEve).on('input', function (e) {
+                    if ($(changeEve).change()) {
+                        $(".my-infoform div").addClass("my-focusbg");
+                        $(".my-singlebut").addClass("none");
+                        $(".my-footbut").removeClass("none")
+                    }
+                });
+            }
+            inputChange(".my-infoform input");
+            inputChange(".my-address textarea");*/
+            // 个人信息提交
+
+
+            $(".my-keepinfo").click(function (e) {
+                $(".my-nickname input").blur();
+                $(".my-realname input").blur();
+                $(".my-phonenum input").blur();
+                $(".my-address textarea").blur();
+                var formFocus = [0, 0, 0, 0, 0];
+                var nickname = $(".my-nickname input").val(),
+                    autograph = $(".my-qminput input").val(), // 新增签名
+                    realname = $(".my-realname input").val(),
+                    phonenum = $(".my-phonenum input").val(),
+                    address = $(".my-address textarea").val();
+                function conEmpty (con, arrtindex, inputEve, errorCon, maxNum, maxwords) {
+                    var str = con; 
+                    var len = str.match(/[^ -~]/g) == null ? str.length : str.length + str.match(/[^ -~]/g).length;
+                    
+                    if (!conAir.test(con)) {
+                        if (len <= maxNum) {
+                            formFocus[arrtindex] = 1;
+                        } else {
+                            formFocus[arrtindex] = 0;
+                            $(inputEve).val("");
+                            $(inputEve).addClass("my-infoerror");
+                            $(inputEve).attr({
+                                "placeholder" : maxwords
+                            })
+                        }
+                    } else {
+                        formFocus[arrtindex] = 0;
+                        $(inputEve).val("");
+                        $(inputEve).addClass("my-infoerror");
+                        $(inputEve).attr({
+                            "placeholder" : errorCon
+                        })
+                    }
+                }
+                conEmpty(nickname, 0, ".my-nickname input", "昵称不能为空", 14, "最多14个字符");
+                conEmpty(realname, 2, ".my-realname input", "真实姓名不能为空", 10, "最多10个字符");
+                conEmpty(address, 4, ".my-address textarea", "收货地址不能为空", 80, "最多80个字符");
+                // 签名判断
+                function qmEmpty (con, arrtindex, inputEve, maxNum, maxwords) {
+                    var str = con; 
+                    var len = str.match(/[^ -~]/g) == null ? str.length : str.length + str.match(/[^ -~]/g).length;
+                    if (len <= maxNum) {
+                        formFocus[arrtindex] = 1;
+                    } else {
+                        formFocus[arrtindex] = 0;
+                        $(inputEve).val("");
+                        $(inputEve).addClass("my-infoerror");
+                        $(inputEve).attr({
+                            "placeholder" : maxwords
+                        })
+                    }
+                }
+                qmEmpty(autograph, 1, ".my-qminput input", 28, "最多28个字符");
+                // 判断手机格式是否正确
+                if (phoneReg.test(phonenum)) {
+                    // 手机格式正确且不为空
+                    formFocus[3] = 1;
+                } else {
+                    // 手机格式错误
+                    formFocus[3] = 0;
+                    $(".my-phonenum input").val("");
+                    $(".my-phonenum input").addClass("my-infoerror");
+                    $(".my-phonenum input").attr({
+                        "placeholder" : "请输入正确的手机号"
+                    })
+                }
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    // 这里提交数据，验证手机号码与验证码是否正确
+                    console.log(nickname, realname, phonenum, address);
+                    $(".my-fadealert").html("保存成功");
+                    $(".my-fadealert").fadeIn(300, function () {
+                        // 复制成功提示淡出
+                        $(this).fadeOut(2500);
+                    })
+                }
+            });
+
+            // 仓库
+            // 点击返回或关闭按钮关闭弹窗
+            function alertClose (closeEvt, alertbg) {
+                $(closeEvt).click(function (e) {
+                    $(alertbg).addClass("none");
+                    relievescroll() // 解除锁定
+                });
+            }
+            alertClose(".my-depotret", ".my-depotalebg");
+            alertClose(".my-depotclose", ".my-depotalebg");
+            // 宝箱弹窗关闭按钮
+            alertClose(".my-boxclose", ".my-boxalebg");
+            alertClose(".my-succlose", ".my-sucalebg"); //申请成功弹窗关闭按钮
+            alertClose(".my-sucalebut", ".my-sucalebg"); //申请成功弹窗朕知道了
+            alertClose(".my-landclose", ".my-landalebg"); // 土地证关闭按钮
+            alertClose(".my-giveclose", ".my-givealebg"); // 赠送弹窗关闭按钮
+            alertClose(".my-suclose", ".my-givesucbg"); // 赠送成功弹窗关闭按钮
+            alertClose(".my-givesucbut", ".my-givesucbg"); // 赠送成功——点击"朕知道了"关闭弹窗
+            alertClose(".my-perflose", ".my-perfbg"); // 完善收货地址弹窗关闭按钮
+
+            // 点击弹窗空白部分隐藏弹窗
+            freeBlank(".my-depotalebg", ".my-depotale", "none");
+            freeBlank(".my-boxalebg", ".my-boxale", "none"); //宝箱
+            freeBlank(".my-sucalebg", ".my-sucale", "none"); //申请成功
+            freeBlank(".my-landalebg", ".my-landale", "none"); //土地证弹窗
+            freeBlank(".my-givealebg", ".my-giveale", "none"); //赠送弹窗
+            freeBlank(".my-givesucbg", ".my-givesuc", "none"); //赠送成功弹窗
+            freeBlank(".my-perfbg", ".my-perf", "none"); //完善收货地址弹窗
+
+            function popAlert (lists, items, alertbg) {
+                $(lists).on("click", items, function (e) {
+                    $(alertbg).removeClass("none");
+                    lockscroll(); // 锁定滚动条
+                });
+            }
+            popAlert(".my-depotlist", ".my-depotitem", ".my-depotalebg");
+            popAlert(".my-boxlist", ".my-boxitem", ".my-boxalebg");
+            // 土地
+            popAlert(".my-landlist", ".my-landitem", ".my-landalebg");
+            // 赠送
+            popAlert(".my-givelist", ".my-giveitem", ".my-givealebg");
+
+            // 我的宝箱
+            
+            // 点击领取奖品弹出申请成功弹窗
+            $(".my-boxbut").click(function (e) {
+                $(".my-boxalebg").addClass("none");
+                $(".my-sucalebg").removeClass("none");
+                lockscroll(); // 锁定滚动条
+            })
+            // 点击马上去
+            $(".my-perfbut").click(function (e) {
+                $(".my-perfbg").addClass("none");
+                $(".my-mybox").addClass("none");
+                $(".my-infocon").removeClass("none");
+                $(".my-navinfo").addClass("my-navsel").siblings("div").removeClass("my-navsel");
+            });
+
+            // 赠送
+            var conAir = /^[\s]*$/;
+            $(".my-givealebut").click(function (e) {
+                $(".my-giveid").blur();
+                var giveId = $(".my-giveid").val();
+                if (!conAir.test(giveId)) {
+                    $(".my-giveid").removeClass("my-infoerror");
+                    $(".my-giveid").attr({
+                        "placeholder" : "请输入好友ID"
+                    });
+                    // 提交赠送好友ID
+                    console.log(giveId)
+                    // 显示赠送成功弹窗
+                    $(".my-givealebg").addClass("none");
+                    $(".my-givesucbg").removeClass("none");
+                } else {
+                    $(".my-giveid").val("");
+                    $(".my-giveid").addClass("my-infoerror");
+                    $(".my-giveid").attr({
+                        "placeholder" : "ID不能为空"
+                    });
+                }
+            });
+
+            /*// 滚动条自动下滑一些距离
+            var scrollHeight = 100 * window.screen.width / 750;
+            $('body,html').stop(true).animate({
+                "scrollTop" : scrollHeight + "px"
+            },500);*/
+
+
+            /*// 选择种子打钩
+            $(".my-giveitem").click(function (e) {
+                var _this = $(this);
+                if (_this.hasClass("my-checkflo")) {
+                    // 取消勾选
+                    _this.removeClass("my-checkflo");
+                    _this.children(".my-givemask").addClass("none");
+                } else {
+                    // 勾选
+                    _this.addClass("my-checkflo");
+                    _this.children(".my-givemask").removeClass("none");
+                }
+            });
+
+            var conAir = /^[\s]*$/;
+            var giveSubmit = true; //防止多次提交
+            $(".my-givebut").click(function (e) {
+                $(".my-givenum").blur();
+                var giveFocus = [0, 0];
+                var giveUserId = $(".my-givenum").val();
+                // 判断赠送人的ID号是否为空
+                if (conAir.test(giveUserId)) {
+                    // 为空
+                    giveFocus[0] = 0;
+                    $(".my-givenum").val("");
+                    $(".my-givenum").addClass("my-giveerror");
+                    $(".my-givenum").attr({
+                        "placeholder" : "请输入正确的ID"
+                    })
+                } else {
+                    // 不为空
+                    giveFocus[0] = 1;
+                }
+                var checkfloNum = 0; //勾选的种子数
+                $(".my-giveitem").each(function (i) {
+                    if (!$(this).children(".my-givemask").hasClass("none")) {
+                        checkfloNum++;
+                    }
+                });
+                if (checkfloNum > 0) {
+                    giveFocus[1] = 1;
+                } else {
+                    giveFocus[1] = 0;
+                    $(".my-fadealert").html("请选择你要赠送的物品");
+                    $(".my-fadealert").fadeIn(300, function () {
+                        $(this).fadeOut(2500);
+                    })
+                }
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var giveSum = 0;
+                if (giveSubmit) {
+                    for (var i = 0; i < giveFocus.length; i++) {
+                        giveSum += giveFocus[i];
+                    };
+                    if (giveSum == giveFocus.length) {
+                        giveSubmit = false;
+                        // 这里提交数据
+                        console.log(giveUserId);
+
+                        $(".my-fadealert").html("赠送成功");
+                        $(".my-fadealert").fadeIn(300, function () {
+                            // 赠送成功提示淡出
+                            $(this).fadeOut(2500);
+                            // 2800毫秒之后可以再次点击提交赠送数据
+                            setTimeout(function () {
+                                giveSubmit = true;
+                            }, 2800)
+                        })
+                    }
+                }
+            });*/
+        </script>
+    </body>
+</html>

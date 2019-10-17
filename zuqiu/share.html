@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>分享</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                background-color: #23c270;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="share-wrap position-rel">
+            <div class="share-con clearfix">
+                <div class="share-code left">
+                    <img class="block" src="images/demoimages/pic8.png" alt="" />
+                </div>
+                <p class="thirty-two left weight-bold">扫码加入我们</p>
+            </div>
+            <!-- 提醒弹窗 -->
+            <div class="share-alertbg position-fix">
+                <div class="share-alert bg-white thirty text-center position-abs weight-bold">
+                    <p>手机截图保存图片并分享<br />邀请好友扫码一起玩耍~</p>
+                    <span class="share-alebut block white">知道了</span>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(".share-alebut").click(function () {
+                $(".share-alertbg").addClass("none");
+                relievescroll(); // 解除锁定
+            });
+        </script>
+    </body>
+</html>

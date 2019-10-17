@@ -81,7 +81,7 @@ function itemShow (navItem, navItemNum, itemList) {
         }
     });
 }
-itemShow(".index-p-navitem", 5, ".index-p-navul");
+// itemShow(".index-p-navitem", 5, ".index-p-navul");
 
 // 点击显示微信二维码
 clickWechat(".index-p-wechat", ".index-p-wechatcode");

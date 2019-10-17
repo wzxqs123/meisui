@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>电影分类页</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/film.css">
+        <style type="text/css">
+            html, body {
+                background: #f5f1ef;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="film-d-wrap">
+            <header class="film-d-head index-f-head position-rel">
+                <div class="film-d-headstyle index-f-headstyle clearfix">
+                    <em class="b-four twenty-four left clearfix">电影<i class="right"></i></em>
+                    <span class="bg-white left b-four twenty-four position-rel"><i class="index-f-search position-abs"></i>搜索全网</span>
+                    <a class="film-d-bang index-f-bang thirty white left clearfix" href=""><i class="left"></i>首页</a>
+                </div>
+                <div class="index-f-headinput none">
+                    <input class="left twenty-four" type="text" placeholder="请输入片名或主演名" />
+                    <span class="left thirty white">搜索</span>
+                    <em class="left thirty white">取消</em>
+                </div>
+                <!-- 搜索推荐列表 -->
+                <div class="index-f-searchlists bg-white position-abs none">
+                    <a class="block thirty clearfix" href="">
+                        <span class="three left">仙女归来</span>
+                        <em class="nine right">电影</em>
+                    </a>
+                </div>
+                <!-- 点击电影出现导航 -->
+                <div class="film-d-headnav position-abs thirty text-center clearfix none">
+                    <a class="left" href="">首页</a>
+                    <a class="left" href="">动漫</a>
+                    <a class="left" href="">电影</a>
+                    <a class="left" href="">VIP</a>
+                    <a class="left" href="">综艺</a>
+                </div>
+            </header>
+            <div class="film-c-news twenty-four text-center clearfix">
+                <a class="left three bg-white film-c-newssel" href="">最近更新</a>
+                <a class="left three bg-white" href="">影院热评</a>
+                <!-- 箭头向上film-c-arrowt，箭头向下film-c-arrowb -->
+                <span class="film-c-arrowt right">分类</span>
+            </div>
+            <div class="film-c-fenlei bg-white">
+                <p class="twenty-four nine">分类索引</p>
+                <div class="swiper-container film-c-nav">
+                    <div class="swiper-wrapper text-center thirty clearfix">
+                        <a class="swiper-slide film-c-option left" href="">VIP</a>
+                        <a class="swiper-slide film-c-option left" href="">动漫</a>
+                        <a class="swiper-slide film-c-option left" href="">电影</a>
+                        <a class="swiper-slide film-c-option left" href="">综艺</a>
+                        <a class="swiper-slide film-c-option left" href="">性感</a>
+                        <a class="swiper-slide film-c-option left" href="">电影</a>
+                        <a class="swiper-slide film-c-option left" href="">动画</a>
+                        <a class="swiper-slide film-c-option left" href="">电影</a>
+                        <a class="swiper-slide film-c-option left" href="">综艺</a>
+                        <a class="swiper-slide film-c-option left" href="">性感</a>
+                        <a class="swiper-slide film-c-option left" href="">电影</a>
+                        <a class="swiper-slide film-c-option left" href="">动画</a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-f-lists bg-white clearfix">
+                <div class="film-c-popular thirty clearfix">
+                    <!-- 选中时为film-c-zuixinsel，否则为film-c-zuixin -->
+                    <a class="film-c-zuixinsel left clearfix" href=""><i class="left"></i>最新</a>
+                    <!-- 选中时为film-c-renqisel，否则为film-c-renqi -->
+                    <a class="film-c-renqi left clearfix" href=""><i class="left"></i>人气</a>
+                    <!-- 选中时为film-c-pingfensel，否则为film-c-pingfen -->
+                    <a class="film-c-pingfen left clearfix" href=""><i class="left"></i>评分</a>
+                </div>
+                <a class="index-f-movie white twenty-four left position-rel" href="">
+                    <span class="position-abs">高清国语</span>
+                    <img class="block img" src="images/loading.gif" data-echo="images/demoimages/pic1.png" alt="" />
+                    <em class="position-abs text-center">加勒比海盗2</em>
+                </a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/echo.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            // 头部导航
+            $(".film-d-headstyle span").click(function() {
+                $(".film-d-headstyle").addClass("none");
+                $(".index-f-headinput").removeClass("none");
+                $(".index-f-searchlists").removeClass("none");
+                $(".film-d-headnav").addClass("none");
+                $(".index-f-headinput input").focus();
+            });
+            $(".index-f-headinput em").click(function() {
+                $(".film-d-headstyle").removeClass("none");
+                $(".index-f-headinput").addClass("none");
+                $(".index-f-searchlists").addClass("none");
+            });
+            $(".film-d-headstyle em").click(function() {
+                if ($(".film-d-headnav").hasClass("none")) {
+                    $(".film-d-headnav").removeClass("none");
+                } else {
+                    $(".film-d-headnav").addClass("none");
+                }
+            });
+
+            // 分类索引滑动特效
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto"
+            })
+
+            // 点击分类隐藏或显示导航
+            $(".film-c-news span").click(function() {
+                if ($(this).hasClass("film-c-arrowt")) {
+                    $(this).removeClass("film-c-arrowt").addClass("film-c-arrowb");
+                    $(".film-c-fenlei").addClass("none");
+                } else {
+                    $(this).removeClass("film-c-arrowb").addClass("film-c-arrowt");
+                    $(".film-c-fenlei").removeClass("none");
+                }
+            });
+
+            var winSH = window.screen.height;
+            // 懒加载
+            Echo.init({
+                offset: winSH,
+                throttle: 1
+            });
+        </script>
+    </body>
+</html>

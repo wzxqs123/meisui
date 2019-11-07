@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>邀请记录</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="integral-m-title twenty-four white clearfix">
+            <h2 class="text-center white">邀请记录</h2>
+            <a class="integral-m-return left white clearfix" href=""><i class="left"></i>返回</a>
+        </div> -->
+        <!-- 返回顶部 -->
+        <div class="integral-m-backtop text-center position-fix">返回顶部</div>
+        <!-- 兑换记录 -->
+        <div class="integral-m-record">
+            <div class="invitation-r-head clearfix">
+                <div class="invitation-r-info recharge-pink left">
+                    <em class="block">2017年12月</em>
+                    <p>邀请好友成功20次，成为会员的好友10个</p>
+                </div>
+                <!-- 选中添加invitation-r-classsel类 -->
+                <span class="text-center white left">会员</span>
+                <span class="text-center white left">非会员</span>
+                <span class="invitation-r-classsel text-center white left">全部</span>
+            </div>
+            <div class="integral-m-recordnav twenty-four text-center clearfix">
+                <span class="left">好友</span>
+                <span class="left">会员</span>
+                <span class="left">分成</span>
+                <span class="left">状态</span>
+            </div>
+            <!-- 无分成，处理中添加类integral-m-unsign,已入账添加类integral-m-sign -->
+            <div class="integral-m-totallists">
+                <div class="invitation-r-lists integral-m-unsign text-center clearfix">
+                    <div class="invitation-r-name left">CC</div>
+                    <div class="invitation-r-viptype left">50元会员</div>
+                    <div class="invitation-r-percen left">5元</div>
+                    <div class="invitation-r-state left">已入账</div>
+                </div>
+                <div class="invitation-r-lists integral-m-sign text-center clearfix">
+                    <div class="invitation-r-name left">CC</div>
+                    <div class="invitation-r-viptype left">50元会员</div>
+                    <div class="invitation-r-percen left">5元</div>
+                    <div class="invitation-r-state left">已入账</div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 点击返回顶部，返回顶部
+            $(".integral-m-backtop").on('click', function(event) {
+                $('body,html').stop(true).animate({
+                    "scrollTop" : "0"
+                },500);
+            });
+            // 滚动滚动条时出现返回顶部按钮
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $(".integral-m-backtop").stop(true).animate({
+                        "opacity" : 1
+                    }, 500)
+                } else {
+                    $(".integral-m-backtop").stop(true).animate({
+                        "opacity" : 0
+                    }, 500)
+                }
+            })
+            if ($(window).scrollTop() == 0) {
+                $(".integral-m-backtop").stop(true).animate({
+                    "opacity" : 0
+                }, 17)
+            }
+
+            // 头部会员，非会员，全部点击切换
+            $(".invitation-r-head span").click(function () {
+                $(this).addClass("invitation-r-classsel");
+                $(this).siblings("span").removeClass("invitation-r-classsel");
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>精选</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+    </head>
+    <body class="sel-wrap">
+        <div class="swiper-container sel-header sel-mar">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide block sel-imgs position-rel">
+                    <img class="position-abs" src="images/demoimages/pic12.jpg" alt="商品图" />
+                </a>
+                <a class="swiper-slide block sel-imgs position-rel">
+                    <img class="position-abs" src="images/demoimages/pic4.jpg" alt="商品图" />
+                </a>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 暂时不需要 -->
+        <!-- <div class="white sel-mar">
+            <div class="sel-collec">
+                <span class="block text-center">精&nbsp&nbsp选&nbsp&nbsp合&nbsp&nbsp辑</span>
+                <em class="block g-three text-center">COLLECTION</em>
+            </div>
+            <div class="sel-nav clearfix">
+                <img class="left" src="images/demoimages/pic13.jpg" alt="" />
+                <img class="left" src="images/demoimages/pic13.jpg" alt="" />
+                <img class="left" src="images/demoimages/pic13.jpg" alt="" />
+                <img class="left" src="images/demoimages/pic13.jpg" alt="" />
+            </div>
+        </div> -->
+        <div class="white mar-bor">
+            <div class="sel-strip line-one">
+                <div class="sel-times text-center clearfix">
+                    <span class="left white-color twenty-six">09</span>
+                    <em class="left">：</em>
+                    <span class="left white-color twenty-six">02</span>
+                    <em class="left">：</em>
+                    <span class="left white-color twenty-six">01</span>
+                </div>
+                <!-- 即将开始和抢购中为c-two颜色字体，已结束时用g-three颜色字体 -->
+                <div class="sel-state c-two twenty-six text-center">抢购中</div>
+            </div>
+            <div class="sel-lists">
+                <div class="swiper-wrapper clearfix">
+                    <a href="" class="left swiper-slide">
+                        <div class="sel-chart text-center">
+                            <img src="images/demoimages/pic101.jpg" alt="" />
+                        </div>
+                        <p class="g-one">卓棒(JAWBONE)卓棒卓棒卓棒</p>
+                        <div class="sel-money clearfix">
+                            <span class="c-two left">￥502</span>
+                            <em class="g-three">￥79</em>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a class="block sel-mar" href="">
+            <img class="block sel-pics" src="images/demoimages/pic107.jpg" alt="" />
+        </a>
+
+        <div class="sel-collec white">
+            <span class="block text-center">每&nbsp&nbsp日&nbsp&nbsp精&nbsp&nbsp选</span>
+            <em class="block g-three text-center">DAILY SELECTION</em>
+        </div>
+        <div class="white mar-bor">
+            <a class="block" href="">
+                <img class="block sel-pics" src="images/demoimages/pic107.jpg" alt="" />
+            </a>
+            <div class="sel-good">
+                <div class="swiper-wrapper clearfix">
+                    <a href="" class="left swiper-slide">
+                        <div class="sel-things text-center">
+                            <img src="images/demoimages/pic101.jpg" alt="" />
+                        </div>
+                        <p class="g-one">卓棒(JAWBONE)卓棒卓棒卓棒</p>
+                        <div class="sel-price c-two twenty-six">￥502</div>
+                    </a>
+                    <a href="" class="left swiper-slide sel-more">
+                        <div class="g-three twenty-six text-center">更多好物</div>
+                        <strong class="g-four text-center block">M&nbspO&nbspR&nbspE</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 底部导航 -->
+        <div class="pad-bot"></div>
+        <div class="nav clearfix">
+            <a href="" class="left"></a>
+            <a href="" class="left selected"></a>
+            <a href="" class="left"></a>
+            <a href="" class="left"></a>
+            <a href="" class="left"></a>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/style.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 头图
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay: 5000,//可选选项，自动滑动
+                autoplayDisableOnInteraction : false,
+
+                // 如果需要分页器
+                pagination: '.swiper-pagination'
+            })
+
+            // 秒杀
+            var mySwi = new Swiper ('.sel-lists', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto"
+            })
+            // 品牌介绍处横向列表
+            var mySwi = new Swiper ('.sel-good', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto"
+            })
+        </script>
+    </body>
+</html>

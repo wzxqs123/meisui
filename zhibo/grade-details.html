@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>等级说明</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #efeff4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grade-d-wrap">
+            <div class="grade-d-head">
+                <h2 class="text-center">等级特权</h2>
+                <span class="block thirty-two text-center three">等级越高，特权越多！</span>
+                <!-- <span class="block thirty-two text-center three">每日<em>免费钻石</em>拿不停！</span> -->
+            </div>
+            <!-- 图 -->
+            <div class="grade-d-bar clearfix">
+                <span class="left"></span>
+                <span class="right"></span>
+            </div>
+            <!-- 列表 -->
+            <div class="grade-d-lists">
+                <div class="grade-d-listit bg-white">
+                    <div>等级与积分</div>
+                </div>
+                <div class="grade-d-titdel twenty-four three text-center grade-d-gray clearfix">
+                    <span class="left">等级</span>
+                    <span class="left">需要积分</span>
+                </div>
+                <div class="grade-d-gradel text-center">
+                    <div class="clearfix">
+                        <em class="left white grade-d-graone">Lv.1</em>
+                        <span class="left three twenty-four">0</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-graone">Lv.5</em>
+                        <span class="left three twenty-four">240</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-ten">Lv.10</em>
+                        <span class="left three twenty-four">1340</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-ten">Lv.15</em>
+                        <span class="left three twenty-four">3840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-twenty">Lv.20</em>
+                        <span class="left three twenty-four">8340</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-twenty">Lv.25</em>
+                        <span class="left three twenty-four">20840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-thirty">Lv.30</em>
+                        <span class="left three twenty-four">35840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-thirty">Lv.35</em>
+                        <span class="left three twenty-four">60840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-forty">Lv.40</em>
+                        <span class="left three twenty-four">105840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-forty">Lv.45</em>
+                        <span class="left three twenty-four">230840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-fifty">Lv.50</em>
+                        <span class="left three twenty-four">380840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-fifty">Lv.55</em>
+                        <span class="left three twenty-four">630840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-sixty">Lv.60</em>
+                        <span class="left three twenty-four">930840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-sixty">Lv.65</em>
+                        <span class="left three twenty-four">1430840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-seventy">Lv.70</em>
+                        <span class="left three twenty-four">2080840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-seventy">Lv.75</em>
+                        <span class="left three twenty-four">3330840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-eighty">Lv.80</em>
+                        <span class="left three twenty-four">4830840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-eighty">Lv.85</em>
+                        <span class="left three twenty-four">7330840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-ninety">Lv.90</em>
+                        <span class="left three twenty-four">11830840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-ninety">Lv.95</em>
+                        <span class="left three twenty-four">24330840</span>
+                    </div>
+                    <div class="clearfix">
+                        <em class="left white grade-d-hundred">Lv.100</em>
+                        <span class="left three twenty-four">36830840</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grade-d-bor"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            $(".grade-d-gradel div").each(function(i) {
+                var _this = $(this);
+                if (i % 2 == 0) {
+                    _this.addClass("bg-white");
+                } else {
+                    _this.addClass("grade-d-gray");
+                }
+            });
+
+            var headSpan = $(".grade-d-head span").size();
+            if (headSpan == 1) {
+                $(".grade-d-head h2").css({
+                    "marginBottom" : "3.14rem"
+                });
+            }
+        </script>
+    </body>
+</html>

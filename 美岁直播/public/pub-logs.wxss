@@ -1,0 +1,29 @@
+.logs-warrant {
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.logs-warrant, .logs-warrantcon {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.logs-warrantcon {
+  width: 570rpx;
+  height: 400rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.logs-warrantcon image {
+  width: 140rpx;
+  margin-bottom: 50rpx;
+}
+.logs-warrantcon .logs-infobut {
+  width: 360rpx;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>直播</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <style type="text/css">
+            body, html {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        
+    </head>
+    <body class="">
+        <div class="share-a-wrap position-rel">
+            <img class="block share-a-img" src="images/demoimages/pic4.jpg" alt="" />
+            <div class="livePlayer" id="livePlayer"></div>
+            
+            <!-- 播放按钮 -->
+            <span class="share-a-play position-abs"></span>
+
+            <!-- 头部 -->
+            <div class="share-l-head position-abs position-rel clearfix">
+                <a href="" class="share-l-headlcon left">
+                    <div class="share-l-hlinfo left clearfix">
+                        <img class="share-l-hlpic left" src="images/demoimages/pic9.png" alt="">
+                        <div class="share-l-hlcoms left">
+                            <span class="block white">营田丽人</span>
+                            <div class="share-l-hlpeonum clearfix">
+                                <i class="left"></i>
+                                <em class="left white">1940</em>
+                            </div>
+                        </div>
+                        <div class="share-l-hlgz bg-white left text-center">关注</div>
+                    </div>
+                    <div class="share-l-hlxgz left white twenty-four clearfix"><i class="left"></i>10540040</div>
+                </a>
+                <a href="" class="share-l-headrcon left">
+                    <div class="swiper-container share-l-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide share-l-slide position-rel">
+                                <img src="images/demoimages/pic16.png" alt="">
+                                <span class="position-abs text-center white">Lv.<em class="share-l-hyhg">15</em></span>
+                            </div>
+                            <div class="swiper-slide share-l-slide position-rel">
+                                <img src="images/demoimages/pic9.png" alt="">
+                                <span class="position-abs text-center white">Lv.<em class="share-l-hyhg">47</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="anchor-hotlist.html" class="share-l-close position-abs"></a>
+            </div>
+
+            <!-- 聊天部分 -->
+            <div class="share-l-infocon position-abs">
+                <ul>
+                    <!-- <li class="share-l-icli clearfix">
+                        <div class="share-l-iccom white left twenty-six"><span>Lv.<em class="share-l-icgnum">27</em></span><strong>君君家的蜘蛛侠</strong>：主播很不错，关注了！</div>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- 右侧倒计时 -->
+            <a href="" class="share-l-lqjf position-abs">
+                <i class="block"></i>
+                <span class="share-l-downtime block text-center white">00:<em>59</em></span>
+            </a>
+
+            <!-- 底部按钮 -->
+            <footer class="share-l-foot position-abs clearfix">
+                <a href="" class="share-l-flone left"></a>
+                <a href="" class="share-l-fltwo left"></a>
+                <a href="" class="share-l-fthree left"></a>
+                <a href="" class="share-l-frfour left"></a>
+                <a href="" class="share-l-frfive left"></a>
+            </footer>
+        </div>
+        <!-- 微信登录 -->
+        <div class="share-l-wxsignbg position-fix ">
+            <div class="share-l-wxale bg-white position-abs">
+                <span class="share-l-wxclose position-abs"></span>
+                <img class="share-l-userpic block" src="images/demoimages/share-l-userpic.png" alt="" />
+                <p class="text-center">登录之后即课与主播亲密互动</p>
+                <a href="" class="share-l-wxsign block white text-center">微信登录</a>
+            </div>
+        </div>
+        <!-- 主播停播时出现的界面 -->
+        <!-- <div class="share-a-stop none">
+            <div class="share-a-off position-rel">
+                <img class="share-a-offcover block img" src="images/demoimages/pic8.png" alt="" />
+                <div class="share-a-offcon position-abs">
+                    <span class="share-a-offtit block white text-center">直播已结束</span>
+                    <a href="" class="block b-one twenty-six">下载天香直播</a>
+                </div>
+            </div>
+        </div> -->
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/jwplayer.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 主播封面的居中
+            var shareImgW = $(".share-a-img").width(),
+                shareWrapW = $(".share-a-wrap").width();
+                shareDistance = -((shareImgW - shareWrapW) / 2) / 28;
+            $(".share-a-img").css({
+                "margin-left" : shareDistance + "rem"
+            });
+
+            // 头部右侧头像滑动
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto"
+            })
+            // 获取头部右侧用户等级并给予相对应的等级背景色
+            $(".share-l-slide").each(function () {
+                var _this = $(this);
+                var gradeNum = parseInt(_this.children("span").children("em").html());
+                if (1 <= gradeNum && gradeNum <= 9) {
+                    _this.children("span").addClass("grade-d-graone");
+                } else if (10 <= gradeNum && gradeNum <= 19) {
+                    _this.children("span").addClass("grade-d-ten");
+                } else if (20 <= gradeNum && gradeNum <= 29) {
+                    _this.children("span").addClass("grade-d-twenty");
+                } else if (30 <= gradeNum && gradeNum <= 39) {
+                    _this.children("span").addClass("grade-d-thirty");
+                } else if (40 <= gradeNum && gradeNum <= 49) {
+                    _this.children("span").addClass("grade-d-forty");
+                } else if (50 <= gradeNum && gradeNum <= 59) {
+                    _this.children("span").addClass("grade-d-fifty");
+                } else if (60 <= gradeNum && gradeNum <= 69) {
+                    _this.children("span").addClass("grade-d-sixty");
+                } else if (70 <= gradeNum && gradeNum <= 79) {
+                    _this.children("span").addClass("grade-d-seventy");
+                } else if (80 <= gradeNum && gradeNum <= 89) {
+                    _this.children("span").addClass("grade-d-eighty");
+                } else if (90 <= gradeNum && gradeNum <= 99) {
+                    _this.children("span").addClass("grade-d-ninety");
+                } else {
+                    _this.children("span").addClass("grade-d-hundred");
+                }
+            })
+            // 右侧倒计时
+            var times = 59;
+            $(".share-l-downtime em").html(times);
+            var timeDown = setInterval(function () {
+                if (times > 0) {
+                    times--;
+                    if (times < 10) {
+                        times = "0" + times;
+                    }
+                    $(".share-l-downtime em").html(times);
+                } else {
+                    clearInterval(timeDown);
+                    $(".share-l-downtime").html("可领取");
+                }
+            }, 1000)
+
+            // 聊天部分
+            $.get(
+                'json/room-con.json', 
+                function(data) {
+                    var roomGiftNum = null, //礼物名字
+                        roomUserCopy = null, //用户评论文案
+                        roomAnchorName = null, //名字
+                        roomUserGrade = null, //用户等级
+                        roomGradeColor = null; //等级颜色
+                    function roomBarChat () {
+                        $(".share-l-infocon ul").append("<li class='share-l-icli clearfix'><div class='share-l-iccom white left twenty-six'><span class=" + roomGradeColor + ">Lv.<em class='share-l-icgnum'>" + roomUserGrade + "</em></span><strong>" + roomAnchorName + "</strong>：" + roomUserCopy + "</div></li>");
+                    }
+                    function roomGetRoom () {
+                        $(".share-l-infocon ul").append("<li class='share-l-icli clearfix'><div class='share-l-iccom white left twenty-six'><span class=" + roomGradeColor + ">Lv.<em class='share-l-icgnum'>" + roomUserGrade + "</em></span><strong>" + roomAnchorName + "</strong>&nbsp进入游戏间</div></li>");
+                    }
+                    function roomGiveGift (argument) {
+                        $(".share-l-infocon ul").append("<li class='share-l-icli clearfix'><div class='share-l-iccom white left twenty-six'><span class=" + roomGradeColor + ">Lv.<em class='share-l-icgnum'>" + roomUserGrade + "</em></span><strong>" + roomAnchorName + "</strong>&nbsp" + roomGiftNum + "</div></li>");
+                    }
+
+                    var roomChat = null;
+                    roomChat = setInterval(roomCon, 1000);
+                    function roomCon () {
+                        var roomProba = Math.ceil(Math.random() * 10);// 随机一个数作为礼物、评论、进入房间的比例
+                        
+                        roomAnchorName = data.anchornickname[Math.floor(Math.random() * 20)]; //随机一个名字
+
+                        roomUserGrade = parseInt(Math.floor(Math.random() * 90 + 5));//等级
+                        if (1 <= roomUserGrade && roomUserGrade <= 9) {
+                            roomGradeColor = "grade-d-graone"
+                        } else if (10 <= roomUserGrade && roomUserGrade <= 19) {
+                            roomGradeColor = "grade-d-ten"
+                        } else if (20 <= roomUserGrade && roomUserGrade <= 29) {
+                            roomGradeColor = "grade-d-twenty"
+                        } else if (30 <= roomUserGrade && roomUserGrade <= 39) {
+                            roomGradeColor = "grade-d-thirty"
+                        } else if (40 <= roomUserGrade && roomUserGrade <= 49) {
+                            roomGradeColor = "grade-d-forty"
+                        } else if (50 <= roomUserGrade && roomUserGrade <= 59) {
+                            roomGradeColor = "grade-d-fifty"
+                        } else if (60 <= roomUserGrade && roomUserGrade <= 69) {
+                            roomGradeColor = "grade-d-sixty"
+                        } else if (70 <= roomUserGrade && roomUserGrade <= 79) {
+                            roomGradeColor = "grade-d-seventy"
+                        } else if (80 <= roomUserGrade && roomUserGrade <= 89) {
+                            roomGradeColor = "grade-d-eighty"
+                        } else if (90 <= roomUserGrade && roomUserGrade <= 99) {
+                            roomGradeColor = "grade-d-ninety"
+                        } else {
+                            roomGradeColor = "grade-d-hundred"
+                        }
+
+                        if (roomProba <= 2) {
+                            // console.log("送礼物");
+                            roomGiftNum = data.giftname[Math.floor(Math.random() * 5)]; //随机一个礼物名称
+                            roomGiveGift();
+                        } else if (roomProba >= 3 && roomProba <= 5) {
+                            // console.log("进入房间");
+                            roomGetRoom();
+                        } else if (6 <= roomProba <= 10) {
+                            // console.log("评论");
+                            roomUserCopy = data.usercopy[Math.floor(Math.random() * 43)]; //随机一条评论
+                            roomBarChat();
+                        }
+                        function roomScrollTop (comEve,conEve) {
+                            var roomComHeight = $(comEve).height(),
+                                roomConHeight = $(conEve).height();
+                            $(conEve).scrollTop(roomComHeight - roomConHeight + 10);
+                        }
+                        roomScrollTop(".share-l-infocon ul", ".share-l-infocon");
+                    }
+                }
+            );
+
+            var playUrl = "http://al2-hls.live.huajiao.com/live_huajiao_v2/_LC_AL2_non_18466719915401893901192637_OX/index.m3u8";
+            
+            // 判断直播中还是停播了 
+            // 例如  shareJudgeState = 0; 正在直播中
+            //       shareJudgeState = 1; 已停播
+            var shareJudgeState = 0;
+            function shareClick (cleckEve) {
+                $(cleckEve).click(function () {
+                    var shareLiveState = null;
+                    if (shareJudgeState == 0) {
+                        // $(".share-a-stop").addClass("none");
+                        $(".share-a-img").addClass("none");
+                        $(".share-a-play").addClass("none");
+                        jwplayer().play(true);
+                        // 此种方法为轮播查询方法，每秒都去请求次服务端当前的直播状态是什么样的，如果用到websocket方法可将此方法删除
+                        shareLiveState = setInterval(function () {
+                            // 此处每秒向服务端获取shareJudgeState状态是直播还是停播了
+                            if (shareJudgeState == 1) {
+                                // 获取的状态为停播
+                                clearInterval(shareLiveState);
+                                // 跳转页面
+                                window.location.href="anchor-hotlist.html"
+                            }
+                        }, 1000)
+                    } else if (shareJudgeState == 1) {
+                        // 跳转页面
+                        window.location.href="anchor-hotlist.html"
+
+                        /*$(".share-a-wrap").addClass("none");
+                        $(".share-a-stop").removeClass("none");*/
+                    }
+                })
+            }
+            shareClick($(".share-a-img"));
+            shareClick($(".share-a-play"));
+
+            // 点击微信登录关闭按钮关闭弹窗
+            $(".share-l-wxclose").click(function() {
+                $(".share-l-wxsignbg").addClass("none");
+            });
+            freeBlank(".share-l-wxsignbg", ".share-l-wxale", "none");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,213 @@
+@charset "utf8";
+/* CSS reset */
+html{max-width: 750px;width: 100%;height: 100%;background-color: #f9f4f5;color: #333;font-family:Arial,'Microsoft YaHei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong{padding:0;margin:0;font-family:Arial,'Microsoft YaHei';}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+a{text-decoration:none; color:#29738f; outline:none;}/*此处待添加默认链接颜色*/
+var,em,strong{font-style:normal;}
+address,caption,cite,code,dfn,em,strong,th,var, optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:center;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit; font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+/*input{border:none; outline:none;}*/
+
+
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+/*去除高亮*/
+a {-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/*清除苹果默认按钮样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+textarea { -webkit-appearance: none;}
+
+/*去除type="number"自带的默认样式*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+/*显示*/
+.block {
+    display: block;
+}
+/*隐藏*/
+.none {
+    display: none;
+}
+/*文字居中*/
+.text-center {
+    text-align: center;
+}
+/*相对定位*/
+.position-rel {
+    position: relative;
+}
+/*绝对定位*/
+.position-abs {
+    position: absolute;
+}
+.position-fix {
+    position: fixed;
+}
+/*加粗*/
+.weight-bold {
+    font-weight: bold;
+}
+.img {
+    width: 100%;
+}
+
+/*字体颜色*/
+.b-one {
+    color: #000;
+}
+.b-four {
+    color: #ccc;
+}
+.white {
+    color: #fff;
+}
+.three {
+    color: #333333;
+}
+.six {
+    color: #666666;
+}
+.nine {
+    color: #999999;
+}
+
+/*背景色*/
+/*白色背景*/
+.bg-white {
+    background-color: #fff;
+}
+.bg-b-one {
+    background-color: #000;
+}
+.bg-b-four {
+    background-color: #ccc;
+}
+
+/*24px字体*/
+.twenty-four {
+    font-size: 0.86rem;
+}
+/*26px字体*/
+.twenty-six {
+    font-size: 0.94rem;
+}
+/*30px字体*/
+.thirty {
+    font-size: 1.06rem;
+}
+/*32px字体*/
+.thirty-two {
+    font-size: 1.14rem;
+}
+/*内涵福利TV官网移动端*/
+.index-m-wrap {
+  min-height: 47.64rem;
+  background: url("../images/index-m-wrapbg.png") center 0 no-repeat;
+  background-size: 100%;
+}
+.index-m-cons {
+  bottom: 1.75rem;
+  left: 4%;
+  /*margin: auto;*/
+  width: 40%;
+}
+.index-m-code, 
+.loading-code {
+  width: 76.7%;
+  padding: 0.54rem 5%;
+}
+.index-m-code {
+  margin: 0 auto 0.64rem;
+  box-shadow: 0 0 0 1px #d4d4d4;
+}
+.index-m-code img, 
+.loading-code img {
+  height: 8.21rem;
+}
+.index-m-download {
+  right: 0;
+  bottom: 1.75rem;
+  padding-bottom: 2.61rem;
+  width: 56%;
+}
+.index-m-iph, 
+.index-m-and {
+  width: 5.54rem;
+  height: 2.36rem;
+  padding: 0 0 0 3.57rem;
+  margin: 0 auto;
+  line-height: 2.36rem;
+  font-size: 0.8rem;
+  color: #47d8e1;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px 0 rgba(23, 158, 187, 0.2);
+}
+.index-m-iph {
+  margin-bottom: 1.43rem;
+  background: #fff url(../images/index-p-iph.png) 25% 0.43rem no-repeat;
+  background-size: 12%;
+}
+.index-m-and {
+  background: #fff url(../images/index-p-and.png) 25% 0.5rem no-repeat;
+  background-size: 12%;
+}
+.index-m-mask {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7) url("../images/index-m-mask.png") center 0 no-repeat;
+  background-size: 100%;
+}
+/*下载中*/
+.loading-wrap {
+  min-height: 34.78rem;
+  padding-top: 12.86rem;
+  background: url("../images/loading-wrapbg.png") center 0 no-repeat;
+  background-size: 100%;
+}
+.loading-cons {
+  width: 40%;
+  margin: 0 auto 2.57rem;
+}
+.loading-code {
+  height: 8.21rem;
+  margin: 0 auto 1.07rem;
+  box-shadow: 0 0.36rem 0.72rem 0 rgba(111, 201, 253, 0.2);
+}
+.loading-flow {
+  width: 54.8%;
+  margin: 0 auto;
+}
+.index-m-bei {
+  bottom: 0.36rem;
+  left: 0;
+  width: 100%;
+  font-size: 0.64rem;
+}

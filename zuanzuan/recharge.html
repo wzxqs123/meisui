@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>赚赚</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <style type="text/css">
+            html, body {
+                background: #ff6363;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="index-title twenty-four clearfix">
+            <i class="block"></i>
+            <a class="recharge-return left white clearfix" href=""><i class="left"></i>返回</a>
+        </div> -->
+        <div class="recharge-wrap">
+            <div class="recharge-nav text-center white clearfix">
+                <!-- 选中状态的span添加recharge-navsel -->
+                <span class="recharge-navsel left">会员</span>
+                <span class="left">Z币</span>
+            </div>
+            <div class="recharge-sec bg-white">
+                <!-- 会员 -->
+                <div class="recharge-member">
+                    <div class="recharge-grade clearfix">
+                        <div class="recharge-qt text-center recharge-pink left">
+                            <span class="twenty-four block">青铜会员</span>
+                            <em class="block">20元</em>
+                        </div>
+                        <div class="recharge-by text-center recharge-pink left">
+                            <span class="twenty-four block">白银会员</span>
+                            <em class="block">50元</em>
+                        </div>
+                        <div class="recharge-bj recharge-membersel text-center recharge-pink left">
+                            <span class="twenty-four block">白金会员</span>
+                            <em class="block"> 100元</em>
+                        </div>
+                    </div>
+                    <a class="recharge-open text-center block white" href="">立即开通</a>
+                    <ul class="recharge-con thirty">
+                        <li>非会员：</li>
+                        <li>注册即送100积分 ，无红包 ，无免费游戏机会；</li>
+                        <li>青铜会员：</li>
+                        <li>成为会员即送<em class="recharge-red">200积分</em>，每天还可以领取红包<em class="recharge-red">1次</em>，每天每个游戏拥有<em class="recharge-red">1次</em>免费的游戏机会；</li>
+                        <li>白银会员：</li>
+                        <li>成为会员即送<em class="recharge-red">500积分</em>，每天还可以领取红包<em class="recharge-red">2次</em>，每天每个游戏拥有<em class="recharge-red">2次</em>免费的游戏机会；</li>
+                        <li>白金会员：</li>
+                        <li>成为会员即送<em class="recharge-red">1000积分</em>，每天还可以领取红包<em class="recharge-red">3次</em>，每天每个游戏拥有<em class="recharge-red">3次</em>免费的游戏机会。</li>
+                    </ul>
+                </div>
+                <!-- Z币 -->
+                <div class="recharge-zbi none">
+                    <div class="recharge-rechargez clearfix">
+                        <div class="recharge-twentyz text-center recharge-pink left">
+                            <span class="twenty-four block">200Z币</span>
+                            <em class="block">20元</em>
+                        </div>
+                        <div class="recharge-fiftyz text-center recharge-pink left">
+                            <span class="twenty-four block">500Z币</span>
+                            <em class="block">50元</em>
+                        </div>
+                        <div class="recharge-hundredz recharge-zsel text-center recharge-pink left">
+                            <span class="twenty-four block">1000Z币</span>
+                            <em class="block"> 100元</em>
+                        </div>
+                    </div>
+                    <a class="recharge-buy text-center block white" href="">立即购买</a>
+                    <ul class="recharge-con thirty">
+                        <li>1.Z币可以用来购买“赚赚”内游戏次数；</li>
+                        <li>2.10Z币=1元</li>
+                        <li>3.Z币仅能用于兑换“赚赚”直接运营的产品和服务，不能兑换现金，不能进行转账交易，不能兑换“赚赚”网站以外的产品和服务。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="recharge-foot text-center twenty-four white">
+                <p>充值遇到问题请联系客服。</p>
+                <p>客服微信：chenju2018</p>
+            </div>
+        </div>
+        
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            $(".recharge-nav").on("click", "span", function (argument) {
+                var thisnum = $(this).index();
+                $(this).addClass("recharge-navsel").siblings("span").removeClass("recharge-navsel");
+                if (thisnum == 0) {
+                    $(".recharge-member").removeClass("none");
+                    $(".recharge-zbi").addClass("none");
+                } else if (thisnum == 1) {
+                    $(".recharge-zbi").removeClass("none");
+                    $(".recharge-member").addClass("none");
+                }
+            })
+
+            // 选择会员或充值的Z币
+            function choice (mainEve, classopera) {
+                $(mainEve).click(function () {
+                    $(this).addClass(classopera).siblings().removeClass(classopera);
+                })
+            }
+            choice(".recharge-grade div", "recharge-membersel");
+            choice(".recharge-rechargez div", "recharge-zsel");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的钱包</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="integral-m-title twenty-four white clearfix">
+            <h2 class="text-center white">我的钱包</h2>
+            <a class="integral-m-return left white clearfix" href=""><i class="left"></i>返回</a>
+            <a class="integral-m-convertrecord right white" href="">账单明细</a>
+        </div> -->
+        <div class="my-m-head clearfix">
+            <div class="my-m-redpacket text-center left">
+                <strong class="block"></strong>
+                <span class="block">红包</span>
+                <span class="block">112911.25</span>
+                <em class="my-m-quota block"><i></i>额度：30</em>
+                <!-- 可提现：my-m-withdrawals，不可提现：my-m-unwithdrawals -->
+                <a class="my-m-withdrawals block" href="javascript:;"></a>
+                <!-- 可兑换：my-m-changez，不可兑换：my-m-unchangez -->
+                <a class="my-m-changez block" href="javascript:;"></a>
+            </div>
+            <div class="my-m-zbi text-center left">
+                <strong class="block"></strong>
+                <span class="block">Z币</span>
+                <span class="block">68800000</span>
+                <a class="my-m-palygame block" href=""></a>
+            </div>
+            <div class="my-m-integral text-center left">
+                <strong class="block"></strong>
+                <span class="block">积分</span>
+                <span class="block">68800000</span>
+                <a class="my-m-exprizes block" href=""></a>
+            </div>
+        </div>
+        <section class="my-m-sec">
+            <h2 class="my-m-sectitle">今日精选</h2>
+            <div class="integral-m-sec clearfix">
+                <div class="integral-m-com left">
+                    <div class="integral-m-info position-rel">
+                        <div class="integral-m-compic">
+                            <img class="block img" src="images/demoimages/pic2.jpg" alt="">
+                        </div>
+                        <div class="integral-m-infoword">
+                            <p>【飞科 FS373】 7级防水， 智能充电显示， 智能防夹须</p>
+                            <div class="integral-m-value clearfix">
+                                <span class="left">原价：<strong class="integral-m-delete">600 元</strong></span>
+                                <em class="left">领券：200 元</em>
+                            </div>
+                            <div class="integral-m-price clearfix">
+                                <span class="integral-m-redcolor left">券后包邮：400.00 元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="integral-m-but">
+                        <!-- 可兑换为integral-m-exchange，缺货为integral-m-unexchange -->
+                        <a class="block my-m-coupons" href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="integral-m-com left">
+                    <div class="integral-m-info position-rel">
+                        <div class="integral-m-compic">
+                            <img class="block img" src="images/demoimages/pic2.jpg" alt="">
+                        </div>
+                        <div class="integral-m-infoword">
+                            <p>【飞科 FS373】 7级防水， 智能充电显示， 智能防夹须</p>
+                            <div class="integral-m-value clearfix">
+                                <span class="left">原价：<strong class="integral-m-delete">600 元</strong></span>
+                                <em class="left">领券：200 元</em>
+                            </div>
+                            <div class="integral-m-price clearfix">
+                                <span class="integral-m-redcolor left">券后包邮：400.00 元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="integral-m-but">
+                        <!-- 可兑换为integral-m-exchange，缺货为integral-m-unexchange -->
+                        <a class="block my-m-coupons" href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="my-m-yhqbg position-fix none">
+            <div class="my-m-yhq position-abs">
+                <p class="my-m-longpress white text-center twenty-four">长按把图片保存到手机相册才可以扫描二维码</p>
+                <div class="my-m-yhqcon bg-white position-rel">
+                    <!-- 关闭按钮 -->
+                    <span class="my-m-close position-abs"></span>
+                    <div class="my-m-warepic">
+                        <img class="block" src="images/demoimages/pic5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 红包提现 -->
+        <div class="my-m-redwithdbg position-fix none">
+            <div class="my-m-redwithd position-abs bg-white">
+                <span class="my-m-redclose position-abs"></span>
+                <div class="my-m-redmoney twenty-four clearfix">
+                    <label class="left" for="my-m-withdmoney">提现金额</label>
+                    <input id="my-m-withdmoney" class="left" type="number" placeholder="输入提现金额">
+                </div>
+                <div class="my-m-withdacc twenty-four clearfix">
+                    <label class="left" for="my-m-withdzh">提现账号</label>
+                    <input id="my-m-withdzh" class="left" type="text" placeholder="输入支付宝账号">
+                </div>
+                <button class="my-m-withdbut twenty-four white text-center block" type="button">提现</button>
+                <ol class="my-m-withdrule">
+                    <li>1.最少必须提现30元；</li>
+                    <li>2.通过此途径可增加提现额度：邀请好友成为30元会员、50元会员、100元会员，提现额度对应减少3元、5元、10元。</li>
+                </ol>
+            </div>
+        </div>
+        <!-- 兑换Z币 -->
+        <div class="my-m-exczbg position-fix none">
+            <div class="my-m-excz position-abs bg-white">
+                <span class="my-m-redclose position-abs"></span>
+                <div class="my-m-exczmoney twenty-four clearfix">
+                    <label class="left" for="my-m-exczzb">兑换Z币</label>
+                    <input id="my-m-exczzb" class="left" type="number" placeholder="输入兑换数量">
+                </div>
+                <button class="my-m-exczbut twenty-four white text-center block" type="button">提现</button>
+                <ol class="my-m-exczrule">
+                    <li>1.1元=10Z币</li>
+                    <li>2.兑换的Z币可用于游戏。</li>
+                </ol>
+            </div>
+        </div>
+        <!-- 最终弹窗提示 -->
+        <div class="my-m-withdsuc white text-center position-fix none"></div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function alertFun (mainEve, closeEve, bgEve, noneEve) {
+                // 点击领券
+                $(mainEve).click(function () {
+                    $(bgEve).removeClass(noneEve);
+                    lockscroll(); // 锁定滚动条
+                })
+                // 关闭领券
+                $(closeEve).click(function () {
+                    $(bgEve).addClass(noneEve);
+                    relievescroll(); // 解除锁定
+                })
+            }
+            // 领券购买
+            alertFun(".my-m-coupons", ".my-m-close", ".my-m-yhqbg", "none");
+            // 提现
+            alertFun(".my-m-withdrawals", ".my-m-redclose", ".my-m-redwithdbg", "none");
+            // 兑换z币
+            alertFun(".my-m-changez", ".my-m-redclose", ".my-m-exczbg", "none");
+            // 点击空白部分隐藏内容
+            freeBlank(".my-m-yhqbg", ".my-m-yhq", "none");
+            freeBlank(".my-m-redwithdbg", ".my-m-redwithd", "none");
+            freeBlank(".my-m-exczbg", ".my-m-excz", "none");
+
+            // 提现输入框失焦判断
+            var numberempty = /^[\s]*$/;
+            var moneyFoucs = [0, 0];
+            function formVali (inputEve, errorClass, flaseCon, tureCon, numEve) {
+                $(inputEve).blur(function () {
+                    var _this = $(this);
+                    var redmoney = _this.val();
+                    if (numberempty.test(redmoney)) {
+                        _this.val("").addClass(errorClass);
+                        _this.attr({
+                            "placeholder" : flaseCon
+                        })
+                        moneyFoucs[numEve] = 0;
+                    } else {
+                        _this.removeClass(errorClass);
+                        _this.attr({
+                            "placeholder" : tureCon
+                        })
+                        moneyFoucs[numEve] = 1;
+                    }
+                })
+            }
+            formVali(".my-m-redmoney input", "my-m-errorprompt", "金额不能为空", "输入提现金额", 0);
+            formVali(".my-m-withdacc input", "my-m-errorprompt", "账号不能为空", "输入支付宝账号", 1);
+            
+            // 点击弹窗提现按钮
+            var withdBool = true;
+            $(".my-m-withdbut").click(function (e) {
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                if (withdBool) {
+                    $(".my-m-redmoney input").blur();
+                    $(".my-m-withdacc input").blur();
+                    var foucsMoney = 0;
+                    for (var i = 0; i < moneyFoucs.length; i++) {
+                        foucsMoney += moneyFoucs[i]
+                    };
+                    if (foucsMoney == moneyFoucs.length) {
+                        // 这里传数据
+                        
+                        withdBool = false;
+                        // 传完数据之后则执行以下注释部分，成功则提示：提现成功，否则提示：金额不足
+                        /*$(".my-m-withdsuc").html("提现成功")
+                        $(".my-m-withdsuc").fadeIn(300, function () {
+                            $(this).fadeOut(1300, function () {
+                                $(".my-m-redwithdbg").addClass("none");
+                                withdBool = true;
+                            })
+                        })*/
+                    } else {
+                        withdBool = true;
+                    }
+                }
+
+            })
+
+            // Z币兑换
+            $(".my-m-exczbut").click(function () {
+                $("#my-m-exczzb").blur();
+                var excMoney = $("#my-m-exczzb").val();
+                if (numberempty.test(excMoney)) {
+                    $("#my-m-exczzb").val("").addClass("my-m-errorprompt");
+                    $("#my-m-exczzb").attr({
+                        "placeholder" : "数量不为空"
+                    })
+                } else {
+                    // 这里传数据
+                    
+                    $("#my-m-exczzb").removeClass("my-m-errorprompt");
+                    $("#my-m-exczzb").attr({
+                        "placeholder" : "输入兑换数量"
+                    })
+                }
+            })
+        </script>
+    </body>
+</html>

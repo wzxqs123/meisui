@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>看金鸡影迷嘉年华，上美岁直播</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                background: #0f1955;
+            }
+            * {
+                -webkit-touch-callout:none;
+                -webkit-user-select:none;
+                -khtml-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                user-select:none;
+            }
+            .share-ag-wrap .none {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="share-ag-wrap position-rel">
+            <div class="share-ag-list">
+                <!-- <a href="meisui://com.meisui.live/ms://anchor?10686635" class="block">
+                    <img class="block" src="images/demoimages/pic174.png" alt="" />
+                </a>
+                <a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live" class="block">
+                    <img class="block" src="images/demoimages/pic175.png" alt="" />
+                </a>
+                <a href="MeisuiAPP://anchor56361667" class="block">
+                    <img class="block" src="images/demoimages/pic176.png" alt="" />
+                </a>
+                <a href="" class="block">
+                    <img class="block" src="images/demoimages/pic177.png" alt="" />
+                </a> -->
+            </div>
+            <!-- 分享底部下载栏 -->
+            <div class="jinj-share position-fix">
+                <img class="block" src="images/demoimages/ms-logo-ji.png" alt="" />
+                <div class="white">
+                    <h3 class="twenty-six">美岁直播</h3>
+                    <p>看金鸡影迷嘉年华，上美岁直播</p>
+                </div>
+                <a class="block white" href="https://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live">点击下载</a>
+            </div>
+            <!-- 微信中打开链接的提示窗 -->
+            <div class="share-ag-wxalert position-fix none"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var imgUrl = ["images/demoimages/pic174.png", "images/demoimages/pic175.png", "images/demoimages/pic176.png", "images/demoimages/pic177.png"]
+            var foodNum = [77330434, 11148389, 58265812, 66646768]
+            
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("iphone") > -1) {
+                console.log("ios")
+                var itemListCon = ""
+                for (var i = 0; i < imgUrl.length; i++) {
+                    itemListCon += '<a href="MeisuiAPP://anchor' + foodNum[i] + '" class="block"><img class="block" src="' + imgUrl[i] + '" alt="" /></a>'
+                };
+                $(".share-ag-list").empty("")
+                $(".share-ag-list").append(itemListCon)
+                
+            }else {
+                console.log("android")
+                var itemListCon = ""
+                for (var i = 0; i < imgUrl.length; i++) {
+                    itemListCon += '<a href="meisui://com.meisui.live/ms://anchor?' + foodNum[i] + '" class="block"><img class="block" src="' + imgUrl[i] + '" alt="" /></a>'
+                };
+                $(".share-ag-list").empty("")
+                $(".share-ag-list").append(itemListCon)
+            }
+            $(".share-ag-list a").click(function () {
+                // 判断是否是微信打开
+                function is_weixn(){
+                    if(ua.match(/MicroMessenger/i) == "micromessenger") {
+                        // 显示去浏览器中打开提示层
+                        $(".share-ag-wxalert").removeClass("none");
+                    } else {
+                        setTimeout(function () {
+                            loadPage()
+                        }, 2000)
+                    }
+                }
+                is_weixn();
+            });
+            // 页面跳转至应用宝下载
+            function loadPage () {
+                window.location.href = "https://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live"
+            }
+            // 点击提示层模块，隐藏该模块
+            $(".share-ag-wxalert").click(function() {
+                $(this).addClass("none")
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>排行榜</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            body, html {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.0);
+                color: #333;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="rank-al-wrap position-rel">
+            <div class="rank-al-alert bg-white position-abs">
+                <!-- 关闭按钮 -->
+                <span class="rank-al-close position-abs"></span>
+                <div class="rank-al-nav nine position-abs bg-white">
+                    <span class="rank-al-navsel">本周排行</span>
+                    <span>上周TOP10</span>
+                    <!-- 19-2-20修改 -->
+                    <span>竟赛规则</span>
+                </div>
+                <div class="rank-al-box">
+                    <!-- 本周排行 -->
+                    <div class="rank-al-thisweek position-rel">
+                        <div class="rank-al-thisweekcom">
+                            <div class="rank-al-first position-rel">
+                                <!-- 底层背景旋转图 -->
+                                <div class="rank-al-aura position-abs"></div>
+                                <div class="rank-al-fram position-abs"></div>
+                                <!-- 头像 -->
+                                <img class="rank-al-pic position-abs" src="images/demoimages/pic48.png" alt="" />
+                                <!-- 第一名详细信息 -->
+                                <div class="rank-al-oneinfo position-abs">
+                                    <div class="rank-al-firone">
+                                        <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                        <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                        <em data-sex="0" class="rank-al-firsex"></em>
+                                        <!-- 19-2-20删除 -->
+                                        <!-- <div class="rank-al-firgrade white text-center">Lv.<span>32</span></div> -->
+                                    </div>
+                                    <div class="rank-al-sectwo">
+                                        <span class="twenty-four nine">贡献榜</span>
+                                        <img src="images/demoimages/pic48.png" alt="" />
+                                        <img src="images/demoimages/pic48.png" alt="" />
+                                        <img src="images/demoimages/pic48.png" alt="" />
+                                    </div>
+                                    <div class="rank-al-thithree twenty-four nine">丽人&nbsp9999</div>
+                                </div>
+                            </div>
+                            <ul class="rank-al-weeklist">
+                                <li class="rank-al-weekitem">
+                                    <!-- 第二添加rank-al-weektwo类，第三名添加rank-al-weekthree -->
+                                    <span class="rank-al-weeknum rank-al-weektwo text-center thirty weight-bold"></span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="0" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>20</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum rank-al-weekthree text-center thirty weight-bold"></span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="1" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>60</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum text-center thirty weight-bold">5</span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="1" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>40</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum text-center thirty weight-bold">15</span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="0" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>60</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum text-center thirty weight-bold">115</span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="0" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>10</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 底部个人详情 -->
+                            <div class="rank-al-footmy bg-white position-abs">
+                                <span class="rank-al-mynum text-center thirty weight-bold">22</span>
+                                <img class="rank-al-mypic" src="images/demoimages/pic48.png" alt="" />
+                                <div class="rank-al-myinfo">
+                                    <div class="rank-al-myname twenty-six">伊丽莎白</div>
+                                    <div class="rank-al-mybar position-rel">
+                                        <span class="rank-al-myprog block"></span>
+                                        <em class="rank-al-myinte nine position-abs">150/299</em>
+                                    </div>
+                                    <p class="rank-al-mytip nine">距离娥眉，还差149积分</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 上周TOP10 -->
+                    <div class="rank-al-lastweek position-rel none">
+                        <div class="rank-al-lastweekcom">
+                            <div class="rank-al-first position-rel">
+                                <!-- 底层背景旋转图 -->
+                                <div class="rank-al-aura position-abs"></div>
+                                <div class="rank-al-fram position-abs"></div>
+                                <!-- 头像 -->
+                                <img class="rank-al-pic position-abs" src="images/demoimages/pic48.png" alt="" />
+                                <!-- 第一名详细信息 -->
+                                <div class="rank-al-oneinfo position-abs">
+                                    <div class="rank-al-firone">
+                                        <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                        <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                        <em data-sex="0" class="rank-al-firsex"></em>
+                                        <!-- 19-2-20删除 -->
+                                        <!-- <div class="rank-al-firgrade white text-center">Lv.<span>32</span></div> -->
+                                    </div>
+                                    <div class="rank-al-sectwo">
+                                        <span class="twenty-four nine">贡献榜</span>
+                                        <img src="images/demoimages/pic48.png" alt="" />
+                                        <img src="images/demoimages/pic48.png" alt="" />
+                                        <img src="images/demoimages/pic48.png" alt="" />
+                                    </div>
+                                    <div class="rank-al-thithree twenty-four nine">丽人&nbsp9999</div>
+                                </div>
+                            </div>
+                            <ul class="rank-al-weeklist">
+                                <li class="rank-al-weekitem">
+                                    <!-- 第二添加rank-al-weektwo类，第三名添加rank-al-weekthree -->
+                                    <span class="rank-al-weeknum rank-al-weektwo text-center thirty weight-bold"></span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="0" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>20</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum rank-al-weekthree text-center thirty weight-bold"></span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="1" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>60</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum text-center thirty weight-bold">5</span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="1" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>40</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum text-center thirty weight-bold">15</span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="0" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>60</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                                <li class="rank-al-weekitem">
+                                    <span class="rank-al-weeknum text-center thirty weight-bold">115</span>
+                                    <img class="rank-al-weekpic" src="images/demoimages/pic48.png" alt="" />
+                                    <div class="rank-al-weekinfo">
+                                        <div class="rank-al-infofir">
+                                            <p class="thirty-two weight-bold">Kristin汀汀汀</p>
+                                            <!-- 男的data-sex为0添加rank-al-firman，女的data-sex为1添加rank-al-firwoman -->
+                                            <em data-sex="0" class="rank-al-usersex"></em>
+                                            <!-- 19-2-20删除 -->
+                                            <!-- <div class="rank-al-usergrade white text-center">Lv.<span>10</span></div> -->
+                                        </div>
+                                        <div class="rank-al-infosec">
+                                            <span class="twenty-four nine">贡献榜</span>
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                            <img src="images/demoimages/pic48.png" alt="" />
+                                        </div>
+                                        <div class="rank-al-infothi twenty-four nine">丽人&nbsp9999</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 比赛规则 -->
+                    <div class="rank-al-rule none">
+                        <ul class="rank-al-rulelist nine">
+                            <li class="rank-al-ruleitem clearfix">
+                                <span class="left"></span>
+                                <p class="twenty-six left">有14个段位，分为佳人、粉黛、蛾眉、玉人、璧人、佼人、丽人、伊人、玉女、淑女、尤物、娇娃、西施、青娥</p>
+                            </li>
+                            <li class="rank-al-ruleitem clearfix">
+                                <span class="left"></span>
+                                <p class="twenty-six left">主播进入PK后，初始段位为佳人</p>
+                            </li>
+                            <li class="rank-al-ruleitem clearfix">
+                                <span class="left"></span>
+                                <p class="twenty-six left">胜利增加50积分；单场PK每达到10000星光值，奖励20积分，达到20000星光值，奖励30积分。</p>
+                            </li>
+                            <li class="rank-al-ruleitem clearfix">
+                                <span class="left"></span>
+                                <p class="twenty-six left">失败减少50积分；单场PK每达到10000星光值，奖励10积分，达到20000星光值，奖励20积分。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(".rank-al-nav span").click(function (e) {
+                $(this).addClass("rank-al-navsel");
+                $(this).siblings().removeClass("rank-al-navsel");
+                // 切换内容
+                var selNavNum = $(this).index();
+                $(".rank-al-box").children("div").eq(selNavNum).siblings("div").addClass("none");
+                $(".rank-al-box").children("div").eq(selNavNum).removeClass("none");
+            });
+
+            // 性别判断
+            function judgeSex (sexEve, eqNum, sexData, mans, womans) {
+                var userSex = parseInt($(sexEve).eq(eqNum).attr(sexData));
+                if (userSex == 0) {
+                    $(sexEve).eq(eqNum).removeClass(womans);
+                    $(sexEve).eq(eqNum).addClass(mans);
+                } else if (userSex == 1) {
+                    $(sexEve).eq(eqNum).removeClass(mans);
+                    $(sexEve).eq(eqNum).addClass(womans);
+                }
+            }
+            judgeSex(".rank-al-firsex", 0, "data-sex", "rank-al-firman", "rank-al-firwoman"); // 本周第一名的性别判断
+            judgeSex(".rank-al-firsex", 1, "data-sex", "rank-al-firman", "rank-al-firwoman"); // 上周第一名的性别判断
+            $(".rank-al-usersex").each(function (i) {
+                var sexEqNum = i;
+                judgeSex(".rank-al-usersex", sexEqNum, "data-sex", "rank-al-firman", "rank-al-firwoman"); // 列表用户的性别判断
+            });
+
+            // 19-2-20删除
+            /*// 添加等级背景
+            function addGradeColor (gradeNum, gradeEve, eqNum) {
+                var userGrade = parseInt($(gradeNum).eq(eqNum).html());
+                if (userGrade >= 1 && userGrade < 10) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-graone");
+                } else if (userGrade >= 10 && userGrade < 20) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-ten");
+                } else if (userGrade >= 20 && userGrade < 30) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-twenty");
+                } else if (userGrade >= 30 && userGrade < 40) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-thirty");
+                } else if (userGrade >= 40 && userGrade < 50) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-forty");
+                } else if (userGrade >= 50 && userGrade < 60) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-fifty");
+                } else if (userGrade >= 60 && userGrade < 70) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-sixty");
+                } else if (userGrade >= 70 && userGrade < 80) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-seventy");
+                } else if (userGrade >= 80 && userGrade < 90) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-eighty");
+                } else if (userGrade >= 90 && userGrade < 100) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-ninety");
+                } else if (userGrade >= 100) {
+                    $(gradeEve).eq(eqNum).addClass("grade-d-hundred");
+                }
+            }
+            addGradeColor(".rank-al-firgrade span", ".rank-al-firgrade", 0);
+            addGradeColor(".rank-al-firgrade span", ".rank-al-firgrade", 1);
+            $(".rank-al-usergrade").each(function (i) {
+                var gradeEqNum = i;
+                addGradeColor(".rank-al-usergrade span", ".rank-al-usergrade", gradeEqNum); // 添加等级颜色
+            });*/
+
+            // 点击关闭按钮
+            $(".rank-al-close").click(function (e) {
+                $(".rank-al-wrap").addClass("none")
+            });
+
+            // 获取后端返回的数据——自己的积分值及总值
+            // $.ajax({
+            //     url: '/path/to/file',
+            //     type: 'get',
+            //     dataType: 'json',
+            //     data: {param1: 'value1'},
+            //     success: function (data) {
+                    // 进度条特效
+                    // myIntegral为我当前的积分，totalIntegral为升级需要的总积分
+                    var myIntegral = 150,
+                        totalIntegral = 299;
+                    var percentage = myIntegral / totalIntegral * 100;
+                    if (percentage >= 100) {
+                        percentage = 100;
+                    }
+                    $(".rank-al-myprog").animate({
+                        "width" : percentage + "%"
+                    }, 1000)
+            //     }
+            // })
+        </script>
+    </body>
+</html>

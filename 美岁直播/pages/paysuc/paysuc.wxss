@@ -1,0 +1,42 @@
+/* pages/paysuc/paysuc.wxss */
+@import"../../public/pay-result.wxss";
+.paysuc-tips {
+  margin-bottom: 40rpx;
+}
+.paysuc-payicon {
+ background: url("https://wechatpay.pod.meisuizhibo.com/paysuc-payicon.png") center center no-repeat;
+  background-size: contain;
+}
+.paysuc-tips text {
+  color: #5d84ff;
+}
+.paysuc-order {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150rpx;
+}
+.paysuc-orderdel {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.paysuc-orderdel text, 
+.paysuc-orderdel view {
+  font-size: 26rpx;
+}
+.paysuc-orderdel text {
+  margin-right: 15rpx;
+  color: #999;
+}
+.paysuc-orderdel view {
+  color: #333;
+  font-weight: bold;
+}
+.paysuc-line {
+  width: 2rpx;
+  height: 16rpx;
+  margin: 0 30rpx;
+  background-color: #cacacc;
+}

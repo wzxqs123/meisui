@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>年度盛典</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                background: #7a4aff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ndsd-r-wrap position-rel">
+            <a href="ndsd-index.html" class="ndsd-r-linkone twenty-six position-abs white">一起来种金钱树</a>
+            <a href="ndsd-my.html" class="ndsd-r-linktwo twenty-six position-abs white">我的奖品</a>
+            <div class="ndsd-r-tit white weight-bold text-center">抽取你的幸运折扣</div>
+            <p class="ndsd-r-times white weight-bold text-center thirty">老用户回归折扣时间：1月23日-1月31日</p>
+            <div class="ndsd-r-cons bg-white">
+                <p class="weight-bold text-center">我的幸运折扣是</p>
+                <div class="ndsd-r-rebate weight-bold text-center"><span class="ndsd-r-nums">?</span>&nbsp&nbsp折</div>
+                <!-- 已点添加ndsd-r-clickend -->
+                <div class="ndsd-r-but white text-center">试试手气</div>
+                <div class="text-center twenty-four nine">折扣仅在线充值有效</div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            var butHasEnd = $(".ndsd-r-but").hasClass("ndsd-r-clickend"); // 按钮是否已经点过 true为点过，false为未点过
+            $(".ndsd-r-but").click(function (e) {
+                var clickEnd = $(this).hasClass("ndsd-r-clickend"); // 按钮是否已经点过
+                if (!butHasEnd) {
+                    $(this).addClass("ndsd-r-clickend");
+                    // 此处向服务端发送请求获取折扣数 这里以5折举例说明
+                    /*$.ajax({
+                        url: '/path/to/file',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {param1: 'value1'},
+                        success: function (data) {
+                            var zkNums = 5;
+                            $(".ndsd-r-nums").html(zkNums);
+                        }
+                    })*/
+                    var zkNums = 5.5;
+                    $(".ndsd-r-nums").html(zkNums);
+                }
+            });
+        </script>
+    </body>
+</html>

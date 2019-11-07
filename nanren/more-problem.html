@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>更多问题</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/dropload.css" />
+    </head>
+    <body>
+        <div class="more-p-wrap">
+            <div class="more-p-lists line-one white twenty-six">
+                <p class="">177 80kg 穿多大？177 80kg 穿多大？177 80kg 穿多大？177 80kg 穿多大？</p>
+                <p class="g-three">向您推荐34号供参考向您推荐34号供参考向您推荐34号供参考.</p>
+            </div>
+            <div class="more-p-lists line-one white twenty-six">
+                <p class="">177 80kg 穿多大？177 80kg 穿多大？177 80kg 穿多大？177 80kg 穿多大？</p>
+                <p class="g-three">向您推荐34号供参考向您推荐34号供参考向您推荐34号供参考.</p>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/dropload.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 删除列表最底部line-one样式改为line-two样式
+            var moreNums = $(".more-p-lists").size() - 1;
+            $(".more-p-lists").eq(moreNums).removeClass("line-one").addClass("line-two");
+
+            /*$(function(){
+                var counter = 0;
+                // 每页展示4个
+                var num = 4;
+                var pageStart = 0,pageEnd = 0;
+
+                // dropload
+                $(".more-p-wrap").dropload({
+                    scrollArea : window,
+                    loadDownFn : function(me){
+                        $.ajax({
+                            type: 'post',
+                            url: '',
+                            dataType: 'json',
+                            success: function(data){
+                                var result = '';
+                                counter++;
+                                pageEnd = num * counter;
+                                pageStart = pageEnd - num;
+
+                                // 锁定
+                                me.lock();
+                                // 无数据
+                                me.noData();
+                                // break;
+                                // 为了测试，延迟1秒加载
+                                setTimeout(function(){
+                                    // 每次数据加载完，必须重置
+                                    me.resetload();
+                                },1000);
+                            },
+                            error: function(xhr, type){
+                                alert('Ajax error!');
+                                // 即使加载出错，也得重置
+                                me.resetload();
+                            }
+                        });
+                    }
+                });
+            });*/
+        </script>
+    </body>
+</html>

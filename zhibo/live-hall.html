@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>直播大厅</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            body, html {
+                background-color: #f5f1ef;
+            }
+        </style>
+    </head>
+    <body class="">
+        <a href="" class="live-h-head bg-white block">
+            <span class="three left">直播大厅</span>
+            <em class="live-h-blue right">下载APP</em>
+        </a>
+        <div class="live-h-lists clearfix">
+            <div class="live-h-anchor left">
+                <div class="live-h-pic position-rel">
+                    <!-- 主播封面照 -->
+                    <img class="block img" src="images/demoimages/pic12.png" alt="" />
+                    <!-- 游戏图片显示 -->
+                    <span class="live-h-games position-abs"></span>
+                </div>
+                <div class="live-h-con bg-white">
+                    <div class="live-h-infor three clearfix">
+                        <span class="left">伊莉莎布</span>
+                        <em class="right">500人</em>
+                    </div>
+                    <p class="nine">主播个人说明</p>
+                </div>
+            </div>
+            <div class="live-h-anchor left">
+                <div class="live-h-pic position-rel">
+                    <!-- 主播封面照 -->
+                    <img class="block img" src="images/demoimages/pic12.png" alt="" />
+                    <!-- 游戏图片显示 -->
+                    <span class="live-h-games position-abs"></span>
+                </div>
+                <div class="live-h-con bg-white">
+                    <div class="live-h-infor three clearfix">
+                        <span class="left">伊莉莎布</span>
+                        <em class="right">500人</em>
+                    </div>
+                    <p class="nine">主播个人说明</p>
+                </div>
+            </div>
+            <div class="live-h-anchor left">
+                <div class="live-h-pic position-rel">
+                    <!-- 主播封面照 -->
+                    <img class="block img" src="images/demoimages/pic12.png" alt="" />
+                    <!-- 游戏图片显示 -->
+                    <span class="live-h-games position-abs"></span>
+                </div>
+                <div class="live-h-con bg-white">
+                    <div class="live-h-infor three clearfix">
+                        <span class="left">伊莉莎布</span>
+                        <em class="right">500人</em>
+                    </div>
+                    <p class="nine">主播个人说明</p>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <a class="share-a-download clearfix position-fix" href="">
+            <div class="share-a-xzlogo left">
+                <img class="img block" src="images/demoimages/pic5.png" alt="">
+            </div>
+            <div class="share-a-mscon left">
+                <span class="block white">天香直播</span>
+                <em class="block">你想要的这里都有</em>
+            </div>
+            <div class="share-a-clickxz bg-white text-center twenty-six right">立即打开</div>
+        </a>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(".live-h-anchor").eq(0).css({
+                "width" : "100%"
+            });
+            $(".live-h-anchor").each(function(i) {
+                var takeOver = i % 2;
+                if (takeOver == 1) {
+                    $(this).css({
+                        "marginRight" : "1.2%"
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>一起“脱光”洗香香</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            html, body {
+                background: #ffe467;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="get-n-wrap">
+            <div class="get-n-time text-center">11月10日 00：00-11月12日23：59</div>
+            <div class="get-n-one position-rel">
+                <div class="get-n-onetitle"></div>
+                <strong class="get-n-people position-abs"></strong>
+                <div class="get-n-onecon">
+                    <div class="get-n-attribute text-center thirty clearfix">
+                        <span class="left">奖项</span>
+                        <span class="right">奖励</span>
+                    </div>
+                    <div class="get-n-ranking twenty-six text-center white">
+                        <div class="clearfix">
+                            <span class="left">第<em>1</em>名</span>
+                            <span class="right"><em>1111</em>元</span>
+                        </div>
+                        <div class="clearfix">
+                            <span class="left">第<em>2</em>名</span>
+                            <span class="right"><em>888</em>元</span>
+                        </div>
+                        <div class="clearfix">
+                            <span class="left">第<em>3</em>名</span>
+                            <span class="right"><em>520</em>元</span>
+                        </div>
+                        <div class="clearfix">
+                            <span class="left">第<em>4</em>、<em>5</em>名</span>
+                            <span class="right"><em>200</em>元</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="get-n-two">
+                <div class="get-n-twotitle"></div>
+                <div class="get-n-twocon">
+                    <div class="get-n-twonav thirty text-center clearfix">
+                        <span class="left">TOP</span>
+                        <span class="left">主播ID</span>
+                        <span class="left">昵称</span>
+                        <span class="left">魅力指数</span>
+                    </div>
+                    <div id="get-n-twocom" class="get-n-twocom twenty-six text-center white">
+                        <div id="get-n-twolength" class="get-n-twolength">
+                            <div class="clearfix">
+                                <span class="left">1</span>
+                                <span class="left">8273621</span>
+                                <span class="left">斯巴达</span>
+                                <span class="left">50</span>
+                            </div>
+                            <div class="clearfix">
+                                <span class="left">2</span>
+                                <span class="left">8273621</span>
+                                <span class="left">斯巴达</span>
+                                <span class="left">50</span>
+                            </div>
+                            <div class="clearfix">
+                                <span class="left">3</span>
+                                <span class="left">8273621</span>
+                                <span class="left">斯巴达</span>
+                                <span class="left">50</span>
+                            </div>
+                            <div class="clearfix">
+                                <span class="left">4</span>
+                                <span class="left">8273621</span>
+                                <span class="left">斯巴达</span>
+                                <span class="left">50</span>
+                            </div>
+                            <div class="clearfix">
+                                <span class="left">5</span>
+                                <span class="left">8273621</span>
+                                <span class="left">斯巴达</span>
+                                <span class="left">50</span>
+                            </div>
+                            <div class="clearfix">
+                                <span class="left">6</span>
+                                <span class="left">8273621</span>
+                                <span class="left">斯巴达</span>
+                                <span class="left">50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="get-n-three">
+                <div class="get-n-threetitle"></div>
+                <div class="get-n-threecon">
+                    <ol class="twenty-six">
+                        <li>1.主播获得1个特殊“爱心”礼物，增加1点魅力指数，三天累计魅力指数排行榜前五名的主播获得奖励。</li>
+                        <li>2.充值折扣活动狂欢进行</li>
+                        <li>3.奖励将于活动结束后3个工作日内统一发放</li>
+                        <li>更多详询客服微信：txzhibo666</li>
+                    </ol>
+                </div>
+            </div>
+            <footer class="twenty-four text-center">本活动最终解释权归天香所有</footer>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var luckMain = document.getElementById("get-n-twocom");
+            var luckSpeed = 1;
+            var luckScroll = setInterval(function(){
+                if (luckMain.scrollTop + $("#get-n-twocom").height() >= $("#get-n-twolength").height()) {
+                    setTimeout(function () {
+                        luckMain.scrollTop += luckSpeed;
+                        // 滚动到底部时重新滚动
+                        luckMain.scrollTop = 0;
+                        getLoveCount();
+                    }, 1500)
+                } else if (luckMain.scrollTop + $("#get-n-twocom").height() >= 0) {
+                    setTimeout(function () {
+                        luckMain.scrollTop += luckSpeed;
+                    }, 1500)
+                };
+            },50);
+            
+            getLoveCount();
+            function getLoveCount(){
+                 $.ajax({
+                     url:'getLoveCount',
+                     dataType: 'json',
+                     async: false,
+                     data:{
+                         'type':2
+                     },
+                     success: function (data) {
+                         $(".get-n-twolength").empty();
+                         for (var i = 0; i < data.data.length; i++) {
+                             var top = i+1;
+                             $(".get-n-twolength").append("<div class='clearfix'><span class='left'>" + top + "</span><span class='left'>" + data.data[i].fuuid + "</span><span class='left'>" + data.data[i].nickname + "</span><span class='left'>" + data.data[i].total2 + "</span></div>")
+                         };
+                     }
+                 })
+            }
+        </script>
+    </body>
+</html>

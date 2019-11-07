@@ -1,0 +1,63 @@
+/* pages/index/index.wxss */
+@import "../../public/pub-logs.wxss";
+
+page {
+  background: #f0eff4;
+}
+.index-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 0 20rpx 0;
+}
+.index-item {
+  width: 370rpx;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+}
+.index-anchorpic {
+  overflow: hidden;
+  position: relative;
+  height: 370rpx;
+}
+.index-anchorpic image {
+  width: 100%;
+  height: 370rpx;
+}
+.index-anchorname {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.index-anchorpic image {
+  display: block;
+  width: 100%;
+}
+.index-zbiocn {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  width: 120rpx;
+  height: 40rpx;
+  background: url("https://wechatpay.pod.meisuizhibo.com/index-zbiocn.png") center center no-repeat;
+  background-size: 100%;
+}
+.index-andel {
+  overflow: hidden;
+  width: 180rpx;
+  padding-right: 20rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333;
+}
+.index-peonums {
+  color: #999;
+}
+.index-foottip {
+  padding-bottom: 20rpx;
+}

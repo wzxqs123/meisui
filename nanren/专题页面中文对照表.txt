@@ -1,0 +1,10 @@
+新人必买   ————  new-special.html
+尖货推荐   ————  tipgoods-recom.html
+觅物       ————  scavenger.html
+每日上新   ————  everyday-new.html
+热销榜     ————  hot-list.html
+预售页面   ————  presale-page.html
+
+双十二主会场   ————  doubletwelve-main.html
+双十二分会场   ————  doubletwelve-branch.html
+1212榜单   ————  selling-list.html

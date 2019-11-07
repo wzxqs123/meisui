@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>免费拿福利</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/dropload.css" />
+        <style type="text/css">
+            html, body {
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="free-b-float none">
+            <div class="free-b-outer">
+                <form class="free-b-form" action="">
+                    <img class="block" src="images/demoimages/pic38.png" alt="" />
+                    <div class="white free-b-data">
+                        <input class="block twenty-six text-center free-b-num" type="number" placeholder="请输入手机号"/>
+                        <p class="text-center g-two">使用手机登录男人帮，即可看到你的优惠劵</p>
+                        <button class="block white-color bg-color-two free-b-sub" type="submit">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="free-b-fail twenty-six white-color text-center none">领取失败，只有新人才能领取哦！快去男人帮看看最新优惠~</div>
+        <div class="free-b-head">
+            <dl class="free-b-dl clearfix">
+                <dt class="left">
+                    <img class="block" src="images/demoimages/pic36.png" alt="" />
+                </dt>
+                <dd class="left white-color">XXXX的邀请</dd>
+            </dl>
+            <img class="free-b-con block" src="images/demoimages/pic37.png" alt="" />
+            <a href="javascript:;" class="block free-b-but free-b-ori c-two text-center">领礼包 ，去免单</a>
+            <p class="text-center white-color twenty-six">已有50456男神礼包被领取！</p>
+        </div>
+        <h2 class="free-b-title twenty-six text-center line-one">———————&nbsp&nbsp&nbsp男人帮的质感好物&nbsp&nbsp&nbsp———————</h2>
+        <div class="ord-c-lists free-b-lists">
+            <a class="block white position-rel" href="">
+                <dl class="clearfix">
+                    <dt class="ord-c-pic position-rel text-center left">
+                        <img src="images/demoimages/pic98.jpg" alt="" />
+                        <div class="position-abs bou-c-loot none">
+                            <em class="position-abs text-center white-color">已抢光</em>
+                        </div>
+                        <div class="position-abs bou-c-discount clearfix">
+                            <span class="white-color left">5折</span>
+                        </div>
+                    </dt>
+                    <dd class="left ord-c-con">
+                        <p class="g-one">COACH小牛皮</p>
+                        <!-- 当无国内价时外层的标签.global-p-stictwo不可删除也不可注释 -->
+                        <div class="global-p-stictwo">
+                            <strong class="g-three">国内价<em>¥40000</em></strong>
+                        </div>
+                        <div class="art-d-money clearfix">
+                            <span class="left c-two"><strong class="twenty-six">¥</strong>123456</span>
+                            <em class="right text-center c-two" href="">去购买</em>
+                        </div>
+                    </dd>
+                </dl>
+            </a>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/dropload.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function(){
+                var counter = 0;
+                // 每页展示4个
+                var num = 4;
+                var pageStart = 0,pageEnd = 0;
+
+                // dropload
+                $(".ord-c-lists").dropload({
+                    scrollArea : window,
+                    loadDownFn : function(me){
+                        $.ajax({
+                            type: 'post',
+                            url: '',
+                            dataType: 'json',
+                            success: function(data){
+                                var result = '';
+                                counter++;
+                                pageEnd = num * counter;
+                                pageStart = pageEnd - num;
+
+                                // 锁定
+                                me.lock();
+                                // 无数据
+                                me.noData();
+                                // break;
+                                // 为了测试，延迟1秒加载
+                                setTimeout(function(){
+                                    // 每次数据加载完，必须重置
+                                    me.resetload();
+                                },1000);
+                            },
+                            error: function(xhr, type){
+                                alert('Ajax error!');
+                                // 即使加载出错，也得重置
+                                me.resetload();
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

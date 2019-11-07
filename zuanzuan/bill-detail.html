@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>账单明细</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="integral-m-title twenty-four white clearfix">
+            <h2 class="text-center white">账单明细</h2>
+            <a class="integral-m-return left white clearfix" href=""><i class="left"></i>返回</a>
+        </div> -->
+        <!-- 返回顶部 -->
+        <div class="integral-m-backtop text-center position-fix">返回顶部</div>
+        <!-- 兑换记录 -->
+        <div class="integral-m-record">
+            <div class="integral-m-recordnav text-center clearfix">
+                <span class="left">交易项</span>
+                <span class="left">明细</span>
+                <span class="left">交易时间</span>
+                <span class="left">状态</span>
+            </div>
+            <!-- 未签收，处理中添加类integral-m-unsign,已签收添加类integral-m-sign -->
+            <div class="integral-m-totallists">
+                <div class="integral-m-lists integral-m-unsign text-center clearfix">
+                    <div class="my-m-ordernum integral-m-ordernum left">提现</div>
+                    <div class="integral-m-comname left">+30</div>
+                    <div class="integral-m-exctime left">
+                        <span class="block">2017-12-29</span>
+                        <em class="block">15:23</em>
+                    </div>
+                    <div class="integral-m-state left">处理中</div>
+                </div>
+                <div class="integral-m-lists integral-m-sign text-center clearfix">
+                    <div class="my-m-ordernum integral-m-ordernum left">提现</div>
+                    <div class="integral-m-comname left">-30</div>
+                    <div class="integral-m-exctime left">
+                        <span class="block">2017-12-29</span>
+                        <em class="block">15:23</em>
+                    </div>
+                    <div class="integral-m-state left">已完成</div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 点击返回顶部，返回顶部
+            $(".integral-m-backtop").on('click', function(event) {
+                $('body,html').stop(true).animate({
+                    "scrollTop" : "0"
+                },500);
+            });
+            // 滚动滚动条时出现返回顶部按钮
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $(".integral-m-backtop").stop(true).animate({
+                        "opacity" : 1
+                    }, 500)
+                } else {
+                    $(".integral-m-backtop").stop(true).animate({
+                        "opacity" : 0
+                    }, 500)
+                }
+            })
+            if ($(window).scrollTop() == 0) {
+                $(".integral-m-backtop").stop(true).animate({
+                    "opacity" : 0
+                }, 17)
+            }
+        </script>
+    </body>
+</html>

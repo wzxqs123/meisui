@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>canvas</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <style type="text/css">
+            /*.can-one {
+                border: 1px solid #999;
+            }
+            .can-two {
+                width: 200px;
+                height: 100px;
+                border: 1px solid #999;
+            }*/
+            .draw {
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <canvas id="testCanvasOne" width="400" height="200" class="can-one"></canvas>
+        <canvas id="testCanvasTwo" width="400" height="200" class="can-two"></canvas>
+        <canvas id="testCanvasThree" width="200" height="100" class="can-one"></canvas> -->
+
+        <!-- <canvas id="testCanvas" width="300" height="150" class="draw"></canvas> -->
+
+        <canvas id="testCanvas" width="500" height="600" class="draw"></canvas>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            /*var testCanvasOne = $("#testCanvasOne")[0];
+            var conTextOne = testCanvasOne.getContext("2d");
+            conTextOne.beginPath();
+            conTextOne.rect(180, 80, 40, 40);
+            conTextOne.stroke();
+            conTextOne.closePath();
+
+            var testCanvasTwo = $("#testCanvasTwo")[0];
+            var conTexTwo = testCanvasTwo.getContext("2d");
+            conTexTwo.beginPath();
+            conTexTwo.rect(180, 80, 40, 40);
+            conTexTwo.stroke();
+            conTexTwo.closePath();
+
+            var testCanvasThree = $("#testCanvasThree")[0];
+            var conTextThree = testCanvasThree.getContext("2d");
+            conTextThree.beginPath();
+            conTextThree.rect(180, 80, 40, 40);
+            conTextThree.stroke();
+            conTextThree.closePath();*/
+
+            /*var testCanvas = $("#testCanvas")[0];
+            var context = testCanvas.getContext("2d");
+            context.beginPath();
+            context.moveTo(20, 20);
+
+            context.lineTo(280, 20);
+            context.lineTo(280, 130);
+            context.lineTo(20, 130);
+            context.lineTo(20, 20);
+
+            context.stroke();
+
+            // context.fill();
+
+            context.closePath();*/
+
+            var testCanvas = $("#testCanvas")[0];
+            var context = testCanvas.getContext("2d");
+            context.beginPath();
+
+            context.moveTo(250, 20);
+            context.lineTo(450, 90);
+            context.lineTo(50, 90);
+            context.lineTo(250, 20);
+
+            context.moveTo(50, 90);
+            context.lineTo(50, 490);
+            context.lineTo(450, 490);
+            context.lineTo(450, 90);
+
+            context.moveTo(100, 180);
+            context.lineTo(180, 180);
+            context.lineTo(180, 260);
+            context.lineTo(100, 260);
+            context.lineTo(100, 180);
+            context.font = "32px Microsoft YaHei";
+            context.fillText("傻", 125, 232, 80);
+
+            context.moveTo(320, 180);
+            context.lineTo(400, 180);
+            context.lineTo(400, 260);
+            context.lineTo(320, 260);
+            context.lineTo(320, 180);
+            context.font = "32px Microsoft YaHei";
+            context.fillText("逼", 345, 232, 80);
+
+            context.moveTo(200, 490);
+            context.lineTo(200, 390);
+            context.lineTo(300, 390);
+            context.lineTo(300, 490);
+            context.font = "32px Microsoft YaHei";
+            context.fillText("CC", 230, 452, 80);
+
+            context.stroke();
+
+            context.closePath();
+        </script>
+    </body>
+</html>

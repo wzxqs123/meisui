@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>登录</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #fff;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="sign-i-wrap position-rel">
+            <!-- 标题部分 -->
+            <div class="headtit bg-white clearfix none">
+                <h2 class="thirty-four text-center">登录</h2>
+                <a href="javascript:history.go(-1)" class="left"></a>
+            </div>
+            
+            <form action="" class="sign-i-main thirty-two">
+                <div class="clearfix">
+                    <input class="sign-i-account left" type="number" placeholder="请输入您的账号" />
+                    <input class="sign-i-pw left" type="number" placeholder="请输入您的密码" />
+                    <button class="sign-i-but text-center white" type="button">登录</button>
+                </div>
+            </form>
+            <div class="sign-i-hrefs clearfix">
+                <a href="" class="left">忘记密码？</a>
+                <a href="register.html" class="right">注册账号</a>
+            </div>
+            <!-- 渐隐弹窗 -->
+            <div class="fadealert text-center white position-fix none">登录成功</div>
+            <div class="sign-i-third">
+                <div class="sign-i-thirdhead clearfix">
+                    <em class="left"></em>
+                    <span class="left">第三方软件登录</span>
+                    <em class="left"></em>
+                </div>
+                <div class="sign-i-thirdcon clearfix">
+                    <a class="sign-i-wechat left" href=""></a>
+                    <a class="sign-i-weibo left" href=""></a>
+                    <a class="sign-i-qq left" href=""></a>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 点击登录
+            var conAir = /^[\s]*$/;
+            var nonEmpty = /^[\S]*$/;
+            $(".sign-i-but").click(function (e) {
+                $(".sign-i-account").blur();
+                $(".sign-i-pw").blur();
+                var formFocus = [0, 0];
+                var phoneCon = $(".sign-i-account").val(),
+                    passCon = $(".sign-i-pw").val();
+                // 判断手机格式是否正确且不为空
+                if (phoneReg.test(phoneCon) && !conAir.test(phoneCon)) {
+                    // 手机格式正确且不为空
+                    formFocus[0] = 1;
+                    $(".sign-i-account").removeClass("infoerror");
+                } else {
+                    // 手机格式错误
+                    formFocus[0] = 0;
+                    $(".sign-i-account").addClass("infoerror");
+                    $(".sign-i-account").val("");
+                    $(".sign-i-account").attr({
+                        "placeholder" : "请输入正确的手机号"
+                    });
+                }
+                
+                if (!conAir.test(passCon) && nonEmpty.test(passCon)) {
+                    // 密码不为为空
+                    if (passCon.length >= 6 && passCon.length <= 20) {
+                        // 正确密码格式
+                        formFocus[1] = 1;
+                        $(".sign-i-pw").removeClass("infoerror");
+                    } else {
+                        formFocus[1] = 0;
+                        $(".sign-i-pw").addClass("infoerror");
+                        $(".sign-i-pw").val("");
+                        $(".sign-i-pw").attr({
+                            "placeholder" : "密码长度为6~20位"
+                        });
+                    }
+                } else {
+                    // 密码为空
+                    formFocus[1] = 0;
+                    $(".sign-i-pw").addClass("infoerror");
+                    $(".sign-i-pw").val("");
+                    $(".sign-i-pw").attr({
+                        "placeholder" : "密码不能为空"
+                    });
+                }
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    // 这里提交数据，验证手机号码与验证码是否正确
+                    console.log(phoneCon, passCon);
+
+                    // 登录成功渐隐弹窗
+                    $(".fadealert").fadeIn(500, function () {
+                        // 弹窗提示淡出
+                        $(this).fadeOut(2500);
+                    })
+                }
+            })
+        </script>
+    </body>
+</html>

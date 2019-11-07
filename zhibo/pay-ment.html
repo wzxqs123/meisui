@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>充值</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            body, html {
+                width: 100%;
+                background-color: #f6f6f8;
+                color: #343434;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="pay-m-wrap">
+            <div class="pay-m-cons bg-white">
+                <h2 class="pay-m-tit pay-m-yellow text-center">用户充值</h2>
+                <div class="pay-m-moeny">
+                    <p class="pay-m-modeltit twenty-six">*选择支付方式</p>
+                    <!-- 选中添加pay-m-waysel -->
+                    <div class="pay-m-way pay-m-waysel position-rel">
+                        <em class="pay-m-butpic"><i class="block"></i></em>
+                        <img class="pay-m-paypic" src="images/demoimages/pic106.png" alt="" />
+                        <div class="twenty-six">支付宝支付</div>
+                        <span class="pay-m-recom white text-center position-abs">推荐</span>
+                    </div>
+                    <div class="pay-m-way position-rel">
+                        <em class="pay-m-butpic"><i class="block"></i></em>
+                        <img class="pay-m-paypic" src="images/demoimages/pic107.png" alt="" />
+                        <div class="twenty-six">微信支付</div>
+                    </div>
+                </div>
+                <div class="pay-m-del">
+                    <p class="pay-m-modeltit twenty-six">*选择支付方式</p>
+                    <ul class="pay-m-list">
+                        <!-- 选中添加pay-m-itemsel -->
+                        <li class="pay-m-item pay-m-itemsel position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X2500</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥25.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X9900</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥99.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X15800</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥158.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X29800</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥298.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X49800</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥498.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X99800</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥998.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X199800</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥1998.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X499800</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥4998.00</div>
+                        </li>
+                        <li class="pay-m-item position-rel">
+                            <i class="pay-m-diamond"></i>
+                            <span class="twenty-six">X999800</span>
+                            <div class="pay-m-moneydel pay-m-yellow weight-bold position-abs">￥9998.00</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pay-m-foot bg-white position-fix">
+                <div class="pay-m-footcom">
+                    <div class="pay-m-moneyshow twenty-six text-center">应付金额：<span class="pay-m-yellow weight-bold">99.00</span>元</div>
+                    <a class="pay-m-moneybut block white thirty text-center" href="">支付</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 底部获取初始充值金额
+            var moneyNum = $(".pay-m-itemsel").children(".pay-m-moneydel").html();
+            $(".pay-m-moneyshow span").html(moneyNum);
+
+            function payClick (itemEve, selClass, moneyEve, showEve) {
+                $(itemEve).click(function () {
+                    var _this = $(this);
+                    _this.addClass(selClass).siblings(itemEve).removeClass(selClass);
+                    // 修改显示金额
+                    var newMoneyNum = _this.children(moneyEve).html();
+                    $(showEve).html(newMoneyNum);
+                });
+            }
+            payClick(".pay-m-way", "pay-m-waysel"); // 支付类型选择
+            payClick(".pay-m-item", "pay-m-itemsel", ".pay-m-moneydel", ".pay-m-moneyshow span"); // 选择钻石套餐
+        </script>
+    </body>
+</html>

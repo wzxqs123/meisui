@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>邀请有礼</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #7c3596;
+            }
+            input::-webkit-input-placeholder { /* WebKit browsers */
+                color: #944bbb;
+            }
+            input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: #944bbb;
+            }
+            input::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: #944bbb;
+            }
+            input:-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: #944bbb;
+            }
+            .invite-n-error::-webkit-input-placeholder { /* WebKit browsers */
+                color: #f00;
+            }
+            .invite-n-error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: #f00;
+            }
+            .invite-n-error::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: #f00;
+            }
+            .invite-n-error:-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: #f00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="invite-n-wrap">
+            <form class="invite-n-con" action="">
+                <div class="invite-n-nosign">
+                    <div class="invite-n-phone">
+                        <input class="invite-n-phonenum white block" type="number" placeholder="请输入手机号码" />
+                    </div>
+                    <div class="invite-n-code clearfix">
+                        <input class="invite-n-codenum white left" type="number" placeholder="验证码" />
+                        <!-- 倒计时时添加类invite-n-reading -->
+                        <span class="invite-n-codebut text-center white right"></span>
+                    </div>
+                    <button class="invite-n-sibbut block" type="button"></button>
+                    <!-- 微信登录 -->
+                    <!-- 需要显示时删除none -->
+                    <a class="invite-n-wxsign block none" href=""></a>
+                </div>
+                <div class="invite-n-ysign none">
+                    <img class="invite-n-userpic block" src="images/demoimages/pic46.png" alt="" />
+                    <div class="invite-n-usercon text-center twenty-four">
+                        <span class="invite-n-username">15759226362用户</span>
+                        <a class="invite-n-cancel" href="">[注销]</a>
+                    </div>
+                </div>
+            </form>
+            <div class="invite-n-foot clearfix">
+                <div class="invite-n-left position-rel left">
+                    <div class="invite-n-tit position-abs clearfix">
+                        <img class="left" src="images/demoimages/invite-n-htlogo.png" alt="" />
+                    </div>
+                    <ol class="invite-n-list">
+                        <li>1.被邀请人必须为首次登录嗨兔直播的用户；</li>
+                        <li>2.登录成功后，无需再次输入邀请码；</li>
+                        <li>3.客服联系方式，微信：livekefu，QQ：965997888；</li>
+                    </ol>
+                </div>
+                <a class="invite-n-load left" href=""></a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 获取验证码
+            $(".invite-n-codebut").click(function () {
+                var _this = $(this);
+                if (!_this.hasClass("invite-n-reading")) {
+                    $(".invite-n-phonenum").blur();
+                    var phonenum = $(".invite-n-phonenum").val();
+                    if (phoneReg.test(phonenum)) {
+                        $(".invite-n-phonenum").removeClass("invite-n-error");
+                        _this.addClass("invite-n-reading");
+                        // 手机栏改成只读
+                        $(".invite-n-phonenum").attr({
+                            "readonly" : "readonly"
+                        });
+                        var times = 60;
+                        _this.html(times + "s");
+                        var timeDown = setInterval(function () {
+                            if (times > 0) {
+                                times--;
+                                _this.html(times + "s");
+                            } else {
+                                clearInterval(timeDown);
+                                _this.html("");
+                                _this.removeClass("invite-n-reading");
+                                // 手机栏删除只读属性
+                                $(".invite-n-phonenum").removeAttr("readonly");
+                            }
+                        }, 1000)
+                    } else {
+                        _this.removeClass("invite-n-reading");
+                        $(".invite-n-phonenum").addClass("invite-n-error");
+                        $(".invite-n-phonenum").val("");
+                        $(".invite-n-phonenum").attr({
+                            "placeholder" : "请输入正确的手机号"
+                        })
+                    }
+                }
+            })
+            
+            // 点击登录
+            var conAir = /^[\s]*$/;
+            var nonEmpty = /^[\S]*$/;
+            $(".invite-n-sibbut").click(function (e) {
+                $(".invite-n-phonenum").blur();
+                $(".invite-n-codenum").blur();
+                var formFocus = [0, 0];
+                var phoneCon = $(".invite-n-phonenum").val(),
+                    codeCon = $(".invite-n-codenum").val();
+                // 判断手机格式是否正确且不为空
+                if (phoneReg.test(phoneCon) && !conAir.test(phoneCon)) {
+                    // 手机格式正确且不为空
+                    formFocus[0] = 1;
+                    $(".invite-n-phonenum").removeClass("invite-n-error");
+                } else {
+                    // 手机格式错误
+                    formFocus[0] = 0;
+                    $(".invite-n-phonenum").addClass("invite-n-error");
+                    $(".invite-n-phonenum").val("");
+                    $(".invite-n-phonenum").attr({
+                        "placeholder" : "请输入正确的手机号"
+                    });
+                }
+                if (!conAir.test(codeCon)) {
+                    // 验证码不为为空
+                    formFocus[1] = 1;
+                    $(".invite-n-codenum").removeClass("invite-n-error");
+                } else {
+                    // 验证码为空
+                    formFocus[1] = 0;
+                    $(".invite-n-codenum").addClass("invite-n-error");
+                    $(".invite-n-codenum").val("");
+                    $(".invite-n-codenum").attr({
+                        "placeholder" : "验证码不能为空"
+                    });
+                }
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    // 这里提交数据，验证手机号码与验证码是否正确
+                    console.log(phoneCon, codeCon);
+
+                    // 服务端验证返回一个值，暂且定0是正确，1是错误
+                    var fwdjudge = 0;
+                    if (fwdjudge == 0) {
+                        $(".invite-n-nosign").addClass("none");
+                        $(".invite-n-ysign").removeClass("none");
+                    } else {
+                        $(".invite-n-codenum").addClass("invite-n-error");
+                        $(".invite-n-codenum").val("");
+                        $(".invite-n-codenum").attr({
+                            "placeholder" : "验证码不能为空"
+                        });
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

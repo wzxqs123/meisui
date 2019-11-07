@@ -1,0 +1,12 @@
+/* pages/payfail/payfail.wxss */
+@import"../../public/pay-result.wxss";
+.payfail-tips {
+  margin-bottom: 210rpx;
+}
+.payfail-payicon {
+  background: url("https://wechatpay.pod.meisuizhibo.com/payfail-payicon.png") center center no-repeat;
+  background-size: contain;
+}
+.payfail-tips text {
+  color: #666;
+}

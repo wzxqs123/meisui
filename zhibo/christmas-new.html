@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>缤纷圣诞·豪礼萌约</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <style type="text/css">
+            html, body {
+                background: #fff;
+            }
+            /*12-20新增*/
+            .snow-canvas {
+                z-index: 5;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: fixed;
+                pointer-events: none;
+            }
+            *{
+                -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+                -webkit-user-select:none; /*webkit浏览器*/
+                -khtml-user-select:none; /*早期浏览器*/
+                -moz-user-select:none; /*火狐*/
+                -ms-user-select:none;  /*IE10*/
+                user-select:none;
+            }
+            input{
+                -webkit-user-select: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="christmas-new-wrap position-rel">
+            <!-- 下雪 12-20新增 -->
+            <canvas class="snow-canvas" speed="1" interaction="false" size="2" count="80" opacity="0.00001" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" wind-power="0" image="false" width="1366" height="667"></canvas>
+            <canvas class="snow-canvas" speed="3" interaction="true" size="6" count="30" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false" width="1366" height="667"></canvas>
+            <canvas class="snow-canvas" speed="3" interaction="true" size="12" count="20" wind-power="-5" image="images/snow.png" width="1366" height="667"></canvas>
+            <!-- 音乐 -->
+            <!-- 无音乐时添加chri-n-nomusic -->
+            <div class="chri-n-micon chri-n-nomusic position-abs">
+                <audio id="chri-n-audio" src="" loop="loop" autoplay="autoplay"></audio>
+            </div>
+            <div class="christmas-new-tree">
+            	<div class="christmas-new-treebg">
+                    <div class="christmas-new-giftbg position-rel">
+                        <span class="chri-n-giftone position-abs"></span>
+                        <span class="chri-n-gifttwo position-abs"></span>
+                        <span class="chri-n-giftthree position-abs"></span>
+                        <span class="chri-n-giftfour position-abs"></span>
+                        <span class="chri-n-giftfive position-abs"></span>
+                    </div>
+                </div>
+            </div>
+            <p class="christmas-new-tip text-center">（2000钻=一次点击礼包机会）</p>
+            <div class="chri-n-jackpot position-rel">
+                <div class="swiper-container new-y-jacklists">
+                    <div class="swiper-wrapper new-y-jackcon new-y-yellow">
+                        <!-- 12-20修改 -->
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic58.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacksix">IphoneXS<br />max</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic59.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">情侣对戒</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic60.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">梦幻城堡</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic61.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">爱情火箭</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic62.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">圣诞结</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic68-2.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">50000钻石</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic68-2.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">10000钻石</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic64.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">小女仆</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic63.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">小女巫</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic65.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">小绵羊</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic66.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">烟花</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic67.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">5000经验</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chri-n-jackslide block position-rel">
+                                <img class="block img" src="images/demoimages/pic67.png" alt="" />
+                                <div class="position-abs text-center chri-n-jacktwe">2000经验</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev position-abs"></div>
+                <div class="swiper-button-next position-abs"></div>
+            </div>
+            <a href="christmas-me.html" class="chri-n-lookme block text-center weight-bold thirty">查看我的获奖情况</a>
+            <ol class="chri-n-con">
+                <li>1、使用2000钻石换取一次拆圣诞礼包的机会，赢新萌颜（小绵羊、小女巫、小女仆）、火箭、城堡等大礼，还有特殊萌颜礼物“圣诞结”、情侣对戒、IphoneXS max等神秘大礼；</li>
+                <li>2、抽中的奖品请至礼物箱查看；</li>
+                <li>3、“圣诞结”可送给主播，主播可获得平台随机千元以上奖励。</li>
+                <li class="chri-n-conlast clearfix">
+                	<img src="images/demoimages/pic55.png" alt="" class="left">
+                	<span class="left">圣诞结=千元以上随机红包奖励</span>
+                </li>
+            </ol>
+            <div class="chri-n-top">
+                <div class="chri-n-tophead twenty-four weight-bold christmas-red clearfix text-center">
+                    <span class="left">用户昵称</span>
+                    <span class="left">奖品</span>
+                </div>
+                <div id="chri-n-toplists" class="chri-n-toplists bg-white christmas-red">
+                    <ol id="chri-n-topol" class="chri-n-topol">
+                        <li class="chri-n-topoption clearfix text-center">
+                            <span class="left">斯巴好强大</span>
+                            <span class="left">5000经验</span>
+                        </li>
+                        <li class="chri-n-topoption clearfix text-center">
+                            <span class="left">斯巴好强大</span>
+                            <span class="left">5000经验</span>
+                        </li>
+                        <li class="chri-n-topoption clearfix text-center">
+                            <span class="left">斯巴好强大</span>
+                            <span class="left">5000经验</span>
+                        </li>
+                        <li class="chri-n-topoption clearfix text-center">
+                            <span class="left">斯巴好强大</span>
+                            <span class="left">5000经验</span>
+                        </li>
+                        <li class="chri-n-topoption clearfix text-center">
+                            <span class="left">斯巴好强大</span>
+                            <span class="left">5000经验</span>
+                        </li>
+                        <li class="chri-n-topoption clearfix text-center">
+                            <span class="left">斯巴好强大</span>
+                            <span class="left">5000经验</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <footer class="chri-n-foot text-center">更多详询客服  微信：&nbsplivekefu&nbsp&nbsp&nbspQQ：965997888<br>本活动最终解释权归美岁直播所有</footer>
+            <!-- 渐隐提示弹窗 -->
+            <div class="chri-n-error white thirty text-center position-fix none"></div>
+            <!-- 兑换弹窗 -->
+            <div class="chri-n-dhalebg position-fix none">
+            	<div class="chri-n-dhale position-abs">
+            		<!-- 圣诞老人背景图 -->
+            		<div class="chri-n-sdlrbg position-abs"></div>
+            		<div class="chri-n-dhtips thirty text-center">
+            			<span class="block">是否确认使用钻石换取礼包</span>
+            			<em class="block">（2000钻=1次）</em>
+            		</div>
+            		<div class="chri-n-dhcom text-center clearfix">
+                        <!-- 选中项加chri-n-dhdel -->
+            			<div class="chri-n-dhitem chri-n-dhdel left">
+            				<span class="block">2000钻</span>
+            				<em class="block">(1次)</em>
+            			</div>
+            			<div class="chri-n-dhitem left">
+            				<span class="block">19800钻</span>
+            				<em class="block">(10次)</em>
+            			</div>
+            			<div class="chri-n-dhitem left">
+            				<span class="block">195000钻</span>
+            				<em class="block">(100次)</em>
+            			</div>
+            		</div>
+            		<!-- 兑换按钮 -->
+                    <div class="clearfix">
+                        <div class="chri-n-dhcancel white text-center left">取消</div>
+                        <div class="chri-n-dhbut white text-center left">兑换</div>
+                    </div>
+            	</div>
+            </div>
+            <!-- 恭喜获得 -->
+            <div class="chri-n-hdalebg position-fix none">
+            	<div class="chri-n-hdale position-abs">
+            		<!-- 圣诞老人背景图 -->
+            		<div class="chri-n-hdsdlr position-abs"></div>
+            		<div class="chri-n-hdtit thirty text-center position-rel">
+            			<span class="position-abs"></span>
+            			<em class="position-abs"></em>
+            			<div>恭喜你</div>
+            			<em class="position-abs"></em>
+            			<span class="position-abs"></span>
+            		</div>
+                    <div class="chri-n-hdcom">
+                        <div class="chri-n-hdcons text-center thirty clearfix">获得情侣对指、爱心火箭、IphoneXS max等礼物</div>
+                    </div>
+            		<!-- 确定按钮 -->
+            		<div class="chri-n-hdbut white text-center">确定</div>
+            	</div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <!-- 12-20新增 -->
+        <script src="js/snow-plugin.js" type="text/javascript"></script>
+        <script>
+            // 下雪 12-20新增
+            $(function(){
+                $(".snow-canvas").snow();
+            });
+
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto",
+                // 如果需要前进后退按钮
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev'
+            })
+
+            // li背景色交替出现
+            function blockPink (liEve, pinkBg) {
+                $(liEve).each(function (i) {
+                    if (i % 2 == 0) {
+                        $(this).addClass(pinkBg);
+                    }
+                });
+            }
+            blockPink(".chri-n-topol li", "chri-n-rewardpink");
+
+            // 获奖公告滚屏
+            topscroll("chri-n-toplists", "#chri-n-toplists", "#chri-n-topol", 1, 50);
+            function topscroll (idEve, outerlayer, inlayer, speed, intervaltime) {
+                // top魅力值模块滚动
+                var luckMain = document.getElementById(idEve);
+                var luckSpeed = speed;
+                var luckScroll = setInterval(function (){
+                    if (luckMain.scrollTop + $(outerlayer).height() >= $(inlayer).height()) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollTop += luckSpeed;
+                            // 滚动到底部时重新滚动
+                            luckMain.scrollTop = 0;
+                            topscroll("chri-n-toplists", "#chri-n-toplists", "#chri-n-topol", 1, 50);
+                        }, 1500)
+                    } else if(luckMain.scrollTop + $(outerlayer).height() < $(inlayer).height() && luckMain.scrollTop == 0) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollTop += luckSpeed;
+                            topscroll("chri-n-toplists", "#chri-n-toplists", "#chri-n-topol", 1, 50);
+                        }, 1500)
+                    } else {
+                        luckMain.scrollTop += luckSpeed;
+                    }
+                }, intervaltime);
+            }
+
+            // 点击兑换按钮 12-20修改
+            var isCanClick = true;
+            $(".chri-n-dhbut").click(function (e) {
+                // 判断此时的按钮是否可点击
+                if (isCanClick) {
+                    // 此时在向服务端请求结果未完成之前，禁止再次提交信息
+                    isCanClick = false;
+                    // 此处需向服务端请求，钻石是否足够，例如zsstate为0时为兑换成功，1为兑换失败
+                    var zsstate = 1;
+                    if (zsstate == 0) {
+                        /*$(".chri-n-error").html("加载中...").removeClass("none");
+                        // 关闭兑换弹窗*/
+                        $(".chri-n-dhalebg").addClass("none");
+                        // 开启获奖弹窗
+                        $(".chri-n-hdalebg").removeClass("none");
+                        /*$.ajax({
+                            url: '',
+                            type: 'post',
+                            dataType: 'json',
+                            success: function (res) {
+                                // 关闭兑换弹窗
+                                $(".chri-n-dhalebg").addClass("none");
+                                // 开启获奖弹窗
+                                $(".chri-n-hdalebg").removeClass("none");
+                                $(".chri-n-error").html("").addClass("none"); // 请求成功后隐藏渐隐弹窗
+                            }
+                        })*/
+                        
+                    } else if (zsstate == 1) {
+                        $(".chri-n-error").html("您的钻石不足");
+                        $(".chri-n-error").fadeIn(300, function () {
+                            // 复制成功提示淡出
+                            $(this).fadeOut(2500);
+                            isCanClick = true;
+                        })
+                    }
+                }
+            });
+            // 点击空白部分隐藏弹窗 12-20新增
+            function freeBlanks (floEve, formEve, noneEve) {
+                $(floEve).on("click", function(e){
+                    var _target = $(e.target);
+                    if (_target.closest(formEve).length == 0) {
+                        // 隐藏内容
+                        $(floEve).addClass(noneEve);
+                        isCanClick = true; // 允许可再次点击提交 12-20新增
+                        relievescroll(); // 解除锁定的滚动条
+                    }
+                })
+            }
+            freeBlanks(".chri-n-hdalebg", ".chri-n-hdale", "none");
+            freeBlanks(".chri-n-dhalebg", ".chri-n-dhale", "none");
+            // 点击确定按钮关闭弹窗 12-20修改
+            function closeAle (butEve, aleBg) {
+                $(butEve).click(function (e) {
+                    $(aleBg).addClass("none");
+                    isCanClick = true; // 允许可再次点击提交
+                    relievescroll(); // 解除锁定的滚动条
+                });
+            }
+            closeAle(".chri-n-hdbut", ".chri-n-hdalebg");
+            closeAle(".chri-n-dhcancel", ".chri-n-dhalebg")
+            // 选择兑换次数
+            $(".chri-n-dhcom").on("click", ".chri-n-dhitem", function(event) {
+                $(this).siblings('.chri-n-dhitem').removeClass("chri-n-dhdel");
+                $(this).addClass("chri-n-dhdel");
+            });
+
+            // 点击礼物区域
+            $(".christmas-new-giftbg").click(function (e) {
+                $(".chri-n-dhalebg").removeClass("none");
+                lockscroll(); // 锁定滚动条
+            });
+
+            // 12-20新增
+            // 音乐
+            $(function() {
+                getSong();
+                clicks();
+            })
+
+            //获取歌曲链接并插入dom中
+            function getSong() { 
+                var audio = document.getElementById("chri-n-audio");
+                audio.src = "media/jinglebells.m4a";
+                audio.loop = true; // 歌曲循环
+                audio.pause();
+            }
+            //点击播放/暂停
+            function clicks() {
+                var audio = document.getElementById("chri-n-audio");
+                $(".chri-n-micon").click(function() {
+                    if ($(".chri-n-micon").hasClass("chri-n-nomusic")) {
+                        $(".chri-n-micon").removeClass("chri-n-nomusic");
+                        audio.play(); // 开始播放
+                    } else {
+                        $(".chri-n-micon").addClass("chri-n-nomusic");
+                        audio.pause(); // 暂停播放
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>

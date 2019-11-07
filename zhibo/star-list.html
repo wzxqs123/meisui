@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>星光榜</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #cce4f6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="rank-l-wrap">
+            <div class="rank-l-head text-center clearfix">
+                <!-- <a class="rank-l-front left white" href="javascript:history.go(-1)">返回</a> -->
+                <a class="star-l-return left" href="javascript:history.go(-1)"></a>
+            </div>
+            <!-- 有内容时rank-l-con去除none，无内容是rank-l-nocon去除none -->
+            <div class="rank-l-con">
+                <div class="rank-l-com text-center clearfix">
+                    <span class="left">排名</span>
+                    <span class="left">昵称</span>
+                    <span class="left">星光值</span>
+                </div>
+                <ol class="rank-l-lists bg-white">
+                    <!-- 第一名rank-l-orderone，第二名rank-l-ordertwo，第三名rank-l-orderthree -->
+                    <li class="rank-l-item clearfix">
+                        <span class="rank-l-orders rank-l-orderone left text-center"></span>
+                        <div class="rank-l-nick left clearfix">
+                            <img class="left" src="images/demoimages/pic38.png" alt="" />
+                            <span class="left twenty-six three">宝儿姐宝儿姐宝儿姐宝儿姐</span>
+                        </div>
+                        <em class="rank-l-peonum text-center left twenty-six three">9999</em>
+                    </li>
+                    <li class="rank-l-item clearfix">
+                        <span class="rank-l-orders rank-l-ordertwo left text-center"></span>
+                        <div class="rank-l-nick left clearfix">
+                            <img class="left" src="images/demoimages/pic38.png" alt="" />
+                            <span class="left twenty-six three">宝儿姐</span>
+                        </div>
+                        <em class="rank-l-peonum text-center left twenty-six three">9999</em>
+                    </li>
+                    <li class="rank-l-item clearfix">
+                        <span class="rank-l-orders rank-l-orderthree left text-center"></span>
+                        <div class="rank-l-nick left clearfix">
+                            <img class="left" src="images/demoimages/pic38.png" alt="" />
+                            <span class="left twenty-six three">宝儿姐宝儿姐宝儿姐宝儿姐</span>
+                        </div>
+                        <em class="rank-l-peonum text-center left twenty-six three">9999</em>
+                    </li>
+                    <li class="rank-l-item clearfix">
+                        <span class="rank-l-orders left text-center">4</span>
+                        <div class="rank-l-nick left clearfix">
+                            <img class="left" src="images/demoimages/pic38.png" alt="" />
+                            <span class="left twenty-six three">宝儿姐宝儿姐宝儿姐宝儿姐</span>
+                        </div>
+                        <em class="rank-l-peonum text-center left twenty-six three">9999</em>
+                    </li>
+                </ol>
+                <div class="rank-l-foot text-center clearfix">
+                    <a href="" class="left">上一页</a>
+                    <div class="rank-l-pages left text-center">
+                        <em class=""></em>
+                        <span class="">1</span>
+                        <em class=""></em>
+                    </div>
+                    <a href="" class="right">下一页</a>
+                </div>
+            </div>
+            <!-- 无内容 -->
+            <div class="rank-l-nocon none">
+                <div class="rank-l-nocom">
+                    <img class="block" src="images/demoimages/pic39.png" alt="" />
+                    <p class="text-center six">暂无查询数据，有疑问请联系客服</p>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 列表颜色变换
+            $(".rank-l-item").each(function (i) {
+                var _this = $(this);
+                if (i % 2 == 0) {
+                    _this.addClass("rank-l-itemblue");
+                }
+            });
+        </script>
+    </body>
+</html>

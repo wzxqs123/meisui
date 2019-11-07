@@ -1,0 +1,48 @@
+page {
+  background: #fff;
+}
+.payfail-wrap, 
+.payfail-tips, 
+.paysuc-wrap, 
+.paysuc-tips {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.payfail-wrap, 
+.paysuc-wrap {
+  padding-top: 255rpx;
+}
+.payfail-payicon, 
+.paysuc-payicon {
+  width: 170rpx;
+  height: 178rpx;
+  margin-bottom: 28rpx;
+}
+.payfail-tips text, 
+.paysuc-tips text {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.payfail-wrap .payfail-return, 
+.paysuc-wrap .paysuc-okbut {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 450rpx;
+  height: 88rpx;
+  background: rgb(93,132,255); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(93,132,255,1) 0%, rgba(150,220,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(93,132,255,1) 0%,rgba(150,220,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(93,132,255,1) 0%,rgba(150,220,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d84ff', endColorstr='#96dcff',GradientType=1 ); /* IE6-9 */
+  line-height: 88rpx;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 45rpx;
+}
+.payfail-return::after, 
+.paysuc-okbut::after {
+  border: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>二级页面分栏</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/special.css">
+    </head>
+    <body>
+        <header class="dtwe-m-marbot">
+            <img class="dtwe-m-img block" src="images/demoimages/pic114.jpg" alt="" />
+        </header>
+        <section class="dtwe-m-sec">
+            <div class="dtwe-m-marbot white clearfix">
+                <a class="block" href="">
+                    <img class="block dtwe-m-img" src="images/demoimages/pic122.jpg" alt="" />
+                </a>
+                <div class="column-c-lists left">
+                    <a class="block" href="">
+                        <div class="column-c-pics position-rel text-center">
+                            <img src="images/pic-loading.png" data-echo="images/demoimages/pic7.jpg" alt="" />
+                            <div class="position-abs bou-c-discount none clearfix">
+                                <span class="white-color left">5折</span>
+                            </div>
+                        </div>
+                        <p class="g-two column-c-text twenty-six">Ralph Lauren拉夫劳伦直角浅拉夫劳伦直角浅</p>
+                        <div class="column-c-pre clearfix">
+                            <span class="twenty-six c-two left">¥36011</span>
+                            <em class="g-four left">¥40000</em>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/echo.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var winSH = window.screen.height;
+            // 懒加载
+            Echo.init({
+                offset: winSH,
+                throttle: 1
+            });
+        </script>
+    </body>
+</html>

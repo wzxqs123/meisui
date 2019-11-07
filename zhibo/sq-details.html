@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>社区详情</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 顶部空白部分 -->
+        <div class="sq-d-wrap position-rel">
+            <div class="sq-d-modelbg">
+                <div class="sq-d-head bg-white">
+                    <a href="" class="sq-d-ancinfo block clearfix">
+                        <img class="left" src="images/demoimages/pic6.png" alt="" />
+                        <div class="sq-d-ancdel left">
+                            <span class="sq-d-ancname block thirty-two three">伊丽莎白</span>
+                            <em class="sq-d-anctime block twenty-four nine">2018-10-10</em>
+                        </div>
+                        <div class="sq-d-follow right three twenty-four text-center">关注</div>
+                    </a>
+                    <p class="sq-d-word three thirty">哈哈哈哈哈哈哈哈哈</p>
+                </div>
+                <!-- 2018-11-26修改 -->
+                <!-- 6种照片的状态 sq-d-pictype1~6 -->
+                <a href="" class="sq-d-secpic sq-d-pictype5 block bg-white clearfix">
+                    <img src="images/demoimages/pic49.png" alt="" />
+                    <img src="images/demoimages/pic49.png" alt="" />
+                    <img src="images/demoimages/pic49.png" alt="" />
+                    <img src="images/demoimages/pic49.png" alt="" />
+                    <img src="images/demoimages/pic49.png" alt="" />
+                </a>
+                <!-- 视频 -->
+                <a href="javascript:;" class="sq-d-secpic sq-d-videotype block bg-white clearfix">
+                    <div class="position-rel">
+                        <i class="sq-d-videobut position-abs"></i>
+                        <img class="sq-d-cover block" src="images/demoimages/pic49.png" alt="" />
+                        <video id="sq-d-videopaly" class="sq-d-videopaly none" preload="auto" controls="controls" >
+                            <!-- preload: auto值是在页面加载后载入视频 -->
+                            <source type="video/mp4" src="media/media.mp4">
+                            <source type="video/ogg" src="">
+                            <source type="video/webm" src="">
+                        </video>
+                    </div>
+                </a>
+                <!-- end -->
+                <div class="sq-d-secinfo bg-white">
+                    <div class="clearfix">
+                        <!-- 喜欢 -->
+                        <a href="" class="sq-d-seclove right clearfix">
+                            <!-- 喜欢为sq-d-lovet,不喜欢为sq-d-lovef -->
+                            <i class="sq-d-lovef left"></i>
+                            <span class="left nine twenty-four">999喜欢</span>
+                        </a>
+                        <a href="" class="sq-d-secshare right clearfix">
+                            <i class="left"></i>
+                            <span class="left nine twenty-four">999分享</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sq-d-modelbg">
+                <!-- 评论模块 -->
+                <div class="sq-d-comment bg-white">
+                    <div class="sq-d-comhead clearfix">
+                        <i class="left"></i>
+                        <span class="left nine twenty-four">999评论</span>
+                    </div>
+                    <ul class="sq-d-comlist">
+                        <li class="sq-d-comitem">
+                            <a class="block clearfix" href="">
+                                <img class="left" src="images/demoimages/pic6.png" alt="" />
+                                <div class="sq-d-cominfo left">
+                                    <span class="twenty-six three block">小王子</span>
+                                    <em class="three block">好看，这是去哪玩了？</em>
+                                </div>
+                                <div class="sq-d-comnum right clearfix">
+                                    <span class="left nine twenty-four">9999</span>
+                                    <!-- 喜欢为sq-d-lovet,不喜欢为sq-d-lovef -->
+                                    <i class="sq-d-lovet left"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sq-d-comitem">
+                            <a class="block clearfix" href="">
+                                <img class="left" src="images/demoimages/pic6.png" alt="" />
+                                <div class="sq-d-cominfo left">
+                                    <span class="twenty-six three block">小王子</span>
+                                    <em class="three block">好看，这是去哪玩了？</em>
+                                </div>
+                                <div class="sq-d-comnum right clearfix">
+                                    <span class="left nine twenty-four">9999</span>
+                                    <!-- 喜欢为sq-d-lovet,不喜欢为sq-d-lovef -->
+                                    <i class="sq-d-lovet left"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="" class="sq-d-foot position-fix">
+                <div class="nine twenty-six">发表评论</div>
+            </a>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            // 点击封面播放视频
+            function videoPlay (butEve) {
+                $(butEve).click(function(event) {
+                    $(".sq-d-videobut").addClass("none");
+                    $(".sq-d-cover").removeClass("block").addClass("none");
+                    $(".sq-d-videopaly").removeClass("none").addClass("block");
+                    $(".sq-d-videopaly")[0].play();
+                });
+            }
+            videoPlay(".sq-d-videobut");
+            videoPlay(".sq-d-cover");
+        </script>
+    </body>
+</html>

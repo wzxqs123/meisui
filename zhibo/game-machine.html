@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>开心摇摇乐</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.0);
+            }
+            /*12-14-14修改*/
+            *{
+                -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+                -webkit-user-select:none; /*webkit浏览器*/
+                -khtml-user-select:none; /*早期浏览器*/
+                -moz-user-select:none; /*火狐*/
+                -ms-user-select:none;  /*IE10*/
+                user-select:none;
+            }
+            input{
+                -webkit-user-select: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="game-m-wrap position-rel">
+            <div class="game-m-boxs position-abs">
+                <!-- 关闭按钮 -->
+                <span class="game-m-close position-abs"></span>
+                <div class="game-m-tit position-abs">
+                    <img class="block img" src="images/demoimages/lhj-pic1.png" alt="" />
+                </div>
+                <div class="game-m-notice clearfix">
+                    <i class="left"></i>
+                    <div id="game-m-rollcon" class="game-m-rollcon white left">
+                        <!-- 12-14-14修改 -->
+                        <!-- <marquee class="game-m-headroll block" direction="left" scrollamount="2"> -->
+                        <div id="game-m-headroll" class="game-m-headroll clearfix">
+                            <span class="left">2恭喜用户夜影的悸动摇到了一辆城堡</span>
+                            <span class="left">1恭喜用户ID13682537摇到了苹果派1000个</span>
+                            <span class="left">2恭喜用户夜影的悸动摇到了一辆城堡</span>
+                        </div>
+                        <!-- </marquee> -->
+                    </div>
+                </div>
+                <!-- 内容区 -->
+                <div class="game-m-content position-rel">
+                    <!-- 灯 -->
+                    <div class="game-m-lamp position-abs"></div>
+                    <div class="game-m-list">
+                        <div class="game-m-goods position-rel">
+                            <div id="game1" class="game-m-selprize position-abs">
+                                <ul class="game-m-ul clearfix">
+                                    <!-- <li class="game-m-li game-m-li_2 left">
+                                        <div class="game-m-giftbg">
+                                            <img class="game-m-giftpic block" src="images/demoimages/lhj-spic1.png" alt="" />
+                                        </div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="game-m-goods position-rel">
+                            <div id="game2" class="game-m-selprize position-abs">
+                                <ul class="game-m-ul clearfix">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="game-m-goods position-rel">
+                            <div id="game3" class="game-m-selprize position-abs">
+                                <ul class="game-m-ul clearfix">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-m-shadow position-abs"></div>
+                </div>
+                <!-- 抽奖次数 -->
+                <div class="game-m-showNum">
+                    <div class="game-m-drawNum position-rel">
+                        <i class="game-m-drawNuml position-abs"></i>
+                        <div class="game-m-drawval white text-center">抽奖次数：<em>10</em>次</div>
+                        <i class="game-m-drawNumr position-abs"></i>
+                    </div>
+                </div>
+                <!-- 按钮 -->
+                <div class="game-m-butregion position-rel">
+                    <!-- 规则 -->
+                    <div class="game-m-rulebut block position-abs"></div>
+                    <!-- 按钮 game-m-drawNo为正常状态，game-m-drawIng为按下状态 -->
+                    <div class="game-m-drawBut game-m-drawNo"></div>
+                </div>
+                <!-- 底部礼物列表区 -->
+                <div class="game-m-footgift position-rel">
+                    <!-- 12-14-14修改 -->
+                    <!-- <marquee class="game-m-footshow block" direction="left" scrollamount="2"> -->
+                    <div id="game-m-footshow" class="game-m-footshow">
+                        <ul id="game-m-footul" class="game-m-footul clearfix">
+                            <li class="game-m-footitem position-rel">
+                                <div class="game-m-footpic">
+                                    <img class="block" src="images/demoimages/lhj-spic2.png" alt="" />
+                                </div>
+                                <span class="game-m-footword text-center position-abs">爱心1个</span>
+                            </li>
+                            <li class="game-m-footitem position-rel">
+                                <div class="game-m-footpic">
+                                    <img class="block" src="images/demoimages/lhj-spic3.png" alt="" />
+                                </div>
+                                <span class="game-m-footword text-center position-abs">棒棒糖1个</span>
+                            </li>
+                            <li class="game-m-footitem position-rel">
+                                <div class="game-m-footpic">
+                                    <img class="block" src="images/demoimages/lhj-spic2.png" alt="" />
+                                </div>
+                                <span class="game-m-footword text-center position-abs">爱心1个</span>
+                            </li>
+                            <li class="game-m-footitem position-rel">
+                                <div class="game-m-footpic">
+                                    <img class="block" src="images/demoimages/lhj-spic3.png" alt="" />
+                                </div>
+                                <span class="game-m-footword text-center position-abs">棒棒糖1个</span>
+                            </li>
+                            <li class="game-m-footitem position-rel">
+                                <div class="game-m-footpic">
+                                    <img class="block" src="images/demoimages/lhj-spic2.png" alt="" />
+                                </div>
+                                <span class="game-m-footword text-center position-abs">爱心1个</span>
+                            </li>
+                            <li class="game-m-footitem position-rel">
+                                <div class="game-m-footpic">
+                                    <img class="block" src="images/demoimages/lhj-spic3.png" alt="" />
+                                </div>
+                                <span class="game-m-footword text-center position-abs">棒棒糖1个</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- </marquee> -->
+                    <div class="game-m-footmask position-abs"></div>
+                </div>
+                <!-- 无次数弹窗 -->
+                <!-- 12-14-14修改 -->
+                <div class="game-m-fadealert text-center white position-fix none">您的次数用完了</div>
+                <!-- 中奖或者未中奖弹窗 -->
+                <div class="game-m-prizeale position-fix none">
+                    <!-- 中奖是的彩带 -->
+                    <div class="game-m-cdxg game-m-ribbon position-abs none"></div>
+                    <div class="game-m-prizebg position-abs none">
+                        <!-- 成功 -->
+                        <div class="game-m-suchimg position-abs"></div>
+                        <!-- 失败 -->
+                        <div class="game-m-failhimg position-abs none"></div>
+                        <div class="game-m-prizetip clearfix position-rel">
+                            <span class="position-abs"></span>
+                            <em class="position-abs"></em>
+                            <div class="white thirty text-center">恭喜获得</div>
+                            <em class="position-abs"></em>
+                            <span class="position-abs"></span>
+                        </div>
+                        <!-- 花边,未中奖时不显示(该标签添加none) -->
+                        <div class="game-m-lace position-abs"></div>
+                        <!-- 内容区 -->
+                        <div class="game-m-prizecom position-rel">
+                            <!-- 中奖 -->
+                            <div class="game-m-drawcon clearfix game-m-none">
+                                <div class="game-m-drawpic left position-rel">
+                                    <img class="position-abs" src="images/demoimages/lhj-spic3.png" alt="" />
+                                </div>
+                                <em class="left six">X</em>
+                                <span class="left six">1</span>
+                            </div>
+                            <!-- 失败 -->
+                            <div class="game-m-nodrawcon text-center thirty-two clearfix six">哎呀，奖品溜走了！</div>
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="game-m-prizebut text-center">确定</div>
+                    </div>
+                </div>
+                <!-- 活动规则弹窗 -->
+                <div class="game-m-rulebg position-fix none">
+                    <div class="game-m-ruleale position-abs">
+                        <div class="game-m-rulecom">
+                            <div class="game-m-ruletit twenty-six text-center"><i></i>活动规则<i></i></div>
+                            <ol class="game-m-rulelist">
+                                <li class="game-m-ruleitem clearfix">
+                                    <i class="left white twenty-four text-center">1</i>
+                                    <p class="left">每日登录获得一次抽奖机会</p>
+                                </li>
+                                <li class="game-m-ruleitem clearfix">
+                                    <i class="left white twenty-four text-center">2</i>
+                                    <p class="left">若抽到礼物会发放到个人“背包”中，可到直播间“背包”查看</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="game-m-rulesure white text-center">确定</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            // 横向滚动
+            // 奖品展示
+            var footitemSize = $(".game-m-footitem").size(); // 获取奖品一个有多少个
+            var footulWidth = 4.68 * footitemSize;
+            // 设置game-m-footul的宽度
+            $(".game-m-footul").css({
+                "width" : footulWidth + "rem"
+            })
+            // 礼物板滚动
+            lybscroll("game-m-footshow", "#game-m-footshow", "#game-m-footul", 1, 50);
+            function lybscroll (idEve, outerlayer, inlayer, speed, intervaltime) {
+                // top魅力值模块滚动
+                var luckMain = document.getElementById(idEve);
+                var luckSpeed = speed;
+                var luckScroll = setInterval(function (){
+                    if (luckMain.scrollLeft + $(outerlayer).width() >= $(inlayer).width() - 2) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollLeft += luckSpeed;
+                            // 滚动到底部时重新滚动
+                            luckMain.scrollLeft = 0;
+                            lybscroll("game-m-footshow", "#game-m-footshow", "#game-m-footul", 1, 50);
+                        }, 1000)
+                    } else if(luckMain.scrollLeft + $(outerlayer).width() < $(inlayer).width() - 2 && luckMain.scrollLeft == 0) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollLeft += luckSpeed;
+                            lybscroll("game-m-footshow", "#game-m-footshow", "#game-m-footul", 1, 50);
+                        }, 1000)
+                    } else {
+                        luckMain.scrollLeft += luckSpeed;
+                    }
+                }, intervaltime);
+            }
+            // 头部文字通知
+            var headitemSize = $(".game-m-headroll span").size(); // 获取奖品一个有多少个
+            var headulWidth = 15.9 * headitemSize;
+            // 设置game-m-footul的宽度
+            $(".game-m-headroll").css({
+                "width" : headulWidth + "rem"
+            })
+            // 礼物板滚动
+            headscroll("game-m-rollcon", "#game-m-rollcon", "#game-m-headroll", 1, 50);
+            function headscroll (idEve, outerlayer, inlayer, speed, intervaltime) {
+                // top魅力值模块滚动
+                var luckMain = document.getElementById(idEve);
+                var luckSpeed = speed;
+                var luckScroll = setInterval(function (){
+                    if (luckMain.scrollLeft + $(outerlayer).width() >= $(inlayer).width() - 2) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollLeft += luckSpeed;
+                            // 滚动到底部时重新滚动
+                            luckMain.scrollLeft = 0;
+                            headscroll("game-m-rollcon", "#game-m-rollcon", "#game-m-headroll", 1, 50);
+                        }, 500)
+                    } else if(luckMain.scrollLeft + $(outerlayer).width() < $(inlayer).width() - 2 && luckMain.scrollLeft == 0) {
+                        clearInterval(luckScroll);
+                        setTimeout(function () {
+                            luckMain.scrollLeft += luckSpeed;
+                            headscroll("game-m-rollcon", "#game-m-rollcon", "#game-m-headroll", 1, 50);
+                        }, 500)
+                    } else {
+                        luckMain.scrollLeft += luckSpeed;
+                    }
+                }, intervaltime);
+            }
+
+            // 点击确定关闭弹窗
+            function closeAlert (butEve, alebgEve, aleCon, cdxg) {
+                $(butEve).click(function () {
+                    $(alebgEve).addClass("none");
+                    $(aleCon).addClass("none");
+                    $(cdxg).addClass("none");
+                    relievescroll(); // 解除滚动条锁定
+                });
+            }
+            closeAlert(".game-m-close", ".game-m-wrap");
+            closeAlert(".game-m-rulesure", ".game-m-rulebg");
+            closeAlert(".game-m-prizebut", ".game-m-prizeale", ".game-m-prizebg", ".game-m-cdxg");
+
+            // 点击空白部分关闭弹窗
+            freeBlank(".game-m-rulebg", ".game-m-ruleale", "none");
+            freeBlank(".game-m-prizeale", ".game-m-prizebg", "none");
+
+            // 点击规则按钮显示规则弹窗
+            $(".game-m-rulebut").click(function() {
+                $(".game-m-rulebg").removeClass("none");
+            });
+
+            // 获取当前屏幕的宽度
+            var screenWidth = window.screen.width;
+            if (screenWidth > 750) {
+                screenWidth = 750
+            }
+            var LiHeight = 122; // 宽度为750px下的li高度
+            // 判断安卓还是iOS  12-14-14修改
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("iphone") > -1 || ua.indexOf("oppo r9m") > -1) {
+                // 灯光切换
+                $(".game-m-lamp").addClass("game-m-ioslampone");
+                var dgstar = 1;
+                setInterval(function () {
+                    if (dgstar == 1) {
+                        $(".game-m-lamp").removeClass("game-m-ioslampone");
+                        $(".game-m-lamp").addClass("game-m-ioslamptwo");
+                        dgstar = 2;
+                    } else {
+                        $(".game-m-lamp").addClass("game-m-ioslampone");
+                        $(".game-m-lamp").removeClass("game-m-ioslamptwo");
+                        dgstar = 1;
+                    }
+                }, 800)
+                var newLiH = parseInt(LiHeight * screenWidth / 750); // 当前屏幕下li的高度
+            }else {
+                // 添加灯光
+                $(".game-m-lamp").addClass("game-m-andlamp");
+                var newLiH = LiHeight * screenWidth / 750; // 当前屏幕下li的高度
+            }
+
+            luckGame();
+            function luckGame() {
+                var settings = {
+                    'zj_arr': {
+                        //中奖数组，第一个表示是否中奖，第二个中奖号码
+                        'is_win': 1, // 0未中奖，1中奖
+                        'number': 6//从0算起，就是10了
+                    },
+                    gameLen: 7, //产品抽奖数量，
+                    game_pagesize: 8 //生成多少圈同样的东西,最好不小于4页
+                }
+                console.log(settings)
+                var gameArr = []; // 获得奖励的总集合
+                var gameLen = settings.gameLen; // 产品抽奖数量
+                var game_list_h = ''; // 列表ul的高度
+                var game_init = []; // 初始展示的图片
+                var game_list_item_h = newLiH; // 列表子项高度
+
+                //每次进来随机3个数字，来启动当前的选择的状态
+                for (var i = 0; i < 3; i++) {
+                    if (i == 0 || i == 2) {
+                        game_init.push(Math.floor(Math.random() * gameLen) + gameLen);
+                    } else if (i == 1) {
+                        game_init.push(Math.floor(Math.random() * gameLen) + gameLen * (settings.game_pagesize - 2));
+                    }
+                }
+
+                createGame();
+                function createGame(){
+                    setLi();
+                    pushLi(gameArr);
+                    start();
+                }
+
+                //设置奖品
+                function setLi(){
+                    for (var j = 1; j <= settings.game_pagesize; j++) {
+                        for (var i = 1; i <= gameLen; i++) {
+                            var liColorNum = null; // 背景颜色序号
+                            if ((i+1) % 3 == 0) {
+                                liColorNum = 3
+                            } else if((i+1) % 3 == 1) {
+                                liColorNum = 1
+                            } else if((i+1) % 3 == 2) {
+                                liColorNum = 2
+                            }
+                            // 设置列表子项属性及图片地址
+                            gameArr.push({'type':j,'index':i,'src':'images/demoimages/lhj-spic'+i+'.png', 'bgcolor':liColorNum});
+                        }
+                    }
+                    console.log(gameArr)
+                }
+                //写入，初始化奖品的滚动
+                function pushLi(arr){
+                    console.log(game_list_item_h);
+                    var html_str='';
+                    for (var i = 0; i < arr.length; i++) {
+                        // 创建子项html
+                        html_str+='<li class="game-m-li game-m-li_' + arr[i]['bgcolor'] + ' left" data-index="'+arr[i]['index']+'" data-type="'+arr[i]['type']+'"><div class="game-m-giftbg"><img class="game-m-giftpic block" src="'+arr[i]['src']+'"></div></li>';
+                    }
+                    $(".game-m-ul").each(function(e){
+                        $(this).empty().append(html_str);
+                        console.log('game_list_item_h', game_init);
+                        y = game_list_item_h * game_init[e];
+                        $(this).css({
+                            'transition-duration': '0ms',
+                            'transform':'translate(0px, -'+y+'px) translateZ(0px)'
+                        })
+                    });
+                    
+                }
+                  
+                function start(){
+                    var drawing = false; // true表示当前正在抽奖，false为当前没在抽奖
+                    $(".game-m-drawBut").click(function() {
+                        // 判断抽奖是否已经在进行中了
+                        if (!drawing) {
+                            drawFun();
+                        }
+                        function drawFun () {
+                            // 判断是否有次数
+                            var drawNums = parseInt($(".game-m-drawval em").html());
+                            if (drawNums > 0) {
+                                // 有次数
+                                drawNums -= 1;
+                                $(".game-m-drawval em").html(drawNums);
+                                // 状态改为当前正在抽奖中
+                                drawing = true;
+                                $(".game-m-drawBut").removeClass("game-m-drawNo").addClass("game-m-drawIng");
+
+                                // 此处向服务端请求是否中奖(settings.zj_arr.is_win)，中哪个(settings.zj_arr.number)，请求成功后success里执行以下函数
+
+                                //如果中奖
+                                if(settings.zj_arr.is_win == 1) {
+                                    setTimeout(function () {
+                                        drawing = false; // 抽奖完毕
+                                        $(".game-m-drawBut").removeClass("game-m-drawIng").addClass("game-m-drawNo");
+
+                                        // 中奖弹窗
+                                        // 彩带
+                                        $(".game-m-prizeale").removeClass("none");
+                                        $(".game-m-cdxg").removeClass("none");
+                                        $(".game-m-failhimg").addClass("none");
+                                        $(".game-m-suchimg").removeClass("none");
+                                        $(".game-m-prizetip div").html("恭喜获得");
+                                        $(".game-m-lace").removeClass("none");
+                                        $(".game-m-drawcon").removeClass("game-m-none");
+                                        $(".game-m-nodrawcon").addClass("game-m-none");
+                                        $(".game-m-prizebut").html("确定");
+                                        // 中奖的图片
+                                        $(".game-m-drawpic img").attr({
+                                            "src" : 'images/demoimages/lhj-spic7.png'
+                                        });
+                                        // 奖品的个数
+                                        $(".game-m-drawcon span").html(2);
+                                        $(".game-m-prizebg").removeClass("none");
+                                        /*setTimeout(function () {
+                                        }, 700)*/
+                                        
+                                    }, 5700)
+                                    $(".game-m-ul").each(function(e){
+                                        console.log(e)
+                                        // 12-14-14修改
+                                        setTimeout(function(){
+                                            if (e == 0 || e == 2) {
+                                                y = (settings.zj_arr.number + gameLen * (settings.game_pagesize-2)) * game_list_item_h;
+                                                
+                                            } else if (e == 1) {
+                                                y = (settings.zj_arr.number + gameLen) * game_list_item_h;
+                                            }
+                                            $(".game-m-ul").eq(e).css({
+                                                'transition-duration': '5000ms',
+                                                'transform':'translate(0px, -'+y+'px) translateZ(0px)'
+                                            })
+                                        }, 300);
+                                        //判断最后面是否完毕
+                                        $("#game3").find(".game-m-ul").on("webkitTransitionEnd", function() {
+                                            // 12-14-14修改
+                                            if (e == 0 || e == 2) {
+                                                y = (settings.zj_arr.number + gameLen) * game_list_item_h;
+                                            } else if (e == 1) {
+                                                y = (settings.zj_arr.number + gameLen * (settings.game_pagesize-2)) * game_list_item_h;
+                                            }
+                                            $(".game-m-ul").eq(e).css({
+                                                'transition-duration': '0ms',
+                                                'transform':'translate(0px, -'+y+'px) translateZ(0px)'
+                                            })
+                                            $("#game3").find(".game-m-ul").unbind("webkitTransitionEnd");
+                                        })
+                                    })
+                                } else {
+                                    setTimeout(function () {
+                                        drawing = false; // 抽奖完毕
+                                        $(".game-m-drawBut").removeClass("game-m-drawIng").addClass("game-m-drawNo");
+                                        // 未中奖弹窗
+                                        // 彩带
+                                        $(".game-m-cdxg").addClass("none");
+                                        $(".game-m-failhimg").removeClass("none");
+                                        $(".game-m-suchimg").addClass("none");
+                                        $(".game-m-prizetip div").html("抱歉");
+                                        $(".game-m-lace").addClass("none");
+                                        $(".game-m-drawcon").addClass("game-m-none");
+                                        $(".game-m-nodrawcon").removeClass("game-m-none");
+                                        $(".game-m-prizebut").html("明天再试");
+                                        $(".game-m-prizebg").removeClass("none");
+                                        $(".game-m-prizeale").removeClass("none");
+                                    }, 5700)
+                                    numrand = randNum2();
+                                    console.log(numrand);
+                                    //不中奖的时候
+                                    $(".game-m-ul").each(function(e){
+                                        y2 = (numrand[0] + gameLen) * game_list_item_h;
+                                        y3 = (numrand[1] + gameLen * (settings.game_pagesize - 2)) * game_list_item_h;
+                                        y4 = (numrand[2] + gameLen) * game_list_item_h;
+                                        // 12-14-14修改
+                                        setTimeout(function(){
+                                            if (e == 0 || e == 2) {
+                                                y = (numrand[e] + gameLen * (settings.game_pagesize - 2)) * game_list_item_h;
+                                            } else if (e == 1) {
+                                                y = (numrand[e] + gameLen) * game_list_item_h;
+                                            }
+                                            $(".game-m-ul").eq(e).css({
+                                                'transition-duration': '5000ms',
+                                                'transform':'translate(0px, -'+y+'px) translateZ(0px)'
+                                            })
+                                        }, 300);
+                                        //判断最后面是否完毕
+                                        $("#game3").find(".game-m-ul").on("webkitTransitionEnd", function() {
+                                            $(".game-m-ul").eq(2).css({
+                                                'transition-duration': '00ms',
+                                                'transform':'translate(0px, -'+y4+'px) translateZ(0px)'
+                                            })
+                                            $("#game3").find(".game-m-ul").unbind("webkitTransitionEnd");
+                                        })
+                                        $("#game2").find(".game-m-ul").on("webkitTransitionEnd", function() {
+                                            
+                                            $(".game-m-ul").eq(1).css({
+                                                'transition-duration': '00ms',
+                                                'transform':'translate(0px, -'+y3+'px) translateZ(0px)'
+                                            })
+                                            $("#game2").find(".game-m-ul").unbind("webkitTransitionEnd");
+                                        })
+                                        $("#game1").find(".game-m-ul").on("webkitTransitionEnd", function() {
+                                            
+                                            $(".game-m-ul").eq(0).css({
+                                                'transition-duration': '00ms',
+                                                'transform':'translate(0px, -'+y2+'px) translateZ(0px)'
+                                            })
+                                            $("#game1").find(".game-m-ul").unbind("webkitTransitionEnd");
+                                        })
+                                    })
+
+                                }
+                            } else {
+                                // 无次数
+                                $(".game-m-fadealert").html("您的次数用完了，快去获取次数吧");
+                                $(".game-m-fadealert").fadeIn(300, function () {
+                                    // 复制成功提示淡出
+                                    $(this).fadeOut(2500);
+                                })
+                            }
+                        }
+                        
+                    })
+                }
+                function randNum2(){
+                    a = Math.floor(Math.random() * gameLen);
+                    b = Math.floor(Math.random() * gameLen);
+                    c = Math.floor(Math.random() * gameLen);
+                    arr = [];
+                    if(a==b) {
+                        return randNum2();
+                    } else {
+                        return arr=[a,b,c]; // 不中奖时随机的三个物品
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>新星首页</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                background: #fed954;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 顶部空白部分 -->
+        <div class="zqxx-index position-rel">
+            <div class="zqxx-conbg">
+                <div class="zqxx-con bg-white">
+                    <div class="zqxx-contit"></div>
+                    <p class="zqxx-word three">主播可通过此页面报名参加活动，成功报名的主播可选择自己想要PK的对手，并选择PK的时间。PK结束后胜利的主播将获得活动积分升段位，失败的主播将直接掉段。段位一共15个，分为贫民、业余、助理、兼职群演、全职群演、驻唱、伴唱、监制、练习生、新星、青春偶像、颜值偶像、实力偶像、天王巨星、奥斯卡影后。</p>
+                    <a href="javascript:;" class="zqxx-but block"></a>
+                    <div class="zqxx-look">
+                        <a href="" class="position-rel nine twenty-six text-center">查看最强新星榜<i class="position-abs"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 提示弹窗 -->
+            <div class="zqxx-fadealert text-center white position-fix none">请先成为主播再来报名吧！</div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            $(".zqxx-but").click(function (e) {
+                // 此处获取用户是否为主播等状态
+                var stateCode = 0; // 此处暂定0为了是主播且报名成功，1为不是主播弹窗提示，具体服务端设定
+                if (stateCode == 0) {
+                    $(".zqxx-fadealert").html("报名成功！");
+                    $(".zqxx-fadealert").fadeIn(300, function () {
+                        // 复制成功提示淡出
+                        $(this).fadeOut(2500);
+                        window.location.href="zqxx-choice.html"
+                    })
+                } else if(stateCode == 1) {
+                    $(".zqxx-fadealert").html("请先成为主播再来报名吧！");
+                    $(".zqxx-fadealert").fadeIn(300, function () {
+                        // 复制成功提示淡出
+                        $(this).fadeOut(2500);
+                    })
+                }
+            });
+        </script>
+    </body>
+</html>

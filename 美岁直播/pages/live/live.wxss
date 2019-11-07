@@ -1,0 +1,337 @@
+/* pages/live/live.wxss */
+page {
+  height: 100%;
+  background-color: #fff;
+}
+live-player {
+  display: block;
+}
+live-player, 
+.live-noplayer {
+  width: 100%;
+  height: 500rpx;
+  padding: 0;
+}
+.live-noplayer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #323233;
+}
+.live-noplayercon {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 570rpx;
+  height: 320rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20rpx;
+}
+.live-noplayerpic {
+  width: 130rpx;
+  height: 130rpx;
+  margin-bottom: 30rpx;
+  border-radius: 50%;
+}
+.live-noplayertip {
+  font-size: 28rpx;
+  color: #fff;
+}
+.live-navs {
+  display: flex;
+  width: 750rpx;
+  height: 80rpx;
+}
+.live-navitem {
+  position: relative;
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #979799;
+}
+.live-itemselbor {
+  position: absolute;
+  bottom: -2rpx;
+  left: 0;
+  width: 100%;
+  height: 4rpx;
+}
+.live-navitemsel {
+  color: #5d84ff;
+}
+.live-navitemsel .live-itemselbor, 
+.live-download {
+  background: rgb(93,132,255); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(93,132,255,1) 0%, rgba(150,220,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(93,132,255,1) 0%,rgba(150,220,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(93,132,255,1) 0%,rgba(150,220,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d84ff', endColorstr='#96dcff',GradientType=1 ); /* IE6-9 */
+}
+.live-foot {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68rpx;
+  padding: 15rpx 20rpx;
+  background-color: #fff;
+  box-shadow: 0 -1rpx 0 0 #eaeaea;
+}
+.live-input {
+  width: 480rpx;
+  height: 68rpx;
+  padding: 0 30rpx;
+  background-color: #f2f3f4;
+  line-height: 68rpx;
+  font-size: 26rpx;
+  border-radius: 35rpx;
+}
+.live-placeholder {
+  color: #979799;
+}
+.live-download {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 160rpx;
+  height: 68rpx;
+  border-radius: 35rpx;
+}
+.live-download image {
+  width: 24rpx;
+  height: 26rpx;
+  margin: 0 3rpx 0 0;
+}
+.live-download text {
+  font-size: 26rpx;
+  color: #fff;
+}
+.live-chatcon {
+  display: flex;
+  flex-flow: column wrap;
+}
+.live-chatcon {
+  overflow: hidden;
+}
+.live-anchorinfo {
+  overflow: auto;
+}
+.live-chatcon, 
+.live-anchorinfo {
+  height: 100%;
+}
+.live-chatitem {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 25rpx 15rpx;
+}
+.live-chatname {
+  line-height: 36rpx;
+  color: #6493e2;
+  font-size: 28rpx;
+}
+.live-intoroom {
+  margin-left: 15rpx;
+}
+.live-pad {
+  padding: 0 15rpx;
+}
+.live-chatname text {
+  color: #323233;
+}
+.live-chatname .live-chatxt {
+  color: #777;
+}
+.live-infocon {
+  padding: 0 30rpx;
+}
+.live-infotop, 
+.live-anchortag {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.live-infotop {
+  padding: 30rpx 0;
+  box-shadow: 0 2rpx 0 0 #f2f2f5;
+}
+.live-anchorpic {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 30rpx;
+  border-radius: 50%;
+}
+.live-anchordel {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.live-anchorname {
+  color: #323233;
+  margin-bottom: 8rpx;
+  font-size: 32rpx;
+}
+.live-anchorid {
+  margin-bottom: 10rpx;
+  font-size: 26rpx;
+  color: #979799;
+}
+.live-anchorgrade {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  color: #fff;
+  font-size: 18rpx;
+  border-radius: 28rpx;
+}
+/*1-9级*/
+.live-gradeone {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-graone.png) center center no-repeat;
+  background-size: contain;
+}
+/*10-19级*/
+.live-gradeten {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-ten.png) center center no-repeat;
+  background-size: contain;
+}
+/*20-29级*/
+.live-gradetwenty {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-twenty.png) center center no-repeat;
+  background-size: contain;
+}
+/*30-39级*/
+.live-gradethirty {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-thirty.png) center center no-repeat;
+  background-size: contain;
+}
+/*40-49级*/
+.live-gradeforty {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-forty.png) center center no-repeat;
+  background-size: contain;
+}
+/*50-59级*/
+.live-gradefifty {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-fifty.png) center center no-repeat;
+  background-size: contain;
+}
+/*60-69级*/
+.live-gradesixty {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-sixty.png) center center no-repeat;
+  background-size: contain;
+}
+/*70-79级*/
+.live-gradeseventy {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-seventy.png) center center no-repeat;
+  background-size: contain;
+}
+/*80-89级*/
+.live-gradeeighty {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-eighty.png) center center no-repeat;
+  background-size: contain;
+}
+/*90-99级*/
+.live-gradeninety {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-ninety.png) center center no-repeat;
+  background-size: contain;
+}
+/*100级*/
+.live-gradehundred {
+  background: url(https://wechatpay.pod.meisuizhibo.com/grade-d-hundred.png) center center no-repeat;
+  background-size: contain;
+}
+.live-anchorv {
+  width: 30rpx;
+  height: 30rpx;
+  background: url(https://wechatpay.pod.meisuizhibo.com/live-addv.png) center center no-repeat;
+  background-size: contain;
+}
+.live-infosec {
+  display: flex;
+  flex-flow: column wrap;
+}
+.live-infosec view {
+  padding-top: 22rpx;
+  margin-bottom: 14rpx;
+  color: #323233;
+  font-size: 32rpx;
+}
+.live-infosec text {
+  color: #979799;
+  font-size: 28rpx;
+  line-height: 42rpx;
+}
+.live-alertbg {
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.live-alert {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 650rpx;
+  height: 340rpx;
+  padding-top: 60rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.live-loadtit {
+  width: 270rpx;
+  height: 44rpx;
+  margin-bottom: 38rpx;
+}
+.live-copytip {
+  padding: 0 50rpx;
+  margin-bottom: 50rpx;
+  line-height: 42rpx;
+  font-size: 28rpx;
+  color: #979799;
+  white-space: pre-wrap;
+}
+.live-copybut {
+  display: block;
+  width: 300rpx;
+  height: 88rpx;
+}
+.live-alertclose {
+  top: 20rpx;
+  right: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.live-alertclose cover-view {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 3rpx;
+  background-color: #000;
+  border-radius: 10rpx;
+}
+.live-alertclose cover-view:nth-child(1) {
+  transform: rotate(45deg)
+}
+.live-alertclose cover-view:nth-child(2) {
+  transform: rotate(-45deg)
+}

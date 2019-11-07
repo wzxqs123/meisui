@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>最强新星</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <link rel="stylesheet" type="text/css" href="css/DateTimePicker.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                background: #fed954;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 顶部空白部分 -->
+        <div class="zqxx-c-wrap position-rel">
+            <a href="" class="zqxx-r-mybut text-center white position-fix">我的</a>
+            <div class="zqxx-c-conbg">
+                <div class="zqxx-c-com bg-white position-rel">
+                    <a href="" class="zqxx-c-rank position-abs"></a>
+                    <div class="zqxx-c-headtit">
+                        <img class="block" src="images/demoimages/pic50.png" alt="" />
+                    </div>
+                    <ul class="zqxx-c-list">
+                        <li class="zqxx-c-item clearfix">
+                            <div class="zqxx-c-itempic left">
+                                <img class="block" src="images/demoimages/pic48.png" alt="" />
+                            </div>
+                            <div class="zqxx-c-iteminfo left">
+                                <span class="thirty-two weight-bold three block">伊丽莎白</span>
+                                <em class="twenty-six six block">实力偶像</em>
+                            </div>
+                            <div class="zqxx-c-gopk right"></div>
+                        </li>
+                    </ul>
+                    <div class="zqxx-c-page">
+                        <a href="" class="zqxx-c-top"></a>
+                        <a href="" class="zqxx-c-bottom"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 弹窗 -->
+            <div class="zqxx-c-alertbg position-fix none">
+                <div class="zqxx-c-alert position-abs">
+                    <div class="zqxx-c-alecon bg-white">
+                        <div class="zqxx-c-start clearfix">
+                            <img src="images/demoimages/pic51.png" alt="" class="left" />
+                            <input type="text" id="times1" class="zqxx-c-stime left" placeholder="请选择开始时间" data-field="datetime" readonly />
+                        </div>
+                        <div class="zqxx-c-end clearfix">
+                            <img src="images/demoimages/pic52.png" alt="" class="left" />
+                            <input type="text" id="times2" class="zqxx-c-etime left" placeholder="请选择结束时间" data-field="datetime" readonly />
+                        </div>
+                        <div class="zqxx-c-alebut">
+                            <span class="zqxx-c-cancel"></span>
+                            <span class="zqxx-c-truebut"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 隐藏添加none，删除zqxx-c-fadeshow，显示反之 -->
+            <div class="zqxx-c-fade text-center white position-fix none"></div>
+            <!-- 时间插件弹窗 -->
+            <div id="dtBox"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/DateTimePicker.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function() {
+                $("#dtBox").DateTimePicker({
+                    dateFormat: "yyyy-MM-dd",
+                    timeFormat: "HH:mm",
+                    dateTimeFormat: "yyyy-MM-dd HH:mm:ss"
+                });
+            });
+
+            // 点击pk
+            $(".zqxx-c-gopk").click(function (e) {
+                $(".zqxx-c-alertbg").removeClass("none");
+                lockscroll(); // 锁定滚动条
+            });
+            // 点击取消
+            $(".zqxx-c-cancel").click(function (e) {
+                $(".zqxx-c-alertbg").addClass("none");
+                relievescroll(); // 解除锁定
+            });
+            // 点击空白部分隐藏内容
+            freeBlank(".zqxx-c-alertbg", ".zqxx-c-alert", "none");
+            // 点击确认
+            var conAir = /^[\s]*$/;
+            $(".zqxx-c-truebut").click(function (e) {
+                $(".zqxx-c-stime").blur();
+                $(".zqxx-c-etime").blur();
+                var s_time = $(".zqxx-c-stime").val();
+                var e_time = $(".zqxx-c-etime").val();
+                var formFocus = [0, 0];
+                timeJudge(s_time, ".zqxx-c-stime", 0, "开始日期不能为空");
+                timeJudge(e_time, ".zqxx-c-etime", 1, "结束日期不能为空");
+                function timeJudge (timeval, timeEve, indexNum, emptyword) {
+                    if (!conAir.test(timeval)) {
+                        // 验证码不为为空
+                        formFocus[indexNum] = 1;
+                        $(timeEve).removeClass("zqxx-c-empty");
+                    } else {
+                        // 验证码为空
+                        formFocus[indexNum] = 0;
+                        $(timeEve).val("");
+                        $(timeEve).addClass("zqxx-c-empty");
+                        $(timeEve).attr({
+                            "placeholder" : emptyword
+                        });
+                    }
+                }
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    // 这里提交数据，验证手机号码与验证码是否正确
+                    console.log(s_time, e_time);
+
+                    // 服务端验证返回一个值，暂且定0是约战成功，1是已被预约
+                    var fwdjudge = 0;
+                    if (fwdjudge == 0) {
+                        $(".zqxx-c-fade").addClass("zqxx-c-fadeshow").html("约战成功");
+                        $(".zqxx-c-fade").fadeIn(300, function () {
+                            // 复制成功提示淡出
+                            $(this).fadeOut(2500);
+                            $(".zqxx-c-alertbg").addClass("none");
+                            relievescroll(); // 解除锁定
+                        })
+                    } else {
+                        $(".zqxx-c-fade").removeClass("zqxx-c-fadeshow").html("战机转瞬即逝，该时段被其他小伙伴预约了，请重新选择！");
+                        $(".zqxx-c-fade").fadeIn(300, function () {
+                            // 复制成功提示淡出
+                            $(this).fadeOut(2500);
+                        })
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

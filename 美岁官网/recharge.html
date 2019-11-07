@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>美岁-充值</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="icon" sizes="any" mask href="images/demoimages/index-p-logo.png">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- PC端 -->
+        <div class="index-p-wrap position-rel">
+            <div class="index-p-main">
+                <!-- 头部区 -->
+                <div class="index-p-head clearfix">
+                    <img class="index-p-hlogo left" src="images/demoimages/index-p-headlogo.png" alt="" />
+                    <div class="index-p-hnav right clearfix">
+                        <a href="index.html" class="left position-rel">首页</a>
+                        <a href="javascript:;" class="left position-rel">充值<em class="position-abs"></em></a>
+                        <a href="about-us.html" class="left position-rel">关于我们</a>
+                        <a href="platform-ecology.html" class="left position-rel">平台生态</a>
+                        <a href="partner.html" class="left position-rel">合伙人计划</a>
+                        <a href="contact-us.html" class="left position-rel">联系我们</a>
+                    </div>
+                </div>
+                <!-- 内容区 -->
+                <div class="recharge-section">
+                    <h2 class="about-u-tit three text-center weight-bold">钻石充值</h2>
+                    <div class="recharge-signstar">
+                        <!-- 此处隐藏标签使用recharge-none -->
+                        <div class="recharge-nosign">
+                            <img class="recharge-nosignpic" src="images/demoimages/pic17.png" alt="" />
+                            <div class="recharge-nosigndes">
+                                <span class="block three">您还未登录</span>
+                                <em class="block nice">登录后可看钻石余额</em>
+                            </div>
+                            <input type="text" style="ime-mode:disabled" oninput="if(value.length>8)value=value.slice(0,8);" autocomplete="on" class="recharge-userid" placeholder="请输入你的美岁ID" />
+                            <!-- 可以点击确认添加recharge-canclick -->
+                            <button type="button" class="recharge-confirm white">确定</button>
+                        </div>
+                        <div class="recharge-sign recharge-none">
+                            <img class="recharge-signpic" src="images/demoimages/pic17.png" alt="" />
+                            <div class="recharge-signdes">
+                                <span class="block three">伊丽莎白</span>
+                                <em class="block nice">账户余额：1000钻石</em>
+                            </div>
+                            <div class="recharge-switch">切换美岁账号</div>
+                        </div>
+                    </div>
+                    <div class="recharge-choice">
+                        <p class="recharge-chotit three">选择充值金额</p>
+                        <ul class="recharge-cholist clearfix">
+                            <!-- 选中添加recharge-choitemsel -->
+                            <li class="recharge-choitem recharge-choitemsel left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X2800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>28.00</em></div>
+                            </li>
+                            <li class="recharge-choitem left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X9800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>98.00</em></div>
+                            </li>
+                            <li class="recharge-choitem left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X29800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>298.00</em></div>
+                            </li>
+                            <li class="recharge-choitem left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X59800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>598.00</em></div>
+                            </li>
+                            <li class="recharge-choitem left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X99800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>998.00</em></div>
+                            </li>
+                            <li class="recharge-choitem left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X299800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>2998.00</em></div>
+                            </li>
+                            <li class="recharge-choitem left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X599800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>5998.00</em></div>
+                            </li>
+                            <li class="recharge-choitem left">
+                                <div class="recharge-zsnums">
+                                    <i></i>
+                                    <span class="three">X999800</span>
+                                </div>
+                                <div class="recharge-moneynum weight-bold">￥<em>9998.00</em></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="recharge-custom">
+                        <div class="recharge-custit">
+                            <span class="three">自定义金额</span>
+                            <em class="nice">（自定义档位金额为10,000~5,000,000元）</em>
+                        </div>
+                        <div class="recharge-cusmoney clearfix">
+                            <input type="number" style="ime-mode:disabled" oninput="if(value.length>7)value=value.slice(0,7);" autocomplete="on" class="left" />
+                            <span class="left">元</span>
+                        </div>
+                    </div>
+                    <div class="recharge-payment">
+                        <p class="recharge-chotit three">选择支付方式</p>
+                        <div class="recharge-way clearfix position-rel">
+                            <!-- 选中添加recharge-paysel -->
+                            <div class="recharge-payitem recharge-paysel left" data-paystyle="0">
+                                <i class="recharge-paywx"></i>
+                                <span class="recharge-payname">微信支付</span>
+                            </div>
+                            <div class="recharge-payitem left" data-paystyle="1">
+                                <i class="recharge-payzfb"></i>
+                                <span class="recharge-payname">支付宝支付</span>
+                            </div>
+                            <div class="recharge-payitem left" data-paystyle="2">
+                                <i class="recharge-paywy"></i>
+                                <span class="recharge-payname">网银支付</span>
+                            </div>
+                            <!-- 超额提示 -->
+                            <div class="recharge-excess fourteen six text-center position-abs none"></div>
+                        </div>
+                        <ul class="recharge-banklist clearfix none">
+                            <!-- 选中添加recharge-bankitemsel -->
+                            <!-- <li class="recharge-bankitem recharge-bankitemsel left" data-mechanismnum="0801050000">
+                                <img class="block img" src="images/demoimages/js_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0801020000">
+                                <img class="block img" src="images/demoimages/gs_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0803050000">
+                                <img class="block img" src="images/demoimages/ms_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0803080000" style="margin-right: 0px;">
+                                <img class="block img" src="images/demoimages/zs_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0803030000">
+                                <img class="block img" src="images/demoimages/gd_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0801040000">
+                                <img class="block img" src="images/demoimages/zgyh_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0803060000">
+                                <img class="block img" src="images/demoimages/gdfz_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="080401001C" style="margin-right: 0px;">
+                                <img class="block img" src="images/demoimages/shyh_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0801000000">
+                                <img class="block img" src="images/demoimages/yzcx_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0804105840">
+                                <img class="block img" src="images/demoimages/pa_bank.png" alt="">
+                            </li>
+                            <li class="recharge-bankitem left" data-mechanismnum="0804031000">
+                                <img class="block img" src="images/demoimages/bjyh_bank.png" alt="">
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="recharge-total">
+                        <div class="recharge-paymoney text-center three">应付金额：<span class="weight-bold"></span>元</div>
+                        <div class="recharge-tipboxs">
+                            <p class="recharge-tips text-center nice">温馨提示：如果您在支付过程中遇到问题，请及时联系官方客服</p>
+                            <p class="recharge-tips text-center nice">QQ:965997888    微信：livekefu</p>
+                        </div>
+                        <!-- 可以购买时添加recharge-canpaybut -->
+                        <a class="recharge-paybut white text-center block" href="javascript:;">支付</a>
+                    </div>
+                    <div class="recharge-alert text-center white position-fix none"></div>
+                </div>
+            </div>
+            <!-- 删除 2018-10-18 -->
+            <!-- uin1填写客服的qq -->
+            <!-- <a class="index-p-kfqq position-fix" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=965997888&site=qq&menu=yes"></a> -->
+            <!-- 新增 2018-10-18 -->
+            <ul class="index-p-lxul text-center position-fix">
+                <li class="index-p-lxitem clearfix">
+                    <a class="index-p-lxwxcom right position-rel" href="javascript:;">
+                        <img class="index-p-lxnoatc block" src="images/demoimages/index-p-lxwx.png" alt="" />
+                        <div class="index-p-lxatc position-rel none">
+                            <img class="index-p-lxoneatc block" src="images/demoimages/index-p-lxphoatc.png" alt="" />
+                            <div class="index-p-lxcode position-abs">
+                                <img class="block" src="images/demoimages/pic9.png" alt="" />
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="index-p-lxitem clearfix">
+                    <a class="index-p-lxqqcom right position-rel clearfix" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=965997888&site=qq&menu=yes">
+                        <img class="index-p-lxnoatc left" src="images/demoimages/index-p-lxqq.png" alt="" />
+                        <div class="index-p-lxatc position-rel clearfix left">
+                            <img class="index-p-lxqqatc left" src="images/demoimages/index-p-lxqq.png" alt="" />
+                            <div class="index-p-lxqqcon text-center white left position-rel"><i class="position-abs"></i>965997888</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="index-p-lxitem clearfix">
+                    <a class="index-p-lxdhcom right position-rel clearfix" href="javascript:;">
+                        <img class="index-p-lxnoatc left" src="images/demoimages/index-p-lxphone.png" alt="" />
+                        <div class="index-p-lxatc position-rel clearfix left">
+                            <img class="index-p-lxqqatc left" src="images/demoimages/index-p-lxphone.png" alt="" />
+                            <div class="index-p-lxdhcon text-center white left position-rel"><i class="position-abs"></i>0592-5057775</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="index-p-lxitem clearfix">
+                    <a class="index-p-lxfhcom right position-rel clearfix" href="javascript:;">
+                        <img class="index-p-lxnoatc left" src="images/demoimages/index-p-lxfhdb.png" alt="" />
+                        <div class="index-p-lxatc position-rel clearfix left">
+                            <img class="index-p-lxfhatc left" src="images/demoimages/index-p-lxfhdb.png" alt="" />
+                            <div class="index-p-lxfhcon text-center white left position-rel">
+                                <i class="position-abs"></i>
+                                <span class="block">返回顶部</span>
+                                <em class="block">EFFECT OF</em>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <p class="index-p-bei text-center position-abs">深圳市娱动文化传媒有限公司  粤网文 {2017} 9943-2506 备案号：<a class="nice" target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备18054953号-1</a></p>
+        </div>
+        <!-- 移动端 -->
+        <div class="index-m-wrap position-rel">
+            <div class="index-m-hlogo">
+                <img class="block img" src="images/demoimages/index-m-hlogo.png" alt="" />
+            </div>
+            <div class="index-m-tips text-center white">
+                <span class="thirty block">看最精彩的直播，聊最开心的话题！</span>
+                <em class="twenty-four block">Look For Less,Do More!</em>
+            </div>
+            <div class="index-m-secpic">
+                <img class="block img" src="images/demoimages/pic10.png" alt="" />
+            </div>
+            <div class="index-m-down clearfix">
+                <div class="index-m-dleft left">
+                    <a class="index-m-iph white block thirty" href="">iPhone版</a>
+                    <a class="index-m-and white block thirty" href="">Android版</a>
+                </div>
+                <div class="index-m-dright left">
+                    <img class="block img" src="images/demoimages/pic9.png" alt="" />
+                    <span class="twenty-six block white text-center">扫码下载</span>
+                </div>
+            </div>
+            <footer class="index-m-foot three text-center">深圳市娱动文化传媒有限公司  粤网文 {2017} 9943-2506 备案号：<a class="nice" target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备18054953号-1</a></footer>
+            <!-- 微信打开的提示层 -->
+            <div class="index-m-mask position-fix none"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 函数pageFun位于index.js中
+            pageFun(".index-p-wrap", ".index-m-wrap");
+
+            var initialMoney = $(".recharge-choitemsel .recharge-moneynum em").html(); // 获取初始选中的充值金额
+            $(".recharge-paymoney span").html(initialMoney)
+
+            var payStyle = null, // 选择付款的方式
+                newMoneyNum = null, // 最新应付款金额
+                idNums = null, // 用户ID
+                dataMechanismnum = null; // 网银支付具体哪家银行
+
+            var bankNameList = [{
+                    name: "js_bank.png",
+                    mechanismNum: "0801050000"
+                }, {
+                    name: "gs_bank.png",
+                    mechanismNum: "0801020000"
+                }, {
+                    name: "ms_bank.png",
+                    mechanismNum: "0803050000"
+                }, {
+                    name: "zs_bank.png",
+                    mechanismNum: "0803080000"
+                }, {
+                    name: "gd_bank.png",
+                    mechanismNum: "0803030000"
+                }, {
+                    name: "zgyh_bank.png",
+                    mechanismNum: "0801040000"
+                }, {
+                    name: "gdfz_bank.png",
+                    mechanismNum: "0803060000"
+                }, {
+                    name: "shyh_bank.png",
+                    mechanismNum: "080401001C"
+                }, {
+                    name: "yzcx_bank.png",
+                    mechanismNum: "0801000000"
+                }, {
+                    name: "pa_bank.png",
+                    mechanismNum: "0804105840"
+                }, {
+                    name: "bjyh_bank.png",
+                    mechanismNum: "0804031000"
+                }];
+            var bankListItem = '';
+            for (var i = 0; i < bankNameList.length; i++) {
+                if (i == 0) {
+                    bankListItem += '<li class="recharge-bankitem recharge-bankitemsel left" data-mechanismNum="' + bankNameList[i].mechanismNum + '"><img class="block img" src="images/demoimages/' + bankNameList[i].name + '" alt="" /></li>'
+                } else {
+                    bankListItem += '<li class="recharge-bankitem left" data-mechanismNum="' + bankNameList[i].mechanismNum + '"><img class="block img" src="images/demoimages/' + bankNameList[i].name + '" alt="" /></li>'
+                }
+            };
+            $(".recharge-banklist").empty("");
+            $(".recharge-banklist").append(bankListItem);
+
+            // 去除列表的右边距
+            function reMarginRight (itemEve, divisor) {
+                $(itemEve).each(function (i) {
+                    var _this = $(this);
+                    if ((i + 1) % divisor == 0 && i != 0) {
+                        _this.css({
+                            "marginRight" : 0
+                        })
+                    }
+                });
+            }
+            reMarginRight(".recharge-choitem", 5);
+            reMarginRight(".recharge-bankitem", 4);
+
+            var userSign = false; // 用户是否登录，初始默认为未登录
+            // 用户登录
+            $(".recharge-userid").on("input", function (e) {
+                var _this = $(this);
+                idNums = _this.val();
+                idNums = idNums.replace(/[^\d]/g,'');
+                _this.val(idNums);
+                if (idNums.length >= 8) {
+                    console.log(idNums, idNums.length)
+                    $(".recharge-confirm").addClass("recharge-canclick");
+                    // 点击可点击的确认按钮
+                    $(".recharge-confirm").click(function (e) {
+                        // 向服务端发送请求判断输入ID是否正确
+                        console.log(idNums);
+
+                        var userIDBool = true; // 举例说明，例如用户id正
+                        if (userIDBool) {
+                            userSign = true;
+                            $(".recharge-nosign").addClass("recharge-none");
+                            $(".recharge-sign").removeClass("recharge-none");
+
+                            payStyle = $(".recharge-paysel").attr("data-paystyle"); // 0为微信支付，1为支付宝支付，2为银联支付
+                            newMoneyNum = $(".recharge-paymoney span").html();
+                            if (newMoneyNum != "") {
+                                newMoneyNum = parseInt($(".recharge-paymoney span").html());
+                                var customMoney = $(".recharge-cusmoney input").val(); // 获取自定义输入框中的值
+                                if (customMoney != '' && newMoneyNum < 10000) {
+                                    $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                                } else {
+                                    butBool(); // 判断支付按钮是否可点击
+                                }
+                            } else {
+                                $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                            }
+                        } else {
+                            userSign = false;
+                            $(".recharge-alert").html("此美岁ID不存在，请重新输入");
+                            $(".recharge-alert").fadeIn(300, function () {
+                                // 复制成功提示淡出
+                                $(this).fadeOut(3000);
+                            })
+                        }
+                    });
+                } else {
+                    $(".recharge-confirm").removeClass("recharge-canclick");
+                }
+            })
+            // 切换用户
+            $(".recharge-switch").click(function (e) {
+                userSign = false;
+                $(".recharge-sign").addClass("recharge-none");
+                $(".recharge-nosign").removeClass("recharge-none");
+                $(".recharge-userid").val("");
+                $(".recharge-confirm").removeClass("recharge-canclick");
+                $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                idNums = ""; //  清空之前的账号
+            });
+            // 自定义金额输入
+            $(".recharge-cusmoney input").on("input", function (e) {
+                newMoneyNum = $(this).val();
+                if (newMoneyNum != "") {
+                    newMoneyNum = parseInt(newMoneyNum.replace(/[^\d]/g,''));
+                    if(newMoneyNum >= 5000000) {
+                        newMoneyNum = 5000000
+                    }
+                    $(this).val(newMoneyNum);
+                    // 判断用户是否登录
+                    if (userSign) {
+                        if (newMoneyNum < 10000) {
+                            // 自定义金额低于10000元
+                            $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                            $(".recharge-excess").addClass("none"); // 关闭限额提示弹窗
+                        } else {
+                            payStyle = $(".recharge-paysel").attr("data-paystyle");
+
+                            butBool(); // 判断支付按钮是否可点击
+                        }
+                    }
+                    $(".recharge-paymoney span").html(newMoneyNum);
+                } else {
+                    $(".recharge-paymoney span").html("");
+                    $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                    $(".recharge-excess").addClass("none"); // 关闭限额提示弹窗
+                }
+                $(".recharge-choitem").removeClass("recharge-choitemsel");
+            })
+            // 选择充值套餐
+            $(".recharge-choitem").click(function (e) {
+                var _this = $(this);
+                _this.siblings(".recharge-choitem").removeClass("recharge-choitemsel");
+                _this.addClass("recharge-choitemsel");
+                $(".recharge-cusmoney input").val(""); // 自定义金额输入框清空
+
+                // 更新底部充值金额
+                newMoneyNum = parseInt(_this.children(".recharge-moneynum").children("em").html());
+                $(".recharge-paymoney span").html(newMoneyNum);
+
+                // 判断用户是否登录
+                if (userSign) {
+                    // 判断选择充值金额是否大于该充值模式单日最大单笔限额值
+                    payStyle = $(".recharge-paysel").attr("data-paystyle");
+
+                    butBool(); // 判断支付按钮是否可点击
+                } else {
+                    $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                }
+            });
+            // 选择付款的方式
+            $(".recharge-payitem").click(function (e) {
+                var _this = $(this);
+                _this.siblings(".recharge-payitem").removeClass("recharge-paysel");
+                _this.addClass("recharge-paysel");
+
+                payStyle = _this.attr("data-paystyle"); // 0为微信支付，1为支付宝支付，2为银联支付
+                console.log(payStyle)
+                if (payStyle == 2) {
+                    $(".recharge-banklist").removeClass("none");
+                    bankName = $(".recharge-bankitemsel").attr("data-mechanismnum");
+                } else {
+                    $(".recharge-banklist").addClass("none");
+                }
+
+                newMoneyNum = $(".recharge-paymoney span").html();
+                if (newMoneyNum != "" && userSign) {
+                    newMoneyNum = parseInt($(".recharge-paymoney span").html());
+                    var customMoney = $(".recharge-cusmoney input").val(); // 获取自定义输入框中的值
+                    if (customMoney != '' && newMoneyNum < 10000) {
+                        $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                    } else {
+                        butBool(); // 判断支付按钮是否可点击
+                    }
+                } else {
+                    $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                }
+            });
+            // 判断支付按钮是否可点击
+            function butBool () {
+                if (payStyle == 0 && newMoneyNum >= 10000) {
+                    $(".recharge-excess").html("您的订单超出微信单笔限额，请选择其他支付")
+                    $(".recharge-excess").removeClass("none");
+                    $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                } else if(payStyle == 1 && newMoneyNum >= 50000) {
+                    $(".recharge-excess").html("您的订单超出支付宝单笔限额，请选择网银支付");
+                    $(".recharge-excess").removeClass("none");
+                    $(".recharge-paybut").removeClass("recharge-canpaybut"); // 支付按钮不可点击
+                } else {
+                    $(".recharge-excess").addClass("none");
+                    $(".recharge-paybut").addClass("recharge-canpaybut"); // 支付按钮可点击
+                }
+            }
+            // 网银支付具体哪家银行
+            $(".recharge-bankitem").click(function (e) {
+                var _this = $(this);
+                _this.siblings(".recharge-bankitem").removeClass("recharge-bankitemsel");
+                _this.addClass("recharge-bankitemsel");
+                dataMechanismnum = _this.attr("data-mechanismnum");
+            });
+
+            $(".recharge-paybut").click(function (e) {
+                var canPay = $(this).hasClass("recharge-canpaybut");
+                if (canPay) {
+                    // 此处将数据提交服务端
+                    // payStyle:0为微信支付，1为支付宝支付，2为银联支付
+                    // newMoneyNum:需要充值的金额
+                    // idNums:用户ID
+                    // dataMechanismnum:银行机构号
+                    console.log(payStyle, newMoneyNum, idNums, dataMechanismnum);
+                }
+            });
+        </script>
+    </body>
+</html>

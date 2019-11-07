@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的猪年运势</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/mobileSelect.css">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            /*18-12-28修改*/
+            html, body {
+                width: 100%;
+                height: 100%;
+                background: #e31a27;
+            }
+            .sd-i-error::-webkit-input-placeholder { /* WebKit browsers */
+                color: #f00;
+            }
+            .sd-i-error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: #f00;
+            }
+            .sd-i-error::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: #f00;
+            }
+            .sd-i-error:-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: #f00;
+            }
+            .sd-i-errortip {
+                color: #f00;
+            }
+            /*12-28新增*/
+            .left-tops, 
+            .left-bottoms, 
+            .right-tops, 
+            .right-bottoms {
+                z-index: 3;
+                width: 50%;
+                height: 40px;
+                background-color: #fff;
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
+            }
+            .left-tops, 
+            .right-tops {
+                top: 0;
+            }
+            .left-bottoms, 
+            .right-bottoms {
+                bottom: 0;
+            }
+            .left-tops, 
+            .left-bottoms {
+                left: 0;
+            }
+            .right-tops, 
+            .right-bottoms {
+                right: 0;
+            }
+            .left-tops i, 
+            .right-tops i, 
+            .left-bottoms i, 
+            .right-bottoms i {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                width: 1.07rem;
+                height: 0.57rem;
+            }
+            .left-tops i, 
+            .right-tops i {
+                background: url(images/sd-i-ticon.png) center 0 no-repeat;
+                background-size: contain;
+            }
+            .left-bottoms i, 
+            .right-bottoms i {
+                background: url(images/sd-i-bicon.png) center 0 no-repeat;
+                background-size: contain;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" class="sd-i-wrap position-rel">
+            <div class="sd-i-starbg position-rel">
+                <span class="sd-i-star block"></span>
+            </div>
+            <div class="sd-i-conone position-rel none">
+                <div class="sd-i-onetit weight-bold">1、关于你</div>
+                <div class="sd-i-onesex clearfix">
+                    <span class="sd-i-osword thirty weight-bold left">性别：</span>
+                    <div class="sd-i-osman left clearfix">
+                        <span class="left thirty weight-bold">男</span>
+                        <!-- 选中的添加sd-i-ossel -->
+                        <em class="sd-i-ossel left"></em>
+                    </div>
+                    <div class="sd-i-oswoman left clearfix">
+                        <span class="left thirty weight-bold">女</span>
+                        <em class="left"></em>
+                    </div>
+                </div>
+                <div class="sd-i-twoage clearfix">
+                    <span class="sd-i-taword thirty weight-bold left">年龄：</span>
+                    <div class="sd-i-tanum left clearfix">
+                        <input class="left" type="number" oninput="if(value.length>2)value=value.slice(0,2);" placeholder="请输入年龄" />
+                    </div>
+                </div>
+                <div class="sd-i-threecity clearfix">
+                    <span class="sd-i-tcword weight-bold thirty left">城市：</span>
+                    <div class="sd-i-tccon left clearfix position-rel">
+                        <em id="sd-i-tccitys" class="sd-i-tccitys left">请选择城市</em>
+                        <i class="sd-i-tcicon position-abs"></i>
+                    </div>
+                </div>
+                <p class="twenty-six text-center">填写的信息关系到测试的运势结果哦！</p>
+                <div class="sd-i-onext"></div>
+            </div>
+            <div class="sd-i-contwo position-rel none">
+                <div class="sd-i-twotit weight-bold">2、你喜欢的季节</div>
+                <div class="sd-i-twopic">
+                    <img src="images/demoimages/pic69.png" alt="" class="block img" />
+                </div>
+                <ul class="sd-i-twolist sd-i-ctlist thirty">
+                    <!-- 选中的添加sd-i-ctlisel -->
+                    <li class="sd-i-ctli position-rel" data-num="1">A、不冷不热的春天<i class="position-abs"></i></li>
+                    <li class="sd-i-ctli position-rel" data-num="2">B、温度极高的夏天<i class="position-abs"></i></li>
+                    <li class="sd-i-ctli position-rel" data-num="3">C、落叶的秋天<i class="position-abs"></i></li>
+                    <li class="sd-i-ctli position-rel" data-num="4">D、寒冷的冬天<i class="position-abs"></i></li>
+                </ul>
+            </div>
+            <div class="sd-i-conthree position-rel none">
+                <div class="sd-i-threetit weight-bold">3、观察图片，选择你首先看到的细节？</div>
+                <div class="sd-i-threepic">
+                    <img src="images/demoimages/pic70.png" alt="" class="block img" />
+                </div>
+                <ul class="sd-i-threelist sd-i-ctlist thirty">
+                    <li class="sd-i-ctli position-rel" data-num="1">A、一只蝴蝶<i class="position-abs"></i></li>
+                    <li class="sd-i-ctli position-rel" data-num="2">B、一本书<i class="position-abs"></i></li>
+                    <li class="sd-i-ctli position-rel" data-num="3">C、一位女子<i class="position-abs"></i></li>
+                    <li class="sd-i-ctli position-rel" data-num="4">D、蓝天草原<i class="position-abs"></i></li>
+                </ul>
+            </div>
+        </form>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/mobileSelect.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/sd-index.js" type="text/javascript"></script>
+        <script>
+            // 点击开始测试
+            $(".sd-i-star").click(function (e) {
+                $(".sd-i-starbg").addClass("none");
+                $(".sd-i-conone").removeClass("none");
+            });
+
+            // 选择性别
+            $(".sd-i-onesex").on("click", "div", function (e) {
+                $(this).siblings("div").children("em").removeClass("sd-i-ossel");
+                $(this).children("em").addClass("sd-i-ossel");
+            })
+            // 城市选择
+            var mobileSelect3 = new MobileSelect({
+                trigger: '#sd-i-tccitys',
+                title: '城市选择',
+                wheels: [
+                            {data: cityArr}
+                        ]
+            });
+            function btnAction () {
+                $(".sd-i-tccitys").removeClass("sd-i-errortip");
+            }
+
+            // 点击下一步
+            var conAir = /^[\s]*$/;
+            $(".sd-i-onext").click(function (e) {
+                $(".sd-i-tanum input").blur();
+                var formFocus = [0, 0];
+                var ageCon = $(".sd-i-tanum input").val(),
+                    cityCons = $(".sd-i-tccitys").html();
+                
+                if (!conAir.test(ageCon)) {
+                    // 年龄不为为空
+                    formFocus[0] = 1;
+                    $(".sd-i-tanum input").removeClass("sd-i-error");
+                } else {
+                    // 年龄为空
+                    formFocus[0] = 0;
+                    $(".sd-i-tanum input").addClass("sd-i-error");
+                    $(".sd-i-tanum input").val("");
+                    $(".sd-i-tanum input").attr({
+                        "placeholder" : "年龄不能为空"
+                    });
+                }
+                if (cityCons == "请选择城市") {
+                    // 城市为空
+                    formFocus[1] = 0;
+                    $(".sd-i-tccitys").addClass("sd-i-errortip");
+                } else {
+                    // 城市不为为空
+                    formFocus[1] = 1;
+                    $(".sd-i-tccitys").removeClass("sd-i-errortip");
+                }
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    $(".sd-i-conone").addClass("none");
+                    $(".sd-i-contwo").removeClass("none");
+                }
+            })
+            $(".sd-i-twolist").on("click", ".sd-i-ctli", function (e) {
+                $(this).siblings("li").removeClass("sd-i-ctlisel");
+                $(this).addClass("sd-i-ctlisel");
+                $(".sd-i-contwo").addClass("none");
+                $(".sd-i-conthree").removeClass("none");
+            })
+            $(".sd-i-threelist").on("click", ".sd-i-ctli", function (e) {
+                $(this).siblings("li").removeClass("sd-i-ctlisel");
+                $(this).addClass("sd-i-ctlisel");
+                // 提交数据
+                var end_sex = $(".sd-i-ossel").siblings("span").html(),
+                    end_age = $(".sd-i-tanum input").val(),
+                    end_city = $(".sd-i-tccitys").html(),
+                    end_twonum = $(".sd-i-twolist .sd-i-ctlisel").attr("data-num"),
+                    end_threenum = $(".sd-i-threelist .sd-i-ctlisel").attr("data-num");
+                    console.log(end_sex, end_age, end_city, end_twonum, end_threenum);
+                // window.location.href="sd-keepimg.html" // 跳转到我的运势结果页
+            })
+
+            // 12-28新增
+            var newCitynum = [0, 0], // 默认数据第一个省份，第一个城市的数组
+                newChildListObject = null, // 获取一个省份及对应城市的对象
+                newChildListNum = 30; // 默认第一个省份河北省有几个几个对应的市（从0开始）
+        </script>
+    </body>
+</html>

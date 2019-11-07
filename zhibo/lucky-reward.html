@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>幸运奖池</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.0);
+            }
+            .mask{
+                position:absolute;
+                display:none;
+                top: -0.14rem;
+                left: -2.86%;
+                width: 105.72%;
+                height: 5.29rem;
+            }
+            .active .mask{
+                z-index: 1;
+                display:block;
+                background: url("images/lucky-r-active.png") center center no-repeat;
+                background-size: contain;
+            }
+            .lucky-r-wrap.none {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="lucky-r-wrap position-rel">
+            <div class="lucky-r-main position-rel">
+                <!-- 头部标题图片 -->
+                <div class="lucky-r-head position-abs">
+                    <img class="block img" src="images/demoimages/pic129.png" alt="" />
+                </div>
+                <!-- 抽奖部分 -->
+                <div class="lucky-r-drawcon">
+                    <ul id="lottery" class="lucky-r-list">
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-0">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-1">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-2">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-3">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-4">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-5">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-6">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-7">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                        <li class="lucky-r-item position-rel lottery-unit lottery-unit-8">
+                            <img class="block" src="images/demoimages/qd7.png" alt="" />
+                            <p class="lucky-r-prizename block text-center white"><em>玫瑰花</em>  X<span>1</span></p>
+                            <div class="mask"></div>
+                        </li>
+                    </ul>
+                    <!-- 开始按钮 -->
+                    <div class="lucky-r-butgo"></div>
+                </div>
+                <!-- 奖品展示部分 -->
+                <div class="lucky-r-drawshow none">
+                    <div class="lucky-r-drawpic">
+                        <img class="block img" src="" alt="" />
+                    </div>
+                    <span class="block white twenty-six text-center"></span>
+                </div>
+                <!-- 关闭按钮 -->
+                <div class="lucky-r-close position-abs">
+                    <i class="position-abs"></i>
+                    <i class="position-abs"></i>
+                </div>
+                <!-- 渐隐弹窗 -->
+                <div class="lucky-r-fadealert text-center white thirty position-fix none"></div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            // 点击关闭按钮
+            $(".lucky-r-close").click(function (e) {
+                $(".lucky-r-wrap").addClass("none")
+            })
+
+            var lottery = {
+                index: -1,    //当前转动到哪个位置，起点位置
+                count: 0,    //总共有多少个位置
+                timer: 0,    //setTimeout的ID，用clearTimeout清除
+                speed: 20,    //初始转动速度
+                times: 0,    //转动次数
+                cycle: 10,    //转动基本次数：即至少需要转动多少次再进入抽奖环节
+                prize: -1,    //中奖位置
+                init:function(id){
+                    if ($("#"+id).find(".lottery-unit").length>0) {
+                        $lottery = $("#"+id);
+                        $units = $lottery.find(".lottery-unit");
+                        this.obj = $lottery;
+                        this.count = $units.length;
+                        $lottery.find(".lottery-unit-"+this.index).addClass("active");
+                    };
+                },
+                roll:function(){
+                    var index = this.index;
+                    var count = this.count;
+                    var lottery = this.obj;
+                    $(lottery).find(".lottery-unit-"+index).removeClass("active");
+                    index += 1;
+                    if (index>count-1) {
+                        index = 0;
+                    };
+                    $(lottery).find(".lottery-unit-"+index).addClass("active");
+                    this.index=index;
+                    return false;
+                },
+                stop:function(index){
+                    this.prize=index;
+                    return false;
+                }
+            };
+
+            function roll(){
+                lottery.times += 1;
+                lottery.roll();//转动过程调用的是lottery的roll方法，这里是第一次调用初始化
+                if (lottery.times > lottery.cycle+10 && lottery.prize==lottery.index) {
+                    clearTimeout(lottery.timer);
+                    setTimeout(function () {
+                        // 显示中奖弹窗
+                        console.log(lottery.prize);
+                        var drawImgSrc = $(".active").children("img").attr("src"),
+                            drawPrizeName = $(".active").children("p").children("em").html(),
+                            drawPrizeNum = $(".active").children("p").children("span").html();
+                        $(".lucky-r-drawpic img").attr({
+                            "src" : drawImgSrc
+                        });
+                        $(".lucky-r-drawshow span").html("恭喜你获得“" + drawPrizeName + "X" + drawPrizeNum + "”");
+                        setTimeout(function (e) {
+                            $(".lucky-r-drawcon").addClass("none");
+                            $(".lucky-r-drawshow").removeClass("none");
+                        }, 500)
+
+                        // 重置
+                        lottery.prize=-1;
+                        lottery.times=0;
+                    }, 30)
+                    // click=false; // 转动一次后不可在转动，如果需再次可转动click重置为false
+                }else{
+                    if (lottery.times<lottery.cycle) {
+                        lottery.speed -= 10;
+                    }else if(lottery.times==lottery.cycle) {
+                        var index = Math.random()*(lottery.count)|0;//中奖物品通过一个随机数生成
+                        lottery.prize = index;
+                    }else{
+                        if (lottery.times > lottery.cycle+10 && ((lottery.prize==0 && lottery.index==7) || lottery.prize==lottery.index+1)) {
+                            lottery.speed += 110;
+                        }else{
+                            lottery.speed += 20;
+                        }
+                    }
+                    if (lottery.speed<110) {
+                        lottery.speed=110;
+                    };
+                    // console.log(lottery.times+'^^^^^^'+lottery.speed+'^^^^^^^'+lottery.prize);
+                    lottery.timer = setTimeout(roll,lottery.speed);//循环调用
+                }
+                return false;
+            }
+
+            var click = false;
+
+            window.onload=function(){
+                lottery.init('lottery');
+                $(".lucky-r-butgo").click(function(){
+                    if (click) {//click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
+                        return false;
+                    }else{
+                        lottery.speed = 160;
+                        roll();    //转圈过程不响应click事件，会将click置为false
+                        click = true; //一次抽奖完成后，设置click为true，可继续抽奖
+                        return false;
+                    }
+                });
+            };
+
+            // 调取客户端相对应的事件
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("iphone") > -1) {
+                var oHead = document.getElementsByTagName('HEAD').item(0);
+                var oScript = document.createElement("script");
+                var sign = 0;
+                oScript.type = "text/javascript";
+                oScript.src = "http://img1.szdc666.com/WebViewJavascriptBridge.js?r=1";
+                oHead.appendChild(oScript);
+                function connectWebViewJavascriptBridge(callback) {
+                    try {
+                        //如果桥接对象已存在，则直接调用callback函数
+                        if (window.WebViewJavascriptBridge) {
+                            callback(WebViewJavascriptBridge);
+                        }
+                        //否则添加一个监听器来执行callback函数
+                        else {
+                            document.addEventListener(
+                                'WebViewJavascriptBridgeReady', function() {
+                                    callback(WebViewJavascriptBridge);
+                                }, false);
+                        }
+                    } catch (e) {
+                        alert(e);
+                    }
+                }
+            }
+            $(document).ready(function () {
+                if (ua.indexOf("iphone") > -1) {
+                    connectWebViewJavascriptBridge(function(bridge) {
+                        if (sign == 0) {
+                            bridge.init(function(message, responseCallback) {
+                            });
+                            sign = 1;
+                        }
+                        bridge.callHandler('loadover', {
+                        }, function(response) {
+                        });
+                    });
+                } else {
+                    $(function() {
+                        if (window['JavaScriptInterface']) {
+                            window.JavaScriptInterface.loadover();
+                        }
+                    });
+                }
+            })
+            $(".lucky-r-close").click(function(){
+                if (ua.indexOf("iphone") > -1) {
+                    connectWebViewJavascriptBridge(function(bridge) {
+                        if (sign == 0) {
+                            bridge.init(function(message, responseCallback) {
+                            });
+                            sign = 1;
+                        }
+                        bridge.callHandler('closedial', {
+                        }, function(response) {
+                        });
+                        if (isRefreshknap) {
+                            bridge.callHandler('goUpdate', {
+                            }, function(response) {
+                            });
+                        }
+                    });
+                } else {
+                    $(function() {
+                        if (window['JavaScriptInterface']) {
+                            window.JavaScriptInterface.closedial();
+                            if (isRefreshknap) {
+                                window.JavaScriptInterface.goUpdate();
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

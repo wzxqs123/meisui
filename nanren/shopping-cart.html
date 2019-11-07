@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>购物车</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+    </head>
+    <body>
+        <form action="" class="shop-c-wrap pad-bot">
+            <!-- 一个仓库 -->
+            <div class="shop-c-marb white">
+                <div class="shop-c-ware line-two clearfix">
+                    <a class="right g-two clearfix" href="">已免邮费12元<i class="right"></i></a>
+                    <div class="left twenty-six position-rel clearfix"><input class="shop-c-areacheck position-abs" type="checkbox" /><em class="shop-c-ware-false left"></em>免税自营</div>
+                </div>
+                <!-- 一个满减活动 -->
+                <div class="shop-c-lists line-two">
+                    <a class="shop-c-cut block g-one clearfix" href="">
+                        <strong class="left"></strong>购满200元可减40元，还差50元<em class="right g-two clearfix">去凑单<i class="right"></i></em>
+                    </a>
+                    <!-- 单件商品 -->
+                    <div class="shop-c-layer clearfix">
+                        <div class="shop-c-length position-rel clearfix">
+                            <input class="shop-c-check position-abs" type="checkbox" />
+                            <div class="shop-c-con shop-c-con-false left">
+                                <dl class="shop-c-dl clearfix">
+                                    <dt class="shop-c-dt left">
+                                        <img class="block" src="images/demoimages/pic1.jpg" alt="" />
+                                    </dt>
+                                    <dd class="shop-c-dd left">
+                                        <!-- 无内容时也不可删除标签 -->
+                                        <h2 class="twenty-six g-one">logo标贴无袖背背心心心l背背心心标贴无袖背背心背</h2>
+                                        <!-- 无内容时也不可删除标签 -->
+                                        <div class="shop-c-size g-three">颜色:黑色 尺码:185/104a</div>
+                                        <div class="shop-c-nums g-one clearfix">
+                                            <span class="left"></span>
+                                            <em  class="left text-center">5</em>
+                                            <span class="left"></span>
+                                            <!-- 单价 -->
+                                            <strong class="right twenty-six">¥200</strong>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="shop-c-slide text-center left clearfix">
+                                <a class="white-color left" href="">移动到收藏</a>
+                                <span class="white-color left">删除</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                </div>
+                <!-- end -->
+            </div>
+            <!-- 失效商品 -->
+            <div class="shop-c-invalid g-three text-center">失效商品</div>
+            <div class="shop-c-marb white">
+                <!-- 一个满减活动 -->
+                <div class="shop-c-lists line-two">
+                    <!-- 单件商品 -->
+                    <div class="shop-c-layer clearfix">
+                        <div class="shop-c-length position-rel clearfix">
+                            <!-- 此处的复选框禁止操 -->
+                            <!-- <input class="shop-c-check position-abs" type="checkbox" disabled /> -->
+                            <div class="shop-c-con shop-c-con-false left">
+                                <dl class="shop-c-dl clearfix">
+                                    <dt class="shop-c-dt left">
+                                        <img class="block" src="images/demoimages/pic1.jpg" alt="" />
+                                    </dt>
+                                    <dd class="shop-c-dd left">
+                                        <!-- 无内容时也不可删除标签 -->
+                                        <h2 class="twenty-six g-one">logo标贴无袖背背心心心l背背心心标贴无袖背背心背</h2>
+                                        <!-- 无内容时也不可删除标签 -->
+                                        <div class="shop-c-size g-three">颜色:黑色 尺码:185/104a</div>
+                                        <div class="shop-c-nums g-one clearfix">
+                                            <span class="left"></span>
+                                            <em  class="left text-center">5</em>
+                                            <span class="left"></span>
+                                            <!-- 单价 -->
+                                            <strong class="right twenty-six">¥200</strong>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="shop-c-slide text-center left clearfix">
+                                <a class="white-color left" href="">移动到收藏</a>
+                                <span class="white-color left">删除</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                </div>
+                <!-- end -->
+                <div class="shop-c-empty">
+                    <div class="text-center">清空失效商品</div>
+                </div>
+            </div>
+            <!-- end -->
+            <footer class="shop-c-footer white position-rel clearfix">
+                <input class="position-abs shop-c-allcheck" type="checkbox" />
+                <span class="shop-c-select shop-c-select-false twenty-six left">全选</span>
+                <button class="shop-c-settlement white-color bg-color-two text-center right" type="submit">结算</button>
+                <div class="shop-c-total right">
+                    <em class="block">合计：¥132011</em>
+                    <strong class="block g-two">不含运费</strong>
+                </div>
+            </footer>
+        </form>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/style.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 每件物品下加一条line-one的边框，最后一个物品不加
+            $(".shop-c-lists").each(function(i) {
+                var shopCNums = $(this).children(".shop-c-layer").size();
+                for (var shopCi = 0; shopCi < shopCNums-1; shopCi++) {
+                    $(this).children(".shop-c-layer").eq(shopCi).children(".shop-c-length").children(".shop-c-con").children(".shop-c-dl").addClass("line-one");
+                }
+            })
+
+            // 增减按钮
+            $(".shop-c-nums em").each(function(i) {
+                scopera($(this));
+            });
+            // 此处最大值应为服务端给的值，暂时由10代替
+            var shopCMaxpiece = 10;
+            function scopera (_this) {
+                var shopCpiece = parseInt(_this.html());
+                _this.prev().click(function() {
+                    scalgorithm(shopCpiece > 1, shopCpiece - 1, _this, 1);
+                })
+                _this.next().click(function() {
+                    scalgorithm(shopCpiece < shopCMaxpiece, shopCpiece + 1, _this, shopCMaxpiece);
+                })
+                function scalgorithm (num, oper, show, ext) {
+                    if (num) {
+                        shopCpiece = oper;
+                        show.html(shopCpiece);
+                    } else if(shopCpiece <= 1) {
+                        shopCpiece = ext;
+                        show.html(shopCpiece);
+                    }
+                }
+            }
+            
+            // 滑动出收藏和删除
+            $(".shop-c-layer").each(function(i) {
+                shopCSlide(this);
+            });
+            function shopCSlide (shopCLayer) {
+                var scstart = 0,
+                    scend = 400;
+                shopCLayer.addEventListener("touchstart", function (e) {
+                    if (e.touches.length = 1) {
+                        scstart = e.touches[0].clientX;
+                        // console.log(scstart)
+                    }
+                })
+                shopCLayer.addEventListener("touchmove", function (e) {
+                    if(e.touches.length = 1) {
+                        scend = e.touches[0].clientX;
+                        // console.log(scend)
+                    }
+                })
+                shopCLayer.addEventListener("touchend", function (e) {
+                    // console.log(scend - scstart)
+                    if(scend - scstart > 100) {
+                        $(this).stop(true, true).animate({
+                            "scrollLeft" : 0
+                        }, 300)
+                    }
+                    if(scend - scstart < -100) {
+                        $(this).stop(true, true).animate({
+                            "scrollLeft" : "298"
+                        }, 300)
+                    }
+                })
+            }
+
+            // 清空失效商品
+            $(".shop-c-empty div").click(function() {
+                $(".shop-c-invalid").remove();
+                $(this).parent().parent().remove();
+            });
+            // 点击删除按钮删除标签
+            $(".shop-c-slide span").click(function () {
+                $(this).parent().parent().parent().remove();
+            });
+
+            // 商品选择，全选
+                // 全选复选框
+            scChoice($(".shop-c-allcheck"));
+                // 地区选择————小全选复选框
+            scChoice($(".shop-c-areacheck"));
+                // 单件商品的复选框
+            scChoice($(".shop-c-check"));
+            function scChoice (checkbox) {
+                checkbox.click(function() {
+                    scbool($(this), ".shop-c-select", "shop-c-select-false", "shop-c-select-true");
+                    scbool($(this), "em", "shop-c-ware-false", "shop-c-ware-true");
+                    scbool($(this), ".shop-c-con", "shop-c-con-false", "shop-c-con-true");
+                })
+            }
+            // 判断复选框是否选中，如果选中那么对应的复选框的图标就发生变化
+            function scbool (_this, blockEve, falseClass, trueClass) {
+                if (_this.prop("checked")) {
+                    _this.siblings(blockEve).removeClass(falseClass).addClass(trueClass);
+                } else {
+                    _this.siblings(blockEve).removeClass(trueClass).addClass(falseClass);
+                }
+            }
+            // 地区选择————小全选
+            $(".shop-c-areacheck").click(function() {
+                // 获取到该地区单件商品所对应的复选框
+                var scThisCheck = $(this).parent().parent().siblings(".shop-c-lists").children(".shop-c-layer").children(".shop-c-length").children(".shop-c-check");
+                scThisCheck.prop("checked", $(this).prop("checked"));
+                // 复选框变化时图标跟着变化
+                scbool(scThisCheck, ".shop-c-con", "shop-c-con-false", "shop-c-con-true");
+            });
+            // 选择单品的复选框，一个地区的选满该地区的复选框自动打钩
+            $(".shop-c-check").on("click", function(event) {
+                var sctemp = 0,
+                    scLayerNums = $(this).parent().parent().parent().children(".shop-c-layer"),
+                    scregion = $(this).parent().parent().parent().siblings(".shop-c-ware").children("div").children(".shop-c-areacheck");
+                for (var sctempi = 0; sctempi < scLayerNums.size(); sctempi++) {
+                    if (scLayerNums.eq(sctempi).children().children(".shop-c-check").prop("checked")) {
+                        sctemp++;
+                    }
+                    if(sctemp == scLayerNums.size()) {
+                        scregion.prop("checked", true);
+                        scbool(scregion, "em", "shop-c-ware-false", "shop-c-ware-true");
+                    } else {
+                        scregion.prop("checked", false);
+                        scbool(scregion, "em", "shop-c-ware-false", "shop-c-ware-true");
+                    }
+                };
+            });
+            $(".shop-c-allcheck").click(function() {
+                $(":checkbox").prop("checked", $(this).prop("checked"));
+                scbool($(".shop-c-areacheck"), "em", "shop-c-ware-false", "shop-c-ware-true");
+                scbool($(".shop-c-check"), ".shop-c-con", "shop-c-con-false", "shop-c-con-true");
+            })
+            function scAreaAll (checkEve) {
+                checkEve.on("click", function(event) {
+                    var sctemp = 0;
+                    for (var sctempj = 0; sctempj < $(":checkbox").length - 1; sctempj++) {
+                        if ($(":checkbox")[sctempj].checked) {
+                            sctemp++;
+                        }
+                        if (sctemp == $(":checkbox").length - 1) {
+                            $(".shop-c-allcheck").prop("checked", true);
+                            scbool($(".shop-c-allcheck"), ".shop-c-select", "shop-c-select-false", "shop-c-select-true");
+                        } else {
+                            $(".shop-c-allcheck").prop("checked", false);
+                            scbool($(".shop-c-allcheck"), ".shop-c-select", "shop-c-select-false", "shop-c-select-true");
+                        }
+                    };
+                })
+            }
+            scAreaAll($(".shop-c-check"));
+            scAreaAll($(".shop-c-areacheck"));
+        </script>
+    </body>
+</html>

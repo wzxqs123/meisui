@@ -1,0 +1,70 @@
+<!--pages/live/live.wxml-->
+<view class="live-wrap">
+  <!-- 主播正在直播 -->
+  <live-player wx:if="{{ anchorState }}" id="player" class="player position-rel" src="{{ livePlayerSrc }}" mode="{{ livePlayer.mode }}" autoplay bindstatechange="statechange" binderror="error" object-fit="{{ livePlayer.objectFit }}" ></live-player>
+  <!-- 主播已下播 -->
+  <view wx:else class="live-noplayer">
+    <view class="live-noplayercon">
+      <image class="live-noplayerpic" src="{{ anchorInfo.headPic }}" mode="aspectFill"></image>
+      <text class="live-noplayertip">{{ noPlayerTip }}</text>
+    </view>
+  </view>
+  <view class="live-navs">
+    <block wx:for="{{ listNav }}" wx:for-index="idx" wx:for-item="navitem" wx:key="idx">
+      <view id="{{ navitem.idName }}" class="live-navitem weight-bold {{ navitem.isSel? 'live-navitemsel':'' }}" bindtap="tapNavs">{{ navitem.cons }}<view class="live-itemselbor"></view></view>
+    </block>
+  </view>
+  <!-- 中间内容区 -->
+  <view class="live-maincon" style="height: {{ mainconH }}px; padding: 10px 0;">
+    <scroll-view class="live-chatcon" hidden="{{ !listNav[0].isSel }}" scroll-y="{{ chatListSet.scrollY }}" scroll-with-animation="{{ chatListSet.isAnimation }}" scroll-into-view="{{ newItemId }}" bindscroll="bindScroll">
+      <block wx:for="{{ weChatLists }}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
+        <view id="{{ 'chatitem' + idx }}" class="live-chatitem">
+          <view wx:if="{{ items.d.msg }}" class="live-chatname">{{ items.d.nickname + "(LV." + items.d.level + ")" }}：<text>{{ items.d.msg }}</text></view>
+          <view wx:elif="{{ items.d.text && items.d.one_name }}" class="live-chatname">{{ items.d.one_name }}<text class="live-pad">送给</text>{{ items.d.two_name }}<text class="live-intoroom">{{ items.d.quantifier + items.d.text }}</text></view>
+          <view wx:elif="{{ items.d.text && !items.d.one_name }}" class="live-chatname">{{ items.d.quantifier + items.d.text }}</view>
+          <view wx:else class="live-chatname">{{ items.d.nickname + "(LV." + items.d.level + ")" }}<text class="live-intoroom">进入了房间</text></view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="live-anchorinfo" hidden="{{ !listNav[1].isSel }}">
+      <view class="live-infocon">
+        <view class="live-infotop">
+          <image class="live-anchorpic" src="{{ anchorInfo.headPic }}" mode="aspectFill"></image>
+          <view class="live-anchordel">
+            <text class="live-anchorname weight-bold">{{ anchorInfo.name }}</text>
+            <view class="live-anchorid">ID：{{ anchorInfo.idnum }}</view>
+            <view class="live-anchortag">
+              <view class="live-anchorgrade {{ anchorInfo.gradeBg }}">Lv.{{ anchorInfo.grade }}</view>
+              <view class="live-anchorv"></view>
+            </view>
+          </view>
+        </view>
+        <view class="live-infosec weight-bold">
+          <view>{{ anchorInfo.noticeTit }}</view>
+          <text>{{ anchorInfo.noticeCon }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部固定区 -->
+  <view class="live-foot" style="bottom:{{ footBottom }}px">
+    <input id="live-input" class="live-input" value="{{ inputCons }}" disabled="{{ inputDis }}" placeholder="{{ footInput.placeholderCon }}" placeholder-class="{{ footInput.placeholderClass }}" confirm-type="{{ footInput.confirmType }}" adjust-position="{{ footInput.adjustPosition }}" bindfocus="bindFoucus" bindblur="bindBlur" bindconfirm="bindConfirm"></input>
+    <view class="live-download" bindtap="loadApp">
+      <image mode="widthFix" src="https://wechatpay.pod.meisuizhibo.com/download.png"></image>
+      <text>下载</text>
+    </view>
+  </view>
+  <!-- 弹窗 -->
+  <cover-view id="live-alertbg" class="live-alertbg position-fix" hidden="{{ !alertisShow }}" bindtap="hideAlert">
+    <cover-view id="live-alert" class="live-alert position-rel">
+      <cover-view id="live-alertclose" class="live-alertclose position-abs">
+        <cover-view class="position-abs"></cover-view>
+        <cover-view class="position-abs"></cover-view>
+      </cover-view>
+      <cover-image class="live-loadtit" src="{{ alertDel.titImageSrc }}" mode="widthFix"></cover-image>
+      <cover-view class="live-copytip">{{ alertDel.copyTip }}</cover-view>
+      <cover-image class="live-copybut" src="{{ alertDel.butPicUrl }}" mode="widthFix" bindtap="copyLink"></cover-image>
+      <!-- <cover-view class="live-copybut" bindtap="copyLink">{{ alertDel.copybutCon }}</cover-view> -->
+    </cover-view>
+  </cover-view>
+</view>

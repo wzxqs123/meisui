@@ -1,0 +1,8 @@
+<!--pages/payfail/payfail.wxml-->
+<view class="payfail-wrap">
+  <view class="payfail-tips">
+    <view class="payfail-payicon"></view>
+    <text>{{ titles }}</text>
+  </view>
+  <button class="payfail-return" type="{{ butSet.type }}" open-type="{{ butSet.openType }}" app-parameter="{{ butSet.appParameter }}" hover-class="{{ butSet.hoverClass }}" binderror="{{ bindError }}">{{ butSet.con }}</button>
+</view>

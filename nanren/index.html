@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="white">
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+    </head>
+    <body class="white">
+        <div class="swiper-container index-header position-rel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide index-imgs position-rel">
+                    <img class="position-abs" src="images/demoimages/pic12.jpg" alt="商品图" />
+                </div>
+                <div class="swiper-slide index-imgs position-rel">
+                    <img class="position-abs" src="images/demoimages/pic4.jpg" alt="商品图" />
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <div class="position-abs index-black"></div>
+        </div>
+        <div class="index-int twenty-six clearfix">
+            <span class="left">品质生活</span>
+            <strong class="left g-three">LIFESTYLE</strong>
+            <em class="right g-two">更多兴趣</em>
+        </div>
+        <div class="swiper-containers index-live">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide index-rec">
+                    <img class="block" src="images/demoimages/pic13.jpg" alt="商品图" />
+                    <div class="twenty-six text-center">不止是馬球衫</div>
+                </div>
+                <div class="swiper-slide index-rec">
+                    <img class="block" src="images/demoimages/pic13.jpg" alt="商品图" />
+                    <div class="twenty-six text-center">不止是馬球衫</div>
+                </div>
+                <div class="swiper-slide index-rec">
+                    <img class="block" src="images/demoimages/pic13.jpg" alt="商品图" />
+                    <div class="twenty-six text-center">不止是馬球衫</div>
+                </div><div class="swiper-slide index-rec">
+                    <img class="block" src="images/demoimages/pic13.jpg" alt="商品图" />
+                    <div class="twenty-six text-center">不止是馬球衫</div>
+                </div><div class="swiper-slide index-rec">
+                    <img class="block" src="images/demoimages/pic13.jpg" alt="商品图" />
+                    <div class="twenty-six text-center">不止是馬球衫</div>
+                </div>
+            </div>
+        </div>
+        <div class="index-con">
+            <div class="index-pics position-rel">
+                <img class="block" src="images/demoimages/pic14.jpg" alt="商品图" />
+                <div class="position-abs index-title">
+                    <p>画册 x 穿衣｜穿着衬衫去海边衬衫去海衫去衬衫去海边</p>
+                    <span class="block twenty-six">穿搭</span>
+                </div>
+            </div>
+            <div class="index-article">
+                <h2>G-STAR RAW与PHARRELL</h2>
+                <p class="twenty-six g-two">G-Star RAW“创想之魁”Pharrell Williams在纽约第五大道举行了品牌新旗舰店的开业</p>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/style.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay: 5000,//可选选项，自动滑动
+                autoplayDisableOnInteraction : false,
+
+                // 如果需要分页器
+                pagination: '.swiper-pagination'
+            })
+            var mySwipers = new Swiper ('.swiper-containers', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto"
+            })
+        </script>
+    </body>
+</html>

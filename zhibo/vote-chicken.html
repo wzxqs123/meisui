@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的电影人生猜金鸡</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            html, body {
+                background: #0f1955;
+            }
+            .vote-c-wrap .none {
+                display: none;
+            }
+            input::-webkit-input-placeholder { /* WebKit browsers */
+                color: rgba(255, 255, 255, 0.3);
+            }
+            input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: rgba(255, 255, 255, 0.3);
+            }
+            input::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: rgba(255, 255, 255, 0.3);
+            }
+            input:-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: rgba(255, 255, 255, 0.3);
+            }
+            .vote-c-error::-webkit-input-placeholder { /* WebKit browsers */
+                color: #f00;
+            }
+            .vote-c-error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: #f00;
+            }
+            .vote-c-error::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: #f00;
+            }
+            .vote-c-error:-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: #f00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="vote-c-wrap position-rel">
+            <div class="vote-c-head">
+                <img class="block" src="images/demoimages/pic183.png" alt="" />
+                <span class="block white thirty text-center">剩余投票次数：2次</span>
+            </div>
+            <div class="vote-c-story">
+                <div class="vote-c-listtit vote-c-golden text-center">
+                    <h2 class="thirty block">第28届金鸡百花电影节<br />最佳故事片提名名单</h2>
+                    <span class="twenty-four block">（排名不分先后）</span>
+                </div>
+                <ul class="vote-c-storyul clearfix">
+                    <li class="vote-c-storyli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                    <li class="vote-c-storyli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                    <li class="vote-c-storyli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="vote-c-man">
+                <div class="vote-c-listtit vote-c-golden text-center">
+                    <h2 class="thirty">第28届金鸡百花电影节<br />最佳男主角提名名单</h2>
+                    <span class="twenty-four block">（排名不分先后）</span>
+                </div>
+                <ul class="vote-c-manul clearfix">
+                    <li class="vote-c-manli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <p class="twenty-six white">《地久天长》饰演刘耀军</p>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                    <li class="vote-c-manli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <p class="twenty-six white">《地久天长》饰演刘耀军</p>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                    <li class="vote-c-manli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <p class="twenty-six white">《地久天长》饰演刘耀军</p>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="vote-c-woman">
+                <div class="vote-c-listtit vote-c-golden text-center">
+                    <h2 class="thirty">第28届金鸡百花电影节<br />最佳女主角提名名单</h2>
+                    <span class="twenty-four block">（排名不分先后）</span>
+                </div>
+                <ul class="vote-c-womanul clearfix">
+                    <li class="vote-c-womanli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <p class="twenty-six white">《地久天长》饰演刘耀军</p>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                    <li class="vote-c-womanli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <p class="twenty-six white">《地久天长》饰演刘耀军</p>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                    <li class="vote-c-womanli text-center left">
+                        <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        <h2 class="thirty-two white">《古田军号》</h2>
+                        <p class="twenty-six white">《地久天长》饰演刘耀军</p>
+                        <span class="twenty-six white block">得票数：34221</span>
+                        <div class="twenty-six">投票</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="vote-c-rule">
+                <h2 class="vote-c-ruletit text-center vote-c-golden">活动规则</h2>
+                <ul class="vote-c-ruleul thirty white">
+                    <li class="vote-c-ruleli">1、活动期内，关注公众号每天可获得3次投票机会，投票次数可累计。</li>
+                    <li class="vote-c-ruleli">2、只要参与投票活动的用户，注册美岁APP，就可以获得3次线上口红机夺宝机会，有机会获得金鸡节周边等诸多大奖。</li>
+                    <li class="vote-c-ruleli">3、金鸡百花电影节将于11月23日晚 公布获奖片，我们将会从投票参与者中抽取幸运参与者或者奖品。</li>
+                    <li class="vote-c-ruleli">4、获奖名单将于11月25日在金鸡百花电影节影迷嘉年华官方直播平台美岁APP进行公布。</li>
+                    <li class="vote-c-ruleli">注：可在美岁直播观看第28届金鸡百花电影节获奖作品、明星相关视频。</li>
+                </ul>
+                <div class="vote-c-ruleline"></div>
+                <h2 class="vote-c-rewardtit text-center vote-c-golden">活动规则</h2>
+                <img class="vote-c-rewardmp block" src="images/demoimages/pic185.png" alt="" />
+                <span class="vote-c-rewardname text-center block white thirty">金鸡节展映票券</span>
+            </div>
+            <div class="jinj-foot jinj-ycolor text-center">更多详询客服 微信：livekefu   QQ：965997888<br />本活动最终解释权归美岁直播所有</div>
+            <!-- 投票详情页 -->
+            <div class="vote-c-vote position-fix none">
+                <div class="vote-c-votecon">
+                    <div class="vote-c-palycon">
+                        <!-- 展示图片的 -->
+                        <div class="vote-c-showpic none">
+                            <img class="block" src="images/demoimages/pic184.png" alt="" />
+                        </div>
+                        <!-- 展示视频的 -->
+                        <div class="vote-c-showvideo position-rel">
+                            <!-- poster为视频封面 -->
+                            <video id="vote-c-playvideo" class="vote-c-playvideo block" poster="images/demoimages/pic184.png" playsinline="true" webkit-playsinline="true">
+                                <source type="video/mp4" src="media/meisuixc.mp4">
+                            </video>
+                            <span class="vote-c-playbut position-abs"></span>
+                            <strong class="vote-c-vrate position-abs block">
+                                <em class="block"></em>
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="vote-c-votetit vote-c-golden text-center weight-bold">王景春</div>
+                    <span class="vote-c-vicetit text-center thirty vote-c-golden block">《地久天长》中饰刘耀军</span>
+                    <div class="vote-c-vicebrief white">
+                        <p>王景春，1973年2月12日出生于新疆维吾尔自治区阿勒泰市，毕业于上海戏剧学院表演系，中国内地男演员。</p>
+                        <p>1998年首次出演电视剧《生死之门》，自此开始演艺事业；1999年主演电影《我们结婚吧》；2003年出演大型情景喜剧《都市男女》；2009年出演《疯狂的玫瑰》，获得第十届电视电影百</p>
+                    </div>
+                    <div class="vote-c-vicenum white text-center twenty-six">剩余投票次数：2次</div>
+                    <div class="vote-c-viceta twenty-six text-center">为TA投票</div>
+                    <div class="vote-c-viceother twenty-six text-center">看看其他</div>
+                    <a class="vote-c-viceapp block twenty-six text-center" href="">进入放映室</a>
+                </div>
+            </div>
+            <!-- 填写个人资料 -->
+            <div class="vote-c-info position-fix none">
+                <div class="vote-c-infocon">
+                    <h2 class="thirty-two text-center vote-c-golden">填写获奖联系资料</h2>
+                    <form class="vote-c-form" action="">
+                        <div class="vote-c-username">
+                            <label for="vote-c-undel" class="vote-c-golden thirty">
+                                <span>姓</span>
+                                <span>名</span>
+                            </label>
+                            <input id="vote-c-undel" class="vote-c-undel white" type="text" placeholder="输入您的名字" />
+                        </div>
+                        <div class="vote-c-phone">
+                            <label for="vote-c-phonedel" class="vote-c-golden thirty">
+                                <span>联</span>
+                                <span>系</span>
+                                <span>方</span>
+                                <span>式</span>
+                            </label>
+                            <input id="vote-c-phonedel" class="vote-c-phonedel white" type="number" placeholder="输入您的联系方式" oninput="if(value.length>11)value=value.slice(0,11);" />
+                        </div>
+                        <div class="vote-c-code">
+                            <label for="vote-c-codedel" class="vote-c-golden thirty">
+                                <span>验</span>
+                                <span>证</span>
+                                <span>码</span>
+                            </label>
+                            <input id="vote-c-codedel" class="vote-c-codedel white" type="number" placeholder="输入验证码" />
+                            <!-- 倒计时时添加vote-c-reading -->
+                            <span class="vote-c-codebut twenty-four text-center">获取验证码</span>
+                        </div>
+                    </form>
+                    <p class="vote-c-infotips text-center white">请务必正确填写个人信息，以备开奖后进行领奖</p>
+                    <button type="button" class="vote-c-sib weight-bold twenty-six block">完成</button>
+                </div>
+            </div>
+            <!-- 完成投票 -->
+            <div class="vote-c-complete position-fix none">
+                <div class="vote-c-completecon">
+                    <h2 class="thirty-two text-center vote-c-golden">恭喜你！完成投票！</h2>
+                    <ul class="twenty-six white">
+                        <li>我们将会在金鸡节所有获奖名单公布后，从投票猜中的用户名单中抽取最终的幸运儿。届时我们会在美岁直播APP上公布获奖名单！</li>
+                        <li>除此之外，新注册美岁直播APP的用户将会获得3次线上口红机夺宝机会，赢取金鸡节周边大奖！</li>
+                        <li>数量有限，先到先得！</li>
+                    </ul>
+                    <div class="vote-c-completebut text-center twenty-six">完成</div>
+                    <a class="vote-c-completeload text-center block twenty-six" href="">免费玩口红机</a>
+                </div>
+            </div>
+            <!-- 渐隐提示弹窗 -->
+            <div class="vote-c-tipalert text-center bg-white position-fix none"></div>
+            <!-- 微信中打开链接的提示窗 -->
+            <div class="vote-c-wxalert position-fix none"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            // 列表排版样式处理
+            function limarR (liItem) {
+                $(liItem).each(function (i) {
+                    if (i % 2 == 0) {
+                        $(this).css({
+                            marginRight: "4.76%"
+                        });
+                    }
+                });
+            }
+            limarR(".vote-c-storyli")
+            limarR(".vote-c-manli")
+            limarR(".vote-c-womanli")
+
+            function tipAlert (tipCon) {
+                $(".vote-c-tipalert").html(tipCon);
+                $(".vote-c-tipalert").fadeIn(300, function () {
+                    // 复制成功提示淡出
+                    $(this).fadeOut(2500);
+                })
+            }
+
+            // 关闭弹窗
+            function closeAlert (itemClass, alertEve) {
+                $(itemClass).click(function () {
+                    $(alertEve).addClass("none");
+                });
+            }
+            closeAlert(".vote-c-completebut", ".vote-c-complete")
+            closeAlert(".vote-c-viceother", ".vote-c-vote")
+            
+            // 点击空白部分隐藏内容
+            function freeBlanks (floEve, formEve, noneEve) {
+                $(floEve).on("click", function(e){
+                    var _target = $(e.target);
+                    if (_target.closest(formEve).length == 0) {
+                        // 隐藏内容
+                        $(floEve).addClass(noneEve);
+                        document.querySelector('body').removeAttribute('style')
+                        relievescroll(); // 解除锁定的滚动条
+                    }
+                })
+            }
+            freeBlanks(".vote-c-vote", ".vote-c-votecon", "none")
+            freeBlanks(".vote-c-complete", ".vote-c-completecon", "none")
+            freeBlanks(".vote-c-info", ".vote-c-infocon", "none")
+
+            // 判断安卓还是iOS
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("iphone") > -1) {
+                console.log("ios")
+                $(".vote-c-completeload").attr({
+                    "href": "MeisuiAPP://"
+                })
+                $(".vote-c-viceapp").attr({
+                    "href": "MeisuiAPP://"
+                })
+            }else {
+                console.log("android")
+                $(".vote-c-completeload").attr({
+                    "href": "meisui://com.meisui.live/"
+                })
+                $(".vote-c-viceapp").attr({
+                    "href": "meisui://com.meisui.live/"
+                })
+            }
+            function openAppJudge (clickEve) {
+                $(clickEve).click(function () {
+                    // 判断是否是微信打开
+                    function is_weixn(){
+                        if(ua.match(/MicroMessenger/i) == "micromessenger") {
+                            // 显示去浏览器中打开提示层
+                            $(".vote-c-wxalert").removeClass("none");
+                        } else {
+                            setTimeout(function () {
+                                loadPage()
+                            }, 2000)
+                        }
+                    }
+                    is_weixn();
+                });
+            }
+            openAppJudge(".vote-c-completeload")
+            openAppJudge(".vote-c-viceapp")
+            // 页面跳转至应用宝下载
+            function loadPage () {
+                window.location.href = "https://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live"
+            }
+            // 点击提示层模块，隐藏该模块
+            $(".vote-c-wxalert").click(function() {
+                $(this).addClass("none")
+            });
+
+            // 点击主页面投票
+            $(".vote-c-storyli div").click(function (e) {
+                $(".vote-c-vote").removeClass("none"); // 显示投票弹窗页
+            });
+
+            // 点击为他投票
+            $(".vote-c-viceta").click(function(event) {
+                // 此处请求服务端
+                var dataStar = 1; // 此处假设服务端返回0为有个人信息且投票成功，1为无个人信息须完善，2为投票失败，次数不足
+                if (dataStar == 0) {
+                    $(".vote-c-vote").addClass("none");
+                    $(".vote-c-info").addClass("none");
+                    $(".vote-c-complete").removeClass("none");
+                } else if (dataStar == 1) {
+                    document.querySelector('body').setAttribute('style', 'position:fixed')
+                    $(".vote-c-vote").addClass("none");
+                    $(".vote-c-info").removeClass("none");
+                    $(".vote-c-complete").addClass("none");
+                } else if (dataStar == 2) {
+                    tipAlert("对不起，你的票数不足。")
+                }
+            });
+
+            // 获取验证码
+            $(".vote-c-codebut").click(function () {
+                var _this = $(this);
+                if (!_this.hasClass("vote-c-reading")) {
+                    $(".vote-c-phonedel").blur();
+                    var phonenum = $(".vote-c-phonedel").val();
+                    if (phoneReg.test(phonenum)) {
+                        $(".vote-c-phonedel").removeClass("vote-c-error");
+                        _this.addClass("vote-c-reading");
+                        // 手机栏改成只读
+                        $(".vote-c-phonedel").attr({
+                            "readonly" : "readonly"
+                        });
+                        var times = 60;
+                        _this.html(times + "s");
+                        var timeDown = setInterval(function () {
+                            if (times > 0) {
+                                times--;
+                                _this.html(times + "s");
+                            } else {
+                                clearInterval(timeDown);
+                                _this.html("获取验证码");
+                                _this.removeClass("vote-c-reading");
+                                // 手机栏删除只读属性
+                                $(".vote-c-phonedel").removeAttr("readonly");
+                            }
+                        }, 1000)
+                        // 此处添加添加向服务端请求验证码
+                    } else {
+                        _this.removeClass("vote-c-reading");
+                        $(".vote-c-phonedel").addClass("vote-c-error");
+                        $(".vote-c-phonedel").val("");
+                        $(".vote-c-phonedel").attr({
+                            "placeholder" : "请输入正确的手机号"
+                        })
+                    }
+                }
+            })
+            // 点击登录
+            var conAir = /^[\s]*$/;
+            var nonEmpty = /^[\S]*$/;
+            var butCanClick = true;  // 按钮是否可多次点击
+            $(".vote-c-sib").click(function (e) {
+                $(".vote-c-undel").blur();
+                $(".vote-c-phonedel").blur();
+                $(".vote-c-codedel").blur();
+                var formFocus = [0, 0, 0];
+                var username = $(".vote-c-undel").val(),
+                    phoneCon = $(".vote-c-phonedel").val(),
+                    codeCon = $(".vote-c-codedel").val();
+                // 判断手机格式是否正确且不为空
+                if (phoneReg.test(phoneCon) && !conAir.test(phoneCon)) {
+                    // 手机格式正确且不为空
+                    formFocus[1] = 1;
+                    $(".vote-c-phonedel").removeClass("vote-c-error");
+                } else {
+                    // 手机格式错误
+                    formFocus[1] = 0;
+                    $(".vote-c-phonedel").addClass("vote-c-error");
+                    $(".vote-c-phonedel").val("");
+                    $(".vote-c-phonedel").attr({
+                        "placeholder" : "请输入正确的手机号"
+                    });
+                }
+                function notEmpty (inputCon, focusNum, tagClass, tipsCon) {
+                    if (!conAir.test(inputCon)) {
+                        // 验证码不为为空
+                        formFocus[focusNum] = 1;
+                        $(tagClass).removeClass("vote-c-error");
+                    } else {
+                        // 验证码为空
+                        formFocus[focusNum] = 0;
+                        $(tagClass).addClass("vote-c-error");
+                        $(tagClass).val("");
+                        $(tagClass).attr({
+                            "placeholder" : tipsCon
+                        });
+                    }
+                }
+                notEmpty(codeCon, 2, ".vote-c-codedel", "不能为空")
+                notEmpty(username, 0, ".vote-c-undel", "姓名不能为空")
+
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    if (butCanClick) {
+                        butCanClick = false;
+                        // 这里提交数据，验证手机号码与验证码是否正确
+                        console.log(username, phoneCon, codeCon);
+
+                        var dataStart = 0; // 此处假设服务端传回0为信息填写成功并传回投票成功，1为信息填写成功但无投票次数，2为验证码错误
+                        if (dataStart == 0) {
+                            document.querySelector('body').removeAttribute('style')
+                            $(".vote-c-vote").addClass("none");
+                            $(".vote-c-info").addClass("none");
+                            $(".vote-c-complete").removeClass("none");
+                        } else if (dataStart == 1) {
+                            document.querySelector('body').removeAttribute('style')
+                            $(".vote-c-vote").removeClass("none");
+                            $(".vote-c-info").addClass("none");
+                            $(".vote-c-complete").addClass("none");
+                            tipAlert("对不起，你的票数不足。")
+                        } else if (dataStart == 2) {
+                            butCanClick = true; // 如果表单需要重新提交的情况的话butCanClick必须设置为true，否则无法再次提交
+                            // 验证码为空
+                            formFocus[focusNum] = 0;
+                            $(tagClass).addClass("vote-c-error");
+                            $(tagClass).val("");
+                            $(tagClass).attr({
+                                "placeholder" : "验证码错误"
+                            });
+                        }
+                    }
+                }
+            })
+
+            // 视频 
+            function pubVids (pubEve, strEve, vidEve, spanEve, noneEve) {
+                var pubVid = $(vidEve)[0];
+                var progress = $(strEve)
+                $(pubEve).click(function() {
+                    if ($(spanEve).hasClass(noneEve)) {
+                        pubVid.pause();
+                        $(spanEve).removeClass(noneEve);
+                    } else {
+                        pubVid.play();
+                        $(spanEve).addClass(noneEve);
+                    }
+                })
+                // 进度条功能实现
+                pubVid.addEventListener("timeupdate", showTime);
+                function showTime() {
+                    progress.children().css({
+                        "width": pubVid.currentTime / pubVid.duration * 100 + "%"
+                    })
+                    if ((pubVid.currentTime / pubVid.duration * 100) >= 100) {
+                        pubVid.currentTime = 0;
+                        pubVid.pause();
+                        $(spanEve).removeClass(noneEve);
+                    }
+                }
+                // 监听视频是否已经暂停
+                pubVid.addEventListener("pause", pauseMonitor);
+                function pauseMonitor () {
+                    $(spanEve).removeClass(noneEve);
+                }
+                // 监听视频是否已经播放
+                pubVid.addEventListener("play", playMonitor);
+                function playMonitor () {
+                    $(spanEve).addClass(noneEve);
+                }
+            }
+            pubVids(".vote-c-showvideo", ".vote-c-vrate", ".vote-c-playvideo", ".vote-c-playbut", "none")
+        </script>
+    </body>
+</html>

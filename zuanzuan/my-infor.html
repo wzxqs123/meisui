@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的资料</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="integral-m-title twenty-four white clearfix">
+            <h2 class="text-center white">我的资料</h2>
+            <a class="integral-m-return left white clearfix" href=""><i class="left"></i>返回</a>
+        </div> -->
+        <form class="my-i-wrap" action="">
+            <div class="my-i-pic">
+                <img class="block" src="images/demoimages/pic6.png" alt="">
+            </div>
+            <div class="my-i-info">
+                <div class="my-i-name clearfix">
+                    <label class="left my-i-pink" for="">昵称：</label>
+                    <input class="left my-i-pink" type="text" placeholder="请输入昵称">
+                    <span class="right">编辑</span>
+                </div>
+                <p class="my-i-nameerror my-i-red none"></p>
+                <div class="my-i-iphone clearfix">
+                    <label class="left my-i-pink" for="">手机：</label>
+                    <input class="left my-i-pink" type="number" placeholder="请输入手机号码">
+                    <span class="right">编辑</span>
+                </div>
+                <p class="my-i-ipherror my-i-red none"></p>
+                <div class="my-i-address clearfix">
+                    <label class="left my-i-pink" for="">收货地址：</label>
+                    <textarea class="left my-i-pink" name="" id="" placeholder="请输入收货地址"></textarea>
+                    <span class="right">编辑</span>
+                </div>
+                <p class="my-i-adderror my-i-red none"></p>
+            </div>
+            <button class="my-i-but block white text-center" type="button">保存</button>
+        </form>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var numberempty = /^[\s]*$/;
+            var subFoucs = [0, 0, 0];
+
+            // 判断地址栏是否有内容，改变行高
+            var textareaCon = $(".my-i-address textarea").val();
+            if (numberempty.test(textareaCon)) {
+                $(".my-i-address textarea").val("").addClass("my-i-addcenter");
+                subFoucs[2] = 0;
+            } else {
+                $(".my-i-address textarea").removedClass("my-i-addcenter");
+                subFoucs[2] = 1;
+            }
+            
+            // 昵称失焦事件
+            $(".my-i-name input").blur(function () {
+                var _this = $(this);
+                var nameCon = _this.val();
+                if (numberempty.test(nameCon)) {
+                    _this.val("");
+                    $(".my-i-nameerror").removeClass("none").html("*昵称不能为空");
+                    subFoucs[0] = 0;
+                } else {
+                    $(".my-i-nameerror").addClass("none");
+                    subFoucs[0] = 1;
+                }
+            })
+            // 手机失焦事件
+            $(".my-i-iphone input").blur(function () {
+                var _this = $(this);
+                var iphoneCon = _this.val();
+                if (phoneReg.test(iphoneCon)) {
+                    $(".my-i-ipherror").addClass("none");
+                    subFoucs[1] = 1;
+                } else {
+                    _this.val("");
+                    $(".my-i-ipherror").removeClass("none").html("*请输入正确的手机号");
+                    subFoucs[1] = 0;
+                }
+            })
+            // 地址失焦事件
+            $(".my-i-address textarea").blur(function () {
+                var _this = $(this);
+                var addressCon = _this.val();
+                if (numberempty.test(addressCon)) {
+                    _this.val("").addClass("my-i-addcenter");
+                    $(".my-i-adderror").removeClass("none").html("*收货地址不能为空");
+                    subFoucs[2] = 0;
+                } else {
+                    _this.removeClass("my-i-addcenter");
+                    $(".my-i-adderror").addClass("none");
+                    subFoucs[2] = 1;
+                }
+            })
+            // 地址聚焦
+            $(".my-i-address textarea").focus(function () {
+                $(".my-i-address textarea").removeClass("my-i-addcenter");
+            })
+            // 点击保存
+            $(".my-i-but").click(function (e) {
+                $(".my-i-name input").blur();
+                $(".my-i-iphone input").blur();
+                $(".my-i-address textarea").blur();
+                var infoNum = 0;
+                for (var i = 0; i < subFoucs.length; i++) {
+                    infoNum += subFoucs[i];
+                };
+                if (infoNum == subFoucs.length) {
+                    // 这里传数据
+                    console.log(1)
+                };
+            })
+            $(".my-i-info div span").click(function (e) {
+                _this = $(this);
+                _this.prev(".my-i-pink").focus();
+            })
+        </script>
+    </body>
+</html>

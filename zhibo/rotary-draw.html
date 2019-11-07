@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>幸运大夺宝</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/rotary-draw.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <style type="text/css">
+            body, html {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0);
+            }
+            .rotary-d-wrap .none {
+                display: none;
+            }
+            * {
+                -webkit-touch-callout:none;
+                -webkit-user-select:none;
+                -khtml-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                user-select:none;
+            }
+        </style>
+    </head>
+    <body class="">
+        <div class="rotary-d-wrap position-rel">
+            <div class="rotary-d-main position-fix">
+                <!-- 关闭按钮 -->
+                <div class="rotary-d-close position-abs">
+                    <span class="position-abs"></span>
+                    <span class="position-abs"></span>
+                </div>
+                <div class="rotary-d-navs twenty-six white">
+                    <span class="rotary-d-navsel position-rel">幸运大夺宝<em class="position-abs"></em></span>
+                    <span class="position-rel">规则<em class="position-abs"></em></span>
+                    <span class="position-rel">获奖记录<em class="position-abs"></em></span>
+                </div>
+                <!-- 幸运大夺宝 -->
+                <div class="rotary-d-treasure">
+                    <div id="rotary-d-show" class="rotary-d-show">
+                        <div class="rotary-d-showcom swiper-container">
+                            <div id="rotary-d-noticecon" class="rotary-d-noticecon swiper-wrapper white">
+                                <!-- <div class="rotary-d-noticeitem swiper-slide text-center">小猪猪通过100连抽获得告白超跑x1</div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rotary-d-zpmain position-rel">
+                        <div class="wrap position-abs">
+                            <div class="frame">
+                                <div class="circle">
+                                    <!-- <p class="position-rel" data-lottery="0">
+                                        <span class="three text-center">100钻石</span>
+                                        <img class="rotary-d-prizepic block" src="images/demoimages/cj4.png" alt="" />
+                                    </p> -->
+                                </div>
+                                <div class="button">
+                                    <button></button>
+                                </div>
+                            </div>
+                            <div class="bubbles">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <!-- <mark class="white"></mark>
+                            <div class="dialog">
+                                <p></p>
+                                <button>确定</button>
+                            </div> -->
+                        </div>
+                        <!-- 进度条总值 -->
+                        <canvas width="750" height="685" id="testCanvas" class="rotary-d-draw position-abs"></canvas>
+                        <!-- 当前进度条值 -->
+                        <!-- <canvas width="750" height="685" id="newCanvas" class="rotary-d-nowdraw position-abs"></canvas> -->
+                        <div class="rotary-d-lucky white position-abs">幸运值<i></i></div>
+                    </div>
+                    <div class="rotary-d-choice white text-center">
+                        <span class="rotary-d-choitem position-rel"><em>1抽</em></span>
+                        <span class="rotary-d-choitem position-rel"><em>10抽</em></span>
+                        <span class="rotary-d-choitem rotary-d-chosel position-rel"><em>100抽</em><i></i><p class="white position-abs">概率更高</p></span>
+                    </div>
+                    <p class="rotary-d-foot white text-center">点击GO即消耗<span>28000</span>钻石，并开启转盘。<br />幸运值达到1200必得大奖</p>
+                </div>
+                <!-- 规则 -->
+                <ul class="rotary-d-rule white none">
+                    <li>1、选择抽奖次数选项，点击轮盘上的开启按钮即可抽取幸运礼物。</li>
+                    <li>2、开启一次转盘需要280钻石，抽奖次数选项分别为三种选项，单抽、10连抽、100连抽。选择多次连抽会提升中奖概率。</li>
+                    <li>3、获得的礼物会发放到直播间礼物箱背包内，钻石及消费经验值会直接自动累加。</li>
+                    <li>4、参与幸运大夺宝所得礼物赠送给主播会给主播增加额外星光值。</li>
+                    <li>
+                        <table class="rotary-d-ruletab white text-center">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>价值</th>
+                                    <th>星光值加成</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="">天使之翼</td>
+                                    <td class="">800000钻</td>
+                                    <td class="">10%</td>
+                                </tr>
+                                <tr>
+                                    <td class="">翅膀X1</td>
+                                    <td class="">10钻</td>
+                                    <td class="">50%</td>
+                                </tr>
+                                <tr>
+                                    <td class="">热气球</td>
+                                    <td class="">520000钻</td>
+                                    <td class="">10%</td>
+                                </tr>
+                                <tr>
+                                    <td class="">气球X1</td>
+                                    <td class="">10钻</td>
+                                    <td class="">50%</td>
+                                </tr>
+                                <tr>
+                                    <td class="">浪漫都市</td>
+                                    <td class="">131400钻</td>
+                                    <td class="">10%</td>
+                                </tr>
+                                <tr>
+                                    <td class="">冲浪</td>
+                                    <td class="">9999钻</td>
+                                    <td class="">15%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+                <!-- 获奖记录 -->
+                <div class="rotary-d-recordshow position-rel none">
+                    <div id="rotary-d-record" class="rotary-d-record">
+                        <!-- <li class="rotary-d-recorditem white">
+                            <div class="thirty">获得20消费等级经验</div>
+                            <span class="twenty-six block">2019.8.18 09:00</span>
+                        </li> -->
+                        <!-- <div class="swiper-containers">
+                            <ul class="swiper-wrapper">
+                                <li class="rotary-d-recorditem swiper-slide white">
+                                    <div class="thirty">获得20消费等级经验</div>
+                                    <span class="twenty-six block">2019.8.18 09:00</span>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <div class="rotary-d-listtips white text-center position-abs">仅显示近期120条</div>
+                </div>
+                <!-- 余额不足提示弹窗 -->
+                <div class="rotary-d-nomoneybg position-fix none">
+                    <div class="rotary-d-nomoney position-abs">
+                        <p class="rotary-d-nomoneycon text-center">余额不足请充值</p>
+                        <div class="rotary-d-nomoneybut text-center">
+                            <span class="rotary-d-nomoneyno">取消</span>
+                            <span class="rotary-d-nomoneygo">充值</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 获得奖品提示窗 -->
+                <div class="rotary-d-prizebg position-fix none">
+                    <div class="rotary-d-prizeshow position-abs">
+                        <div class="rotary-d-prizetit weight-bold three text-center">获得100幸运值</div>
+                        <ul class="rotary-d-prizecon">
+                            <!-- <li class="rotary-d-prizeitem">
+                                <img class="block" src="images/demoimages/cj4.png" alt="" />
+                                <span class="twenty-six three">x10</span>
+                            </li> -->
+                        </ul>
+                        <div class="rotary-d-prize text-center weight-bold twenty-six">
+                            <span class="rotary-d-again white">再来100抽</span>
+                            <span class="rotary-d-prizetrue"><em>确定</em></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 幸运值规则 -->
+                <div class="rotary-d-xyzrule position-fix none">
+                    <h2 class="text-center weight-bold three">幸运值暴击翻倍规则</h2>
+                    <ul class="rotary-d-xyzruleul twenty-six six">
+                        <li>1、每转取轮盘一次加1点幸运值，幸运值到300、600、900时会增加抽奖概率，也会出现幸运值暴击。1200幸运值必中大礼物一个。</li>
+                        <li>2、幸运值积满后获得必得礼物，幸运值清零重新累计。</li>
+                    </ul>
+                </div>
+                <!-- 渐隐弹窗 -->
+                <div class="rotary-d-fadealert text-center white thirty position-fix none">系统忙</div>
+            </div>
+            <!-- 获取用的token标签和房间号 -->
+            <div class="rotary-d-token none" userToken="8215190fad2e5a264e8581599cd84e8b1dc0" fUid="95575103"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <!-- <script src="js/WebViewJavascriptBridge.js" type="text/javascript"></script> -->
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var serverUrl = "http://test.web.meisuitd.cn/meisuishare/lottery"
+            // var serverUrl = "http://192.168.2.17:8083/lottery"
+            var userToken = $(".rotary-d-token").attr("userToken"); // 获取用户的token
+            var fUid = $(".rotary-d-token").attr("fUid"); // 获取房间号
+            var drawType = null; // 抽奖次数类型，0为一次，1为10次，2为100次，默认情况下打开页面为2——一百次
+            var resListData = []; // 中奖物品列表
+            var isRefreshknap = false; // 是否通知客户端刷新背包
+
+            // 初次获取数据——8个奖品图及详情
+            $.ajax({
+                url: serverUrl + "/getList",
+                type: 'get',
+                dataType: 'json',
+                data: {
+                    token: userToken
+                },
+                success: function (data) {
+                    var prizeList = data;
+                    console.log(data)
+                    if (data.sign == 1) {
+                        var resData = data.d.list;
+                        var picUrlHead = data.d.picUrl; // 获取图片的头部域名
+                        var listCon = "";
+                        $(".frame .circle").empty('');
+                        for (var i = 0; i < resData.length; i++) {
+                            listCon += '<p class="position-rel" data-lottery="' + i + '"><span class="three text-center">' + resData[i].name + '</span><img class="rotary-d-prizepic block" src="' + picUrlHead + resData[i].pic + '" alt="" /></p>' // 礼物子项
+                        };
+                        $(".frame .circle").append(listCon);
+
+                        // 转盘
+                        $(function(){
+                            //var radius = $(window).width()/3;//半径
+                            var sum = 8;
+                            var loterry;//中奖的index,可将luckDrawArr[0]赋予loterry便是单抽的结果
+                            var minRotate = 2160;//最少转动角度
+                            var rotate = 0;
+                            var duration = 5;
+                            var $items = $(".circle p");
+                            var light = 0;
+                            var showTime,loterryTime,bubblesInterval;
+                            var isClick = true; // 当前是否可点击抽奖
+                            //var borderWidth = radius*Math.tan(360/sum/2*Math.PI/180);
+                            // $(".circle").css("width",radius*2+"px").css("height",radius*2+"px");
+                            $(".circle p").each(function(){
+                               // $(this).css("border-width",radius+"px "+borderWidth+"px 0px "+borderWidth+"px");
+                                //$(this).css("left",radius-borderWidth+"px");
+                                var jiao = $(this).index()*360/sum;
+                                $(this).css("transform","rotate("+jiao+"deg)");
+                                //$(this).css("transform-origin",borderWidth+"px "+radius+"px");
+                            });
+                            // 点击单抽按钮
+                            function luckPumpBut (butEve, pumpEve) {
+                                $(butEve).click(function(){
+                                    if (isClick) {
+                                        isClick = false;
+                                        $(".rotary-d-prizebg").addClass("none"); // 隐藏奖品显示弹窗
+                                        var drawNums = parseInt($(".rotary-d-chosel").children("em").html());
+                                        if (drawNums == 100) {
+                                            drawType = 2
+                                        } else if (drawNums == 10) {
+                                            drawType = 1
+                                        } else if (drawNums == 1) {
+                                            drawType = 0
+                                        }
+                                        // 为请求到数据的时候先让转盘转起来
+                                        var noDataRot = rotate;
+                                        clearInterval(noDatarun)
+                                        var noDatarun = setInterval(function () {
+                                            noDataRot += 4
+                                            $(".circle").css("transform","rotate("+noDataRot+"deg)");
+                                        }, 15)
+                                        // 向服务端请求，该用户是否有抽奖的资格
+                                        $.ajax({
+                                            url: serverUrl + "/main",
+                                            type: 'get',
+                                            dataType: 'json',
+                                            data: {
+                                                token: userToken,
+                                                fid: fUid,
+                                                type: drawType
+                                            },
+                                            success: function (data) {
+                                                console.log(data)
+                                                var turntCishu = data.d.status;
+                                                if (data.sign == 1) {
+                                                    if (turntCishu == 0) {
+                                                        isRefreshknap = true; // 抽奖成功，关闭时需通知客户端刷新背包
+
+                                                        // 进度条运动到最新的位置
+                                                        newLuckyNum = parseInt(data.luckcy) || 0;
+                                                        runCircle()
+
+                                                        $(".rotary-d-prizetit").html("获得" + data.luckcyadd + "幸运值");
+                                                        resListData = data.d.list;
+                                                        $(this).addClass("disabled");
+                                                        // $(".rotary-d-fadealert").html(resListData[0].id - 1);
+                                                        // loterry;
+                                                        loterry = resListData[0].id - 1;//测试，随机一位数，为获奖的序号
+                                                        console.log(loterry)
+                                                        rotate = rotate-rotate%360+minRotate+360-loterry*360/sum;//需要转动的角度
+                                                        clearInterval(noDatarun)
+                                                        $(".circle").css("transform","rotate("+rotate+"deg)");
+                                                        $(".circle").css("transition-duration",duration+"s");
+                                                        // $(".circle").css("transition-timing-function","linear");
+                                                        // $("body").addClass("playing");
+                                                        pumpEve();
+                                                        // setTimeout(function(){
+                                                        //     $("body").addClass("animate");
+                                                        // },1000);
+                                                        // setTimeout(function(){
+                                                        //     $("body").removeClass("animate");
+                                                        // },duration*1000-1000);
+                                                        // loterryLight();
+                                                        // bubbles();
+                                                    } else if(turntCishu == 1) {
+                                                        clearInterval(noDatarun)
+                                                        isClick = true;
+                                                        $(".rotary-d-nomoneybg").removeClass("none"); // 显示余额不足弹窗
+                                                    } else if(turntCishu == 2) {
+                                                        clearInterval(noDatarun)
+                                                        isClick = true;
+                                                        fadeAlert(data.d.msg); // 渐隐弹窗动画
+                                                    }
+                                                } else if(data.sign == 0) {
+                                                    fadeAlert("系统忙"); // 渐隐弹窗动画
+                                                }
+                                            },
+                                            error: function () {
+                                                clearInterval(noDatarun)
+                                                fadeAlert("请求失败"); // 渐隐弹窗动画
+                                            }
+                                        })
+                                        .fail(function() {
+                                            clearInterval(noDatarun)
+                                            fadeAlert("请求失败"); // 渐隐弹窗动画
+                                        });
+                                    }
+                                });
+                                
+                            }
+                            
+                            luckPumpBut(".button", luckSinglePump);
+                            luckPumpBut(".rotary-d-again", luckSinglePump);
+                            // 单抽转盘转动函数
+                            function luckSinglePump () {
+                                setTimeout(function(){
+                                    
+                                    var luckObtainNumber = $items.eq(loterry).attr('data-lottery');
+                                    var listCon = "";
+                                    $(".rotary-d-prizecon").empty('');
+                                    for (var i = 0; i < resListData.length; i++) {
+                                        listCon += '<li class="rotary-d-prizeitem"><img class="block" src="' + picUrlHead + resListData[i].pic + '" alt="" /><span class="twenty-six three">x' + resListData[i].count + '</span></li>' // 礼物子项
+                                    };
+                                    $(".rotary-d-prizecon").append(listCon); // 添加中奖礼物子项
+                                    $(".rotary-d-again").html("再来" + parseInt($(".rotary-d-chosel").children("em").html()) + "抽")
+                                    $(".rotary-d-prizebg").removeClass("none"); // 显示中奖奖品弹窗
+                                    showNotice() // 再次请求公告数据
+                                    
+                                    bubblesInterval&&clearInterval(bubblesInterval);
+                                    $(".button").removeClass("disabled");
+                                    isClick = true;
+                                    // $("body").removeClass("playing");
+                                },duration*1000);
+                            }
+
+                            // function show(){
+                            //     loterryTime&&clearInterval(loterryTime);
+                            //     bubblesInterval&&clearInterval(bubblesInterval);
+                            //     showTime = setInterval(function(){
+                            //         light = light%sum;
+                            //         $items.removeClass("light");
+                            //         $items.eq(light).addClass("light");
+                            //         $items.eq((light+sum/2)%sum).addClass("light");
+                            //         light++;
+                            //     },500);
+                            // }
+                            // show();
+                            // function loterryLight(){
+                            //     showTime&&clearInterval(showTime);
+                            //     var step;//到达中奖的区域 需要移动的步数
+                            //     if(light>=loterry){
+                            //         step = loterry+sum-light;
+                            //     }else{
+                            //         step = loterry-light;
+                            //     }
+                            //     var stepAll = step+3*sum;
+                            //     var time = (duration*1000-500)/stepAll;
+                            //     lightAnimate(time,stepAll)();
+                            // }
+                            // function bubbles(){
+                            //     var $bubbles = $(".bubbles span");
+                            //     var index = 0;
+                            //     bubblesInterval = setInterval(function(){
+                            //         index = index%($bubbles.length);
+                            //         $bubbles.removeClass("light");
+                            //         $bubbles.eq(index).addClass("light");
+                            //         index++;
+                            //     },1.5/12*1000);
+                            // }
+                            // function lightAnimate(time,stepAll){
+                            //     var step = 0,lightInterval;
+                            //     return function(){
+                            //         lightInterval = setInterval(function(){
+                            //             light = light%sum;
+                            //             $items.removeClass("light");
+                            //             $items.eq(light).addClass("light");
+                            //             if(step == stepAll){//已经转动到了中奖项
+                            //                 clearInterval(lightInterval);
+                            //             }
+                            //             light++;
+                            //             step++;
+                            //         },time);
+                            //     };
+                            // }
+                            // $(".dialog button").click(function(){
+                            //     dialog(false);
+                            // });
+                            // function dialog(bool,txt){
+                            //     if(bool){
+                            //         $(".dialog").removeClass("hide").addClass("show").find("p").html(txt);
+                            //     }else{
+                            //         $(".dialog").removeClass("show").addClass("hide");
+                            //     }
+                            // }
+                        });
+                    } else if(data.sign == 0) {
+                        fadeAlert("系统忙"); // 渐隐弹窗动画
+                    }
+
+                    totalLuckyNum = data.d.LuckyList[3].lucky || 1200;
+                    newLuckyNum = parseInt(data.d.luckey) || 0;
+                    runCircle()
+                }
+            })
+            // 渐隐弹窗动画
+            function fadeAlert (alertCon) {
+                $(".rotary-d-fadealert").html(alertCon);
+                $(".rotary-d-fadealert").fadeIn(300, function() {
+                    $(".rotary-d-fadealert").fadeOut(2800);
+                });
+            }
+
+            // 获取公告列表
+            function showNotice () {
+                $.ajax({
+                    url: serverUrl + "/getBoardList",
+                    type: 'get',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data)
+                        if (data.sign == 1) {
+                            var resData = data.d.list;
+                            var listCon = "";
+                            $(".rotary-d-show").empty('');
+                            for (var i = 0; i < resData.length; i++) {
+                                listCon += '<div class="rotary-d-noticeitem swiper-slide text-center">' + resData[i] + '</div>' // 礼物子项
+                            };
+                            
+                            $(".rotary-d-show").append('<div class="rotary-d-showcom swiper-container"><div id="rotary-d-noticecon" class="rotary-d-noticecon swiper-wrapper white">' + listCon + '</div></div>');
+                            var mySwiper = new Swiper ('.swiper-container', {
+                                direction: 'vertical',
+                                loop: true,
+                                autoplay : 5000,
+                                autoplayDisableOnInteraction : false,
+                                freeMode : false
+                            })
+                        } else if(data.sign == 0) {
+                            fadeAlert("系统忙"); // 渐隐弹窗动画
+                        }
+                    }
+                })
+            }
+            showNotice()
+
+            // 抽奖次数切换
+            $(".rotary-d-choitem").click(function () {
+                $(this).addClass("rotary-d-chosel");
+                $(this).siblings("span").removeClass("rotary-d-chosel");
+                var takeNums = parseInt($(this).children("em").html());
+                $(".rotary-d-foot span").html(takeNums * 280) // 点击一次抽奖所需要的钻石
+            })
+
+            // 标题切换
+            $(".rotary-d-navs span").click(function () {
+                $(this).addClass("rotary-d-navsel");
+                $(this).siblings("span").removeClass("rotary-d-navsel");
+
+                var newIndex = $(this).index();
+                if (newIndex == 0) {
+                    $(".rotary-d-treasure").removeClass("none");
+                    $(".rotary-d-rule").addClass("none");
+                    $(".rotary-d-recordshow").addClass("none");
+                } else if (newIndex == 1) {
+                    $(".rotary-d-treasure").addClass("none");
+                    $(".rotary-d-rule").removeClass("none");
+                    $(".rotary-d-recordshow").addClass("none");
+                } else if (newIndex == 2) {
+                    $(".rotary-d-treasure").addClass("none");
+                    $(".rotary-d-rule").addClass("none");
+                    $(".rotary-d-recordshow").removeClass("none");
+                    $.ajax({
+                        url: serverUrl + "/getRecordList",
+                        type: 'get',
+                        dataType: 'json',
+                        data: {
+                            token: userToken
+                        },
+                        success: function (data) {
+                            console.log(data)
+                            if (data.sign == 1) {
+                                var resData = data.d.list;
+                                var listCon = "";
+                                $(".rotary-d-record").empty('');
+                                for (var i = 0; i < resData.length; i++) {
+                                    listCon += '<li class="rotary-d-recorditem swiper-slide white"><div class="thirty">获得' + resData[i].name + 'x' + resData[i].gift_count + '</div><span class="twenty-six block">' + resData[i].createStr + '</span></li>' // 获奖记录子项
+                                };
+                                $(".rotary-d-record").append('<div class="swiper-containers"><ul class="swiper-wrapper">' + listCon + '</ul></div>');
+                                var mySwipers = new Swiper ('.swiper-containers', {
+                                    direction: 'vertical',
+                                    loop: false,
+                                    freeMode : true,
+                                    slidesPerView : "auto"
+                                })
+                            } else if(data.sign == 0) {
+                                fadeAlert("系统忙"); // 渐隐弹窗动画
+                            }
+                        }
+                    })
+                    
+                }
+            })
+            
+            function closeAlert (closeBut, closeCon) {
+                $(closeBut).click(function () {
+                    $(closeCon).addClass("none");
+                })
+            }
+            closeAlert(".rotary-d-close", ".rotary-d-wrap") // 点击关闭按钮关闭弹窗
+            closeAlert(".rotary-d-nomoneyno", ".rotary-d-nomoneybg") // 点击余额不足的取消按钮，关闭弹窗
+            closeAlert(".rotary-d-prizetrue", ".rotary-d-prizebg") // 点击确定关闭奖品展示窗
+
+            // 点击空白部分点击隐藏弹窗
+            freeBlank(".rotary-d-wrap", ".rotary-d-main", "none");
+            freeBlank(".rotary-d-prizebg", ".rotary-d-prizeshow", "none");
+
+
+            // 手指按住幸运值时
+            $(".rotary-d-lucky").on('touchstart', function(e) {
+                $(".rotary-d-xyzrule").removeClass("none")
+            });
+            // 手指离开幸运值时
+            $(".rotary-d-lucky").on('touchend', function(e) {
+                $(".rotary-d-xyzrule").addClass("none")
+            });
+
+            var luckyStart = 0; // 显示的幸运值的初始旋转角度
+            var luckyNumsPos // 幸运值最初始的值
+            var showLuckyNums = 0; // 动画中所显示的变化的幸运值
+            var newLuckyNum = 0; // 后台获取的最新的幸运值
+            
+            var totalLuckyNum = 1200; // 幸运总值
+            var percent = 0.25; // 圆环转动的百分比  0-1,这边只取90度圆环，即0.25
+            var preA = Math.PI/180; // 每一度等于多少PI
+            var rotateAngle = percent * 360; // 多少度
+            var radiansTotal = preA * rotateAngle; // 弧度总值
+            var startA = radiansTotal; // 进度条当前最新的位置
+            var startSeat // 进度条运动前最初始的位置
+            var rotataRadians = null; // 当前的弧度值
+            
+            function runCircle () {
+                var LuckyNumQuarter = totalLuckyNum / 4; // 每个标点之间相差的数值
+                // canvas绘画进度条——总值
+                var testCanvas = document.getElementById("testCanvas");
+                // 获取getContext()对象
+                var context = testCanvas.getContext("2d");
+
+                if (newLuckyNum >= totalLuckyNum) { // 判断当前幸运值是否大于幸运总值
+                    newLuckyNum -= totalLuckyNum
+                }
+                if (showLuckyNums <= newLuckyNum) { // 显示的当前幸运值是否小于新的当前幸运值
+                    var barRise = 1; // 进度条做上升运动
+                } else {
+                    var barRise = 2; // 进度条做下降运动
+                }
+                rotataRadians = (1 - newLuckyNum / totalLuckyNum) * radiansTotal; // 当前的弧度值
+                console.log(radiansTotal, rotataRadians)
+                startSeat = startA; // 进度条第一次运动前的位置赋值给startSeat
+                luckyNumsPos = showLuckyNums; // 幸运值第一次变化前的值赋值给luckyNumsPos
+
+
+                var Timer; // 计时器
+                var intervalTimes = 20 // 片段时长
+                var ainTimes = 1500 // 动画时长：毫秒
+
+                var imgObj = new Image();
+                imgObj.src = "images/rotary-d-spot.png"
+                imgObj.onload = function () {
+                    
+                    function barAni () {
+                        context.clearRect(0, 0, 750, 685); // clearRect清空给定矩形内的指定像素
+
+                        // 开始路径
+                        context.beginPath();
+                        // 1/4圆环背景
+                        context.lineWidth = "10";
+                        context.strokeStyle = "rgba(255, 255, 255, 0.6)";
+                        context.lineCap = "round";
+                        context.arc(375, 300, 300, radiansTotal, 0, true)
+                        context.stroke();
+                        context.closePath();
+
+                        context.beginPath();
+                        // 当前进度条值及动画
+                        if (barRise == 1) { // 显示的当前幸运值是否小于新的当前幸运值
+                            if(startA > rotataRadians){
+                                startA -= (startSeat - rotataRadians) / ainTimes * intervalTimes;
+                            } else if(startA <= rotataRadians) {
+                                startA = rotataRadians;
+                            }
+                        } else if(barRise == 2) {
+                            if(startA < rotataRadians){
+                                startA -= (startSeat - rotataRadians) / ainTimes * intervalTimes;
+                            } else if(startA >= rotataRadians) {
+                                startA = rotataRadians;
+                            }
+                        }
+                        context.lineWidth = "10";
+                        var my_gradient = context.createLinearGradient(0, 300, 300, 0);
+                        my_gradient.addColorStop(0,"#ff6699");
+                        my_gradient.addColorStop(1,"#ff9988");
+                        context.strokeStyle = my_gradient;
+                        context.lineCap = "round";
+                        context.arc(375, 300, 300, radiansTotal, startA, true);
+                        context.stroke();
+                        context.closePath();
+
+                        function punctuation (transX, transY, imageX, imageY, imageW, imageH) { // 标点
+                            context.beginPath();
+                            context.save()
+                            context.setTransform(1,0,0,1,0,0)
+                            context.translate(transX, transY)
+                            context.drawImage(imgObj, imageX, imageY, imageW, imageH)
+                            context.restore()
+                            context.closePath();
+                        }
+                        punctuation(300, 0, 365, 290, 20, 20)
+                        punctuation(Math.cos(Math.PI/8)*300, Math.sin(Math.PI/8)*300, 365, 290, 20, 20)
+                        punctuation(Math.sin(Math.PI/4)*300, Math.cos(Math.PI/4)*300, 365, 290, 20, 20)
+                        punctuation(Math.sin(Math.PI/8)*300, Math.cos(Math.PI/8)*300, 365, 290, 20, 20)
+                        punctuation(0, 300, 365, 290, 20, 20)
+
+                        context.beginPath();
+                        context.save();
+                        context.fillStyle = "#ff6699"
+                        context.lineWidth = "1";
+                        context.textAlign = "start";
+                        context.textBaseline = "middle";
+                        context.font = "20px Microsoft YaHei,Arial";
+                        context.setTransform(1,0,0,1,0,0);
+                        if (barRise == 1) { // 显示的当前幸运值是否小于新的当前幸运值
+                            var isClearInterval = [0, 0]; // 是否清楚计时器
+                            // 当前幸运值位置动画处理
+                            if (showLuckyNums < (totalLuckyNum - 10)) {
+                                // 是否达到目标的角度
+                                if (luckyStart < newLuckyNum / totalLuckyNum * 90) {
+                                    isClearInterval[0] = 0;
+                                } else {
+                                    isClearInterval[0] = 1;
+                                }
+                                luckyStart += ((newLuckyNum-luckyNumsPos) / totalLuckyNum) * 90  / ainTimes * intervalTimes;
+                                context.translate(Math.sin(luckyStart * preA)*333, Math.cos(luckyStart * preA)*333);
+                            } else {
+                                context.translate(290, -20);
+                                isClearInterval[0] = 1;
+                            }
+                            // 当前幸运值显示数字动画处理
+                            if (showLuckyNums >= newLuckyNum) {
+                                showLuckyNums = newLuckyNum
+                                // clearInterval(Timer)
+                                isClearInterval[1] = 1;
+                            } else {
+                                showLuckyNums += (newLuckyNum-luckyNumsPos) / ainTimes * intervalTimes;
+                                isClearInterval[1] = 0;
+                            }
+                            if (isClearInterval[0] && isClearInterval[1]) {
+                                clearInterval(Timer)
+                            }
+                        } else if(barRise == 2) {
+                            var isClearInterval = [0, 0]; // 是否清楚计时器
+                            // 当前幸运值位置动画处理
+                            if (showLuckyNums < (totalLuckyNum - 10)) {
+                                // 是否达到目标的角度
+                                if (luckyStart > newLuckyNum / totalLuckyNum * 90) {
+                                    isClearInterval[0] = 0;
+                                } else {
+                                    isClearInterval[0] = 1;
+                                }
+                                luckyStart -= ((luckyNumsPos-newLuckyNum) / totalLuckyNum) * 90 / ainTimes * intervalTimes;
+                                context.translate(Math.sin(luckyStart * preA)*333, Math.cos(luckyStart * preA)*333);
+                            } else {
+                                context.translate(290, -20);
+                                isClearInterval[0] = 1;
+                            }
+                            // 当前幸运值显示数字动画处理
+                            if (showLuckyNums <= newLuckyNum) {
+                                showLuckyNums = newLuckyNum
+                                // clearInterval(Timer)
+                                isClearInterval[1] = 1;
+                            } else {
+                                showLuckyNums -= (luckyNumsPos-newLuckyNum) / ainTimes * intervalTimes;
+                                isClearInterval[1] = 0;
+                            }
+                            if (isClearInterval[0] && isClearInterval[1]) {
+                                clearInterval(Timer)
+                            }
+                        }
+                        function positionVal (vals, transX, transY, textX, textY, textColor) { // 定位数值
+                            context.beginPath();
+                            context.save();
+                            context.fillStyle = textColor
+                            context.lineWidth = "1";
+                            context.textAlign = "start";
+                            context.textBaseline = "middle";
+                            context.font = "20px Microsoft YaHei,Arial";
+                            var txt = vals;
+                            context.setTransform(1,0,0,1,0,0);
+                            context.translate(transX, transY);
+                            context.fillText(txt, textX, textY);
+                            context.restore();
+                            context.closePath();
+                        }
+                        function positionValColor (oneItem, twoItem, threeItem, fourItem) { // 300,600,900,1200数值的颜色
+                            positionVal(LuckyNumQuarter * 4, 290, -20, 375, 300, oneItem)
+                            positionVal(LuckyNumQuarter * 3, Math.sin(Math.PI * 3/8) * 333 + 2, Math.cos(Math.PI * 3/8) * 333 - 5, 365, 290, twoItem)
+                            positionVal(LuckyNumQuarter * 2, Math.sin(Math.PI/4) * 333 + 2, Math.cos(Math.PI/4) * 333 -3, 365, 290, threeItem)
+                            positionVal(LuckyNumQuarter, Math.sin(Math.PI/8) * 333 + 2, Math.cos(Math.PI/8) * 333 -1, 365, 290, fourItem)
+                        }
+                        if (showLuckyNums % LuckyNumQuarter == 0 && showLuckyNums != 0) {
+                            if (showLuckyNums == LuckyNumQuarter) {
+                                positionValColor("#fff", "#fff", "#fff", "#ff6699")
+                            } else if(showLuckyNums == (LuckyNumQuarter * 2)) {
+                                positionValColor("#fff", "#fff", "#ff6699", "#fff")
+                            } else if (showLuckyNums == (LuckyNumQuarter * 3)) {
+                                positionValColor("#fff", "#ff6699", "#fff", "#fff")
+                            } else if (showLuckyNums == (LuckyNumQuarter * 4)) {
+                                positionValColor("#ff6699", "#fff", "#fff", "#fff")
+                            }
+                            context.fillText("", 365, 290);
+                        } else if((showLuckyNums % LuckyNumQuarter >= (LuckyNumQuarter - 30) && parseInt(showLuckyNums / LuckyNumQuarter) == 0) || (showLuckyNums % LuckyNumQuarter <= 30 && parseInt(showLuckyNums / LuckyNumQuarter) == 1)) {
+                            positionValColor("#fff", "#fff", "#fff", "rgba(0, 0, 0, 0)")
+                            context.fillText(parseInt(showLuckyNums) , 365, 290);
+                        } else if((showLuckyNums % LuckyNumQuarter >= (LuckyNumQuarter - 30) && parseInt(showLuckyNums / LuckyNumQuarter) == 1) || (showLuckyNums % LuckyNumQuarter <= 30 && parseInt(showLuckyNums / LuckyNumQuarter) == 2)) {
+                            positionValColor("#fff", "#fff", "rgba(0, 0, 0, 0)", "#fff")
+                            context.fillText(parseInt(showLuckyNums) , 365, 290);
+                        } else if((showLuckyNums % LuckyNumQuarter >= (LuckyNumQuarter - 30) && parseInt(showLuckyNums / LuckyNumQuarter) == 2) || (showLuckyNums % LuckyNumQuarter <= 30 && parseInt(showLuckyNums / LuckyNumQuarter) == 3)) {
+                            positionValColor("#fff", "rgba(0, 0, 0, 0)", "#fff", "#fff")
+                            context.fillText(parseInt(showLuckyNums) , 365, 290);
+                        } else if((showLuckyNums % LuckyNumQuarter >= (LuckyNumQuarter - 10) && parseInt(showLuckyNums / LuckyNumQuarter) == 3)) {
+                            positionValColor("rgba(0, 0, 0, 0)", "#fff", "#fff", "#fff")
+                            context.fillText(parseInt(showLuckyNums) , 375, 300);
+                        } else {
+                            positionValColor("#fff", "#fff", "#fff", "#fff")
+                            context.fillText(parseInt(showLuckyNums) , 365, 290);
+                        }
+                        context.restore();
+                        context.closePath();
+                    }
+                    Timer = setInterval(barAni, intervalTimes);
+                }
+            }
+            
+            // 调取客户端相对应的事件
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("iphone") > -1) {
+                var oHead = document.getElementsByTagName('HEAD').item(0);
+                var oScript = document.createElement("script");
+                var sign = 0;
+                oScript.type = "text/javascript";
+                oScript.src = "http://img1.szdc666.com/WebViewJavascriptBridge.js?r=1";
+                oHead.appendChild(oScript);
+                function connectWebViewJavascriptBridge(callback) {
+                    try {
+                        //如果桥接对象已存在，则直接调用callback函数
+                        if (window.WebViewJavascriptBridge) {
+                            callback(WebViewJavascriptBridge);
+                        }
+                        //否则添加一个监听器来执行callback函数
+                        else {
+                            document.addEventListener(
+                                'WebViewJavascriptBridgeReady', function() {
+                                    callback(WebViewJavascriptBridge);
+                                }, false);
+                        }
+                    } catch (e) {
+                        alert(e);
+                    }
+                }
+            }
+            $(".rotary-d-close").click(function(){
+                if (ua.indexOf("iphone") > -1) {
+                    connectWebViewJavascriptBridge(function(bridge) {
+                        if (sign == 0) {
+                            bridge.init(function(message, responseCallback) {
+                            });
+                            sign = 1;
+                        }
+                        bridge.callHandler('closedial', {
+                        }, function(response) {
+                        });
+                        if (isRefreshknap) {
+                            bridge.callHandler('goUpdate', {
+                            }, function(response) {
+                            });
+                        }
+                    });
+                } else {
+                    $(function() {
+                        if (window['JavaScriptInterface']) {
+                            window.JavaScriptInterface.closedial();
+                            if (isRefreshknap) {
+                                window.JavaScriptInterface.goUpdate();
+                            }
+                        }
+                    });
+                }
+            });
+            $(".rotary-d-nomoneygo").click(function(){
+                if (ua.indexOf("iphone") > -1) {
+                    connectWebViewJavascriptBridge(function(bridge) {
+                        if (sign == 0) {
+                            bridge.init(function(message, responseCallback) {
+                            });
+                            sign = 1;
+                        }
+                        bridge.callHandler('enterDiamond', {
+                        }, function(response) {
+                        });
+                    });
+                } else {
+                    $(function() {
+                        if (window['JavaScriptInterface']) {
+                            window.JavaScriptInterface.enterDiamond();
+                        }
+                    });
+                }
+            });
+            $(document).ready(function () {
+                if (ua.indexOf("iphone") > -1) {
+                    connectWebViewJavascriptBridge(function(bridge) {
+                        if (sign == 0) {
+                            bridge.init(function(message, responseCallback) {
+                            });
+                            sign = 1;
+                        }
+                        bridge.callHandler('loadover', {
+                        }, function(response) {
+                        });
+                    });
+                } else {
+                    $(function() {
+                        if (window['JavaScriptInterface']) {
+                            window.JavaScriptInterface.loadover();
+                        }
+                    });
+                }
+            })
+
+            /*var page = 1, //分页码
+                off_on = false; //分页开关(滚动加载方法 1 中用的)
+            //加载数据
+            var LoadingDataFn = function() {
+                
+                var dom = '';
+                for (var i = 0; i < 10; i++) {
+                    dom += '<li class="rotary-d-recorditem white"><div class="thirty">获得20消费等级经验</div><span class="twenty-six block">2019.8.18 09:00</span></li>';
+                }
+                $('#rotary-d-record').append(dom);
+                off_on = true; //[重要]这是使用了 {滚动加载方法1}  时 用到的 ！！！[如果用  滚动加载方法1 时：off_on 在这里不设 true的话， 下次就没法加载了哦！]
+            };*/
+            //初始化，第一次加载
+            /*$(document).ready(function() {
+                LoadingDataFn();
+            });*/
+            //滚动加载方法1
+            /*$('#rotary-d-record').scroll(function() {
+                //当时滚动条离底部60px时开始加载下一页的内容
+                if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+                    //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
+                    if (off_on) {
+                        off_on = false;
+                        page++;
+                        console.log("第"+page+"页");
+                        LoadingDataFn();  //调用执行上面的加载方法
+                    }
+                }
+            });*/
+        </script>
+    </body>
+</html>

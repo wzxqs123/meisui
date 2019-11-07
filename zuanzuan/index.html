@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>赚赚</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="index-title">
+            <i class="block"></i>
+        </div> -->
+        <header class="index-head clearfix">
+            <div class="index-myinfo left clearfix">
+                <div class="index-mypic left position-rel">
+                    <img class="block" src="images/demoimages/pic1.png" alt="">
+                    <span class="index-v position-abs"></span>
+                </div>
+                <div class="index-myname thirty left">
+                    <span class="block">昵称：小埋</span>
+                    <em class="block clearfix"><i class="index-mymoney left"></i>500</em>
+                </div>
+            </div>
+            <div class="index-fun right text-center clearfix">
+                <a class="index-member white left" href="javascript:;">会员</a>
+                <a class="index-funsign left" href="javascript:;"></a>
+                <a class="index-funtask left" href="javascript:;"></a>
+                <a class="index-funwallet left" href=""></a>
+            </div>
+        </header>
+        <div class="swiper-container index-redpacket">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide index-redpacketcon">
+                    <div class="index-redpacketpic">
+                        <!-- 正常猪index-normal.png，鼻涕猪index-nose.png，灯泡猪index-bulb.png，go猪index-headgo.png，财神猪index-mammon.png -->
+                        <img class="block img" src="images/demoimages/index-normal.png" alt="">
+                    </div>
+                    <!-- index-unopened未领取，index-opened已领取 -->
+                    <span class="index-unopened block"></span>
+                </div>
+                <div class="swiper-slide index-redpacketcon">
+                    <div class="index-redpacketpic">
+                        <img class="block img" src="images/demoimages/index-nose.png" alt="">
+                    </div>
+                    <span class="index-unopened block"></span>
+                </div>
+                <div class="swiper-slide index-redpacketcon">
+                    <div class="index-redpacketpic">
+                        <img class="block img" src="images/demoimages/index-bulb.png" alt="">
+                    </div>
+                    <span class="index-unopened block"></span>
+                </div>
+                <div class="swiper-slide index-redpacketcon">
+                    <div class="index-redpacketpic">
+                        <img class="block img" src="images/demoimages/index-headgo.png" alt="">
+                    </div>
+                    <span class="index-unopened block"></span>
+                </div>
+                <div class="swiper-slide index-redpacketcon">
+                    <div class="index-redpacketpic">
+                        <img class="block img" src="images/demoimages/index-mammon.png" alt="">
+                    </div>
+                    <span class="index-unopened block"></span>
+                </div>
+                <div class="swiper-slide index-redpacketcon">
+                    <div class="index-redpacketpic">
+                        <img class="block img" src="images/demoimages/index-nose.png" alt="">
+                    </div>
+                    <span class="index-unopened block"></span>
+                </div>
+            </div>
+        </div>
+        <section class="index-sec">
+            <a class="block" href="">
+                <img class="block img" src="images/demoimages/index-inviting.png" alt="">
+            </a>
+            <a class="block" href="">
+                <img class="block img" src="images/demoimages/index-eggs.png" alt="">
+            </a>
+            <a class="block" href="">
+                <img class="block img" src="images/demoimages/index-turntable.png" alt="">
+            </a>
+        </section>
+        <!-- 打开红包 -->
+        <div class="index-openredbg position-fix none">
+            <div class="index-openred position-abs">
+                <div class="index-moneynum text-center white thirty">+2.32元</div>
+                <div class="index-redbut clearfix">
+                    <em class="left"></em>
+                    <span class="left"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 提示加入会员 -->
+        <div class="index-promptbg position-fix none">
+            <div class="index-prompt position-abs">
+                <div class="index-prompcon bg-white">
+                    <p class="weight-bold">亲爱的赚友~<br>只有会员才能领取红包呢！<br>要不要加入我们呀？</p>
+                    <div class="index-prompbut text-center clearfix">
+                        <a class="left white" href="">马上去</a>
+                        <span class="left white">一会去</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 登录 -->
+        <form class="index-zcform position-fix none" action="">
+            <div class="index-register position-abs">
+                <div class="index-dlcon bg-white">
+                    <div class="index-iphone thirty clearfix">
+                        <label class="left" for="index-iphnum">手机号：</label>
+                        <input id="index-iphnum" class="left" type="number" placeholder="请输入手机号">
+                    </div>
+                    <p class="index-ipherror index-errorts"></p>
+                    <div class="index-code thirty clearfix">
+                        <label class="left" for="index-codenum">验证码：</label>
+                        <input id="index-codenum" class="left" type="number">
+                        <span class="twenty-four text-center white left">获取验证码</span>
+                    </div>
+                    <p class="index-codeerror index-errorts"></p>
+                    <button class="index-dlbut text-center white block" type="button">登录</button>
+                </div>
+            </div>
+        </form>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto"
+            })
+
+            // 点击领取红包
+            $(".index-redpacketcon").click(function () {
+                _this = $(this).children("span");
+                // 判断当前红包是否可领取
+                // $(this).hasClass("index-unopened")这里的判断条件可改成服务端自己规定的条件
+                if (_this.hasClass("index-unopened")) {
+                    // 获取数据打开红包
+                    $(".index-openredbg").removeClass("none");
+                } else {
+                    $(".index-openredbg").addClass("none");
+                }
+                // 点击我知道了
+                $(".index-redbut span").click(function () {
+                    $(".index-openredbg").addClass("none"); //关闭红包
+                    _this.removeClass("index-unopened").addClass("index-opened"); //如果需要将领取红包按钮致灰添加这步
+                })
+            })
+
+            // 点击一会去关闭提示弹窗
+            $(".index-prompbut span").click(function () {
+                $(".index-promptbg").addClass("none");
+            })
+
+            var numberempty = /^[\s]*$/;
+            var dlFouct = [0, 0];
+            var checkTouch = true;
+            // 点击登录
+            $(".index-dlbut").click(function (e) {
+                $(".index-iphon input").blur();
+                $(".index-code input").blur();
+                // 手机号验证
+                var iphNum = parseInt($(".index-iphone input").val());
+                if (phoneReg.test(iphNum)) {
+                    dlFouct[0] = 1;
+                    $(".index-ipherror").html("");
+                } else {
+                    dlFouct[0] = 0;
+                    $(".index-ipherror").html("*请输入正确的手机号码");
+                }
+                // 验证码
+                var codeNum = $(".index-code input").val();
+                if (numberempty.test(codeNum)) {
+                    dlFouct[1] = 0;
+                    $(".index-codeerror").html("*验证码不能为空");
+                } else {
+                    $(".index-codeerror").html("");
+                    // 这里发送请求验证验证码，如果验证码正确则dlFouct[1] = 1，否则dlFouct[1] = 0
+                    dlFouct[1] = 1;
+                }
+
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                if (checkTouch) {
+                    var infoNum = 0;
+                    for (var i = 0; i < dlFouct.length; i++) {
+                        infoNum += dlFouct[i];
+                    };
+                    if (infoNum == dlFouct.length) {
+                        // 这里传数据
+                        console.log(1);
+                        checkTouch = false;
+                    } else {
+                        checkTouch = true;
+                    }
+                }
+            })
+            // 倒计时
+            $(".index-code span").click(function (e) {
+                var _this = $(this);
+                if (!_this.hasClass("index-djsz")) {
+                    _this.addClass("index-djsz");
+                    var indexTime = 60;
+                    _this.html(indexTime + "s");
+                    var countDown = setInterval(function (){
+                        indexTime--;
+                        if (indexTime <= 0) {
+                            _this.removeClass("index-djsz");
+                            _this.html("获取验证码");
+                            clearInterval(countDown);
+                        } else {
+                            _this.html(indexTime + "s");
+                        }
+                    }, 1000);
+                }
+            })
+        </script>
+    </body>
+</html>

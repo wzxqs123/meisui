@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>段位排行榜</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background: #c9fff6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dw-l-wrap">
+            <div class="dw-l-con">
+                <div class="dw-l-nav twenty-four text-center clearfix">
+                    <span class="dw-l-navact left">本周排行</span>
+                    <span class="left">上周TOP10</span>
+                    <span class="left">比赛规则</span>
+                </div>
+                <div class="dw-l-section">
+                    <!-- 本周排行 -->
+                    <div class="dw-l-bzbox">
+                        <ol class="dw-l-bzlist">
+                            <li class="dw-l-bzitem clearfix">
+                                <span class="dw-l-rank text-center left">4.</span>
+                                <img class="dw-l-zbpic left" src="images/demoimages/pic40.png" alt="" />
+                                <div class="dw-l-info left">
+                                    <div class="dw-l-infot clearfix">
+                                        <span class="left twenty-six">宝儿姐宝儿姐</span>
+                                        <em class="left text-center white">Lv.22</em>
+                                    </div>
+                                    <div class="dw-l-infob clearfix">
+                                        <span class="twenty-six left dw-l-yellow">贡献榜</span>
+                                        <img class="left" src="images/demoimages/pic40.png" alt="" />
+                                        <img class="left" src="images/demoimages/pic40.png" alt="" />
+                                        <img class="left" src="images/demoimages/pic40.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="dw-l-grad left clearfix">
+                                    <span class="left dw-l-yellow">璀璨星耀 5</span>
+                                    <img class="dw-l-stars left" src="images/demoimages/dw-l-stars.png" alt="" />
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="dw-l-foot text-center clearfix">
+                            <a class="dw-l-paget thirty left" href="">上一页</a>
+                            <span class="dw-l-pagenum left">1</span>
+                            <a class="dw-l-pageb thirty right" href="">下一页</a>
+                        </div>
+                    </div>
+                    <!-- 上周top10 -->
+                    <div class="dw-l-szbox none">
+                        <ol class="dw-l-szlist">
+                            <li class="dw-l-szitem clearfix">
+                                <span class="dw-l-rank text-center left">4.</span>
+                                <img class="dw-l-zbpic left" src="images/demoimages/pic40.png" alt="" />
+                                <div class="dw-l-info left">
+                                    <div class="dw-l-infot clearfix">
+                                        <span class="left twenty-six">宝儿姐宝儿姐</span>
+                                        <em class="left text-center white">Lv.22</em>
+                                    </div>
+                                    <div class="dw-l-infob clearfix">
+                                        <span class="twenty-six left dw-l-yellow">贡献榜</span>
+                                        <img class="left" src="images/demoimages/pic40.png" alt="" />
+                                        <img class="left" src="images/demoimages/pic40.png" alt="" />
+                                        <img class="left" src="images/demoimages/pic40.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="dw-l-grad left clearfix">
+                                    <span class="left dw-l-yellow">璀璨星耀 5</span>
+                                    <img class="dw-l-stars left" src="images/demoimages/dw-l-stars.png" alt="" />
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- 比赛规则 -->
+                    <div class="dw-l-gzbox none">
+                        <ol class="dw-l-gzlist">
+                            <li>1.&nbsp排位赛时间为周一24：00~周日24：00</li>
+                            <li>2.&nbsp每周日24：00本周排位星数清空</li>
+                            <li>3.&nbsp上周前三名主播可以联系运营领取相应奖励</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            $(".dw-l-nav").on('click', 'span', function () {
+                var _this = $(this);
+                _this.addClass("dw-l-navact");
+                _this.siblings("span").removeClass("dw-l-navact");
+
+                // 切换内容区
+                $(".dw-l-section").children("div").eq(_this.index()).removeClass("none");
+                $(".dw-l-section").children("div").eq(_this.index()).siblings("div").addClass("none");
+            });
+            function itemFun (items, odditem, childEve) {
+                $(items).each(function (e) {
+                    // 奇数子项添加背景色
+                    if (e % 2 == 1) {
+                        $(this).addClass(odditem);
+                    }
+
+                    // 前三名添加图标删除文字
+                    if (e == 0) {
+                        $(this).children(childEve).html("");
+                        $(this).children(childEve).addClass("dw-l-rankone");
+                    } else if (e == 1) {
+                        $(this).children(childEve).html("");
+                        $(this).children(childEve).addClass("dw-l-ranktwo");
+                    } else if (e == 2) {
+                        $(this).children(childEve).html("");
+                        $(this).children(childEve).addClass("dw-l-rankthree");
+                    }
+                });
+            }
+            itemFun(".dw-l-bzitem", "dw-l-odditem", ".dw-l-rank");
+            itemFun(".dw-l-szitem", "dw-l-odditem", ".dw-l-rank");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "get-userinfo": "../../components/get-userinfo/get-userinfo"
+  }
+}

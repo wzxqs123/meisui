@@ -1,0 +1,1239 @@
+@charset "utf8";
+/* CSS reset */
+html{max-width: 750px;width: 100%;height: 100%;background-color: #f1f4f8;color: #030303;font-family:Arial,'Microsoft YaHei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong{padding:0;margin:0;font-family:Arial,'Microsoft YaHei';}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+a{text-decoration:none; color:#29738f; outline:none;}/*此处待添加默认链接颜色*/
+var,em,strong{font-style:normal;}
+address,caption,cite,code,dfn,em,strong,th,var, optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:center;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit; font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+/*input{border:none; outline:none;}*/
+
+
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+/*去除高亮*/
+a {-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/*清除苹果默认按钮样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+textarea { -webkit-appearance: none;}
+
+/*过渡动画*/
+.animation {
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.animation img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.logo-homme {
+    width: 9%;
+    height: 2.39rem;
+}
+.logo-circle {
+    width: 2.86rem;
+    height: 2.86rem;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    -ms-animation: spin 2s linear infinite;
+    -o-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+/*字体颜色*/
+.c-one {
+    color: #1c232c;
+}
+.c-two {
+    color: #a4925a;
+}
+.c-three {
+    color: #29738f;
+}
+.c-four {
+    color: #3c424a;
+}
+.g-one {
+    color: #030303;
+}
+.g-two {
+    color: #6d6f74;
+}
+.g-three {
+    color: #aeb0b7;
+}
+.g-four {
+    color: #dadce3;
+}
+.g-five {
+    color: #f3f4fa;
+}
+.g-six {
+    color: #f1f4f8;
+}
+.red {
+    color: #cc3333;
+}
+.white-color {
+    color: #fff;
+}
+/*白色背景*/
+.white {
+    background-color: #fff;
+}
+/*土黄色背景*/
+.bg-color-two {
+    background-color: #a4925a;
+}
+/*深蓝色背景*/
+.bg-color-three {
+    background-color: #29738f;
+}
+/*g3灰色*/
+.bg-color-gthree {
+    background-color: #aeb0b7;
+}
+/*灰色背景*/
+.bg-color-four {
+    background-color: #dadce3;
+}
+.bg-color-five {
+    background-color: #3c424a;
+}
+/*文字居中*/
+.text-center {
+    text-align: center;
+}
+/*相对定位*/
+.position-rel {
+    position: relative;
+}
+/*绝对定位*/
+.position-abs {
+    position: absolute;
+}
+/*显示*/
+.block {
+    display: block;
+}
+.none {
+    display: none;
+}
+/*26px字体*/
+.twenty-six {
+    font-size: 0.94rem;
+}
+.line-one {
+    border-bottom: 1px solid #f3f4fa;
+}
+.line-two {
+    border-bottom: 1px solid #dadce3;
+}
+.mar-bor {
+    margin-bottom: 0.54rem;
+    border-bottom: 1px solid #dadce3;
+}
+
+/*导航的高度*/
+.pad-bot {
+    padding-bottom: 3.5rem;
+}
+/*导航样式*/
+.nav {
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgba(28, 35, 44, 0.8);
+}
+.nav a {
+    width: 20%;
+    height: 3.5rem;
+}
+.nav a:nth-child(1) {
+    background: url("../images/nav-home.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav a:nth-child(2) {
+    background: url("../images/nav-boutique.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav a:nth-child(3) {
+    background: url("../images/nav-class.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav a:nth-child(4) {
+    background: url("../images/nav-bag.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav a:nth-child(5) {
+    background: url("../images/nav-my.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav .selected:nth-child(1) {
+    background: url("../images/nav-home-ed.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav .selected:nth-child(2) {
+    background: url("../images/nav-boutique-ed.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav .selected:nth-child(3) {
+    background: url("../images/nav-class-ed.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav .selected:nth-child(4) {
+    background: url("../images/nav-bag-ed.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.nav .selected:nth-child(5) {
+    background: url("../images/nav-my-ed.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+
+/*我的订单*/
+.my-o-option div, .logist-m-nav div {
+    width: 20%;
+    height: 3.43rem;
+    line-height: 3.43rem;
+}
+.bg-color {
+    background-color: #030303;
+}
+.my-o-option em, .logist-m-nav em {
+    left: 0;
+    bottom: -1.18rem;
+    width: 100%;
+    height: 2px;
+}
+.my-o-option strong {
+    top: -1rem;
+    right: -40%;
+    width: 1.36rem;
+    height: 1.36rem;
+    line-height: 1.36rem;
+    border-radius: 50%;
+}
+.my-o-con li {
+    margin-bottom: 0.58rem;
+}
+.my-o-head {
+    padding: 0 4%;
+    line-height: 2.86rem;
+}
+.my-o-sec {
+    padding: 1.14rem 4%;
+}
+.my-o-sec dt {
+    overflow: hidden;
+    width: 20%;
+    height: 5rem;
+    padding-right: 4%;
+}
+.my-o-sec dt img {
+    display: block;
+    width: 100%;
+    height: 5rem;
+}
+.my-o-sec dd {
+    width: 76%;
+}
+.my-o-sec dd h2 {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 0.46rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.my-o-size {
+    margin-bottom: 1.5rem;
+    font-size: 0.72rem;
+}
+.my-o-footer {
+    padding: 0.86rem 4% 1.29rem;
+}
+.my-o-total {
+    margin-bottom: 1.2rem;
+}
+.my-o-button a {
+    width: 23%;
+    height: 1.86rem;
+    line-height: 1.86rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+}
+.my-o-yellow {
+    margin-left: 5%;
+    border: 0.1rem solid #a4925a;
+}
+.my-o-white {
+    border: 0.1rem solid #6d6f74;
+}
+.my-o-imgs {
+    display: block;
+    width: 100%;
+    height: 7.64rem;
+}
+.my-o-empty img {
+    width: 16%;
+    height: 4.29rem;
+    padding-top: 5.89rem;
+    margin: 0 auto 0.32rem;
+}
+/*订单详情*/
+.order-d-header {
+    padding: 0 4% 1.14rem;
+}
+.order-d-situa {
+    padding: 1rem 0;
+    line-height: 1.25rem;
+}
+.order-d-tel {
+    padding: 0 3% 0 0;
+    background: url("../images/ionic-right.png") no-repeat right center;
+    background-size: 1.8%;
+}
+.order-d-tel p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.order-d-conblock {
+    padding-left: 4%;
+}
+.order-d-lists {
+    padding: 1.14rem 4% 1.14rem 0;
+}
+.order-d-lists dt {
+    overflow: hidden;
+    width: 20%;
+    height: 5rem;
+    margin-right: 5%;
+}
+.order-d-lists dt img {
+    width: 100%;
+    height: 5rem;
+}
+.order-d-lists dd {
+    width: 75%;
+}
+.order-d-lists dd h2 {
+    overflow: hidden;
+    padding-right: 2%;
+    margin: -0.2rem 0 0.29rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.order-d-size {
+    margin-bottom: 1.34rem;
+    font-size: 0.8rem;
+}
+.clear-money {
+    line-height: 1.25rem;
+}
+.order-d-freight {
+    height: 2.86rem;
+    padding: 0 8% 0 4%;
+    background: url("../images/ionic-right.png") 96% center no-repeat;
+    background-size: 1.6%;
+    line-height: 2.86rem;
+}
+.order-d-freight em {
+    margin-left: 2%;
+    font-size: 0.8rem;
+}
+
+.order-d-mon strong {
+    margin-right: 2%;
+    text-decoration: line-through;
+}
+.order-d-con div {
+    padding: 0 4%;
+    line-height: 3.71rem;
+}
+.order-d-con .order-d-jump {
+    width: 1.07rem;
+    height: 3.71rem;
+    background: url("../images/ionic-right.png") right center no-repeat;
+    background-size: 41%;
+}
+.order-d-con div strong {
+    font-size: 0.8rem;
+}
+.order-d-con .order-d-total {
+    font-weight: bold;
+}
+.order-d-con .order-d-delete {
+    text-decoration: line-through;
+}
+.order-d-footer {
+    padding-bottom: 4.04rem;
+}
+.order-d-times {
+    padding: 1.32rem 4%;
+}
+.order-d-times div {
+    margin-bottom: 0.74rem;
+    line-height: 1.25rem;
+}
+.order-d-times div:nth-child(3) {
+    margin-bottom: 0;
+}
+.order-d-times div span {
+    margin-right: 10%;
+}
+.order-d-button {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.7rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #dadce3;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.order-d-right {
+    width: 60%;
+}
+.order-d-right input[type="button"], .order-d-right a {
+    width: 36%;
+    margin-right: 7%;
+    line-height: 1.86rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+}
+.order-d-right input[type="button"] {
+    border: 0.1rem solid #a4925a;
+}
+.order-d-right a {
+    height: 1.86rem;
+    border: 0.1rem solid #6d6f74;
+}
+.order-d-left {
+    width: 36%;
+    padding-left: 4%;
+}
+.order-d-left span {
+    margin-top: -0.2rem;
+    font-size: 1.07rem;
+}
+.order-d-left em {
+    font-size: 0.8rem;
+}
+/*支付方式*/
+.s-header {
+    height: 3.71rem;
+    padding: 0 4%;
+    margin-top: 0.57rem;
+    line-height: 3.71rem;
+}
+.s-mode {
+    padding: 1.43rem 8% 1.43rem 4%;
+}
+.s-selected {
+    background: #fff url("../images/selected.png") no-repeat 96% center;
+    background-size: 5%;
+}
+.s-noselected {
+    background: #fff url("../images/noselected.png") no-repeat 96% center;
+    background-size: 5%;
+}
+.s-mode dt {
+    width: 9%;
+    height: 2.12rem;
+    margin-right: 5%;
+}
+.s-mode dt img {
+    width: 100%;
+}
+.s-mode dd {
+    width: 86%;
+}
+.s-mode dd h2 {
+    margin: -0.1rem 0 0.25rem 0;
+    font-weight: bold;
+}
+.s-mode dd p {
+    margin-bottom: -0.1rem;
+    font-size: 0.72rem;
+}
+.s-pad {
+    margin-bottom: 3.57rem;
+}
+.s-footer {
+    line-height: 3.5rem;
+}
+.s-footer, .clear-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+}
+.s-footer span, .clear-footer div {
+    width: 62%;
+    padding-left: 4%;
+    background-color: rgba(28, 35, 44, 0.8);
+}
+.s-footer input, .clear-footer input {
+    width: 34%;
+    border: none;
+    outline: none;
+    background-color: #a4925a;
+    line-height: 3.5rem;
+    font-size: 1.06rem;
+}
+/*我*/
+.per-c-head {
+    height: 10.79rem;
+    padding-top: 5.5rem;
+    background: url("../images/black-light.jpg") no-repeat 0 0;
+    background-size: 100%;
+}
+.per-c-head img {
+    display: block;
+    width: 18%;
+    height: 4.83rem;
+    margin: 0 auto 1.21rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.2rem #fff;
+}
+.per-c-head div {
+    font-size: 1.06rem;
+}
+.per-c-head a {
+    right: 8%;
+    top: 7.54rem;
+    width: 5%;
+    height: 1.29rem;
+    background: url("../images/change.png") no-repeat center 0;
+    background-size: 94%;
+}
+.per-c-whole {
+    padding: 0 4%;
+    line-height: 3.71rem;
+}
+.per-c-whole {
+    display: block;
+    background: #fff url("../images/ionic-right.png") no-repeat 96% center;
+    background-size: 2%;
+}
+.per-c-see {
+    padding-right: 5%;
+}
+.per-c-order {
+    padding: 1.57rem 0 1.8rem 0;
+}
+.per-c-order a {
+    width: 25%;
+    padding-top: 2.64rem;
+}
+.per-c-order a:nth-child(1) {
+    background: url("../images/payment.png") no-repeat center 0;
+    background-size: 29%;
+}
+.per-c-order a:nth-child(2) {
+    background: url("../images/deliver.png") no-repeat center 0;
+    background-size: 29%;
+}
+.per-c-order a:nth-child(3) {
+    background: url("../images/receipt.png") no-repeat center 0;
+    background-size: 29%;
+}
+.per-c-order a:nth-child(4) {
+    background: url("../images/evaluate.png") no-repeat center 0;
+    background-size: 29%;
+}
+/*填写订单*/
+.clear-consi {
+    padding-top: 0.25rem;
+    margin-top: 0.54rem;
+    background: #fff url("../images/clear-dashed.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.clear-address a, .clear-id a {
+    background: url("../images/ionic-right.png") 96% center no-repeat;
+    background-size: 1.6%;
+}
+.clear-address dl {
+    padding: 0.93rem 13% 0.93rem 12%;
+    background: url("../images/address.png") 4% center no-repeat;
+    background-size: 3.5%;
+}
+.clear-address dt {
+    margin-bottom: 0.32rem;
+}
+.clear-address dt span {
+    margin-left: 4%;
+}
+.clear-id {
+    padding-bottom: 0.25rem;
+    background: #fff url("../images/clear-dashed.png") 0 bottom no-repeat;
+    background-size: contain;
+}
+.clear-id div {
+    padding: 1rem 13% 1rem 12%;
+    background: url("../images/id.png") 4% center no-repeat;
+    line-height: 1.25rem;
+}
+.order-d-war {
+    padding: 1.25rem 4%;
+}
+.order-d-war img, .order-d-war span {
+    height: 1.21rem;
+}
+.order-d-war img {
+    width: 8%;
+    margin-right: 3%;
+}
+.order-d-war span {
+    line-height: 1.21rem;
+}
+
+.clear-read {
+    padding-left: 13%;
+}
+.clear-nosel {
+    background: #fff url("../images/noselected.png") no-repeat 4% center;
+    background-size: 4.6%;
+}
+.clear-sel {
+    background: #fff url("../images/selected.png") no-repeat 4% center;
+    background-size: 4.6%;
+}
+.clear-read p {
+    line-height: 3.71rem;
+}
+.clear-footer div span {
+    padding-top: 0.54rem;
+    margin-bottom: 0.1rem;
+}
+.clear-footer div em {
+    font-size: 0.78rem;
+    padding-bottom: 0.58rem;
+}
+/*主页*/
+.index-header {
+    overflow: hidden;
+    height: 22.32rem;
+    background-color: #eaebf1;
+}
+.index-imgs img {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 22.32rem;
+}
+.index-black {
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.29rem;
+    background: -moz-linear-gradient(top, rgba(164,165,169,0) 0%, rgba(164,165,169,0.09) 22%, rgba(164,165,169,0.3) 40%, rgba(164,165,169,0.66) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(164,165,169,0) 0%, rgba(164,165,169,0.09) 22%, rgba(164,165,169,0.3) 40%, rgba(164,165,169,0.66) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(top, rgba(164,165,169,0) 0%, rgba(164,165,169,0.09) 22%, rgba(164,165,169,0.3) 40%, rgba(164,165,169,0.66) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.index-int {
+    padding: 0 4%;
+    line-height: 3.71rem;
+    letter-spacing: 0.1rem;
+}
+.index-int strong {
+    margin-left: 3%;
+}
+.index-int em {
+    padding-right: 4%;
+    background: url("../images/ionic-right.png") right center no-repeat;
+    background-size: 8.5%;
+}
+.index-live {
+    overflow: hidden;
+    width: 92%;
+    padding: 0 4%;
+    margin-bottom: 0.57rem;
+}
+.index-live .index-rec {
+    width: 38%;
+    margin-right: 3%;
+}
+.index-rec img {
+    width: 100%;
+    height: 5.57rem;
+}
+.index-rec div {
+    overflow: hidden;
+    padding: 0 8%;
+    line-height: 2.86rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    letter-spacing: 0.1rem;
+}
+.index-pics {
+    margin-bottom: 0.86rem;
+}
+.index-pics img {
+    width: 100%;
+}
+.index-pics div {
+    bottom: 0;
+    left: 0;
+    width: 92%;
+    padding: 0.71rem 4% 0.71rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.1rem;
+}
+.index-pics div p {
+    overflow : hidden;
+    margin-bottom: 0.43rem;
+    font-size: 1.22rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.index-pics div span {
+    padding-left: 6%;
+    background: url("../images/white-label.png") 0 center no-repeat;
+    background-size: 4.3%;
+}
+.index-vid-bot {
+    margin-bottom: 0.86rem;
+}
+.index-article {
+    padding: 0rem 4% 1.68rem;
+}
+.index-article h2 {
+    overflow : hidden;
+    margin-bottom: 0.21rem;
+    font-size: 1.22rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.index-article p {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/*登陆*/
+.login-img {
+    width: 19%;
+    padding-top: 4.5rem;
+    margin: 0 auto 2.53rem;
+}
+.login-form {
+    padding: 0 8.4% 4.46rem;
+}
+.login-form div {
+    margin-bottom: 1.25rem;
+}
+.login-num {
+    padding: 0.57rem 0 1.07rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.login-num input {
+    width: 42%;
+    padding-left: 4%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    outline: none;
+}
+.login-text {
+    margin-bottom: 1.61rem;
+}
+.login-but {
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    font-size: 1.06rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.1rem;
+    outline: none;
+    border-radius: 0.2rem;
+}
+.login-code {
+    top: 0.25rem;
+    right: 0;
+    width: 32%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.86rem;
+    border-radius: 0.2rem;
+}
+.login-color {
+    color: rgba(255, 255, 255, 0.1);
+}
+.login-close {
+    top: 0.5rem;
+    left: 4%;
+    font-size: 1.6rem;
+}
+/*精选*/
+.sel-wrap .sel-mar {
+    margin-bottom: 0.54rem;
+}
+.sel-header {
+    height: 13.46rem;
+    background-color: #fff;
+}
+.sel-imgs img {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 13.46rem;
+}
+.sel-collec {
+    padding: 0.57rem 0 0.61rem 0;
+}
+.sel-collec span {
+    margin-bottom: 0.21rem;
+    background: url("../images/sel-collec.png") 0 0 no-repeat;
+    background-size: 100%;
+    font-size: 1.06rem;
+}
+.sel-collec em {
+    font-size: 0.8rem;
+}
+/*.sel-nav {
+    padding: 0 1.4%;
+}
+.sel-nav img {
+    width: 47.2%;
+    padding: 0 1.4% 0.71rem;
+}*/
+.sel-strip {
+    padding: 0.5rem 0 0.18rem;
+}
+.sel-times {
+    padding-left: 37.5%;
+    margin-bottom: 0.21rem;
+}
+.sel-times span, .sel-times em {
+    height: 1.57rem;
+    line-height: 1.57rem;
+}
+.sel-times span {
+    width: 9.4%;
+    background: url(../images/sel-times.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+.sel-lists {
+    padding: 1.14rem 4% 0.75rem;
+}
+.sel-lists a {
+    width: 31%;
+    margin-right: 4%;
+}
+.sel-chart {
+    overflow: hidden;
+    height: 7.5rem;
+    line-height: 7.3rem;
+}
+.sel-chart img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 7.5rem;
+}
+.sel-lists a p {
+    overflow: hidden;
+    height: 1.25rem;
+    margin: 0.64rem 0 0.39rem 0;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sel-money {
+    height: 1.43rem;
+    line-height: 1.43rem;
+}
+.sel-money span {
+    font-size: 1.06rem;
+}
+.sel-money em {
+    margin-left: 11%;
+    font-size: 0.8rem;
+    text-decoration: line-through;
+}
+.sel-pics {
+    width: 100%;
+}
+.sel-good {
+    padding: 1.14rem 4% 0.64rem;
+}
+.sel-good a {
+    width: 27%;
+    height: 10.18rem;
+    margin-right: 5%;
+}
+.sel-things {
+    overflow: hidden;
+    height: 6.65rem;
+    line-height: 6.45rem;
+}
+.sel-things img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 6.65rem;
+}
+.sel-good a p {
+    height: 1.25rem;
+    margin: 0.64rem 0 0.39rem 0;
+    font-size: 0.8rem;
+}
+.sel-price, .sel-good a p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sel-more {
+    box-shadow: 0 0 0 1px #f3f4fa;
+}
+.sel-more div {
+    padding-top: 5rem;
+    margin-bottom: 0.1rem;
+    background: url("../images/sel-more.png") center 2.61rem no-repeat;
+    background-size: 24.5%;
+}
+.sel-more strong {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+/*购物车*/
+.shop-c-wrap {
+    padding-top: 0.64rem;
+}
+.shop-c-marb {
+    margin-bottom: 0.54rem;
+}
+.shop-c-ware, .shop-c-cut {
+    padding: 0 4%;
+}
+.shop-c-ware {
+    height: 3.71rem;
+    line-height: 3.71rem;
+}
+.shop-c-ware a, .shop-c-cut {
+    font-size: 0.8rem;
+}
+.shop-c-ware a i {
+    width: 1.07rem;
+    height: 3.71rem;
+}
+.shop-c-ware a i, .shop-c-cut i {
+    background: url("../images/ionic-right.png") right center no-repeat;
+    background-size: 41%;
+}
+.shop-c-ware div em {
+    width: 1.82rem;
+    height: 3.71rem;
+}
+.shop-c-ware .shop-c-ware-false {
+    background: url("../images/noselected.png") left center no-repeat;
+    background-size: 68%;
+}
+.shop-c-ware .shop-c-ware-true {
+    background: url("../images/selected.png") left center no-repeat;
+    background-size: 68%;
+}
+.shop-c-cut {
+    height: 2.86rem;
+    line-height: 2.86rem;
+}
+.shop-c-cut strong {
+    width: 12%;
+    height: 2.86rem;
+    background: url("../images/full-cut.png") left center no-repeat;
+    background-size: 73%;
+}
+.shop-c-cut i {
+    width: 1.07rem;
+    height: 2.86rem;
+}
+.shop-c-layer {
+    overflow: hidden;
+    width: 100%;
+    height: 7.37rem;
+}
+.shop-c-length {
+    width: 139.5%;
+    height: 7.37rem;
+}
+.shop-c-slide {
+    width: 28.31%;
+}
+.shop-c-slide a, .shop-c-slide span {
+    width: 50%;
+    height: 2.69rem;
+    padding-top: 4.64rem;
+    font-size: 0.8rem;
+}
+.shop-c-slide a {
+    background: #29738f url("../images/collection.png") center 2.57rem no-repeat;
+    background-size: 24%;
+}
+.shop-c-slide span {
+    background: #cc3333 url("../images/delete.png") center 2.46rem no-repeat;
+    background-size: 20.5%;
+}
+.shop-c-con {
+    width: 64.02%;
+    padding-left: 7.67%;
+}
+.shop-c-con-false {
+    background: url("../images/noselected.png") 4% center no-repeat;
+    background-size: 4.6%;
+}
+.shop-c-con-true {
+    background: url("../images/selected.png") 4% center no-repeat;
+    background-size: 4.6%;
+}
+/*.shop-c-con {
+    width: 89.3%;
+    padding-left: 10.7%;
+    background: url("../images/noselected.png") 4% center no-repeat;
+    background-size: 4.6%;
+}*/
+.shop-c-dl {
+    padding: 1.14rem 0;
+}
+.shop-c-dt, .shop-c-dt img {
+    height: 5rem;
+}
+.shop-c-dt {
+    width: 21%;
+    margin-right: 5%;
+}
+.shop-c-dt img {
+    width: 100%;
+}
+.shop-c-dd {
+    width: 69%;
+    padding-right: 5%;
+}
+.shop-c-dd h2, .shop-c-size {
+    overflow: hidden;
+    padding-right: 2%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shop-c-dd h2 {
+    height: 1.25rem;
+    margin: -0.2rem 0 0.29rem 0;
+}
+.shop-c-size {
+    height: 1.07rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.8rem;
+}
+.shop-c-nums span, .shop-c-nums em {
+    overflow: hidden;
+    width: 15%;
+    height: 1.71rem;
+    line-height: 1.71rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-shadow: inset 0 1px 0 0 #f3f4fa,
+                inset 0 -1px 0 0 #f3f4fa;
+}
+.shop-c-nums span:nth-child(1) {
+    background: url("../images/reduce.png") center center no-repeat;
+    background-size: 100%;
+}
+.shop-c-nums span:nth-child(3) {
+    background: url("../images/add.png") center center no-repeat;
+    background-size: 100%;
+}
+.shop-c-nums strong {
+    padding-top: 0.64rem;
+}
+.shop-c-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    border-top: 1px solid #dadce3;
+}
+.shop-c-settlement {
+    width: 34%;
+    height: 3.5rem;
+    border: none;
+    font-size: 1.06rem;
+    outline: none;
+    letter-spacing: 0.1rem;
+}
+.shop-c-select {
+    padding-left: 11%;
+    line-height: 3.5rem;
+}
+.shop-c-select-false {
+    background: url("../images/noselected.png") 29% center no-repeat;
+    background-size: 25.5%;
+}
+.shop-c-select-true {
+    background: url("../images/selected.png") 29% center no-repeat;
+    background-size: 25.5%;
+}
+.shop-c-total {
+    width: 39%;
+    height: 3.5rem;
+    margin-right: 4.8%;
+}
+.shop-c-total em, .shop-c-total strong {
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shop-c-total em {
+    padding-top: 0.57rem;
+    font-size: 1.06rem;
+}
+.shop-c-total strong, .shop-c-invalid {
+    font-size: 0.8rem;
+}
+.shop-c-empty {
+    padding-top: 0.79rem;
+    height: 2.92rem;
+}
+.shop-c-empty div {
+    width: 29%;
+    height: 2rem;
+    margin: 0 auto;
+    border: 0.1rem solid #3c424a;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+}
+.shop-c-invalid {
+    height: 2.14rem;
+    line-height: 2.14rem;
+}
+.shop-c-check, .shop-c-areacheck, .shop-c-allcheck {
+    width: 1.21rem;
+    height: 1.21rem;
+    opacity: 0;
+}
+.shop-c-check {
+    top: 3.1rem;
+    left: 3%;
+}
+.shop-c-areacheck {
+    top: 1.3rem;
+    left: 0;
+}
+.shop-c-allcheck {
+    top: 1.1rem;
+    left: 4%;
+}
+/*运费详情*/
+.freight-d-head {
+    padding-top: 3.57rem;
+    height: 10.72rem;
+}
+.freight-d-head h2 {
+    margin-bottom: 1.07rem;
+    font-size: 1.44rem;
+    font-weight: bold;
+}
+.freight-d-head div {
+    margin-bottom: 0.71rem;
+}
+.freight-d-head span {
+    font-size: 2.14rem;
+    font-weight: bold;
+}
+.freight-d-sec {
+    padding: 1.25rem 8% 2.14rem;
+}
+.freight-d-head div, 
+.freight-d-sec div, .freight-d-sec p {
+    font-size: 1.06rem;
+}
+.freight-d-sec div {
+    margin-bottom: 1.43rem;
+}
+.freight-d-weight {
+    padding: 0 4%;
+}
+.freight-d-weight div, .freight-d-weight span, 
+.freight-d-weight em {
+    height: 1.25rem;
+    line-height: 1.25rem;
+    padding: 1.14rem 0 1.29rem;
+}
+.freight-d-weight span {
+    margin-left: 2%;
+    text-decoration: line-through;
+}
+.freight-d-weight em {
+    margin-left: 2%;
+}
+.freight-d-weight strong {
+    width: 19%;
+    height: 1.89rem;
+    padding-right: 1.3%;
+    margin-top: 0.89rem;
+    background: url("../images/freight-free.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    line-height: 1.89rem;
+}
+.freight-d-text {
+    line-height: 1.5rem;
+    padding: 0.36rem 4% 2rem;
+}

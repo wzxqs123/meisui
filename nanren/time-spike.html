@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>限时秒杀</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+    </head>
+    <body>
+        <!-- 头部时间轴 -->
+        <div class="time-s-times white mar-bor">
+            <div class="swiper-wrapper clearfix">
+                <div class="swiper-slide time-s-slot g-two text-center left">
+                    <div>昨天18:00</div>
+                    <span class="block">已结束</span>
+                </div>
+                <!-- 选中时g-two改成c-two类名 -->
+                <div class="swiper-slide time-s-slot c-two text-center left">
+                    <!-- 选中时添加time-s-sel类名 -->
+                    <div class="time-s-sel">22:00</div>
+                    <span class="block">正在抢购</span>
+                </div>
+                <div class="swiper-slide time-s-slot g-two text-center left">
+                    <div>22:00</div>
+                    <span class="block">即将开始</span>
+                </div>
+                <div class="swiper-slide time-s-slot g-two text-center left">
+                    <div>22:00</div>
+                    <span class="block">即将开始</span>
+                </div>
+            </div>
+        </div>
+        <!-- 内容区 -->
+        <a href="" class="time-s-goods block white mar-bor">
+            <div class="clearfix time-s-count text-center">
+                <span class="left white-color"></span>
+                <em class="left">：</em>
+                <span class="left white-color"></span>
+                <em class="left">：</em>
+                <span class="left white-color"></span>
+            </div>
+            <div class="time-s-pics text-center position-rel">
+                <img src="images/demoimages/pic98.jpg" alt="" />
+                <span class="position-abs white-color none">抢光</span>
+            </div>
+            <h2 class="g-three text-center">“ 充分洁净不伤肤 ”</h2>
+            <p class="text-center g-one twenty-six">熊野油脂 无硅纯天然马油洗发水护发素二合一 600毫升</p>
+            <div class="time-s-details text-center white-color clearfix">
+                <!-- 售完用bg-color-gthree，包邮等用time-s-naturals -->
+                <div class="left bg-color-gthree">已售<em>0%</em></div>
+                <div class="right time-s-naturals">支持包邮</div>
+            </div>
+            <div class="time-s-money text-center">
+                <em class="c-two clearfix">¥<span>320</span>
+                    <strong class="g-three right">￥88</strong>
+                </em>
+            </div>
+            <!-- 提前加车(time-s-remind),进行中(time-s-ing),结束可以正常购买(time-s-end),抢光(time-s-end) -->
+            <div class="time-s-buy time-s-remind white-color text-center">提前加车</div>
+        </a>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 头部导航
+            $(".swiper-wrapper").on("click", ".time-s-slot", function () {
+                $(this).removeClass("g-two").addClass("c-two").children("div").addClass("time-s-sel");
+                $(this).siblings(".time-s-slot").removeClass("c-two").children("div").removeClass("time-s-sel");
+                var timeSindex = $(this).index();
+                var mySwipers = new Swiper ('.time-s-times', {
+                    direction: 'horizontal',
+                    loop: false,
+                    initialSlide : timeSindex,
+                    centeredSlides : true,
+                    freeMode : true,
+                    slidesPerView : "auto"
+                })
+            })
+            // 标签处为一个的样式处理
+            $(".time-s-details").each(function(i) {
+                var timesNum = $(this).children("div").size();
+                if (timesNum == 1) {
+                    $(this).children("div").removeClass("left right").addClass("time-s-tcenter");
+                }
+            })
+            // 价钱处的居中处理
+            var timesmarL = 1.29; /*原价跟现价之间的固定距离为1.29rem*/
+            $(".time-s-money em").each(function() {
+                var timesW = $(this).children("strong").width() / 28,/*获取em在750px下的宽度*/
+                    timesTotal = null;
+                    timesTotal = timesW + timesmarL;
+                $(this).css({
+                    "padding-left" : timesTotal + "rem"
+                });
+            });
+            
+            var timesNows = new Date(), /*当前时间*/
+                timesStart = new Date("2016-12-09 16:58:00"), /*指定开始时间*/
+                timesStartEnd = new Date("2016-12-09 16:59:00"); /*指定结束时间*/
+            var timesacc = null;
+            timesJudge();
+            timesacc = setInterval(function () {
+                timesNows = timesNows - 0 + 1000;
+                timesJudge();
+            }, 1000)
+            function timesJudge () {
+                if (timesNows >= timesStart) {
+                    var timesPoor = timesNows - timesStart; /*当前时间与指定开始时间的差值*/
+                    $(".time-s-goods").each(function (i) {
+                        // 已售进度
+                        var timesdetails = $(this).children(".time-s-details"),
+                            timesSpeed = parseInt(timesdetails.children("div").children("em").html());
+                        if (timesSpeed == 100) {
+                            timesdetails.children("div").eq(0).removeClass("time-s-naturals").addClass("bg-color-gthree");
+                        } else if (timesSpeed < 100) {
+                            timesdetails.children("div").eq(0).removeClass("bg-color-gthree").addClass("time-s-naturals");
+                        }
+
+                        var timesbutten = $(this).children(".time-s-buy"), /*按钮*/
+                            timespics = $(this).children(".time-s-pics");  /*头图*/
+
+                        // 倒计时
+                        var timesSlot = timesStartEnd - timesStart - timesPoor, /*timesSlot是后台获取的倒计时的总时间*/
+                            timesShow = null, /*计时器*/
+                            seconds = 0,    /*秒*/
+                            minute = 0,     /*分钟*/
+                            hour = 0,       /*小时*/
+                            _this = $(this).children(".time-s-count");
+                        if (timesSlot <= 0) {
+                            timesSlot = 0; /*如果当前时间大于结束时间显示为0*/
+                        }
+                        function timespublic (_thisEve) {
+                            seconds = parseInt(timesSlot / 1000 % 60) ;
+                            minute = parseInt(timesSlot / 1000 / 60 % 60) ;
+                            hour = parseInt(timesSlot / 1000 / 60 / 60) ;
+                            _thisEve.children("span").eq("0").html(hour);
+                            _thisEve.children("span").eq("1").html(minute);
+                            _thisEve.children("span").eq("2").html(seconds);
+                        }
+                        timespublic(_this);
+                        timesShow = setInterval(function () {
+                            timesbutten.removeClass("time-s-end time-s-loot time-s-remind").addClass("time-s-ing").html("马上抢购");
+
+                            timesSlot = timesSlot - 1000;
+                            if (timesSlot > 0 && timesSpeed == 100) {
+                                timesbutten.removeClass("time-s-end time-s-ing time-s-remind").addClass("time-s-loot").html("已抢光");
+                                timespics.children("span").removeClass("none");
+                            } else if (timesSlot <= 0 && timesSpeed == 100) {
+                                timesSlot = 0;
+                                clearInterval(timesShow);
+                                timesbutten.removeClass("time-s-end time-s-ing time-s-remind").addClass("time-s-loot").html("已抢光");
+                                timespics.children("span").removeClass("none");
+                            } else if(timesSlot <= 0 && timesSpeed < 100) {
+                                timesSlot = 0;
+                                clearInterval(timesShow);
+                                timesbutten.removeClass("time-s-loot time-s-ing time-s-remind").addClass("time-s-end").html("立即购买");
+                                timespics.children("span").addClass("none");
+                            }
+                            timespublic(_this);
+                        }, 1000);
+                    })
+                } else {
+                    $(".time-s-goods").each(function (i) {
+                        // 已售进度
+                        var timesdetails = $(this).children(".time-s-details");
+                            timesdetails.children("div").eq(0).removeClass("bg-color-gthree").addClass("time-s-naturals");
+
+                        var timesbutten = $(this).children(".time-s-buy"); /*按钮*/
+                        timesbutten.removeClass("time-s-end time-s-loot time-s-ing").addClass("time-s-remind").html("提前加车");
+
+                        // 倒计时
+                        var timesSlot = timesStartEnd - timesStart, /*timesSlot是后台获取的倒计时的总时间*/
+                            seconds = 0,    /*秒*/
+                            minute = 0,     /*分钟*/
+                            hour = 0,       /*小时*/
+                            _this = $(this).children(".time-s-count");
+                        function timespublic (_thisEve) {
+                            seconds = parseInt(timesSlot / 1000 % 60) ;
+                            minute = parseInt(timesSlot / 1000 / 60 % 60) ;
+                            hour = parseInt(timesSlot / 1000 / 60 / 60) ;
+                            _thisEve.children("span").eq("0").html(hour);
+                            _thisEve.children("span").eq("1").html(minute);
+                            _thisEve.children("span").eq("2").html(seconds);
+                        }
+                        timespublic(_this);
+                    })
+                }
+            }
+
+        </script>
+    </body>
+</html>

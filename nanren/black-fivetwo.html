@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>黑五主会场2</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/special.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <style type="text/css">
+            body, html {
+                background-color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img class="block black-f-img" src="images/demoimages/pic110.jpg" alt="" />
+            <img class="block black-f-img" src="images/demoimages/pic111.jpg" alt="" />
+        </header>
+        <section>
+            <img class="block black-ft-tit" src="images/demoimages/pic112.jpg" alt="" />
+            <div class="swiper-containers black-ft-sin white">
+                <div class="swiper-wrapper clearfix">
+                    <a href="" class="left swiper-slide">
+                        <div class="black-ft-pics position-rel text-center">
+                            <img src="images/pic-loading.png" data-echo="images/demoimages/pic7.jpg" alt="" />
+                            <div class="position-abs bou-c-discount clearfix">
+                                <span class="white-color left">5折</span>
+                            </div>
+                        </div>
+                        <p class="c-four black-f-text">Ralph Lauren拉夫劳伦直角浅拉夫劳伦直角浅</p>
+                        <div class="clearfix g-three black-f-price">
+                            <em class="left">国内价</em>
+                            <strong class="left">￥8334</strong>
+                        </div>
+                        <div class="black-f-pre">¥3446</div>
+                    </a>
+                </div>
+            </div>
+            <img class="block black-ft-tit" src="images/demoimages/pic113.jpg" alt="" />
+            <div class="black-ft-bou clearfix">
+                <a href="" class="left swiper-slide white">
+                    <div class="black-ft-pics position-rel text-center">
+                        <img src="images/pic-loading.png" data-echo="images/demoimages/pic7.jpg" alt="" />
+                        <div class="position-abs bou-c-discount clearfix">
+                            <span class="white-color left">5折</span>
+                        </div>
+                    </div>
+                    <p class="c-four black-f-text">Ralph Lauren拉夫劳伦直角浅拉夫劳伦直角浅</p>
+                    <div class="clearfix g-three black-f-price">
+                        <em class="left">国内价</em>
+                        <strong class="left">￥8334</strong>
+                    </div>
+                    <div class="black-f-pre">¥3446</div>
+                </a>
+            </div>
+        </section>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/echo.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var mySwi = new Swiper ('.swiper-containers', {
+                direction: 'horizontal',
+                loop: false,
+                freeMode : true,
+                slidesPerView : "auto"
+            })
+
+            var winSH = window.screen.height;
+            // 懒加载
+            Echo.init({
+                offset: winSH,
+                throttle: 1
+            });
+        </script>
+    </body>
+</html>

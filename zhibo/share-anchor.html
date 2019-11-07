@@ -1,0 +1,330 @@
+<style type="text/css">
+.share-a-demo, .share-a-video {
+    width: 100%;
+    height: 100%;
+}
+.share-a-download{position: fixed;}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>撩主播、玩游戏，牵着你的手，一起来虐狗！</title>
+<meta name="description" itemprop="description" content="" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+<link rel="stylesheet" type="text/css" href="css/dropload.css" />
+<style type="text/css">
+    body, html {
+        height: 100%;
+    }
+
+    .share-a-xzlogo {
+         border-radius: 0; 
+         box-shadow: none; 
+    }
+    video::-webkit-media-controls-enclosure {
+        /*禁用播放器控制栏的样式*/
+        display: none !important;
+    }
+</style>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<!--  <script src="../res/video/mediaelement-and-player.js"></script>
+        <link rel="stylesheet" href="../res/video/mediaelementplayer.min.css" /> -->
+</head>
+<body class="">
+    <div class="share-a-demo position-rel none" style="width: 100%;">
+        <video class="share-a-video block" id="player1"
+            x5-video-player-type="h5" webkit-playsinline>
+            <source type="application/vnd.apple.mpegURL" src="http://play.meisuizhibo.com/live/76432181.m3u8">
+        </video>
+        <div class="room-message position-abs">
+            <div class="room-con room-con-two y-two">
+                <div class="room-com room-com-two">
+                    <div class="room-strip white twenty-six">
+                        <span class="my-g-ten text-center white">LV.10</span> <em class="room-namecolor twenty-six">年月变我未变：</em>妹子
+                    </div>
+                    <div class="room-strip white twenty-six"><span class="my-g-forty text-center white">LV.40</span><em class="room-namemar room-namecolor twenty-six">多啦A萌</em>进入游戏间</div>
+                    <div class="room-strip white twenty-six giftword"><span class="my-g-twenty text-center white">LV.20</span> <em class="room-namemar room-namecolor twenty-six">水中的渔：</em>送你一辆法拉利跑车</div>
+                </div>
+            </div>
+            <div class="room-input clearfix">
+                <input class="left twenty-six white" type="text" placeholder="与主播聊聊..." disabled />
+            </div>
+        </div>
+    </div>
+    <div class="share-a-wrap position-rel">
+        <img class="block share-a-img" src="images/demoimages/pic4.jpg" alt="" />
+        <div class="share-a-inform position-abs">
+            <div class="clearfix">
+                <div class="share-a-portrait left clearfix" onclick="jump();">
+                    <img class="left" src="images/demoimages/pic12.png" alt="" />
+                    <div class="share-a-name white left">
+                        <h3 class="weight-bold">Vcs橘子真可爱</h3>
+                        <em class="block">ID:33717448</em>
+                    </div>
+                    <div class="right share-a-follow twenty-four text-center white">关注</div>
+                </div>
+                <div class="share-a-area right position-rel">
+                    <div class="swiper-container share-a-headimg" onclick="jump();">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="block"
+                                    src="images/demoimages/pic12.png"
+                                    alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 关闭按钮 -->
+                    <a class="share-a-listclose position-abs"
+                        href="javascript:history.go(-1)"></a>
+                </div>
+            </div>
+            <div class="share-a-charm clearfix">
+                    <div class="share-a-lives twenty-four left clearfix" onclick="jump();"><i class="left"></i>11139720</div>
+                    <div class="share-a-watch twenty-four right">75人在看</div>
+            </div>
+        </div>
+        <!-- end -->
+        <!-- 播放按钮 -->
+        <span class="share-a-play position-abs"></span>
+        <!-- 底部信息块 -->
+        <div class="room-message position-abs">
+            <div class="room-con room-con-one y-two">
+                <div class="room-com room-com-one">
+                    <div class="room-strip white twenty-six">
+                        <span class="my-g-forty text-center white">LV.40</span>
+                        <!-- room-namemar边距 -->
+                        <em class="room-namemar room-namecolor twenty-six">阿根</em>进入游戏间
+                    </div>
+                    <div class="room-strip white twenty-six">
+                        <span class="my-g-one text-center white">LV.5</span>
+                        <!-- room-namemar边距 -->
+                        <em class="room-namemar room-namecolor twenty-six">迷失的花生</em>进入游戏间
+                    </div>
+                    <div class="room-strip white twenty-six">
+                        <span class="my-g-ten text-center white">LV.10</span>
+                        <em class="room-namemar room-namecolor twenty-six">开心一生</em>进入游戏间
+                    </div>
+                </div>
+            </div>
+            <div class="room-input clearfix">
+                <input class="left twenty-six white" type="text"
+                    placeholder="与主播聊聊..." disabled />
+            </div>
+        </div>
+    </div>
+    <!-- 主播停播时出现的界面 -->
+     <div class="share-a-off position-rel none">
+        <img class="share-a-offcover block img" src="http://img1.szdc666.com/pic8.png" alt="" />
+        <div class="share-a-offcon position-abs">
+            <span class="share-a-offtit block white text-center">直播已结束</span>
+            <a href="javascript:jump();" class="block b-one twenty-six">进入美岁直播</a>
+        </div>
+    </div>
+    <div class="share-a-listimg clearfix position-rel">
+        <h2 class="share-a-tittle bg-white twenty-six text-center">
+            <span class="bg-b-four"></span>更多热门直播<span class="bg-b-four"></span>
+        </h2>
+        <div class="share-a-lists clearfix">
+            <div class="share-a-recanchor left bg-white" onclick="jump();">
+                <div class="share-a-anchorpic position-rel">
+                    <span class="position-abs"></span>
+                    <img class="block img" src="images/demoimages/pic12.png" alt="" />
+                </div>
+                <div class="share-a-anchorname three thirty clearfix">
+                    <span class="left">菲泡泡</span>
+                    <em class="right nine">98人</em>
+                </div>
+            </div>
+            <div class="share-a-recanchor left bg-white" onclick="jump();">
+                <div class="share-a-anchorpic position-rel">
+                    <span class="position-abs"></span>
+                    <img class="block img" src="images/demoimages/pic12.png" alt="" />
+                </div>
+                <div class="share-a-anchorname three thirty clearfix">
+                    <span class="left">Vcs鑫鑫一字马</span>
+                    <em class="right nine">99人</em>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <a class="share-a-download clearfix position-fix" href="javascript:jump();">
+            <div class="share-a-xzlogo left">
+                <img class="img block" src="images/demoimages/ms-logo-new.png" alt="">
+            </div>
+            <div class="share-a-mscon white left">
+                <span class="block twenty-six">美岁直播</span>
+                <em class="block">午夜秀场福利直播平台</em>
+            </div>
+            <div class="share-a-clickxz bg-white text-center three right">点击下载</div>
+        </a>
+    </div>
+    <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/dropload.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var mySwiper = new Swiper('.swiper-container', {
+            direction : 'horizontal',
+            loop : false,
+            slidesPerView : "auto",
+        })
+        function jump()
+        {
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            var ua = window.navigator.userAgent.toLowerCase();
+
+            if(isAndroid)
+            {
+                if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                    $('body').css("background","url(http://img1.szdc666.com/background.png)no-repeat");
+                    $('body').css("background-size","100%");
+                    $(".share-a-demo").addClass("none");
+                    $(".share-a-wrap").addClass("none");
+                    $(".share-a-listimg").addClass("none");
+                }
+                else
+                    location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live";
+            }
+            if(isiOS||!isAndroid)
+            {
+                location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live";
+            }
+        }
+         // 主播封面的居中
+        var shareImgW = $(".share-a-img").width(),
+            shareWrapW = $(".share-a-wrap").width();
+            shareDistance = -((shareImgW - shareWrapW) / 2) / 28;
+        $(".share-a-img").css({
+            "margin-left" : shareDistance + "rem"
+        });
+        // 右侧用户头像滑动
+        var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: false,
+                slidesPerView : "auto",
+            })
+        var shareVid = $(".share-a-video")[0];
+
+        // 热门主播奇数部分设置右边距
+        $(".share-a-recanchor").each(function (i) {
+            var _this = $(this);
+            if (i % 2 == 0) {
+                _this.css({
+                    "margin-right" : "1.4%"
+                })
+            }
+        })
+
+        // 底部引导下载栏的控制
+        var loadHeight = 3.93; //引导下载栏总高度
+       /*  $(window).scroll(function() {
+            var roomScrollTop = $(document.body).scrollTop() / 28;
+            if (roomScrollTop >= loadHeight) {
+                $(".share-a-download").removeClass("position-abs").addClass("position-fix");
+            } else {
+                $(".share-a-download").removeClass("position-fix").addClass("position-abs");
+            }
+        }) */
+        $.get("http://img1.szdc666.com/room_im.json", 
+            function(data) {
+                var roomGiftNum = null, //礼物名字
+                    roomUserCopy = null, //用户评论文案
+                    roomAnchorName = null, //名字
+                    roomUserGrade = null, //用户等级
+                    roomGradeColor = null; //等级颜色
+                function roomBarChat () {
+                    $(".room-com").append("<div class='room-strip white twenty-six'><span class='" + roomGradeColor + " text-center white'>LV." + roomUserGrade + "</span><em class='room-namecolor twenty-six'>" + roomAnchorName + "：</em>" + roomUserCopy + "</div>");
+                }
+                function roomGetRoom () {
+                    $(".room-com").append("<div class='room-strip white twenty-six'><span class='" + roomGradeColor + " text-center white'>LV." + roomUserGrade + "</span><em class='room-namemar room-namecolor twenty-six'>" + roomAnchorName + "</em>进入游戏间</div>");
+                }
+                function roomGiveGift (argument) {
+                    $(".room-com").append("<div class='room-strip white twenty-six giftword'><span class='" + roomGradeColor + " text-center white'>LV." + roomUserGrade + "</span><em class='room-namemar room-namecolor twenty-six'>" + roomAnchorName + "：</em>" + roomGiftNum + "</div>")
+                }
+
+                var roomChat = null;
+                roomChat = setInterval(roomCon, 1000);
+                function roomCon () {
+                    var roomProba = Math.ceil(Math.random() * 10);// 随机一个数作为礼物、评论、进入房间的比例
+                    
+                    roomAnchorName = data.anchornickname[Math.floor(Math.random() * 20)]; //随机一个名字
+
+                    roomUserGrade = parseInt(Math.floor(Math.random() * 46 + 5));//等级
+                    if (1 <= roomUserGrade && roomUserGrade<= 9) {
+                        roomGradeColor = "my-g-one";
+                    } else if (10 <= roomUserGrade && roomUserGrade <= 19) {
+                        roomGradeColor = "my-g-ten";
+                    } else if (20 <= roomUserGrade && roomUserGrade <= 29) {
+                        roomGradeColor = "my-g-twenty";
+                    } else if (30 <= roomUserGrade && roomUserGrade <= 39) {
+                        roomGradeColor = "my-g-thirty";
+                    } else if (40 <= roomUserGrade && roomUserGrade <= 49) {
+                        roomGradeColor = "my-g-forty";
+                    } else if (50 <= roomUserGrade && roomUserGrade <= 59) {
+                        roomGradeColor = "my-g-fifty";
+                    }
+
+                    if (roomProba <= 2) {
+                        // console.log("送礼物");
+                        roomGiftNum = data.giftname[Math.floor(Math.random() * 5)]; //随机一个礼物名称
+                        roomGiveGift();
+                    } else if (roomProba >= 3 && roomProba <= 5) {
+                        // console.log("进入房间");
+                        roomGetRoom();
+                    } else if (6 <= roomProba <= 10) {
+                        // console.log("评论");
+                        roomUserCopy = data.usercopy[Math.floor(Math.random() * 43)]; //随机一条评论
+                        roomBarChat();
+                    }
+                    function roomScrollTop (comEve,conEve) {
+                        var roomComHeight = $(comEve).height(),
+                            roomConHeight = $(conEve).height();
+                        $(conEve).scrollTop(roomComHeight - roomConHeight);
+                    }
+                    roomScrollTop(".room-com-one", ".room-con-one");
+                    roomScrollTop(".room-com-two", ".room-con-two");
+                }
+            }
+        );
+
+        // 判断直播中还是停播了 
+        // 例如  shareJudgeState = 0; 正在直播中
+        //       shareJudgeState = 1; 已停播
+        var shareJudgeState = 0;
+        function shareClick (cleckEve) {
+            $(cleckEve).click(function () {
+                var shareLiveState = null;
+                if (shareJudgeState == 0) {
+                    $(".share-a-wrap").addClass("none");
+                    $(".share-a-off").addClass("none");
+                    $(".share-a-demo").removeClass("none");
+                    shareVid.play();
+                    // 此种方法为轮播查询方法，每秒都去请求次服务端当前的直播状态是什么样的，如果用到websocket方法可将此方法删除
+                    shareLiveState = setInterval(function () {
+                        // 此处每秒向服务端获取shareJudgeState状态是直播还是停播了
+                        if (shareJudgeState == 1) {
+                            // 获取的状态为停播
+                            clearInterval(shareLiveState);
+                            $(".share-a-wrap").addClass("none");
+                            $(".share-a-off").addClass("none");
+                            $(".share-a-demo").removeClass("none");
+                            shareVid.pause();
+                        }
+                    }, 1000)
+                } else if (shareJudgeState == 1) {
+                    $(".share-a-wrap").addClass("none");
+                    $(".share-a-demo").addClass("none");
+                    $(".share-a-off").removeClass("none");
+                }
+            })
+        }
+        shareClick($(".share-a-img"));
+        shareClick($(".share-a-play"));
+    </script>
+</body>
+</html>

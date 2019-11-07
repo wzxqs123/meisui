@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>商品详情</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/swiper.3.1.7.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f0f0f0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="my-i-wrap position-rel">
+            <!-- 标题部分 -->
+            <div class="headtit bg-white clearfix none">
+                <h2 class="thirty-four text-center">商品详情</h2>
+                <a href="javascript:history.go(-1)" class="left"></a>
+            </div>
+
+            <div class="swiper-container comm-d-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide comm-d-slide">
+                        <img class="block" src="images/demoimages/pic10.png" alt="" />
+                    </div>
+                    <div class="swiper-slide comm-d-slide">
+                        <img class="block" src="images/demoimages/pic10.png" alt="" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="comm-d-info clearfix">
+                <div class="comm-d-money white left">
+                    <span class="thirty-two">¥</span>
+                    <em>75</em>
+                </div>
+                <div class="comm-d-xh left">
+                    <span class="twenty block">¥138</span>
+                    <em class="twenty white block">已抢26件</em>
+                </div>
+                <div class="comm-d-ends text-center right">
+                    <div class="comm-d-time twenty">距结束 08:36:03</div>
+                    <div class="comm-d-xs position-rel">
+                        <span class="block"></span>
+                        <em class="position-abs">已抢3%</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comm-d-tit bg-white thirty">
+                <p>带画家儿童绘画套装水彩笔蜡笔油画棒男女孩生日礼物送儿童画画礼带画家儿童绘画套装水彩笔蜡笔油画棒男女孩生日礼物送儿童画画礼</p>
+            </div>
+            <div class="comm-d-tips bg-white clearfix">
+                <em class="left">优惠：</em>
+                <span class="left red">有券</span>
+                <span class="left red">活动</span>
+            </div>
+            <a class="comm-d-shop block bg-white clearfix" href="">
+                <img class="left" src="images/demoimages/pic8.png" alt="">
+                <span class="left b-one">孩乐宝官方旗舰店</span>
+                <i class="comm-d-shopgo right"></i>
+            </a>
+            <div class="comm-d-czbut white bg-white thirty text-center position-fix clearfix">
+                <span class="left">加入收藏</span>
+                <em class="left">立即购买</em>
+            </div>
+            <!-- 立即购买弹窗 -->
+            <div class="comm-d-alebg position-fix none">
+                <div class="comm-d-ale bg-white position-abs">
+                    <h2 class="thirty-six weight-bold">温馨提示</h2>
+                    <p id="comm-d-copycon" class="comm-d-copycon thirty">点击复制按钮进行复制后，打开手机淘宝APP下单即可</p>
+                    <span id="comm-d-copybut" class="comm-d-copybut block text-center white thirty-six">复制链接</span>
+                </div>
+            </div>
+            <!-- 渐隐弹窗 -->
+            <div class="fadealert text-center white position-fix none"></div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 头部大图滚动
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay: 5000,//可选选项，自动滑动
+                autoplayDisableOnInteraction : false,
+
+                // 如果需要分页器
+                pagination : '.swiper-pagination'
+            })
+
+            // 点击加入收藏，弹出收藏成功渐隐弹窗
+            $(".comm-d-czbut span").click(function (e) {
+                $(".fadealert").html("收藏成功，快去购买哦亲~");
+                $(".fadealert").fadeIn(500, function () {
+                    // 弹窗提示淡出
+                    $(this).fadeOut(2500);
+                })
+            });
+            // 点击立即购买
+            $(".comm-d-czbut em").click(function (e) {
+                $(".comm-d-alebg").removeClass("none");
+            });
+            // 点击空白部分隐藏弹窗
+            freeBlank(".comm-d-alebg", ".comm-d-ale", "none");
+
+            // 复制功能
+            function copyArticle(event){
+                const range = document.createRange();
+                range.selectNode(document.getElementById('comm-d-copycon'));
+
+                const selection = window.getSelection();
+                if(selection.rangeCount > 0) selection.removeAllRanges();
+                selection.addRange(range);
+                
+                document.execCommand('copy');
+
+                $(".comm-d-alebg").addClass("none");
+                // 复制成功弹出渐隐弹窗
+                $(".fadealert").html("复制成功");
+                $(".fadealert").fadeIn(500, function () {
+                    // 弹窗提示淡出
+                    $(this).fadeOut(2500);
+                })
+            }
+            document.getElementById('comm-d-copybut').addEventListener('click', copyArticle, false);
+
+            // 距离结束时间
+            // 从服务端获取一个距离结束的倒计时时间
+            var times = 5000; // 这里先临时定个时间，单位为秒
+            function timeOperate (timeEve, showTime, eqNum, wordCon) {
+                var hour = parseInt(timeEve / 3600),
+                    minute = parseInt(timeEve / 60 % 60),
+                    second = timeEve % 60;
+                $(showTime).eq(eqNum).html(wordCon + hour + ":" + minute + ":" + second);
+            }
+            timeOperate(times, ".comm-d-time", 0, "距结束");
+
+            // 倒计时处理函数
+            function countDown (timeEve, showTime, eqNum, wordCon, endCon, deleteFun) {
+                setTimeout(timeDown, 1000);
+                function timeDown() {
+                    if (timeEve > 0) {
+                        timeEve--;
+                        timeOperate(timeEve, showTime, eqNum, wordCon);
+                        setTimeout(timeDown, 1000);
+                    } else {
+                        // clearInterval(timeDown);
+                        $(showTime).eq(eqNum).html(endCon);
+                        // 秒杀结束，此处应从新从服务端获取新的数据，新的倒计时且重新开始倒计时，并删除旧数据
+                        // console.log(timeEve);
+
+                        // 当时间为0时，删除该条信息
+                        deleteFun(eqNum);
+                    }
+                }
+            }
+            countDown(times, ".comm-d-time", 0, "距结束", "距结束：00:00:00");
+        </script>
+    </body>
+</html>

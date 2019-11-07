@@ -1,0 +1,22 @@
+<!--pages/index/index.wxml-->
+<!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<!-- <nav-bar navbar-data='{{nvabarData}}'></nav-bar> -->
+<view class="index-wrap">
+  <view class="index-list">
+    <block wx:for="{{ anchorList }}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
+      <view class="index-item" bindtap='clickAnchor' data-fuuid="{{ items.f_uuid }}">
+        <view class="index-anchorpic">
+          <image mode="aspectFill" src="{{ imgheadUrl + '/' + items.anchor_cover }}"></image>
+          <view wx:if="{{ items.anchor_state }}" class="index-zbiocn"></view>
+        </view>
+        <view class="index-anchorname">
+          <view class="index-andel">{{ items.nickname }}</view>
+          <view class="index-peonums">{{ items.watch_count }}人</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{ !isCanPullUp }}" class="index-foottip text-center">我是有底线的</view>
+  <!-- 授权微信用户信息 -->
+  <get-userinfo id="getuserinfo" wx:if="{{!hasUserInfo && canIUse}}" class="logs-warrant position-fix" bind:userinfos="getuserinfo"></get-userinfo>
+</view>

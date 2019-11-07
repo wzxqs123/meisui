@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>登陆</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style type="text/css">
+            html {
+                background: url("images/login-bg.jpg") no-repeat 0 0;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <img class="block login-img" src="images/logo.png" alt="" />
+        <form action="" class="login-form">
+            <div>
+                <label class="block g-three login-num">手机号：<input class="white-color" type="text" placeholder="请输入手机号" /></label>
+            </div>
+            <div class="position-rel">
+                <label class="block g-three login-num">验证码：<input class="white-color" type="text" /></label>
+                <span class="position-abs bg-color-five login-color text-center login-code">发送验证码</span>
+            </div>
+            <p class="g-two twenty-six login-text">免注册，直接用手机号就能登陆</p>
+            <button class="bg-color-two white-color login-but" type="submit">登陆</button>
+        </form>
+        <a class="position-abs white-color login-close" href="javascript:history.go(-1)">x</a>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/style.js" type="text/javascript"></script>
+    </body>
+</html>

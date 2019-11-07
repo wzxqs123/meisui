@@ -1,0 +1,6 @@
+<!--component/get-userinfo.wxml-->
+<!-- 授权微信用户信息 -->
+<view class="logs-warrantcon">
+  <image src='https://wechatpay.pod.meisuizhibo.com/logs-logo.png' mode='widthFix' class='block'></image>
+  <button class='logs-infobut' type="default" open-type="getUserInfo" bindgetuserinfo="getuserinfo" hover-class="none" plain="true" type="primary">授权微信用户信息</button>
+</view>

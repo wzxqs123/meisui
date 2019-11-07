@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>收藏</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #f0f0f0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="collec-wrap position-rel">
+            <!-- 标题部分 -->
+            <div class="headtit bg-white clearfix none">
+                <h2 class="thirty-four text-center">收藏</h2>
+                <a href="javascript:history.go(-1)" class="left"></a>
+            </div>
+
+            <div class="collec-head clearfix">
+                <div class="collec-admin thirty-six white text-center right">管理</div>
+            </div>
+            <!-- 收藏夹为空时 -->
+            <div class="collec-main">
+                <ul class="collec-list bg-white clearfix">
+                    <li class="collec-item left position-rel">
+                        <a class="block" href="">
+                            <img class="collec-pics block img" src="images/demoimages/pic3.png" alt="" />
+                            <p class="collec-shoptit b-one twenty">Anna SUI安娜苏独角兽Fantasia爱情魔法旋木香水EDT50ml/75ml</p>
+                            <div class="collec-source clearfix">
+                                <span class="twenty six left">来源：淘宝网</span>
+                                <img class="left" src="images/demoimages/pic4.png" alt="" />
+                            </div>
+                            <div class="collec-money clearfix">
+                                <span class="collec-xz left">¥398~558</span>
+                                <em class="collec-yz six twenty-six right">¥798</em>
+                            </div>
+                        </a>
+                        <div class="collec-check position-abs clearfix none">
+                            <span class="collec-nosel right"></span>
+                        </div>
+                    </li>
+                    <li class="collec-item left position-rel">
+                        <a class="block" href="">
+                            <img class="collec-pics block img" src="images/demoimages/pic3.png" alt="" />
+                            <p class="collec-shoptit b-one twenty">Anna SUI安娜苏独角兽Fantasia爱情魔法旋木香水EDT50ml/75ml</p>
+                            <div class="collec-source clearfix">
+                                <span class="twenty six left">来源：淘宝网</span>
+                                <img class="left" src="images/demoimages/pic4.png" alt="" />
+                            </div>
+                            <div class="collec-money clearfix">
+                                <span class="collec-xz left">¥398~558</span>
+                                <em class="collec-yz six twenty-six right">¥798</em>
+                            </div>
+                        </a>
+                        <div class="collec-check position-abs clearfix none">
+                            <span class="collec-nosel right"></span>
+                        </div>
+                    </li>
+                    <li class="collec-item left position-rel">
+                        <a class="block" href="">
+                            <img class="collec-pics block img" src="images/demoimages/pic3.png" alt="" />
+                            <p class="collec-shoptit b-one twenty">Anna SUI安娜苏独角兽Fantasia爱情魔法旋木香水EDT50ml/75ml</p>
+                            <div class="collec-source clearfix">
+                                <span class="twenty six left">来源：淘宝网</span>
+                                <img class="left" src="images/demoimages/pic4.png" alt="" />
+                            </div>
+                            <div class="collec-money clearfix">
+                                <span class="collec-xz left">¥398~558</span>
+                                <em class="collec-yz six twenty-six right">¥798</em>
+                            </div>
+                        </a>
+                        <div class="collec-check position-abs clearfix none">
+                            <span class="collec-nosel right"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 取消关注按钮栏 -->
+            <div class="collec-fix bg-white position-fix none">
+                <!-- 全部选中为collec-allsel，否则为collec-noallsel -->
+                <span class="collec-all collec-noallsel left"></span>
+                <em class="left">全选</em>
+                <div class="collec-cancel text-center white right">取消关注</div>
+            </div>
+            <!-- 渐隐弹窗 -->
+            <div class="fadealert text-center white position-fix none">取消收藏成功！</div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // 判断是否有子项(li)，没有则删除白边
+            function itemNum () {
+                var liNum = $(".collec-item").size();
+                if (liNum == 0) {
+                    $(".collec-list").css({
+                        "padding": "0 2% 0"
+                    })
+                } else {
+                    $(".collec-list").css({
+                        "padding": "0 2% 0.71rem"
+                    })
+                }
+            }
+            itemNum()
+
+            $(".collec-admin").click(function () {
+                $(".collec-check").removeClass("none");
+                $(".collec-fix").removeClass("none");
+            });
+            $(".collec-check").click(function(event) {
+                var checkAll = $(".collec-all");
+                var _thisChildren = $(this).children("span");
+                if (_thisChildren.hasClass("collec-nosel")) {
+                    // 选中当前选项
+                    _thisChildren.removeClass("collec-nosel");
+                    _thisChildren.addClass("collec-sel");
+                    // 判断是否所有选项都已经打钩了
+                    var checkNum = $(".collec-check span").size(),
+                        selNum = $(".collec-sel").size();
+                    if (selNum == checkNum) {
+                        checkAll.removeClass("collec-noallsel");
+                        checkAll.addClass("collec-allsel");
+                    }
+                } else {
+                    // 取消当前选项打钩按钮
+                    _thisChildren.removeClass("collec-sel");
+                    _thisChildren.addClass("collec-nosel");
+                    // 取消全选打钩按钮
+                    checkAll.removeClass("collec-allsel");
+                    checkAll.addClass("collec-noallsel");
+                }
+            });
+            $(".collec-all").click(function (e) {
+                var checkNum = $(".collec-check span").size(), // 一共有多少个子项
+                    selNum = $(".collec-sel").size(); // 当前一共选中了几个子项
+                if (selNum == checkNum) {
+                    $(".collec-all").removeClass("collec-allsel");
+                    $(".collec-all").addClass("collec-noallsel");
+                    $(".collec-check span").removeClass("collec-sel");
+                    $(".collec-check span").addClass("collec-nosel");
+                } else {
+                    $(".collec-all").removeClass("collec-noallsel");
+                    $(".collec-all").addClass("collec-allsel");
+                    $(".collec-check span").removeClass("collec-nosel");
+                    $(".collec-check span").addClass("collec-sel");
+                }
+            });
+            // 点击取消关注
+            $(".collec-cancel").click(function (e) {
+                var selNum = $(".collec-sel").size();
+                if (!selNum == 0) {
+                    // 删除所有选择项
+                    $(".collec-sel").parent().parent().remove();
+
+                    $(".fadealert").fadeIn(500, function () {
+                        // 弹窗提示淡出
+                        $(this).fadeOut(2500);
+                    })
+                    
+                }
+                // 隐藏选择按钮
+                $(".collec-check").addClass("none");
+                $(".collec-fix").addClass("none");
+                // 判断是否还有子项(li)，没有则删除白边
+                itemNum();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>七夕获奖记录</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="http://img1.szdc666.com/swiper.3.1.7.min.css">
+        <link rel="stylesheet" type="text/css" href="http://img1.szdc666.com/activitys.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                background-color: #4b489d;
+            }
+            @font-face {
+                font-family: "hwlb";
+                src: url("font/hwlb/hwlb.eot"); /* IE9 */
+                src: url("font/hwlb/hwlb.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+                
+                url("font/hwlb/hwlb.woff") format("woff"), /* chrome、firefox */
+                url("font/hwlb/hwlb.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+                
+                url("font/hwlb/hwlb.svg#hwlb") format("svg"); /* iOS 4.1- */
+                font-style: normal;
+                font-weight: normal;
+            }
+            input::-webkit-input-placeholder { /* WebKit browsers */
+                color: #979799;
+            }
+            input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: #979799;
+            }
+            input::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: #979799;
+            }
+            input:-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: #979799;
+            }
+            .sevens-r-error::-webkit-input-placeholder { /* WebKit browsers */
+                color: #f00;
+            }
+            .sevens-r-error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: #f00;
+            }
+            .sevens-r-error::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: #f00;
+            }
+            .sevens-r-error:-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: #f00;
+            }
+            .sevens-r-wrap .none {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sevens-r-wrap position-rel">
+            <a href="javascript:history.go(-1)" class="sevens-r-return block"></a>
+            <div class="sevens-r-giftsec">
+                <div class="seventh-s-gifttit weight-bold text-center">获奖记录</div>
+                <div class="sevens-r-mygift">
+                    <ul class="sevens-r-giftlist">
+                        <!-- <li class="sevens-r-giftitem thirty white">
+                            <span class="text-center">1</span>
+                            <div>iPhone XS Max</div>
+                        </li> -->
+                    </ul>
+                    <div class="sevens-r-emptytip text-center white thirty-two none">请送喜鹊换取牛郎织女谢礼~</div>
+                </div>
+            </div>
+            <div class="sevens-r-form">
+                <div class="seventh-s-gifttit weight-bold text-center">收货地址</div>
+                <form action="" class="sevens-r-formcon">
+                    <p class="sevens-r-tip white thirty">请填写收货地址:<br>(获得实体奖励情况下填写)</p>
+                    <div class="sevens-r-userid twenty-six white">美岁ID：<span>12345678</span></div>
+                    <div class="sevens-r-formitem twenty-six">
+                        <label for="sevens-r-username" class="white">*收件人:</label>
+                        <input id="sevens-r-username" class="sevens-r-username" type="text" placeholder="请输入收件人姓名（必填）" />
+                    </div>
+                    <div class="sevens-r-formitem twenty-six">
+                        <label for="sevens-r-address" class="white">*收货地址:</label>
+                        <input id="sevens-r-address" class="sevens-r-address" type="text" placeholder="请输入收货地址（必填）" />
+                    </div>
+                    <div class="sevens-r-formitem twenty-six">
+                        <label for="sevens-r-phone" class="white">*联系方式:</label>
+                        <input id="sevens-r-phone" class="sevens-r-phone" type="number" placeholder="请输入手机号码（必填）" />
+                    </div>
+                    <div class="sevens-r-formitem twenty-six">
+                        <label for="sevens-r-wechat" class="white">微信:</label>
+                        <input id="sevens-r-wechat" class="sevens-r-wechat" type="text" placeholder="请输入微信号" />
+                    </div>
+                    <div class="sevens-r-formitem twenty-six">
+                        <label for="sevens-r-qq" class="white">QQ:</label>
+                        <input id="sevens-r-qq" class="sevens-r-qq" type="text" placeholder="请输入QQ号" />
+                    </div>
+                    <div class="sevens-r-formitem twenty-six">
+                        <label for="sevens-r-remarks" class="white">备注:</label>
+                        <input id="sevens-r-remarks" class="sevens-r-remarks" type="text" placeholder="请输入你想说的" />
+                    </div>
+                    <button class="sevens-r-formbut block weight-bold seventh-s-violet" type="button">提交</button>
+                </form>
+            </div>
+            <!-- 确认提示弹窗 -->
+            <div class="seventh-s-qrale position-fix none">
+                <div class="seventh-s-qr">
+                    <div class="seventh-s-qrcon white twenty-six text-center">提交成功，如获得实体奖励，<br />客服将会与活动结束后3个工作日内联系您</div>
+                    <div class="seventh-s-tiptrue text-center weight-bold">
+                        <span class="seventh-s-confirm seventh-s-violet">确认</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 渐隐弹窗 -->
+            <div class="seventh-s-fadealert text-center thirty white position-fix none"></div>
+        </div>
+        <script src="http://img1.szdc666.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="http://img1.szdc666.com/swiper.3.1.7.jquery.min.js" type="text/javascript"></script>
+        <script src="http://img1.szdc666.com/index.js" type="text/javascript"></script>
+        <script>
+            var serverUrl = "http://192.168.2.14:8083/qixi";
+            // 获取url中的token
+            function getParameter(param) {
+                var query = window.location.search; // 获取URL地址中？后的所有字符  
+                var iLen = param.length; // 获取你的参数名称长度  
+                var iStart = query.indexOf(param); // 获取你该参数名称的其实索引  
+                if(iStart == -1) // -1为没有该参数  
+                    return "";
+                iStart += iLen + 1;
+                var iEnd = query.indexOf("&", iStart); // 获取第二个参数的其实索引  
+                if(iEnd == -1) // 只有一个参数  
+                    return query.substring(iStart); // 获取单个参数的参数值  
+                return query.substring(iStart, iEnd); // 获取第二个参数的值  
+            }
+            var pageUrlToken = getParameter("t");
+            console.log(pageUrlToken)
+            $.ajax({
+                url: serverUrl + "/getList",
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    t: pageUrlToken
+                },
+                success: function (data) {
+                    console.log(data);
+                    var sign = data.sign;
+                    if (sign == 1) {
+                        var prizeList = data.d.list;
+                        var listCon = "";
+                        if(prizeList.length == 0) {
+                            $(".sevens-r-giftlist").addClass("none");
+                            $(".sevens-r-emptytip").removeClass("none");
+                        } else {
+                            $(".sevens-r-giftlist").removeClass("none");
+                            $(".sevens-r-emptytip").addClass("none");
+                            for (var i = 0; i < prizeList.length; i++) {
+                                listCon += '<li class="sevens-r-giftitem thirty white"><span class="text-center">' + (i + 1) + '</span><div>' + prizeList[i] + '</div></li>'
+                            };
+                            $(".sevens-r-giftlist").empty(""); // 清空奖品列表
+                            $(".sevens-r-giftlist").append(listCon);
+                        }
+                    } else if(sign == 0) {
+                        $(".seventh-s-fadealert").html("系统忙");
+                        $(".seventh-s-fadealert").fadeIn(300, function() {
+                            $(".seventh-s-fadealert").fadeOut(2800);
+                        });
+                        $(".seventh-s-zjale").addClass("none");
+                        $(".seventh-s-qrale").removeClass("none");
+                    }
+                }
+            })
+            
+
+            var formFocus = [0, 0, 0];
+            var sxaAir = /^[\s]*$/;
+            $(".sevens-r-username").blur(function (e) {
+                var shPeople = $(this).val();
+                if (sxaAir.test(shPeople)) {
+                    $(this).val("");
+                    $(this).addClass("sevens-r-error");
+                    $(this).attr({
+                        "placeholder" : "收件人姓名不能为空"
+                    });
+                    formFocus[0] = 0;
+                } else {
+                    $(this).attr({
+                        "placeholder" : "请输入收件人姓名（必填）"
+                    });
+                    $(this).removeClass("sevens-r-error");
+                    formFocus[0] = 1;
+                }
+            });
+            $(".sevens-r-address").blur(function (e) {
+                var sxAddress = $(this).val();
+                if (sxaAir.test(sxAddress)) {
+                    $(this).val("");
+                    $(this).addClass("sevens-r-error");
+                    $(this).attr({
+                        "placeholder" : "收货地址不能为空"
+                    });
+                    formFocus[1] = 0;
+                } else {
+                    $(this).attr({
+                        "placeholder" : "请输入收货地址（必填）"
+                    });
+                    $(this).removeClass("sevens-r-error");
+                    formFocus[1] = 1;
+                }
+            });
+            $(".sevens-r-phone").blur(function (e) {
+                var shIphone = $(this).val();
+                if (phoneReg.test(shIphone)) {
+                    $(this).attr({
+                        "placeholder" : "请输入手机号码（必填）"
+                    });
+                    $(this).removeClass("sevens-r-error");
+                    formFocus[2] = 1;
+                } else {
+                    $(this).val("");
+                    $(this).addClass("sevens-r-error");
+                    $(this).attr({
+                        "placeholder" : "请输入正确的手机号"
+                    });
+                    formFocus[2] = 0;
+                }
+            });
+            // 点击提交
+            $(".sevens-r-formbut").click(function (e) {
+                $(".sevens-r-username").blur();
+                $(".sevens-r-address").blur();
+                $(".sevens-r-phone").blur();
+                $(".sevens-r-wechat").blur();
+                $(".sevens-r-qq").blur();
+                $(".sevens-r-remarks").blur();
+                // 阻止表单提交的默认事件
+                e.preventDefault();
+                var formSum = 0;
+                for (var i = 0; i < formFocus.length; i++) {
+                    formSum += formFocus[i];
+                };
+                if (formSum == formFocus.length) {
+                    var userId = $(".sevens-r-userid span").html();
+                    var username = $(".sevens-r-username").val();
+                    var address = $(".sevens-r-address").val();
+                    var phone = $(".sevens-r-phone").val();
+                    var wechat = $(".sevens-r-wechat").val();
+                    var qq = $(".sevens-r-qq").val();
+                    var remarks = $(".sevens-r-remarks").val();
+                    console.log(userId, username, address, phone, wechat, qq, remarks);
+                    // 此处提交表单信息给服务端
+                    $(".seventh-s-qrale").removeClass("none");
+                    $("input").val(""); // 提交成功后将表单内容全部清空
+                }
+            });
+
+            // 关闭弹窗
+            function closeAlert (closeBut, alertPage, noneEve) {
+                $(closeBut).click(function (e) {
+                    $(alertPage).addClass(noneEve);
+                    relievescroll; // 解除锁定
+                })
+            }
+            closeAlert(".seventh-s-confirm", ".seventh-s-qrale", "none");
+            // 点击空白部分隐藏内容
+            freeBlank(".seventh-s-qrale", ".seventh-s-qr", "none");
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,232 @@
+@charset "utf8";
+/* CSS reset */
+html{max-width: 750px;width: 100%;height: 100%;background-color: #f0f0f0;color: #000;font-family:Arial,'Microsoft YaHei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong{padding:0;margin:0;font-family:Arial,'Microsoft YaHei';}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+a{text-decoration:none; color:#29738f; outline:none;}/*此处待添加默认链接颜色*/
+var,em,strong{font-style:normal;}
+address,caption,cite,code,dfn,em,strong,th,var, optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:center;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit; font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+/*去除高亮*/
+a {-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/*清除苹果默认按钮样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+textarea { -webkit-appearance: none;}
+
+/*去除type="number"自带的默认样式*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+/*显示*/
+.block {
+    display: block;
+}
+/*隐藏*/
+.none {
+    display: none;
+}
+/*文字居中*/
+.text-center {
+    text-align: center;
+}
+/*相对定位*/
+.position-rel {
+    position: relative;
+}
+/*绝对定位*/
+.position-abs {
+    position: absolute;
+}
+.position-fix {
+    position: fixed;
+}
+/*加粗*/
+.weight-bold {
+    font-weight: bold;
+}
+.img {
+    width: 100%;
+}
+.bg-white {
+    background-color: #fff;
+}
+.b-one {
+    color: #000;
+}
+.white {
+    color: #fff;
+}
+.red {
+    color: #f00;
+}
+.ccc {
+    color: #ccc;
+}
+.three {
+    color: #333;
+}
+.six {
+    color: #666;
+}
+.nice {
+    color: #999;
+}
+/*24px字体*/
+.twenty-four {
+    font-size: 0.86rem;
+}
+/*26px字体*/
+.twenty-six {
+    font-size: 0.94rem;
+}
+/*30px字体*/
+.thirty {
+    font-size: 1.06rem;
+}
+/*32px字体*/
+.thirty-two {
+    font-size: 1.14rem;
+}
+/*移动端首页*/
+.index-wrap {
+  padding-bottom: 3.39rem;
+}
+.index-head {
+  margin-bottom: 2.14rem;
+}
+.index-picshow {
+  padding: 0 3.34%;
+  margin-bottom: 2.86rem;
+}
+.index-picshow .index-slide {
+  width: 42.85%;
+  height: 23.21rem;
+  margin: 0 1.43% 0 0;
+}
+.index-load {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 12.67%;
+  margin-bottom: 2.86rem;
+}
+.index-loadleft {
+  width: 60.8%;
+}
+.index-loadleft a {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 2.86rem;
+  padding: 0 0 0 17.6%;
+  background-color: #ff9d2d;
+  border-radius: 1.43rem;
+  box-shadow: 0 0.18rem 0.36rem 0 rgba(255, 157, 45, 0.7);
+}
+.index-loadios {
+  margin-bottom: 1.43rem;
+}
+.index-loadios i {
+  width: 1.5rem;
+  height: 1.79rem;
+  margin-right: 1.43rem;
+  background: url("../images/index-loadios.png") center center no-repeat;
+  background-size: contain;
+}
+.index-loadani i {
+  width: 1.57rem;
+  height: 1.79rem;
+  margin-right: 1.36rem;
+  background: url("../images/index-loadani.png") center center no-repeat;
+  background-size: contain;
+}
+.index-loadright {
+  width: 24.6%;
+  height: 6.6rem;
+  padding: 0.54rem 2.7% 0 2.7%;
+  background-color: #ff9d2d;
+  border-radius: 0.36rem;
+}
+.index-loadright span {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 1.68rem;
+  line-height: 1.68rem;
+}
+.index-operating, 
+.index-service, 
+.index-aboutus {
+  width: 77.34%;
+  height: 10.93rem;
+  padding: 3.57rem 8% 1.79rem 8%;
+}
+.index-operating {
+  margin: 0 auto 2.86rem;
+  background: url("../images/index-operating.png") center center no-repeat;
+  background-size: contain;
+}
+.index-operattit {
+  width: 51.9%;
+  padding-top: 2rem;
+  margin: 0 auto 1.5rem;
+}
+.index-operatcon li, 
+.index-servicecon li {
+  height: 1.71rem;
+  line-height: 1.71rem;
+}
+.index-service {
+  margin: 0 auto 0;
+  background: url("../images/index-service.png") center center no-repeat;
+  background-size: contain;
+}
+.index-servicetit {
+  width: 39.15%;
+  padding-top: 1rem;
+  margin: 0 auto 0.93rem;
+}
+.index-aboutus {
+  margin: 0 auto 2.86rem;
+  background: url("../images/index-service.png") center center no-repeat;
+  background-size: contain;
+}
+.index-aboutustit {
+  width: 26.21%;
+  padding-top: 1rem;
+  margin: 0 auto 1rem;
+}
+.index-aboutuscon {
+  width: 86%;
+  margin: 0 auto;
+}
+.index-aboutuscon li {
+  line-height: 1.5rem;
+}

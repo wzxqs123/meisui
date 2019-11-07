@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>canvas</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <style type="text/css">
+            .wrap {
+                width: 600px;
+                height: 300px;
+                margin: 0 auto;   
+            }
+            .wrap canvas {
+                border: 1px solid #999;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <canvas width="600" height="300">
+            您的浏览器不支持canvas！
+            </canvas> 
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var testCanvas = $("canvas")[0];
+            var context = testCanvas.getContext("2d");
+
+            context.beginPath();
+            // 线条宽度
+            context.lineWidth = "3";
+            context.strokeStyle = "red";
+            context.moveTo(50, 50);
+            context.lineTo(50, 250);
+            context.lineTo(150, 250);
+            context.lineTo(150, 50);
+            context.lineTo(50, 50);
+            context.stroke();
+            context.closePath();
+            // 闭合在实现绘制 该图像左上角出现不重合线性
+            
+            // 中间那条线
+            context.beginPath();
+            context.strokeStyle = "green";
+            context.moveTo(50, 150);
+            context.lineTo(150, 150);
+            context.stroke();
+            context.closePath();
+
+            // 右边的矩形
+            context.beginPath();
+            context.strokeStyle = "blue";
+            context.fillStyle = "skyblue";
+            context.moveTo(300, 50);
+            context.lineTo(300, 250);
+            context.lineTo(550, 250);
+            context.lineTo(550, 50);
+            context.lineTo(300, 50);
+            context.fill();
+            context.closePath();
+
+            var txt = "HTML5学堂";
+            context.textAlign = "start";
+            context.textBaseline = "middle";
+            context.font = "30px Microsoft YaHei";
+            context.fillText(txt, 224, 100);
+            context.strokeText(txt, 224, 200);
+
+            context.beginPath();
+            // 线条宽度
+            context.lineWidth = "10";
+            // 设置线条末端线帽的样式
+            context.lineCap = "round";
+            // 作参考线
+            context.moveTo(224, 50);
+            context.lineTo(224, 250);
+            context.moveTo(160, 100);
+            context.lineTo(290, 100);
+            context.stroke();
+            context.closePath();
+        </script>
+    </body>
+</html>

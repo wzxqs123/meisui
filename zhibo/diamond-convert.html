@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>钻石兑换</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            html, body {
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="diamond-c-wrap position-rel">
+            <div class="diamond-c-head thirty six">
+                <p class="diamond-c-username">账户：<span>会飞的猫</span></p>
+                <div class="diamond-c-charm block">本周获得魅力值：<span>3986730</span></div>
+            </div>
+            <div class="diamond-c-sec">
+                <p class="diamond-c-sectit weight-bold thirty three">请选择兑换钻石数量</p>
+                <ul class="diamond-c-list">
+                    <li class="diamond-c-item diamond-c-itemsel position-rel">
+                        <i></i>
+                        <div class="thirty three">3900</div>
+                        <span class="position-abs"></span>
+                    </li>
+                    <li class="diamond-c-item position-rel">
+                        <i></i>
+                        <div class="thirty three">9900</div>
+                        <span class="position-abs"></span>
+                    </li>
+                    <li class="diamond-c-item position-rel">
+                        <em class="diamond-c-recom white position-abs">推荐</em>
+                        <i></i>
+                        <div class="thirty three">29800</div>
+                        <span class="position-abs"></span>
+                    </li>
+                    <li class="diamond-c-item position-rel">
+                        <i></i>
+                        <div class="thirty three">49800</div>
+                        <span class="position-abs"></span>
+                    </li>
+                    <li class="diamond-c-item position-rel">
+                        <i></i>
+                        <div class="thirty three">99800</div>
+                        <span class="position-abs"></span>
+                    </li>
+                    <li class="diamond-c-item position-rel">
+                        <i></i>
+                        <div class="thirty three">299800</div>
+                        <span class="position-abs"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="diamond-c-consume">
+                <div class="diamond-c-conscon text-center twenty-six three">消耗：<span class="weight-bold">3900</span>魅力值</div>
+                <div class="diamond-c-but white thirty">确认兑换</div>
+            </div>
+            <div class="diamond-c-foot twenty-four nine text-center position-fix">温馨提示：每周末24点前如果未将魅力值兑换成<br />钻石，系统将自动把您的魅力值结算成佣金。</div>
+            <!-- 弹窗 -->
+            <div class="diamond-c-alertbg position-fix diamond-c-none">
+                <div class="diamond-c-alert">
+                    <p class="diamond-c-alertcon text-center thirty-two"></p>
+                    <div class="diamond-c-alertbut text-center">确认</div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(".diamond-c-list").on("click", ".diamond-c-item", function (e) {
+                $(this).addClass("diamond-c-itemsel");
+                $(this).siblings(".diamond-c-itemsel").removeClass("diamond-c-itemsel");
+                var thisMoney = $(this).children("div").html();
+                $(".diamond-c-conscon span").html(thisMoney);
+            })
+
+            var isCanClick = false; // 定义一个变量，活动未开始时为false，开始时为true，此处可以由服务端定义
+            // 点击确认兑换
+            $(".diamond-c-but").click(function (e) {
+                if (isCanClick) {
+                    var userName = $(".diamond-c-username span").html(); // 获取用户的昵称
+                    var charmNum = parseInt($(".diamond-c-charm span").html()); // 获取用户本周获得魅力值
+                    var diamondNum = parseInt($(".diamond-c-conscon span").html()); // 当前需要消耗的魅力值即所需充值的钻石数
+                    if (charmNum >= diamondNum) {
+                        $.ajax({
+                            url: '',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: {
+                                param1: 'value1'
+                            },
+                            success: function (data) {
+                                var postBool = 1; // 假设请求成功
+                                if (postBool) {
+                                    $(".diamond-c-charm span").html(charmNum - diamondNum); // 充值成功后扣除本周获得魅力值
+
+                                    $(".diamond-c-alertcon").html("您已成功兑换钻石");
+                                    $(".diamond-c-alertbg").removeClass("diamond-c-none");
+                                }
+                            }
+                        })
+                    } else {
+                        $(".diamond-c-alertcon").html("您的魅力值不足兑换当前钻石数量");
+                        $(".diamond-c-alertbg").removeClass("diamond-c-none");
+                    }
+                } else {
+                    $(".diamond-c-alertcon").html("兑换暂未开放，敬请期待！");
+                    $(".diamond-c-alertbg").removeClass("diamond-c-none");
+                }
+            });
+            
+            // 关闭弹窗
+            $(".diamond-c-alertbut").click(function (e) {
+                $(".diamond-c-alertbg").addClass("diamond-c-none");
+            })
+            // 点击空白部分隐藏内容
+            freeBlank(".diamond-c-alertbg", ".diamond-c-alert", "diamond-c-none");
+        </script>
+    </body>
+</html>

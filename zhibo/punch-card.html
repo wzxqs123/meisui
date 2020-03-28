@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>美岁打卡图鉴，迎金鸡游厦门</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/activitys.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                background: #0f1955;
+            }
+            .punch-c-wrap .none {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="punch-c-wrap position-rel">
+            <div class="punch-c-head">
+                <img class="block img" src="images/demoimages/pic186_2.png" alt="" />
+            </div>
+            <div class="punch-c-play position-rel">
+                <!-- poster为视频封面 -->
+                <video id="punch-c-playvideo" class="punch-c-playvideo block" poster="images/demoimages/pic184.png" playsinline="true" webkit-playsinline="true">
+                    <source type="video/mp4" src="media/meisuixc.mp4">
+                </video>
+                <span class="punch-c-playbut position-abs"></span>
+                <strong class="punch-c-vrate position-abs block">
+                    <em class="block"></em>
+                </strong>
+            </div>
+            <div class="punch-c-word jinj-ycolor thirty-two">
+                <p>厦门喜迎金鸡来临</p>
+                <p>为迎接来自各地的朋友们</p>
+                <p>美岁直播现联合厦门线下商家</p>
+                <p>推出超多优惠！</p>
+                <p>现在厦门各街道均可寻找</p>
+                <p>美岁用户指定优惠门店～</p>
+                <p>打卡多家还能获得额外惊喜</p>
+                <p>快去打卡吧!</p>
+            </div>
+            <div class="punch-c-rule">
+                <h2 class="jinj-ycolor text-center weight-bold">活动规则</h2>
+                <ul class="punch-c-rulelist thirty white">
+                    <li>1、扫描线下门店内指定二维码进行打卡，打卡成功可获得店家特供奖励。</li>
+                    <li>2、打卡成功需及时向店员展示获奖页面以此兑换奖励，请勿随意关闭打卡成功页面。</li>
+                    <li>3、每累计打卡10家线下门店可获得“美岁直播影迷嘉年华千人网红盛典门票1张”，至多可获得3张。</li>
+                </ul>
+            </div>
+            <div class="punch-c-spshow">
+                <h2 class="jinj-ycolor text-center weight-bold">合作优惠商家</h2>
+                <ul class="punch-c-splist">
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <img class="block" src="images/demoimages/pic48.png" alt="" />
+                    </li>
+                    <li class="punch-c-spitem">
+                        <span class="jinj-ycolor">持续更新中...<br />更多优惠请前往<br />美岁APP进行领取</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 分享底部下载栏 -->
+            <div class="jinj-share position-fix">
+                <img class="block" src="images/demoimages/ms-logo-ji.png" alt="" />
+                <div class="white">
+                    <h3 class="twenty-six">美岁直播</h3>
+                    <p>看最精彩的直播，聊最开心的话题！</p>
+                </div>
+                <a class="block white" href="https://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live">点击下载</a>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script>
+            // 视频 
+            function pubVids (pubEve, strEve, vidEve, spanEve, noneEve) {
+                var pubVid = $(vidEve)[0];
+                var progress = $(strEve)
+                $(pubEve).click(function() {
+                    if ($(spanEve).hasClass(noneEve)) {
+                        pubVid.pause();
+                        $(spanEve).removeClass(noneEve);
+                    } else {
+                        pubVid.play();
+                        $(spanEve).addClass(noneEve);
+                    }
+                })
+                // 进度条功能实现
+                pubVid.addEventListener("timeupdate", showTime);
+                function showTime() {
+                    progress.children().css({
+                        "width": pubVid.currentTime / pubVid.duration * 100 + "%"
+                    })
+                    if ((pubVid.currentTime / pubVid.duration * 100) >= 100) {
+                        pubVid.currentTime = 0;
+                        pubVid.pause();
+                        $(spanEve).removeClass(noneEve);
+                    }
+                }
+                // 监听视频是否已经暂停
+                pubVid.addEventListener("pause", pauseMonitor);
+                function pauseMonitor () {
+                    $(spanEve).removeClass(noneEve);
+                }
+                // 监听视频是否已经播放
+                pubVid.addEventListener("play", playMonitor);
+                function playMonitor () {
+                    $(spanEve).addClass(noneEve);
+                }
+            }
+            pubVids(".punch-c-play", ".punch-c-vrate", ".punch-c-playvideo", ".punch-c-playbut", "none")
+        </script>
+    </body>
+</html>

@@ -9493,9 +9493,9 @@ mark.white {
   color: #c4aa80;
 }
 .jinj-wrap {
-  min-height: 224.71rem;
+  min-height: 171.14rem;
   padding: 24.29rem 0 0 0;
-  background: url("../images/jinj-wrapbg_2.png") center 0 no-repeat;
+  background: url("../images/jinj-wrapbg_4.png") center 0 no-repeat;
   background-size: 100%;
 }
 .jinj-times {
@@ -9805,9 +9805,15 @@ mark.white {
   background: url("../images/jinj-prizedelbg_2.png") center center no-repeat;
   background-size: contain;
 }
+.jinj-prizedeltwo {
+  height: 28.93rem;
+  background: url("../images/jinj-prizedeltwo.png") center center no-repeat;
+  background-size: contain;
+}
 .jinj-prizeone, 
 .jinj-prizetwo, 
-.jinj-prizethree {
+.jinj-prizethree, 
+.jinj-prizefive {
   margin: 0 auto;
 }
 .jinj-prizeone {
@@ -9819,11 +9825,15 @@ mark.white {
 .jinj-prizethree {
   width: 14.82rem;
 }
+.jinj-prizefive {
+  width: 14.71rem;
+}
 .jinj-foot {
   line-height: 1.43rem;
   font-size: 0.8rem;
 }
 .jinj-fadealert {
+  z-index: 10;
   top: 0;
   right: 0;
   bottom: 0;
@@ -9874,6 +9884,61 @@ mark.white {
   background-size: contain;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
+.jinj-zmcoms {
+  width: 23.93rem;
+  height: 31.07rem;
+  margin: 0 auto 0;
+  background: url("../images/jinj-zmcoms.png") center center no-repeat;
+  background-size: contain;
+}
+.jinj-zmgift {
+  padding: 1.43rem 0 0 0;
+}
+.jinj-zmgift h3 {
+  margin-bottom: 1rem;
+  line-height: 1.79rem;
+}
+.jinj-zmli {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 20.9% 1.61rem;
+}
+.jinj-zmitem {
+  width: 36%;
+}
+.jinj-zmitem div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 0.5rem;
+}
+.jinj-zmonepic {
+  width: 69%;
+}
+.jinj-zmtwopic {
+  width: 87%;
+}
+.jinj-zmthreepic {
+  width: 85.5%;
+}
+.jinj-zmfourpic {
+  width: 85.5%;
+}
+.jinj-zmitem span {
+  color: #feebcb;
+}
+.jinj-zmrule em {
+  padding-top: 1.57rem;
+  margin-bottom: 0.36rem;
+}
+.jinj-zmrule p {
+  color: #feebcb;
+  line-height: 1.43rem;
+}
 /*我的电影人生猜金鸡*/
 .vote-c-golden {
   color: #c4aa80;
@@ -9885,16 +9950,24 @@ mark.white {
   background-size: 100%;
 }
 .vote-c-head {
-  padding: 2.32rem 0 0 0;
+  padding: 3.57rem 0 0 0;
   margin-bottom: 1.96rem;
 }
 .vote-c-head img {
-  width: 89.35%;
-  margin: 0 auto 1.79rem;
+  width: 69.2%;
+  margin: 0 auto 1.61rem;
 }
 .vote-c-story {
   height: 54.28rem;
   background: url("../images/vote-c-storybg.png") center 0rem no-repeat;
+  background-size: contain;
+}
+.vote-c-ji {
+  right: 5%;
+  bottom: -1.96rem;
+  width: 15.35%;
+  height: 8.64rem;
+  background: url("../images/vote-c-ji.png") center 0rem no-repeat;
   background-size: contain;
 }
 .vote-c-man, 
@@ -9918,8 +9991,8 @@ mark.white {
   width: 61%;
   height: 4.29rem;
   margin: 0 auto 1.43rem;
-  background: url("../images/vote-c-listtit.png") center 0rem no-repeat;
-  background-size: contain;
+  /*background: url("../images/vote-c-listtit.png") center 0rem no-repeat;
+  background-size: contain;*/
 }
 .vote-c-listtit h2, .vote-c-listtit span {
   width: 100%;
@@ -10121,7 +10194,7 @@ mark.white {
   margin-bottom: 0.71rem;
 }
 .vote-c-wxalert {
-  z-index: 1;
+  z-index: 100;
   top: 0;
   right: 0;
   bottom: 0;
@@ -10212,9 +10285,9 @@ mark.white {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .vote-c-votecon {
-  height: 42.85rem;
+  height: 36.35rem;
   padding: 1.79rem 0 0 0;
-  background: url("../images/vote-c-votecon.png") center center no-repeat;
+  background: url("../images/vote-c-votecon_2.png") center center no-repeat;
   background-size: contain;
 }
 .vote-c-palycon {
@@ -10235,7 +10308,7 @@ mark.white {
 }
 .vote-c-vicebrief {
   overflow: auto;
-  height: 11.25rem;
+  height: 6.43rem;
   padding: 0 5%;
   margin: 0.57rem 0 0.71rem 0;
 }
@@ -10245,14 +10318,13 @@ mark.white {
 .vote-c-vicenum {
   margin-bottom: 0.5rem;
 }
-.vote-c-viceta, 
-.vote-c-viceother {
-  margin-bottom: 0.71rem;
+.vote-c-viceta {
+  margin-bottom: 1.07rem;
 }
 .vote-c-viceta, 
 .vote-c-viceother, 
 .vote-c-viceapp {
-  width: 10.71rem;
+  width: 44.8%;
   height: 2.43rem;
   background: url("../images/vote-c-completebut.png") center center no-repeat;
   background-size: contain;
@@ -10294,4 +10366,734 @@ mark.white {
   width: 0;
   height: 0.2rem;
   background-color: #f00;
+}
+.vote-c-vicefoot {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+}
+.vote-c-viceother, 
+.vote-c-viceapp {
+  margin: 0 1.5%;
+}
+/*美岁打卡图鉴，迎金鸡游厦门*/
+.punch-c-wrap {
+  width: 100%;
+  min-height: 113.29rem;
+  background: url("../images/punch-c-wrapbg.png") center 0 no-repeat;
+  background-size: 100%;
+}
+.punch-c-head {
+  width: 61.75%;
+  padding: 3.57rem 0 0 0;
+  margin: 0 auto 4.64rem;
+}
+.punch-c-play {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  height: 16.43rem;
+  margin: 0 auto 1.86rem;
+  background: #000;
+}
+.punch-c-playvideo {
+  width: 100%;
+}
+.punch-c-playbut {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 3.57rem;
+  height: 3.57rem;
+  background: url("../images/share-av-playbut.png") center center no-repeat;
+  background-size: contain;
+}
+.punch-c-vrate {
+  left: 0;
+  bottom: -0.1rem;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #aeb0b7;
+}
+.punch-c-vrate em {
+  max-width: 100%;
+  width: 0;
+  height: 0.2rem;
+  background-color: #f00;
+}
+.punch-c-word {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 2.93rem;
+}
+.punch-c-word p {
+  line-height: 1.71rem;
+}
+.punch-c-rule {
+  width: 92%;
+  height: 16.71rem;
+  padding: 1.86rem 0 0 0;
+  margin: 0 auto 2.86rem;
+  background: url("../images/punch-c-rule.png") center center no-repeat;
+  background-size: contain;
+}
+.punch-c-rule h2, 
+.punch-c-spshow h2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 1.86rem;
+  line-height: 1.86rem;
+  font-size: 1.42rem;
+}
+.punch-c-rule h2 {
+  width: 10.57rem;
+  margin: 0 auto 1.43rem;
+  background: url("../images/vote-c-ruletit.png") center center no-repeat;
+  background-size: 100%;
+}
+.punch-c-rulelist {
+  width: 86%;
+  margin: 0 auto;
+}
+.punch-c-rulelist li {
+  line-height: 1.61rem;
+}
+.punch-c-spshow {
+  width: 92%;
+  height: 28.85rem;
+  padding: 1.86rem 0 0 0;
+  margin: 0 auto;
+  background: url("../images/punch-c-spshowbg.png") center center no-repeat;
+  background-size: contain;
+}
+.punch-c-spshow h2 {
+  width: 13.46rem;
+  margin: 0 auto 1.96rem;
+  background: url("../images/punch-c-spshowtit.png") center center no-repeat;
+  background-size: 100%;
+}
+.punch-c-splist {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 92.8%;
+  margin: 0 auto;
+}
+.punch-c-spitem, 
+.punch-c-spitem img {
+  height: 7.14rem;
+  border-radius: 0.36rem;
+}
+.punch-c-spitem {
+  width: 31.25%;
+  margin-bottom: 0.71rem;
+  box-shadow: 0 0 0 0.11rem #c4aa80;
+}
+.punch-c-spitem img {
+  width: 100%;
+}
+.punch-c-spitem:last-child {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  box-shadow: none;
+}
+.punch-c-spitem span {
+  padding: 0 0 0 7%;
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+/*美岁年终盛典*/
+.year-e-wrap {
+  width: 100%;
+  min-height: 196.43rem;
+  background: url("../images/year-e-wrap_2.png") center 0 no-repeat;
+  background-size: 100%;
+}
+.year-e-head {
+  width: 97.6%;
+  padding: 0.71rem 0 0 0;
+  margin: 0 auto;
+}
+.year-e-play {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 94.67%;
+  height: 16.79rem;
+  margin: 0 auto 2.5rem;
+  background: #000;
+  border-radius: 0.18rem;
+}
+.year-e-playbut {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url("../images/year-e-playbut.png") center center no-repeat;
+  background-size: contain;
+}
+.year-e-vrate {
+  left: 0;
+  bottom: -0.1rem;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #aeb0b7;
+}
+.year-e-vrate em {
+  max-width: 100%;
+  width: 0;
+  height: 0.2rem;
+  background-color: #f00;
+}
+.year-e-listmodule {
+  width: 97.07%;
+  height: 33.5rem;
+  margin: 0 auto 2.14rem;
+  background: url("../images/year-e-listmodulebg.png") center center no-repeat;
+  background-size: contain;
+}
+.year-e-lmnav {
+  width: 90.94%;
+  padding: 2.14rem 0 1.61rem 0;
+  margin: 0 auto;
+  background: url("../images/year-e-border.png") center bottom no-repeat;
+  background-size: 100%;
+}
+.year-e-lmnav, 
+.year-e-lmnavitem {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.year-e-lmnavitem {
+  align-items: flex-end;
+  width: 33.33%;
+}
+.year-e-lmnavitem div {
+  font-size: 0.8rem;
+}
+.year-e-lmnavitem span, 
+.year-e-lmnavitem div {
+  color: rgba(255, 255, 255, 0.8);
+}
+.year-e-lmnavitemsel span {
+  font-size: 1.14rem;
+}
+.year-e-lmnav .year-e-lmnavitemsel span, 
+.year-e-lmnav .year-e-lmnavitemsel div {
+  color: #fff;
+}
+.year-e-lmnav .year-e-lmnavitemsel span {
+  font-weight: bold;
+}
+.year-e-lmnavitemsel div em {
+  z-index: 1;
+}
+.year-e-lmnavitemsel div strong {
+  bottom: -0.32rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 0.32rem;
+  background-color: #fff;
+  border-radius: 0.36rem;
+  box-shadow: 0 0 0.89rem 0.25rem rgba(207, 28, 82, 0.75), inset 0 0 0.07rem 0.07rem rgba(126, 2, 98, 0.3);
+}
+.year-e-lmtimemod {
+  width: 90.94%;
+  height: 3.07rem;
+  margin: 0 auto 0.89rem;
+  background: url("../images/year-e-border.png") center bottom no-repeat;
+  background-size: 100%;
+}
+.year-e-lmtime, 
+.year-e-lmtime div, 
+.year-e-lmli span, 
+.year-e-lmweek, 
+.year-e-lmweek div, 
+.year-e-lmnostart {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.year-e-lmtime, 
+.year-e-lmweek {
+  height: 3.07rem;
+}
+.year-e-lmtime div, 
+.year-e-lmweek div {
+  width: 13.6%;
+  height: 2rem;
+  margin-top: -0.18rem;
+  line-height: 2rem;
+}
+.year-e-lmtime .year-e-lmtimesel, 
+.year-e-lmweek .year-e-lmweeksel {
+  background: url("../images/year-e-lmtimesel.png") center center no-repeat;
+  background-size: contain;
+}
+.year-e-lmlists {
+  overflow: auto;
+  width: 90.94%;
+  height: 21.42rem;
+  margin: 0 auto;
+}
+.year-e-lmli {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 3.57rem;
+}
+.year-e-lmli span {
+  width: 10.57%;
+  margin-right: 1.51%;
+}
+.year-e-lmli img {
+  width: 10.57%;
+  height: 2.5rem;
+  margin-right: 3.02%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.11rem #fff;
+}
+.year-e-lmli div {
+  overflow: hidden;
+  width: 45.31%;
+  padding-right: 2.27%;
+  margin-right: 8.31%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.year-e-lmli em {
+  width: 18.44%;
+}
+.year-e-lmnostart {
+  width: 100%;
+  height: 100%;
+}
+.year-e-rule {
+  width: 97.07%;
+  height: 24.5rem;
+  padding: 2.21rem 0 0 0;
+  margin: 0 auto 2.14rem;
+  background: url("../images/year-e-rulebg.png") center center no-repeat;
+  background-size: contain;
+}
+.year-e-ruleul {
+  width: 85.17%;
+  margin: 1.61rem auto 0;
+}
+.year-e-ruleul li {
+  line-height: 1.71rem;
+}
+.year-e-reward {
+  width: 97.07%;
+  height: 55.93rem;
+  padding: 2.21rem 0 0 0;
+  margin: 0 auto 2.14rem;
+  background: url("../images/year-e-rewardbg_2.png") center center no-repeat;
+  background-size: contain;
+}
+.year-e-reward h2 {
+  margin-bottom: 1.25rem;
+}
+.year-e-rewarddel {
+  width: 90.94%;
+  padding-bottom: 0.71rem;
+  margin: 0 auto;
+}
+.year-e-rewarddel img {
+  margin-bottom: 1.43rem;
+}
+.year-e-rewardtip {
+  font-size: 0.8rem;
+}
+.year-e-userreward {
+  width: 97.07%;
+  height: 20.58rem;
+  padding: 2.21rem 0 0 0;
+  margin: 0 auto 2.14rem;
+  background: url("../images/year-e-userrewardbg.png") center center no-repeat;
+  background-size: contain;
+}
+.year-e-userreward h2 {
+  margin-bottom: 1.25rem;
+}
+.year-e-tit div, 
+.year-e-tit div {
+  z-index: 1;
+  font-size: 1.21rem;
+}
+.year-e-tit span, 
+.year-e-tit span {
+  bottom: -0.21rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 20%;
+  height: 0.32rem;
+  border-radius: 0.36rem;
+  box-shadow: 0 0 0.89rem 0.25rem rgba(207, 28, 82, 0.75),
+              inset 0 0 0.07rem 0.07rem rgba(126, 2, 98, 0.3);
+}
+.year-e-uwcon {
+  width: 90.94%;
+  margin: 0 auto;
+  background: url("../images/year-e-border.png") center 0 no-repeat;
+  background-size: 100%;
+}
+.year-e-uwdel {
+  padding: 1.61rem 0 0 0;
+  margin-bottom: 2.5rem;
+}
+.year-e-uwdel h3 {
+  margin-bottom: 1.43rem;
+  text-shadow: 0.36rem 0 0.72rem #c516ff,
+               0 0.36rem 0.72rem #c516ff,
+               -0.36rem 0 0.72rem #c516ff,
+               0 -0.36rem 0.72rem #c516ff;
+}
+.year-e-uwul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 84.6%;
+  margin: 0 auto;
+}
+.year-e-uwli:nth-child(1) {
+  width: 46.8%;
+}
+.year-e-uwli:nth-child(2) {
+  width: 35.4%;
+}
+.year-e-uwli div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 5.36rem;
+  margin-bottom: 0.18rem;
+}
+.year-e-uwli:nth-child(1) div {
+  padding: 0 7.65%;
+}
+.year-e-uwli:nth-child(2) div {
+  padding: 0 10.1%;
+}
+.year-e-uwli span {
+  line-height: 1.21rem;
+}
+.year-e-uwcon p {
+  font-size: 0.8rem;
+}
+.year-e-foot {
+  padding: 0.79rem 0 1rem 0;
+  line-height: 1.36rem;
+  font-size: 0.8rem;
+}
+/*春节抢红包*/
+.spring-red-wrap {
+  min-height: 203.57rem;
+  padding-top: 1.79rem;
+  background: url("../images/spring-red-wrap.png") center bottom no-repeat;
+  background-size: 100%;
+}
+.spring-red-head, .newyear-w-head {
+  width: 95.73%;
+  height: 21.79rem;
+  padding-top: 10.71rem;
+  margin: 0 auto;
+}
+.spring-red-head {
+  background: url("../images/spring-red-head.png") center center no-repeat;
+  background-size: contain;
+}
+.newyear-w-head {
+  background: url("../images/newyear-w-head.png") center center no-repeat;
+  background-size: contain;
+}
+.spring-red-time {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 65.46%;
+  height: 2.14rem;
+  margin: 0 auto;
+  background: url("../images/spring-red-timebg.png") center center no-repeat;
+  background-size: contain;
+  line-height: 2.14rem;
+  color: #cd3728;
+}
+.spring-red-exp, 
+.newyear-w-exp {
+  width: 92%;
+  height: 21.79rem;
+  margin: -0.36rem auto 3.57rem;
+  background: url("../images/spring-red-expbg.png") center center no-repeat;
+  background-size: contain;
+}
+.spring-red-exp h3 {
+  padding-top: 1.25rem;
+  margin-bottom: 0.89rem;
+  color: #cd3728;
+}
+.spring-red-fupic {
+  width: 17.39%;
+  height: 4.29rem;
+  margin: 0 auto 0.25rem;
+}
+.spring-red-fu {
+  margin-bottom: 0.89rem;
+  color: #cd3728;
+}
+.spring-red-expul {
+  width: 85.51%;
+  margin: 0 auto;
+}
+.spring-red-expul li {
+  line-height: 1.43rem;
+}
+.spring-red-wanglist {
+  margin-bottom: 3.57rem;
+}
+.spring-red-wangtit {
+  width: 78.67%;
+  margin: 0 auto 1.07rem;
+}
+.spring-red-wanglistbg {
+  width: 92%;
+  height: 30.36rem;
+  margin: 0 auto;
+  background: url("../images/spring-red-wanglistbg.png") center center no-repeat;
+  background-size: contain;
+}
+.spring-red-wanglisthead {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  width: 85.51%;
+  height: 12.25rem;
+  padding: 0 0 0.14rem 0;
+  margin: 0 auto 1.07rem;
+  background: url("../images/spring-red-wanglisthead.png") center bottom no-repeat;
+  background-size: 100%;
+}
+.spring-red-wlhitem {
+  width: 33.33%;
+  padding-bottom: 1.61rem;
+}
+.spring-red-wlhitemone {
+  order: 1;
+}
+.spring-red-wlhitemthree {
+  order: 2;
+}
+.spring-red-wlhitemone .spring-red-wlhitempic, 
+.spring-red-wlhitemtwo .spring-red-wlhitempic, 
+.spring-red-wlhitemthree .spring-red-wlhitempic {
+  padding: 0.93rem 5.09% 0.36rem;
+  margin: 0 auto 0.5rem;
+}
+.spring-red-wlhitemone .spring-red-wlhitempic {
+  width: 61.03%;
+  height: 4.29rem;
+  background: url("../images/spring-red-wlhitemone.png") center center no-repeat;
+  background-size: 100%;
+}
+.spring-red-wlhitemone .spring-red-wlhitempic img {
+  height: 4.29rem;
+}
+.spring-red-wlhitemtwo .spring-red-wlhitempic, 
+.spring-red-wlhitemthree .spring-red-wlhitempic {
+  width: 46.7%;
+  height: 3.29rem;
+}
+.spring-red-wlhitemtwo .spring-red-wlhitempic img, 
+.spring-red-wlhitemthree .spring-red-wlhitempic img {
+  height: 3.29rem;
+}
+.spring-red-wlhitemtwo .spring-red-wlhitempic {
+  background: url("../images/spring-red-wlhitemtwo.png") center center no-repeat;
+  background-size: 100%;
+}
+.spring-red-wlhitemthree .spring-red-wlhitempic {
+  background: url("../images/spring-red-wlhitemthree.png") center center no-repeat;
+  background-size: 100%;
+}
+.spring-red-wlhitempic img {
+  width: 100%;
+  border-radius: 50%;
+}
+.spring-red-wlhitemname {
+  overflow: hidden;
+  padding: 0 7.61%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.spring-red-wlhitemone .spring-red-wlhitemname {
+  color: #f7ac4a;
+}
+.spring-red-wlhitemtwo .spring-red-wlhitemname {
+  color: #646466;
+}
+.spring-red-wlhitemthree .spring-red-wlhitemname {
+  color: #bf9684;
+}
+.spring-red-wanglistshow {
+  overflow: auto;
+  width: 85.51%;
+  height: 15.72rem;
+  margin: 0 auto;
+}
+.spring-red-wangli {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 3.93rem;
+}
+.spring-red-wangli span {
+  width: 8.14%;
+  padding-left: 1.69%;
+}
+.spring-red-wangli img {
+  width: 11.86%;
+  height: 2.5rem;
+  margin-right: 3.39%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.07rem #ed5d4e;
+}
+.spring-red-wangli div {
+  overflow: hidden;
+  width: 38.98%;
+  margin-right: 3.39%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.spring-red-wangli em {
+  width: 32.55%;
+  text-align: right;
+}
+.spring-red-zbrewardmol {
+  margin-bottom: 3.57rem;
+}
+.spring-red-zbrtit, .spring-red-fanstit {
+  width: 68%;
+  margin: 0 auto 1.07rem;
+}
+.spring-red-zbrconbg {
+  width: 92%;
+  height: 30.36rem;
+  margin: 0 auto;
+  background: url("../images/spring-red-wanglistbg.png") center center no-repeat;
+  background-size: contain;
+}
+.spring-red-zbrone {
+  padding-top: 2.21rem;
+  margin-bottom: 0.71rem;
+}
+.spring-red-zbrone h3 {
+  margin-bottom: 1.14rem;
+  color: #cd3728;
+}
+.zbronecom {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 7.25% 0 3.62%;
+}
+.zbronecom div span, 
+.spring-red-fans div span {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 2.42rem;
+  line-height: 1.21rem;
+}
+.zbronecom div img {
+  margin: 0 auto 0.54rem;
+}
+.zbronecom div:nth-child(1) img {
+  width: 7.14rem;
+  padding-bottom: 1.5rem;
+}
+.zbronecom div:nth-child(2) img {
+  width: 5rem;
+}
+.zbronecom div:nth-child(3) img {
+  width: 5.86rem;
+  padding-bottom: 0.18rem;
+}
+.spring-red-fansconbg {
+  width: 92%;
+  height: 16.07rem;
+  margin: 0 auto;
+  background: url(../images/spring-red-fansconbg.png) center center no-repeat;
+  background-size: contain;
+}
+.spring-red-fansconbg h3 {
+  padding-top: 2.21rem;
+  margin-bottom: 1.79rem;
+  color: #cd3728;
+}
+.spring-red-fans {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 13.04% 0 13.04%;
+}
+.spring-red-fans div:nth-child(1) img {
+  width: 7.86rem;
+  padding-bottom: 1.25rem;
+}
+.spring-red-fans div:nth-child(2) img {
+  width: 5.86rem;
+}
+.spring-red-fans div img {
+  margin: 0 auto 0.71rem;
+}
+.spring-red-foot {
+  padding: 3.57rem 0 0 0;
+  line-height: 1.14rem;
+  color: #ffe9e4;
+  font-size: 0.8rem;
+}
+.spring-red-wwemptytip, 
+.spring-red-fqemptytip {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.newyear-w-fupic {
+  width: 60.72%;
+  padding-top: 0.14rem;
+  margin: 0 auto 2.14rem;
+}
+.newyear-w-exp h3 {
+  margin-bottom: 1rem;
+  color: #cd3728;
+}
+.newyear-w-expul {
+  padding: 0 7.25%;
+  line-height: 1.43rem;
 }

@@ -131,11 +131,8 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 100%;
 }
-.index-wrap .index-m-container {
-  overflow: auto;
-}
 .index-m-slide {
-  /*overflow: hidden;*/
+  overflow: hidden;
   background: #ffcb4d url("../images/index-m-bg.png") 0 0 no-repeat;
   background-size: 100%;
 }

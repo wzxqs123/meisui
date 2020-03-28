@@ -72,6 +72,8 @@
             </div>
             <!-- 提示弹窗 -->
             <div class="invite-g-fade text-center white position-fix none"></div>
+            <!-- 微信中打开链接的提示窗 -->
+            <div class="share-ag-wxalert position-fix none"></div>
             <div class="invite-gc-fuuid none" data-fuuid="70536805"></div>
         </div>
         <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
@@ -243,6 +245,42 @@
                     $(this).fadeOut(2500);
                 })
             }
+
+            var ua = navigator.userAgent.toLowerCase();
+            console.log(ua)
+            if (ua.indexOf("iphone") > -1) {
+                console.log("ios")
+                $(".invite-gc-sucload").attr({
+                    "href": "MeisuiAPP://"
+                })
+            }else {
+                console.log("android")
+                $(".invite-gc-sucload").attr({
+                    "href": "meisui://com.meisui.live/"
+                })
+            }
+            $(".invite-gc-sucload").click(function () {
+                // 判断是否是微信打开
+                function is_weixn(){
+                    if(ua.match(/MicroMessenger/i) == "micromessenger" || ua.match(/WeiBo/i) == "weibo") {
+                        // 显示去浏览器中打开提示层
+                        $(".share-ag-wxalert").removeClass("none");
+                    } else {
+                        setTimeout(function () {
+                            loadPage()
+                        }, 2000)
+                    }
+                }
+                is_weixn();
+            });
+            // 页面跳转至应用宝下载
+            function loadPage () {
+                window.location.href = "https://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live"
+            }
+            // 点击提示层模块，隐藏该模块
+            $(".share-ag-wxalert").click(function() {
+                $(this).addClass("none")
+            });
         </script>
     </body>
 </html>

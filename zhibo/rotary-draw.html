@@ -17,6 +17,30 @@
             .rotary-d-wrap .none {
                 display: none;
             }
+            .button {
+                -webkit-animation: butanimation 1s linear infinite alternate;
+            }
+            @-webkit-keyframes butanimation {
+                0% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                }
+                100% {
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+            }
+            @keyframes butanimation {
+                0% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                }
+                100% {
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+            }
+
             * {
                 -webkit-touch-callout:none;
                 -webkit-user-select:none;
@@ -35,16 +59,19 @@
                     <span class="position-abs"></span>
                     <span class="position-abs"></span>
                 </div>
-                <div class="rotary-d-navs twenty-six white">
-                    <span class="rotary-d-navsel position-rel">幸运大夺宝<em class="position-abs"></em></span>
-                    <span class="position-rel">规则<em class="position-abs"></em></span>
-                    <span class="position-rel">获奖记录<em class="position-abs"></em></span>
+                <!-- 新版规则按钮 -->
+                <div class="rotary-d-nrule position-abs"></div>
+                <div class="rotary-d-navs twenty-four white">
+                    <span class="rotary-d-navsel position-rel">幸运转盘</span>
+                    <!-- <span class="position-rel">规则<em class="position-abs"></em></span> -->
+                    <span class="position-rel">获奖记录</span>
                 </div>
                 <!-- 幸运大夺宝 -->
                 <div class="rotary-d-treasure">
-                    <div id="rotary-d-show" class="rotary-d-show">
+                    <div id="rotary-d-show" class="rotary-d-show position-rel">
+                        <i class="position-abs"></i>
                         <div class="rotary-d-showcom swiper-container">
-                            <div id="rotary-d-noticecon" class="rotary-d-noticecon swiper-wrapper white">
+                            <div id="rotary-d-noticecon" class="rotary-d-noticecon swiper-wrapper">
                                 <!-- <div class="rotary-d-noticeitem swiper-slide text-center">小猪猪通过100连抽获得告白超跑x1</div> -->
                             </div>
                         </div>
@@ -71,6 +98,10 @@
                                 <span></span>
                                 <span></span>
                                 <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                             <!-- <mark class="white"></mark>
                             <div class="dialog">
@@ -79,20 +110,33 @@
                             </div> -->
                         </div>
                         <!-- 进度条总值 -->
-                        <canvas width="750" height="685" id="testCanvas" class="rotary-d-draw position-abs"></canvas>
+                        <!-- <canvas width="750" height="685" id="testCanvas" class="rotary-d-draw position-abs"></canvas> -->
                         <!-- 当前进度条值 -->
                         <!-- <canvas width="750" height="685" id="newCanvas" class="rotary-d-nowdraw position-abs"></canvas> -->
-                        <div class="rotary-d-lucky white position-abs">幸运值<i></i></div>
+                        <div class="rotary-d-lucky position-abs">幸运值<i></i></div>
+                        <div class="rotary-d-ndrawborder position-abs">
+                            <div class="rotary-d-ndrawrate position-rel">
+                                <!-- 进度条 -->
+                                <span class="rotary-d-ndrawnum position-abs">
+                                    <!-- 进度条数值 -->
+                                    <em class="position-abs">0</em>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="rotary-d-choice white text-center">
-                        <span class="rotary-d-choitem position-rel"><em>1抽</em></span>
-                        <span class="rotary-d-choitem position-rel"><em>10抽</em></span>
-                        <span class="rotary-d-choitem rotary-d-chosel position-rel"><em>100抽</em><i></i><p class="white position-abs">概率更高</p></span>
+                        <span class="rotary-d-choitem position-rel"><em>1次</em></span>
+                        <span class="rotary-d-choitem position-rel"><em>10次</em></span>
+                        <span class="rotary-d-choitem rotary-d-chosel position-rel">
+                            <em>100次</em>
+                            <!-- <i></i> -->
+                            <!-- <p class="white position-abs">概率更高</p> -->
+                        </span>
                     </div>
-                    <p class="rotary-d-foot white text-center">点击GO即消耗<span>28000</span>钻石，并开启转盘。<br />幸运值达到1200必得大奖</p>
+                    <p class="rotary-d-foot white text-center">消耗<span>28000</span>钻，开启转盘，幸运值达到1200必得大奖</p>
                 </div>
                 <!-- 规则 -->
-                <ul class="rotary-d-rule white none">
+                <!-- <ul class="rotary-d-rule white none">
                     <li>1、选择抽奖次数选项，点击轮盘上的开启按钮即可抽取幸运礼物。</li>
                     <li>2、开启一次转盘需要280钻石，抽奖次数选项分别为三种选项，单抽、10连抽、100连抽。选择多次连抽会提升中奖概率。</li>
                     <li>3、获得的礼物会发放到直播间礼物箱背包内，钻石及消费经验值会直接自动累加。</li>
@@ -140,7 +184,7 @@
                             </tbody>
                         </table>
                     </li>
-                </ul>
+                </ul> -->
                 <!-- 获奖记录 -->
                 <div class="rotary-d-recordshow position-rel none">
                     <div id="rotary-d-record" class="rotary-d-record">
@@ -169,26 +213,41 @@
                         </div>
                     </div>
                 </div>
+                <!-- 新规则弹窗 -->
+                <div class="rotary-d-nruletc position-fix none">
+                    <div class="rotary-d-nruletccon white position-rel">
+                        <span class="rotary-d-nruletcclose position-abs"></span>
+                        <h2 class="weight-bold thirty text-center">玩法规则</h2>
+                        <ul>
+                            <li>1、选择抽奖次数选项，点击轮盘上的开启按钮即可抽取幸运礼物。</li>
+                            <li>2、开启一次转盘需要280钻石，抽奖次数选项分别为三种选项，单抽、10连抽、100连抽。选择多次连抽会提升中奖概率。</li>
+                            <li>3、获得的礼物会发放到直播间礼物箱背包内，钻石及消费经验值会直接自动累加。</li>
+                            <li>4、参与幸运大夺宝所得礼物赠送给主播会给主播增加额外星光值。</li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- 获得奖品提示窗 -->
                 <div class="rotary-d-prizebg position-fix none">
                     <div class="rotary-d-prizeshow position-abs">
-                        <div class="rotary-d-prizetit weight-bold three text-center">获得100幸运值</div>
+                        <div class="rotary-d-prizeclose position-abs"></div>
+                        <div class="rotary-d-prizetit text-center">本次总计获得20幸运值</div>
                         <ul class="rotary-d-prizecon">
                             <!-- <li class="rotary-d-prizeitem">
                                 <img class="block" src="images/demoimages/cj4.png" alt="" />
-                                <span class="twenty-six three">x10</span>
+                                <span class="white">告白超跑<em class="weight-bold">x10</em></span>
+                                <div class="rotary-d-prizeprice white"><i></i>520000</div>
                             </li> -->
                         </ul>
-                        <div class="rotary-d-prize text-center weight-bold twenty-six">
+                        <div class="rotary-d-prize text-center twenty-six">
                             <span class="rotary-d-again white">再来100抽</span>
-                            <span class="rotary-d-prizetrue"><em>确定</em></span>
+                            <!-- <span class="rotary-d-prizetrue"><em>确定</em></span> -->
                         </div>
                     </div>
                 </div>
                 <!-- 幸运值规则 -->
                 <div class="rotary-d-xyzrule position-fix none">
-                    <h2 class="text-center weight-bold three">幸运值暴击翻倍规则</h2>
-                    <ul class="rotary-d-xyzruleul twenty-six six">
+                    <!-- <h2 class="text-center weight-bold three">幸运值暴击翻倍规则</h2> -->
+                    <ul class="rotary-d-xyzruleul twenty-four white">
                         <li>1、每转取轮盘一次加1点幸运值，幸运值到300、600、900时会增加抽奖概率，也会出现幸运值暴击。1200幸运值必中大礼物一个。</li>
                         <li>2、幸运值积满后获得必得礼物，幸运值清零重新累计。</li>
                     </ul>
@@ -229,7 +288,11 @@
                         var listCon = "";
                         $(".frame .circle").empty('');
                         for (var i = 0; i < resData.length; i++) {
-                            listCon += '<p class="position-rel" data-lottery="' + i + '"><span class="three text-center">' + resData[i].name + '</span><img class="rotary-d-prizepic block" src="' + picUrlHead + resData[i].pic + '" alt="" /></p>' // 礼物子项
+                            if (i == 2 || i == 5|| i == 7) {
+                                listCon += '<p class="position-rel" data-lottery="' + i + '"><span class="three twenty-four text-center">' + resData[i].gift_virtual + '钻石</span><img class="rotary-d-prizepic block" src="' + picUrlHead + resData[i].pic + '" alt="" /></p>' // 礼物子项
+                            } else {
+                                listCon += '<p class="position-rel" data-lottery="' + i + '"><span class="white twenty-four text-center">' + resData[i].gift_virtual + '钻石</span><img class="rotary-d-prizepic block" src="' + picUrlHead + resData[i].pic + '" alt="" /></p>' // 礼物子项
+                            }
                         };
                         $(".frame .circle").append(listCon);
 
@@ -294,9 +357,10 @@
 
                                                         // 进度条运动到最新的位置
                                                         newLuckyNum = parseInt(data.luckcy) || 0;
-                                                        runCircle()
+                                                        // runCircle() // 旧版进度条
+                                                        newCircle() // 新版进度条
 
-                                                        $(".rotary-d-prizetit").html("获得" + data.luckcyadd + "幸运值");
+                                                        $(".rotary-d-prizetit").html("本次总计获得" + data.luckcyadd + "幸运值");
                                                         resListData = data.d.list;
                                                         $(this).addClass("disabled");
                                                         // $(".rotary-d-fadealert").html(resListData[0].id - 1);
@@ -355,10 +419,11 @@
                                     var listCon = "";
                                     $(".rotary-d-prizecon").empty('');
                                     for (var i = 0; i < resListData.length; i++) {
-                                        listCon += '<li class="rotary-d-prizeitem"><img class="block" src="' + picUrlHead + resListData[i].pic + '" alt="" /><span class="twenty-six three">x' + resListData[i].count + '</span></li>' // 礼物子项
+                                        listCon += '<li class="rotary-d-prizeitem"><img class="block" src="' + picUrlHead + resListData[i].pic + '" alt="" /><span class="white">' + resListData[i].name + '<em class="weight-bold">x' + resListData[i].count + '</em></span><div class="rotary-d-prizeprice white"><i></i>' + resListData[i].diamond + '</div></li>' // 礼物子项
+                                        
                                     };
                                     $(".rotary-d-prizecon").append(listCon); // 添加中奖礼物子项
-                                    $(".rotary-d-again").html("再来" + parseInt($(".rotary-d-chosel").children("em").html()) + "抽")
+                                    $(".rotary-d-again").html("再来" + parseInt($(".rotary-d-chosel").children("em").html()) + "次")
                                     $(".rotary-d-prizebg").removeClass("none"); // 显示中奖奖品弹窗
                                     showNotice() // 再次请求公告数据
                                     
@@ -435,7 +500,8 @@
 
                     totalLuckyNum = data.d.LuckyList[3].lucky || 1200;
                     newLuckyNum = parseInt(data.d.luckey) || 0;
-                    runCircle()
+                    // runCircle() // 旧版进度条
+                    newCircle() // 新版进度条
                 }
             })
             // 渐隐弹窗动画
@@ -462,12 +528,14 @@
                                 listCon += '<div class="rotary-d-noticeitem swiper-slide text-center">' + resData[i] + '</div>' // 礼物子项
                             };
                             
-                            $(".rotary-d-show").append('<div class="rotary-d-showcom swiper-container"><div id="rotary-d-noticecon" class="rotary-d-noticecon swiper-wrapper white">' + listCon + '</div></div>');
+                            $(".rotary-d-show").append('<i class="position-abs"></i><div class="rotary-d-showcom swiper-container"><div id="rotary-d-noticecon" class="rotary-d-noticecon swiper-wrapper white">' + listCon + '</div></div>');
                             var mySwiper = new Swiper ('.swiper-container', {
-                                direction: 'vertical',
+                                direction: 'horizontal',
                                 loop: true,
-                                autoplay : 5000,
+                                autoplay : 300,
                                 autoplayDisableOnInteraction : false,
+                                speed: 5000,
+                                freeMode : true,
                                 freeMode : false
                             })
                         } else if(data.sign == 0) {
@@ -494,15 +562,9 @@
                 var newIndex = $(this).index();
                 if (newIndex == 0) {
                     $(".rotary-d-treasure").removeClass("none");
-                    $(".rotary-d-rule").addClass("none");
                     $(".rotary-d-recordshow").addClass("none");
                 } else if (newIndex == 1) {
                     $(".rotary-d-treasure").addClass("none");
-                    $(".rotary-d-rule").removeClass("none");
-                    $(".rotary-d-recordshow").addClass("none");
-                } else if (newIndex == 2) {
-                    $(".rotary-d-treasure").addClass("none");
-                    $(".rotary-d-rule").addClass("none");
                     $(".rotary-d-recordshow").removeClass("none");
                     $.ajax({
                         url: serverUrl + "/getRecordList",
@@ -541,13 +603,16 @@
                     $(closeCon).addClass("none");
                 })
             }
-            closeAlert(".rotary-d-close", ".rotary-d-wrap") // 点击关闭按钮关闭弹窗
+            // closeAlert(".rotary-d-close", ".rotary-d-wrap") // 点击关闭按钮关闭弹窗
             closeAlert(".rotary-d-nomoneyno", ".rotary-d-nomoneybg") // 点击余额不足的取消按钮，关闭弹窗
             closeAlert(".rotary-d-prizetrue", ".rotary-d-prizebg") // 点击确定关闭奖品展示窗
+            closeAlert(".rotary-d-nruletcclose", ".rotary-d-nruletc") // 点击关闭图标关闭规则弹窗
+            closeAlert(".rotary-d-prizeclose", ".rotary-d-prizebg") // 点击关闭新的奖品展示窗
 
             // 点击空白部分点击隐藏弹窗
-            freeBlank(".rotary-d-wrap", ".rotary-d-main", "none");
+            // freeBlank(".rotary-d-wrap", ".rotary-d-main", "none");
             freeBlank(".rotary-d-prizebg", ".rotary-d-prizeshow", "none");
+            freeBlank(".rotary-d-nruletc", ".rotary-d-nruletccon", "none");
 
 
             // 手指按住幸运值时
@@ -559,7 +624,72 @@
                 $(".rotary-d-xyzrule").addClass("none")
             });
 
-            var luckyStart = 0; // 显示的幸运值的初始旋转角度
+            var luckyNumsPos // 幸运值最初始的值
+            var showLuckyNums = 0; // 动画中所显示的变化的幸运值
+            var newLuckyNum = 0; // 后台获取的最新的幸运值
+            var ndrawH // 新进度条实时的高度
+
+            var totalLuckyNum = 1200; // 幸运总值
+
+            function newCircle (argument) {
+                if (newLuckyNum >= totalLuckyNum) { // 判断当前幸运值是否大于幸运总值
+                    newLuckyNum -= totalLuckyNum
+                }
+                if (showLuckyNums <= newLuckyNum) { // 显示的当前幸运值是否小于新的当前幸运值
+                    var barRise = 1; // 进度条做上升运动
+                } else {
+                    var barRise = 2; // 进度条做下降运动
+                }
+
+                luckyNumsPos = showLuckyNums; // 幸运值第一次变化前的值赋值给luckyNumsPos
+
+                var Timer; // 计时器
+                var intervalTimes = 20 // 片段时长
+                var ainTimes = 1500 // 动画时长：毫秒
+
+                function nbarAni (argument) {
+                    if (barRise == 1) { // 显示的当前幸运值是否小于新的当前幸运值
+                        var isClearInterval = [1, 0]; // 是否清楚计时器
+                        // 当前幸运值显示数字动画处理
+                        if (showLuckyNums >= newLuckyNum) {
+                            showLuckyNums = newLuckyNum
+                            // clearInterval(Timer)
+                            isClearInterval[1] = 1;
+                        } else {
+                            showLuckyNums += (newLuckyNum-luckyNumsPos) / ainTimes * intervalTimes;
+                            isClearInterval[1] = 0;
+                        }
+                        if (isClearInterval[0] && isClearInterval[1]) {
+                            clearInterval(Timer)
+                        }
+                    } else if(barRise == 2) {
+                        var isClearInterval = [1, 0]; // 是否清楚计时器
+                        // 当前幸运值显示数字动画处理
+                        if (showLuckyNums <= newLuckyNum) {
+                            showLuckyNums = newLuckyNum
+                            // clearInterval(Timer)
+                            isClearInterval[1] = 1;
+                        } else {
+                            showLuckyNums -= (luckyNumsPos-newLuckyNum) / ainTimes * intervalTimes;
+                            isClearInterval[1] = 0;
+                        }
+                        if (isClearInterval[0] && isClearInterval[1]) {
+                            clearInterval(Timer)
+                        }
+                    }
+                    ndrawH = showLuckyNums / totalLuckyNum * 100
+                    if (ndrawH >= 100) {
+                        ndrawH = (showLuckyNums / totalLuckyNum - 1) * 100
+                    }
+                    $(".rotary-d-ndrawnum").css({
+                        height: ndrawH + "%"
+                    });
+                    $(".rotary-d-ndrawnum em").html(parseInt(showLuckyNums))
+                }
+                Timer = setInterval(nbarAni, intervalTimes);
+            }
+
+            /*var luckyStart = 0; // 显示的幸运值的初始旋转角度
             var luckyNumsPos // 幸运值最初始的值
             var showLuckyNums = 0; // 动画中所显示的变化的幸运值
             var newLuckyNum = 0; // 后台获取的最新的幸运值
@@ -571,9 +701,9 @@
             var radiansTotal = preA * rotateAngle; // 弧度总值
             var startA = radiansTotal; // 进度条当前最新的位置
             var startSeat // 进度条运动前最初始的位置
-            var rotataRadians = null; // 当前的弧度值
+            var rotataRadians = null; // 当前的弧度值*/
             
-            function runCircle () {
+            /*function runCircle () {
                 var LuckyNumQuarter = totalLuckyNum / 4; // 每个标点之间相差的数值
                 // canvas绘画进度条——总值
                 var testCanvas = document.getElementById("testCanvas");
@@ -773,7 +903,7 @@
                     }
                     Timer = setInterval(barAni, intervalTimes);
                 }
-            }
+            }*/
             
             // 调取客户端相对应的事件
             var ua = navigator.userAgent.toLowerCase();
@@ -849,6 +979,7 @@
                         }
                     });
                 }
+                $(".rotary-d-nomoneybg").addClass("none")
             });
             $(document).ready(function () {
                 if (ua.indexOf("iphone") > -1) {
@@ -870,6 +1001,40 @@
                     });
                 }
             })
+            freeBlanks(".rotary-d-wrap", ".rotary-d-main", "none");
+            function freeBlanks (floEve, formEve, noneEve) {
+                $(floEve).on("click", function(e){
+                    var _target = $(e.target);
+                    if (_target.closest(formEve).length == 0) {
+                        if (ua.indexOf("iphone") > -1) {
+                            connectWebViewJavascriptBridge(function(bridge) {
+                                if (sign == 0) {
+                                    bridge.init(function(message, responseCallback) {
+                                    });
+                                    sign = 1;
+                                }
+                                bridge.callHandler('closedial', {
+                                }, function(response) {
+                                });
+                                if (isRefreshknap) {
+                                    bridge.callHandler('goUpdate', {
+                                    }, function(response) {
+                                    });
+                                }
+                            });
+                        } else {
+                            $(function() {
+                                if (window['JavaScriptInterface']) {
+                                    window.JavaScriptInterface.closedial();
+                                    if (isRefreshknap) {
+                                        window.JavaScriptInterface.goUpdate();
+                                    }
+                                }
+                            });
+                        }
+                    }
+                })
+            }
 
             /*var page = 1, //分页码
                 off_on = false; //分页开关(滚动加载方法 1 中用的)
@@ -900,6 +1065,14 @@
                     }
                 }
             });*/
+
+            // 点击问号图标显示规则弹窗
+            function clickClose (buts, alertCon) {
+                $(buts).click(function (e) {
+                    $(alertCon).removeClass("none")
+                });
+            }
+            clickClose(".rotary-d-nrule", ".rotary-d-nruletc");
         </script>
     </body>
 </html>

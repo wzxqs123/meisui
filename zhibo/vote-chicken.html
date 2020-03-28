@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/activitys.css">
         <style type="text/css">
             html, body {
+                width: 100%;
                 background: #0f1955;
             }
             .vote-c-wrap .none {
@@ -41,13 +42,14 @@
     </head>
     <body>
         <div class="vote-c-wrap position-rel">
-            <div class="vote-c-head">
-                <img class="block" src="images/demoimages/pic183.png" alt="" />
+            <div class="vote-c-head position-rel">
+                <img class="block" src="images/demoimages/pic183_2.png" alt="" />
                 <span class="block white thirty text-center">剩余投票次数：2次</span>
+                <i class="vote-c-ji position-abs"></i>
             </div>
             <div class="vote-c-story">
                 <div class="vote-c-listtit vote-c-golden text-center">
-                    <h2 class="thirty block">第28届金鸡百花电影节<br />最佳故事片提名名单</h2>
+                    <h2 class="thirty block">第28届中国金鸡百花电影节<br />最佳故事片提名名单</h2>
                     <span class="twenty-four block">（排名不分先后）</span>
                 </div>
                 <ul class="vote-c-storyul clearfix">
@@ -73,7 +75,7 @@
             </div>
             <div class="vote-c-man">
                 <div class="vote-c-listtit vote-c-golden text-center">
-                    <h2 class="thirty">第28届金鸡百花电影节<br />最佳男主角提名名单</h2>
+                    <h2 class="thirty">第28届中国金鸡百花电影节<br />最佳男主角提名名单</h2>
                     <span class="twenty-four block">（排名不分先后）</span>
                 </div>
                 <ul class="vote-c-manul clearfix">
@@ -102,7 +104,7 @@
             </div>
             <div class="vote-c-woman">
                 <div class="vote-c-listtit vote-c-golden text-center">
-                    <h2 class="thirty">第28届金鸡百花电影节<br />最佳女主角提名名单</h2>
+                    <h2 class="thirty">第28届中国金鸡百花电影节<br />最佳女主角提名名单</h2>
                     <span class="twenty-four block">（排名不分先后）</span>
                 </div>
                 <ul class="vote-c-womanul clearfix">
@@ -172,8 +174,10 @@
                     </div>
                     <div class="vote-c-vicenum white text-center twenty-six">剩余投票次数：2次</div>
                     <div class="vote-c-viceta twenty-six text-center">为TA投票</div>
-                    <div class="vote-c-viceother twenty-six text-center">看看其他</div>
-                    <a class="vote-c-viceapp block twenty-six text-center" href="">进入放映室</a>
+                    <div class="vote-c-vicefoot">
+                        <div class="vote-c-viceother twenty-six text-center">看看其他</div>
+                        <a class="vote-c-viceapp block twenty-six text-center" href="">进入放映室</a>
+                    </div>
                 </div>
             </div>
             <!-- 填写个人资料 -->
@@ -229,10 +233,14 @@
             <div class="vote-c-tipalert text-center bg-white position-fix none"></div>
             <!-- 微信中打开链接的提示窗 -->
             <div class="vote-c-wxalert position-fix none"></div>
+            <!-- 获取用户token -->
+            <div class="vote-c-token none" data-token=""></div>
         </div>
         <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
         <script src="js/index.js" type="text/javascript"></script>
         <script>
+            var token = $(".vote-c-token").attr("data-token");
+
             // 列表排版样式处理
             function limarR (liItem) {
                 $(liItem).each(function (i) {
@@ -282,41 +290,75 @@
 
             // 判断安卓还是iOS
             var ua = navigator.userAgent.toLowerCase();
-            if (ua.indexOf("iphone") > -1) {
-                console.log("ios")
-                $(".vote-c-completeload").attr({
-                    "href": "MeisuiAPP://"
-                })
-                $(".vote-c-viceapp").attr({
-                    "href": "MeisuiAPP://"
-                })
-            }else {
-                console.log("android")
-                $(".vote-c-completeload").attr({
-                    "href": "meisui://com.meisui.live/"
-                })
-                $(".vote-c-viceapp").attr({
-                    "href": "meisui://com.meisui.live/"
-                })
-            }
-            function openAppJudge (clickEve) {
-                $(clickEve).click(function () {
-                    // 判断是否是微信打开
-                    function is_weixn(){
-                        if(ua.match(/MicroMessenger/i) == "micromessenger") {
-                            // 显示去浏览器中打开提示层
-                            $(".vote-c-wxalert").removeClass("none");
-                        } else {
-                            setTimeout(function () {
-                                loadPage()
-                            }, 2000)
+            if (token == "") {
+                if (ua.indexOf("iphone") > -1) {
+                    console.log("ios")
+                    $(".vote-c-completeload").attr({
+                        "href": "MeisuiAPP://"
+                    })
+                    $(".vote-c-viceapp").attr({
+                        "href": "MeisuiAPP://"
+                    })
+                } else {
+                    console.log("android")
+                    $(".vote-c-completeload").attr({
+                        "href": "meisui://com.meisui.live/"
+                    })
+                    $(".vote-c-viceapp").attr({
+                        "href": "meisui://com.meisui.live/"
+                    })
+                }
+                openAppJudge(".vote-c-completeload")
+                openAppJudge(".vote-c-viceapp")
+                function openAppJudge (clickEve) {
+                    $(clickEve).click(function () {
+                        // 判断是否是微信打开
+                        function is_weixn(){
+                            if(ua.match(/MicroMessenger/i) == "micromessenger") {
+                                // 显示去浏览器中打开提示层
+                                $(".vote-c-wxalert").removeClass("none");
+                            } else {
+                                setTimeout(function () {
+                                    loadPage()
+                                }, 2000)
+                            }
                         }
+                        is_weixn();
+                    });
+                }
+            } else {
+                console.log("APP内打开")
+                var fuuidNum = [77330434, 11148389, 58265812, 66646768]; // app内固定的四个金鸡电影直播的房间号
+                $(".vote-c-completeload").attr({ // 跳转至口红机页面
+                    // "href": "https://lipstick.pod.meisuizhibo.com/index.php?s=khj/"
+                    "href": "javascript:;"
+                })
+                $(".vote-c-viceapp").attr({
+                    "href": "javascript:;"
+                })
+                $(".vote-c-completeload").click(function () {
+                    if (ua.indexOf("iphone") > -1) {
+                        window.webkit.messageHandlers.enterLipstick.postMessage("https://lipstick.pod.meisuizhibo.com/index.php?s=khj/");
+                    } else {
+                        $(function() {
+                            if (window['JavaScriptInterface']) {
+                                window.JavaScriptInterface.enterLipstick("https://lipstick.pod.meisuizhibo.com/index.php?s=khj/");
+                            }
+                        });
                     }
-                    is_weixn();
+                });
+                $(".vote-c-viceapp").click(function(){
+                    if (ua.indexOf("iphone") > -1) {
+                        window.webkit.messageHandlers.enterRoom.postMessage("meisuiapp://anchor25385303");
+                    } else {
+                        $(function() {
+                            if (window['JavaScriptInterface']) {
+                                window.JavaScriptInterface.rountHandle(3,"ms://anchor",25385303);
+                            }
+                        });
+                    }
                 });
             }
-            openAppJudge(".vote-c-completeload")
-            openAppJudge(".vote-c-viceapp")
             // 页面跳转至应用宝下载
             function loadPage () {
                 window.location.href = "https://a.app.qq.com/o/simple.jsp?pkgname=com.meisui.live"
@@ -327,9 +369,14 @@
             });
 
             // 点击主页面投票
-            $(".vote-c-storyli div").click(function (e) {
-                $(".vote-c-vote").removeClass("none"); // 显示投票弹窗页
-            });
+            function movieDel (alertEve) {
+                $(alertEve).click(function (e) {
+                    $(".vote-c-vote").removeClass("none"); // 显示投票弹窗页
+                });
+            }
+            movieDel(".vote-c-storyli div");
+            movieDel(".vote-c-manli div");
+            movieDel(".vote-c-womanli div");
 
             // 点击为他投票
             $(".vote-c-viceta").click(function(event) {

@@ -28,13 +28,13 @@
         <div class="jinj-wrap position-rel">
             <div class="jinj-times jinj-ycolor weight-bold">
                 <span class="block">活动时间：</span>
-                <span class="block">2019.10.27</span>
+                <span class="block">2019.11.20</span>
                 <span class="jinj-hline block">-</span>
-                <span class="block">2019.11.17</span>
+                <span class="block">2019.11.30</span>
             </div>
             <div class="jinj-gojinj">
-                <div class="jinj-tit jinj-ycolor text-center weight-bold">众筹去金鸡</div>
-                <div class="jinj-gojjsec">
+                <div class="jinj-tit jinj-ycolor text-center weight-bold">金鸡争鸣</div>
+                <!-- <div class="jinj-gojjsec">
                     <div class="jinj-gojjlw">
                         <h3 class="text-center thirty jinj-ycolor">赠送主播“金鸡”，帮助主播夺取影后</h3>
                         <div class="jinj-gojjlwcon">
@@ -77,6 +77,46 @@
                     <div class="jinj-links">
                         <p class="twenty-six text-center">点击查看“影迷嘉年华”线下活动细则</p>
                         <a class="text-center block" href="javascript:;">敬请期待</a>
+                    </div>
+                </div> -->
+                <div class="jinj-zmcoms">
+                    <div class="jinj-zmgift">
+                        <h3 class="text-center thirty jinj-ycolor">赠送主播“金鸡专属礼物”<br />帮助主播夺取影后</h3>
+                        <ul class="jinj-zmul">
+                            <li class="jinj-zmli">
+                                <div class="jinj-zmitem">
+                                    <div>
+                                        <img class="jinj-zmonepic" src="images/demoimages/pic172.png" alt="" />
+                                    </div>
+                                    <span class="twenty-six text-center block">金鸡</span>
+                                </div>
+                                <div class="jinj-zmitem">
+                                    <div>
+                                        <img class="jinj-zmtwopic" src="images/demoimages/pic190.png" alt="" />
+                                    </div>
+                                    <span class="twenty-six text-center block">闪耀众人</span>
+                                </div>
+                            </li>
+                            <li class="jinj-zmli">
+                                <div class="jinj-zmitem">
+                                    <div>
+                                        <img class="jinj-zmthreepic" src="images/demoimages/pic191.png" alt="" />
+                                    </div>
+                                    <span class="twenty-six text-center block">影后</span>
+                                </div>
+                                <div class="jinj-zmitem">
+                                    <div>
+                                        <img class="jinj-zmfourpic" src="images/demoimages/pic192.png" alt="" />
+                                    </div>
+                                    <span class="twenty-six text-center block">闪亮登场</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <em class="jinj-line block"></em>
+                        <div class="jinj-zmrule text-center">
+                            <em class="block thirty jinj-ycolor weight-bold">活动细则</em>
+                            <p class="twenty-six">赠送主播4个指定的“金鸡节专属礼物”累计星光值<br />累计获得最高星光值的主播获得最终大奖</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,11 +168,11 @@
             </div>
             <div class="jinj-prize">
                 <div class="jinj-tit jinj-ycolor text-center weight-bold">活动奖励</div>
-                <div class="jinj-prizedel">
-                    <img class="jinj-prizeone block" src="images/demoimages/pic168_3.png" alt="" />
-                    <img class="jinj-prizeone block" src="images/demoimages/pic169_2.png" alt="" />
-                    <img class="jinj-prizetwo block" src="images/demoimages/pic170_3.png" alt="" />
-                    <img class="jinj-prizethree block" src="images/demoimages/pic171.png" alt="" />
+                <div class="jinj-prizedel jinj-prizedeltwo">
+                    <img class="jinj-prizeone block" src="images/demoimages/pic193.png" alt="" />
+                    <img class="jinj-prizefive block" src="images/demoimages/pic194.png" alt="" />
+                    <!-- <img class="jinj-prizetwo block" src="images/demoimages/pic170_3.png" alt="" />
+                    <img class="jinj-prizethree block" src="images/demoimages/pic171.png" alt="" /> -->
                 </div>
             </div>
             <div class="jinj-foot jinj-ycolor text-center">更多详询客服 微信：livekefu   QQ：965997888<br />本活动最终解释权归美岁直播所有</div>
@@ -140,7 +180,7 @@
             <div class="jinj-fadealert text-center thirty white position-fix none"></div>
             <!-- 分享底部下载栏 -->
             <div class="jinj-share position-fix none">
-                <img class="block" src="images/demoimages/ms-logo-new.png" alt="" />
+                <img class="block" src="images/demoimages/ms-logo-ji.png" alt="" />
                 <div class="white">
                     <h3 class="twenty-six">美岁直播</h3>
                     <p>看最精彩的直播，聊最开心的话题！</p>
@@ -159,7 +199,7 @@
                 type: 'get',
                 dataType: 'json',
                 data: {
-                    orderField: 0,
+                    orderField: 1,
                     t: userToken
                 },
                 success: function (res) {
@@ -175,13 +215,13 @@
                         var topThreeClass = ["jinj-zbrhitemone", "jinj-zbrhitemtwo", "jinj-zbrhitemthree"]
                         for (var i = 0; i < resAnchorList.length; i++) {
                             if (i < 3) {
-                                topThreeAnchorList += '<div class="jinj-zbrhitem ' + topThreeClass[i] + '"><div class="position-rel"><img class="block" src="' + resAnchorList[i].head + '" alt="" /></div><span class="block text-center thirty">' + resAnchorList[i].nickname + '</span><em class="block text-center twenty-six white">' + resAnchorList[i].gift_count + '</em></div>'
+                                topThreeAnchorList += '<div class="jinj-zbrhitem ' + topThreeClass[i] + '"><div class="position-rel"><img class="block" src="' + resAnchorList[i].head + '" alt="" /></div><span class="block text-center thirty">' + resAnchorList[i].nickname + '</span><em class="block text-center twenty-six white">' + resAnchorList[i].gift_charm + '</em></div>'
                             } else {
-                                anchorListCon += '<li class="jinj-zblistli"><span class="white thirty">' + (i + 1) + '</span><img class="block" src="' + resAnchorList[i].head + '" alt="" /><div class="white thirty">' + resAnchorList[i].nickname + '</div><em class="white twenty-six">' + resAnchorList[i].gift_count + '金鸡</em></li>'
+                                anchorListCon += '<li class="jinj-zblistli"><span class="white thirty">' + (i + 1) + '</span><img class="block" src="' + resAnchorList[i].head + '" alt="" /><div class="white thirty">' + resAnchorList[i].nickname + '</div><em class="white twenty-six">' + resAnchorList[i].gift_charm + '</em></li>'
                             }
                         };
                         for (var j = 0; j < resUserList.length; j++) {
-                            userListCon += '<li class="jinj-userlistli"><span class="white thirty">' + (j + 1) + '</span><img class="block" src="' + resUserList[j].head + '" alt="" /><div class="white thirty">' + resUserList[j].nickname + '</div><em class="white twenty-six">送出' + resUserList[j].gift_count + '</em></li>'
+                            userListCon += '<li class="jinj-userlistli"><span class="white thirty">' + (j + 1) + '</span><img class="block" src="' + resUserList[j].head + '" alt="" /><div class="white thirty">' + resUserList[j].nickname + '</div><em class="white twenty-six">' + resUserList[j].gift_charm + '</em></li>'
                         };
                         $(".jinj-zbrankhead").empty("");
                         $(".jinj-zbrankhead").append(topThreeAnchorList)
@@ -201,7 +241,7 @@
                                     src: resData.loginUserHead,
                                 });
                                 $(".jinj-anchormy div").html(resData.loginUserName)
-                                $(".jinj-anchormy em").html(resData. loginUserCount + '金鸡')
+                                $(".jinj-anchormy em").html(resData.loginUserCharm)
                                 $(".jinj-anchormy").removeClass("none");
                                 $(".jinj-zblist").css({
                                     "height": "15.72rem"
@@ -213,7 +253,7 @@
                                 });
                             }
                             $(".jinj-wrap").css({
-                                "min-height": "224.71rem"
+                                "min-height": "171.14rem"
                             });
                         } else {
                             // 非APP内打开
@@ -223,7 +263,7 @@
                                 "height": "20.72rem"
                             });
                             $(".jinj-wrap").css({
-                                "min-height": "228.21rem"
+                                "min-height": "174.64rem"
                             });
                         }
                     } else if (resState == 0) {

@@ -152,14 +152,16 @@ input::-webkit-inner-spin-button {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 35.71rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    height: 35rem;
+    padding-top: 0.71rem;
+    background: url("../images/rotary-d-mainbg.png") center center no-repeat;
+    background-size: contain;
     border-radius: 0.71rem 0.71rem 0 0;
 }
 .rotary-d-close {
     z-index: 1;
-    top: 1.07rem;
-    right: 4%;
+    top: 0.93rem;
+    left: 4%;
     width: 1.36rem;
     height: 1.36rem;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -180,59 +182,76 @@ input::-webkit-inner-spin-button {
 .rotary-d-close span:nth-child(2) {
     -webkit-transform: rotate(-45deg);
 }
+.rotary-d-nrule {
+  right: 3.33%;
+  top: 0.89rem;
+  width: 1.36rem;
+  height: 1.36rem;
+  background: url("../images/rotary-d-nrule.png") center center no-repeat;
+  background-size: contain;
+}
 .rotary-d-navs {
     display: flex;
     flex-flow: row nowrap;
-    height: 2.32rem;
-    padding: 0 4%;
-    margin-bottom: 1.25rem;
+    width: 42.67%;
+    height: 1.71rem;
+    margin: 0 auto 1.79rem;
+    background-color: rgba(65, 78, 185, 0.6);
+    border-radius: 0.89rem;
 }
 .rotary-d-navs span {
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-end;
-    margin-right: 1.43rem;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 1.71rem;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 .rotary-d-navsel {
-    font-size: 1.14rem;
-}
-.rotary-d-navs span em {
-    left: 0;
-    right: 0;
-    bottom: -0.54rem;
-    margin: auto;
-    width: 0.57rem;
-    height: 0.29rem;
-    border-radius: 0.18rem;
-}
-.rotary-d-navsel em {
-    background-color: #fff;
+  background: url("../images/rotary-d-navsel.png") center center no-repeat;
+  background-size: contain;
+  font-size: 1rem;
 }
 .rotary-d-show {
     overflow: hidden;
-    width: 92%;
-    height: 2.36rem;
+    width: 66.67%;
+    height: 2.14rem;
+    padding: 0 10%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: url("../images/rotary-d-showbg.png") center center no-repeat;
+    background-size: contain;
     border-radius: 0.36rem;
+}
+.rotary-d-show i {
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 6%;
+  margin: auto;
+  width: 0.93rem;
+  height: 0.86rem;
+  background: url("../images/rotary-d-notice.png") center center no-repeat;
+  background-size: contain;
 }
 .rotary-d-showcom {
     width: 100%;
-    height: 2.36rem;
+    height: 2.14rem;
 }
 /*.rotary-d-noticecon {
     display: flex;
     flex-flow: row wrap;
 }*/
 .rotary-d-noticeitem {
-    min-width: 24.64rem;
-    height: 2.36rem;
-    line-height: 2.36rem;
+    /*min-width: 24.64rem;*/
+    height: 2.14rem;
+    line-height: 2.14rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.86rem;
 }
 .rotary-d-zpmain {
     width: 100%;
-    height: 24.46rem;
+    height: 23.89rem;
     padding-top: 0rem;
 }
 
@@ -357,13 +376,12 @@ input::-webkit-inner-spin-button {
 
 .wrap {
     z-index: 5;
-    left: 0;
-    right: 0;
-    top: 1.25rem;
+    left: 2.86rem;
+    top: 1.79rem;
     margin: auto;
-    width: 18.54rem;
-    height: 18.54rem;
-    background: url("../images/rotary-d-zpbg.png") center center no-repeat;
+    width: 73.33%;
+    height: 19.64rem;
+    background: url("../images/rotary-d-zpbg_2.png") center center no-repeat;
     background-size: contain;
     border-radius: 50%;
 }
@@ -386,20 +404,20 @@ input::-webkit-inner-spin-button {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 17.93rem;
-    height: 17.93rem;
-    padding: 0.3rem;
+    width: 17.79rem;
+    height: 17.79rem;
+    /*padding: 0.3rem;*/
     border-radius: 50%;
 }
 
 .circle {
     overflow: hidden;
     position: relative;
-    width: 16.25rem;
-    height: 16.25rem;
-    padding: 0.84rem;
+    width: 17.79rem;
+    height: 17.79rem;
+    /*padding: 0.84rem;*/
     margin: auto;
-    background: url(../images/rotary-d-zpcons.png) center center no-repeat;
+    background: url(../images/rotary-d-zpcons_2.png) center center no-repeat;
     background-size: contain;
     border-radius: 50%;
 }
@@ -410,23 +428,22 @@ input::-webkit-inner-spin-button {
     align-items: center;
     position: absolute;
     z-index: 1;
-    left: 5.84rem;
-    width: 6.25rem;
-    height: 7.96rem;
+    left: 5.5rem;
+    width: 6.79rem;
+    height: 8.89rem;
     border-color: rgba(0, 0, 0, 0.0);
-    -webkit-transform-origin: 3.16rem 8.02rem;
-    -ms-transform-origin: 3.16rem 8.02rem;
-    transform-origin: 3.16rem 8.02rem;
+    -webkit-transform-origin: 3.4rem 8.89rem;
+    -ms-transform-origin: 3.4rem 8.89rem;
+    transform-origin: 3.4rem 8.89rem;
 }
 
 .circle span {
-    padding-top: 0.89rem;
+    padding-top: 0.54rem;
     margin-bottom: 0.71rem;
-    font-size: 0.72rem;
 }
 .rotary-d-prizepic {
-    width: 2.14rem;
-    height: 2.14rem;
+    width: 2.86rem;
+    height: 2.86rem;
 } 
 .button {
     position: absolute;
@@ -436,17 +453,17 @@ input::-webkit-inner-spin-button {
     right: 0;
     z-index: 3;
     margin: auto;
-    width: 5.07rem;
-    height: 3.71rem;
-    padding: 1.86rem 0;
-    background: url(../images/rotary-d-zpstart.png) center center no-repeat;
+    width: 4.36rem;
+    height: 4.36rem;
+    padding: 0.78rem 0;
+    background: url(../images/rotary-d-zpstart_2.png) center 0 no-repeat;
     background-size: contain;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .button button {
     display: block;
-    width: 3.71rem;
-    height: 3.71rem;
+    width: 3.86rem;
+    height: 3.86rem;
     margin: 0 auto;
     background: rgba(0,0,0,0);
     border: none;
@@ -505,55 +522,55 @@ mark.white {
   display: block;
   z-index: 11;
   position: absolute;
-  top: -0.43rem;
+  top: -0.75rem;
   left: 0;
   right: 0;
   margin: auto;
-  width: 1.46rem;
-  height: 1.61rem;
-  background: url("../images/rotary-d-zplamp.png") center center no-repeat;
+  width: 7.64%;
+  height: 1.5rem;
+  background: url("../images/rotary-d-zplamp_2.png") center center no-repeat;
   background-size: contain;
   /*-webkit-transform-origin: 0.34rem 10.60rem;
   -ms-transform-origin: 0.34rem 10.60rem;*/
-  transform-origin: 0.73rem 9.71rem;
+  transform-origin: 0.75rem 10.57rem;
 }
 
 .bubbles span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg); }
 
 .bubbles span:nth-child(3) {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg); }
+
+.bubbles span:nth-child(4) {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-.bubbles span:nth-child(4) {
-  -webkit-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  transform: rotate(135deg); }
-
 .bubbles span:nth-child(5) {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg); }
+
+.bubbles span:nth-child(6) {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg); }
+
+.bubbles span:nth-child(7) {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
-.bubbles span:nth-child(6) {
-  -webkit-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  transform: rotate(225deg); }
-
-.bubbles span:nth-child(7) {
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg); }
-
 .bubbles span:nth-child(8) {
-  -webkit-transform: rotate(315deg);
-  -ms-transform: rotate(315deg);
-  transform: rotate(315deg); }
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg); }
 
-/*.bubbles span:nth-child(9) {
+.bubbles span:nth-child(9) {
   -webkit-transform: rotate(240deg);
   -ms-transform: rotate(240deg);
   transform: rotate(240deg); }
@@ -571,69 +588,49 @@ mark.white {
 .bubbles span:nth-child(12) {
   -webkit-transform: rotate(330deg);
   -ms-transform: rotate(330deg);
-  transform: rotate(330deg); }*/
+  transform: rotate(330deg); }
 
 @-webkit-keyframes bubbles1 {
     0% {
-        background: #ffce4a;
+        opacity: 0.5;
     }
     100% {
-        background: rgb(255,243,200); /* Old browsers */
-        background: -webkit-linear-gradient(rgba(255,243,200,1) 0%, rgba(255,206,74,1) 100%);
-        background: -o-linear-gradient(rgba(255,243,200,1) 0%, rgba(255,206,74,1) 100%);
-        background: linear-gradient(rgba(255,243,200,1) 0%, rgba(255,206,74,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        -webkit-box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
-              box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35); 
-    } 
+        opacity: 1;
+    }
 }
 
 @keyframes bubbles1 {
     0% {
-        background: #ffce4a; 
+        opacity: 0.5;
     }
     100% {
-        background: rgb(255,243,200); /* Old browsers */
-        background: -webkit-linear-gradient(rgba(255,243,200,1) 0%, rgba(255,206,74,1) 100%);
-        background: -o-linear-gradient(rgba(255,243,200,1) 0%, rgba(255,206,74,1) 100%);
-        background: linear-gradient(rgba(255,243,200,1) 0%, rgba(255,206,74,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        -webkit-box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
-              box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
-    } 
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes bubbles2 {
     0% {
-        background: #f94f4f; 
+        opacity: 1;
     }
     100% {
-        background: rgb(249,79,79); /* Old browsers */
-        background: -moz-linear-gradient(top, rgba(249,79,79,1) 0%, rgba(242,119,52,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(249,79,79,1) 0%,rgba(242,119,52,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(249,79,79,1) 0%,rgba(242,119,52,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        -webkit-box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
-                box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
+        opacity: 0.5;
     }
 }
 
 @keyframes bubbles2 {
     0% {
-        background: #f94f4f; 
+        opacity: 1;
     }
     100% {
-        background: rgb(249,79,79); /* Old browsers */
-        background: -moz-linear-gradient(top, rgba(249,79,79,1) 0%, rgba(242,119,52,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(249,79,79,1) 0%,rgba(242,119,52,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(249,79,79,1) 0%,rgba(242,119,52,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        -webkit-box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
-                box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
-    } 
+        opacity: 0.5;
+    }
 }
 
-/*.bubbles span:nth-child(n) {
-    background: #ffce4a;
+.bubbles span:nth-child(n) {
+    /*background: #ffce4a;*/
     -webkit-animation: bubbles1 1s infinite steps(2);
-          animation: bubbles1 1s infinite steps(2); 
-}*/
+    animation: bubbles1 1s infinite steps(2);
+}
 
 /*.playing .bubbles span.light:nth-child(n) {
     background: rgb(255,243,200);
@@ -644,11 +641,11 @@ mark.white {
     box-shadow: 0 0 0.67rem 0.21rem rgba(255, 255, 255, 0.35);
 }*/
 
-/*.bubbles span:nth-child(2n) {
-    background: #f94f4f;
-    -webkit-animation: bubbles2 1s 0.3s infinite steps(2);
-            animation: bubbles2 1s 0.3s infinite steps(2); 
-}*/
+.bubbles span:nth-child(2n) {
+    /*background: #f94f4f;*/
+    -webkit-animation: bubbles2 1s infinite steps(2);
+    animation: bubbles2 1s infinite steps(2); 
+}
 
 /*.playing .bubbles span.light:nth-child(2n) {
     background: rgb(249,79,79);
@@ -850,13 +847,12 @@ mark.white {
 }
 
 .rotary-d-choitem {
-    width: 6.43rem;
-    height: 2.14rem;
-    margin: 0 0.36rem;
-    background: url("../images/rotary-d-choitem.png") center center no-repeat;
-    background-size: contain;
-    line-height: 2.14rem;
-    border-radius: 1.07rem;
+    width: 7.14rem;
+    height: 2.43rem;
+    margin: 0 0.54rem;
+    background-color: rgba(65, 78, 185, 0.6);
+    line-height: 2.43rem;
+    border-radius: 1.25rem;
 }
 .rotary-d-choitem i {
     width: 0.86rem;
@@ -866,13 +862,12 @@ mark.white {
     background-size: contain;
 }
 .rotary-d-choice .rotary-d-chosel {
-    background: url("../images/rotary-d-chosel.png") center center no-repeat;
+    background: url("../images/rotary-d-chosel_2.png") center center no-repeat;
     background-size: contain;
 }
-.rotary-d-chosel em {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 102, 153, 1)), to(rgba(255, 153, 136, 1)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.rotary-d-choice .rotary-d-choitem:nth-child(3).rotary-d-chosel {
+    background: url("../images/rotary-d-chosel_3.png") center center no-repeat;
+    background-size: contain;
 }
 .rotary-d-choitem p {
     top: -1.14rem;
@@ -884,9 +879,9 @@ mark.white {
     font-size: 0.72rem;
 }
 .rotary-d-foot {
-    margin-top: 0.36rem;
+    margin-top: 0.72rem;
     line-height: 1.07rem;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
 }
 .rotary-d-rule {
     overflow: auto;
@@ -979,10 +974,13 @@ mark.white {
     left: 0;
     right: 0;
     margin: auto;
-    width: 23.93rem;
-    height: 14.64rem;
-    background-color: #fff;
-    border-radius: 0.71rem;
+    width: 82.4%;
+    height: 18.82rem;
+    padding: 3.93rem 5.33% 0 2.67%;
+    background: url("../images/rotary-d-prizeshow.png") center center no-repeat;
+    background-size: contain;
+    /*background-color: #fff;*/
+    /*border-radius: 0.71rem;*/
 }
 .rotary-d-prizecon, 
 .rotary-d-prizeitem, 
@@ -994,33 +992,60 @@ mark.white {
     align-items: center;
 }
 .rotary-d-prizetit {
-    padding-top: 1.61rem;
-    margin-bottom: 0.79rem;
+    padding-top: 0.18rem;
+    margin-bottom: 0.71rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
 }
 .rotary-d-prizecon {
-    height: 5.71rem;
-    margin-bottom: 1.43rem;
+    height: 12.71rem;
+    padding-bottom: 0.54rem;
 }
 .rotary-d-prizeitem {
-    width: 5.36rem;
-    height: 2.5rem;
-    margin: 0.18rem;
-    box-shadow: inset 0 0 0 1px #979799;
-    border-radius: 0.36rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 1.07rem;
 }
 .rotary-d-prizeitem img {
-    width: 1.21rem;
-    height: 1.21rem;
+    width: 51.78%;
+    height: 2.86rem;
+    margin-bottom: 0.18rem;
+}
+.rotary-d-prizeitem span, 
+.rotary-d-prizeprice {
+  font-size: 0.8rem;
 }
 .rotary-d-prizeitem span {
-    margin-left: 0.18rem;
+  margin-bottom: 0.11rem;
+}
+.rotary-d-prizeitem span em {
+  font-style: italic;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(255, 163, 31, 1)), to(rgba(255, 236, 199, 1)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+}
+.rotary-d-prizeprice {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 0.93rem;
+  line-height: 0.93rem;
+}
+.rotary-d-prizeprice i {
+  width: 0.79rem;
+  height: 0.64rem;
+  background: url("../images/rotary-d-prizeprice.png") center center no-repeat;
+  background-size: contain;
 }
 .rotary-d-prize span {
-    width: 6.43rem;
-    height: 2.14rem;
-    margin: 0 1.25rem;
-    line-height: 2.14rem;
-    border-radius: 1.07rem;
+    width: 43.69%;
+    height: 2.43rem;
+    line-height: 2.43rem;
+    border-radius: 1.25rem;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .rotary-d-prizetrue {
@@ -1033,11 +1058,11 @@ mark.white {
     -webkit-text-fill-color: transparent;
 }
 .rotary-d-again {
-    background: rgb(93,132,255); /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(93,132,255,1) 0%, rgba(150,220,255,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(93,132,255,1) 0%,rgba(150,220,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(93,132,255,1) 0%,rgba(150,220,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d84ff', endColorstr='#96dcff',GradientType=1 ); /* IE6-9 */
+    background: #ffd9a7; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffd9a7 0%, #ff1c9e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffd9a7 0%,#ff1c9e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffd9a7 0%,#ff1c9e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd9a7', endColorstr='#ff1c9e',GradientType=1 ); /* IE6-9 */
 }
 .rotary-d-draw {
     z-index: 2;
@@ -1048,42 +1073,42 @@ mark.white {
 }
 .rotary-d-lucky {
     z-index: 6;
-    top: 20.86rem;
-    left: 9.55rem;
+    top: 20.54rem;
+    right: 1.33%;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     height: 1.07rem;
     line-height: 1.07rem;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
 }
 .rotary-d-lucky i {
     width: 0.71rem;
     height: 0.71rem;
     margin-left: 0.18rem;
-    background: url("../images/rotary-d-lucky.png") center center no-repeat;
+    background: url("../images/rotary-d-lucky_2.png") center center no-repeat;
     background-size: contain;
 }
 .rotary-d-xyzrule {
     z-index: 15;
-    bottom: 11.07rem;
-    left: 0;
-    right: 0;
+    bottom: 7.96rem;
+    right: 4.67%;
     margin: auto;
-    width: 23.93rem;
-    height: 13.57rem;
-    background-color: #f2f2f5;
-    border-radius: 0.71rem;
+    width: 60.53%;
+    height: 9.86rem;
+    background: url("../images/rotary-d-xyzrule.png") center center no-repeat;
+    background-size: contain;
 }
 .rotary-d-xyzrule h2 {
     padding-top: 1.5rem;
     margin-bottom: 1.07rem;
 }
 .rotary-d-xyzruleul {
-    padding: 0 5.2%;
+    padding: 1.25rem 6.17% 0;
 }
 .rotary-d-xyzruleul li {
-    line-height: 1.71rem;
+    line-height: 1.25rem;
 }
 .rotary-d-fadealert {
     z-index: 30;
@@ -1109,4 +1134,85 @@ mark.white {
     width: 33.33%;
     height: 2.36rem;
     border: 0.18rem solid #fff;
+}
+.rotary-d-nruletc {
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.rotary-d-nruletccon {
+  width: 78.4%;
+  height: 21.21rem;
+  padding: 0 7.33% 0 4.67%;
+  background: url("../images/rotary-d-nruletcbg.png") center center no-repeat;
+  background-size: contain;
+}
+.rotary-d-nruletccon h2 {
+  padding-top: 2.07rem;
+  margin-bottom: 0.89rem;
+}
+.rotary-d-nruletccon ul li {
+  line-height: 1.71rem;
+}
+.rotary-d-nruletcclose {
+  top: 0;
+  right: 0;
+  width: 2.32rem;
+  height: 2.32rem;
+}
+.rotary-d-ndrawborder {
+  right: 5.07%;
+  top: 2.14rem;
+  width: 3.2%;
+  height: 17.86rem;
+  padding: 0.14rem 0.53%;
+  background: url("../images/rotary-d-ndrawborder.png") center center no-repeat;
+  background-size: contain;
+  border-radius: 0.71rem;
+}
+.rotary-d-ndrawrate {
+  height: 17.86rem;
+}
+.rotary-d-ndrawnum {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: #ff1c9e; /* Old browsers */
+  background: -moz-linear-gradient(top, #ff1c9e 0%, #ffd9a7 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ff1c9e 0%,#ffd9a7 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff1c9e 0%,#ffd9a7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1c9e', endColorstr='#ffd9a7',GradientType=0 ); /* IE6-9 */
+  border-radius: 0.71rem;
+}
+.rotary-d-ndrawnum em {
+  top: -0.57rem;
+  left: -0.82rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 2.08rem;
+  height: 0.85rem;
+  padding: 0.11rem 0.21rem 0.43rem;
+  background: url("../images/rotary-d-ndrawtip.png") center center no-repeat;
+  background-size: contain;
+  color: #ff1c9e;
+  font-size: 0.64rem;
+  line-height: 0.85rem;
+}
+.rotary-d-prizeclose {
+  right: 0;
+  top: 1.5rem;
+  width: 2.32rem;
+  height: 2.32rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }

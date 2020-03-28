@@ -230,18 +230,24 @@ input::-webkit-inner-spin-button {
 .share-a-tittle {
     height: 2.86rem;
     line-height: 2.86rem;
+    /*background-color: #0f1955;*/
+    color: #323233;
 }
 .share-a-tittle span {
     display: inline-block;
     width: 7.5rem;
     height: 1px;
     margin: 0 0.86rem 0.3rem;
+    background-color: #323233;
 }
 .share-a-tittlebg {
     background-color: rgba(0, 0, 0, 0.8);
 }
 .share-a-lists {
-    padding-bottom: 0.1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 2.67% 0.1rem 2.67%;
 }
 .share-a-twentytwo {
     font-size: 0.8rem;
@@ -250,25 +256,34 @@ input::-webkit-inner-spin-button {
     width: 49.3%;
     /*height: 16.79rem;*/
     margin-bottom: 0.36rem;
+    /*background-color: #0f1955;*/
 }
 .share-a-anchorpic {
     overflow: hidden;
-    height: 13.21rem;
+    border-radius: 0.36rem;
+    /*height: 13.21rem;*/
+}
+.share-a-anchorpic img {
+  width: 100%;
+  height: 12.5rem;
 }
 .share-a-anchorpic span, 
 .anchor-hx-anchorpic span {
-  top: 0.36rem;
-  right: 3%;
-  width: 4.29rem;
-  height: 1.43rem;
-  background: url("../images/share-a-anchorpic_2.png") center center no-repeat;
+  top: 0rem;
+  right: 0%;
+  width: 5.36rem;
+  height: 1.71rem;
+  background: url("../images/share-a-anchorpic_3.png") center center no-repeat;
   background-size: 100%;
 }
 .share-a-anchorname {
-    padding: 0 5%;
+    padding: 0 2.86%;
     height: 2.86rem;
     line-height: 2.86rem;
 }
+/*.share-a-anchorname span {
+  color: #c4aa80;
+}*/
 .share-a-anchorname span, 
 .anchor-hx-anchorname span {
     overflow: hidden;
@@ -281,93 +296,152 @@ input::-webkit-inner-spin-button {
     top: 0;
     left: 0;
     width: 97%;
-    padding: 0.79rem 0 0 3%;
+    padding: 0.36rem 0 0 2.67%;
 }
 .share-a-portrait {
-    width: 42.5%;
-    padding: 0 1.5% 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 39.18%;
+    padding: 0 1.37% 0 0;
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 1.5rem/50%;
+    border-radius: 1.25rem;
 }
-.share-a-portrait img {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 3%;
-    border-radius: 50%;
+.share-a-ancimg i {
+  right: 0;
+  bottom: 0;
+  width: 0.79rem;
+  height: 0.79rem;
+  background: url("../images/share-a-ancimgv.png") center center no-repeat;
+  background-size: contain;
+}
+.share-a-ancimg, 
+.share-a-ancimg img {
+  border-radius: 50%;
+}
+.share-a-ancimg {
+    width: 22.81%;
+    height: 2.32rem;
+    margin-right: 3.51%;
+    border: 1px solid #fff;
+}
+.share-a-ancimg img {
+  width: 100%;
 }
 .share-a-name {
-    width: 43%;
-    margin-right: 2%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 49.12%;
 }
 .share-a-name h3 {
-    overflow: hidden;
-    margin: 0.07rem 0 0.18rem 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .share-a-name em {
-    overflow: hidden;
-    font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.5);
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.share-a-name em i {
+  width: 11.11%;
+  height: 0.57rem;
+  margin-right: 3.7%;
+  background: url("../images/share-a-peo.png") center center no-repeat;
+  background-size: contain;
+}
+.share-a-name em strong {
+  overflow: hidden;
+  width: 85.19%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .share-a-follow {
-    width: 3.21rem;
-    height: 1.79rem;
-    margin-top: 0.36rem;
-    background-color: #d24cfc;
-    line-height: 1.79rem;
-    font-size: 0.72rem;
-    border-radius: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 24.56%;
+  height: 1.79rem;
+  line-height: 1.79rem;
+  font-size: 0.8rem;
+  border-radius: 0.89rem;
+  background: #5d84ff; /* Old browsers */
+  background: -moz-linear-gradient(left, #5d84ff 0%, #96dcff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #5d84ff 0%,#96dcff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #5d84ff 0%,#96dcff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d84ff', endColorstr='#96dcff',GradientType=1 ); /* IE6-9 */
 }
 .share-a-area {
-    /*padding-top: 0.4rem;*/
-    margin-right: 11%;
-    width: 37%;
-    height: 2.5rem;
+    margin-right: 13.06%;
+    width: 44.67%;
 }
 .share-a-headimg img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.36rem;
+    height: 2.36rem;
     border-radius: 50%;
 }
+.share-a-userslide div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 60.61%;
+  height: 0.71rem;
+  font-size: 0.5rem;
+  line-height: 0.71rem;
+  border-radius: 0.71rem;
+}
 .share-a-headimg .swiper-slide {
-    width: 30%;
-    height: 2.5rem;
+    width: 20.31%;
+    height: 2.36rem;
+    margin-right: 3.08%;
 }
 .share-a-charm {
-    margin-top: 0.79rem;
+    margin-top: 0.36rem;
 }
 .share-a-lives, .share-a-watch {
-    height: 1.43rem;
-    line-height: 1.43rem;
-    border-radius: 0.8rem;
+    height: 1.86rem;
+    line-height: 1.86rem;
+    border-radius: 0.93rem;
 }
 .share-a-lives {
-    padding: 0 0.71rem 0 0.1rem;
-    background-color: rgba(152, 52, 255, 0.15);
-    color: #d24cfc;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 0.71rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
 }
 .share-a-lives i {
-    width: 1.29rem;
-    height: 1.29rem;
-    margin: 0.07rem 0.36rem 0 0;
-    background: url("../images/share-a-lives.png") center center no-repeat;
+    width: 0.71rem;
+    height: 0.71rem;
+    margin: 0rem 0.36rem 0 0;
+    background: url("../images/share-a-lives_2.png") center center no-repeat;
     background-size: 100%;
 }
 .share-a-watch {
-    padding: 0 2.5%;
+    min-width: 15.12%;
+    padding: 0 2.75%;
     margin-right: 4%;
-    background-color: rgba(40, 145, 243, 0.15);
-    color: #2891f3;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
 }
 .share-a-listclose {
-    right: -15%;
-    top: 0.85rem;
-    width: 0.79rem;
-    height: 0.79rem;
-    background: url("../images/share-a-listclose.png") center center no-repeat;
+    right: 2.75%;
+    top: 0rem;
+    width: 2.43rem;
+    height: 2.43rem;
+    background: url("../images/share-a-listclose_2.png") center center no-repeat;
     background-size: 100%;
 }
 .share-a-open, .share-a-return {
@@ -447,10 +521,10 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0.72rem;
 }
 .room-con {
-    overflow: auto;
-    width: 60%;
-    max-height: 7.86rem;
-    padding-bottom: 0.1rem;
+  overflow: auto;
+  width: 60%;
+  max-height: 7.86rem;
+  padding-bottom: 0.1rem;
 }
 .room-freegift {
   right: 3%;
@@ -461,23 +535,28 @@ input::-webkit-inner-spin-button {
   background-size: contain;
 }
 .room-con, .room-input {
-    padding: 0 3% 0.18rem;
+  padding: 0 3% 0.18rem;
 }
 .room-strip {
-    padding-bottom: 0.39rem;
-    line-height: 1.43rem;
+  padding-bottom: 0.39rem;
+  line-height: 1.43rem;
 }
 .room-strip span {
-    width: 2.36rem;
-    height: 0.93rem;
-    margin: 0rem 1% 0 0;
-    /*background-color: #258dee;*/
-    font-size: 0.8rem;
-    line-height: 1rem;
-    border-radius: 0.5rem;
+  width: 2.14rem;
+  height: 1.07rem;
+  margin: 0rem 1% 0 0;
+  /*background-color: #258dee;*/
+  font-size: 0.72rem;
+  line-height: 1.07rem;
+  border-radius: 0.5rem;
 }
-.room-strip span, .room-strip em {
-    display: inline-block;
+.room-strip span, .room-strip em, .room-strip img {
+  display: inline-block;
+}
+.room-strip img {
+  width: 5.32rem;
+  height: 1.36rem;
+  margin-left: 0.71rem;
 }
 .room-namecolor {
     color: #63b8f5;
@@ -510,6 +589,19 @@ input::-webkit-inner-spin-button {
 .share-a-demo, .share-a-video {
     width: 100%;
     height: 100%;
+}
+.share-a-actimg {
+  overflow: hidden;
+  z-index: 1;
+  bottom: 4.64rem;
+  right: 2.7%;
+  width: 16%;
+  height: 4.29rem;
+}
+.share-a-actimg .swiper-slide, 
+.share-a-actimg .swiper-slide img {
+  width: 100%;
+  height: 100%;
 }
 .anchor-hx-lists {
   display: flex;
@@ -819,6 +911,70 @@ input::-webkit-inner-spin-button {
   height: 2.14rem;
   font-size: 0.8rem;
   border-radius: 1.07rem;
+}
+.share-a-tipalert {
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 14.29rem;
+  height: 4.29rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 4.29rem;
+  border-radius: 0.36rem;
+}
+.share-a-newtips {
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.share-a-newtipcon {
+  width: 76%;
+  height: 8.07rem;
+  padding-top: 2.86rem;
+  border-radius: 0.71rem;
+}
+.share-a-newtipcon p {
+  margin-bottom: 1.96rem;
+}
+.share-a-newtipdel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.share-a-closenewtip, 
+.share-a-newtipbut {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 33.69%;
+  height: 2.15rem;
+  margin: 0 2.63%;
+  padding: 0.14rem 0.7%;
+  line-height: 2.15rem;
+  border-radius: 1.25rem;
+  background: #5d84ff; /* Old browsers */
+  background: -moz-linear-gradient(left, #5d84ff 0%, #96dcff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #5d84ff 0%,#96dcff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #5d84ff 0%,#96dcff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d84ff', endColorstr='#96dcff',GradientType=1 ); /* IE6-9 */
+}
+.share-a-closenewtip strong {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.25rem;
+  background-color: #fff;
 }
 
 /*天香直播*/
@@ -4178,7 +4334,7 @@ input::-webkit-inner-spin-button {
   width: 88%;
   height: 3.5rem;
   padding: 0 4% 0 8%;
-  background: url("../images/jinj-sharebg.png") 0 center no-repeat;
+  background: url("../images/share-a-download_2.png") 0 center no-repeat;
   background-size: 100%;
 }
 .jinj-share img {
